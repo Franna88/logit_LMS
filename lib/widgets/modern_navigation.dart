@@ -170,6 +170,15 @@ class _ModernNavigationState extends State<ModernNavigation> {
           const SizedBox(height: 16),
           _buildNavItem(7, Icons.logout, 'Logout', '/login', isLogout: true),
           const SizedBox(height: 16),
+          if (!widget.isExpanded)
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: IconButton(
+                icon: Icon(Icons.chevron_right, color: Colors.grey[600]),
+                onPressed: () => widget.onExpandedChanged(true),
+                tooltip: 'Expand navigation',
+              ),
+            ),
         ],
       ),
     );
@@ -227,39 +236,49 @@ class _ModernNavigationState extends State<ModernNavigation> {
               width: 1.5,
             ),
           ),
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Icon(
-                icon,
-                color: isSelected ? color : Colors.grey[600],
-                size: 22,
-              ),
-              if (widget.isExpanded) ...[
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Text(
-                    label,
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: isSelected ? color : Colors.grey[700],
-                      fontWeight:
-                          isSelected ? FontWeight.bold : FontWeight.normal,
+          child:
+              widget.isExpanded
+                  ? Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Icon(
+                        icon,
+                        color: isSelected ? color : Colors.grey[600],
+                        size: 22,
+                      ),
+                      const SizedBox(width: 12),
+                      Text(
+                        label,
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: isSelected ? color : Colors.grey[700],
+                          fontWeight:
+                              isSelected ? FontWeight.bold : FontWeight.normal,
+                        ),
+                      ),
+                      if (isSelected)
+                        Container(
+                          width: 8,
+                          height: 8,
+                          margin: const EdgeInsets.only(left: 8),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: color,
+                          ),
+                        ),
+                    ],
+                  )
+                  : Tooltip(
+                    message: label,
+                    verticalOffset: 0,
+                    child: Center(
+                      child: Icon(
+                        icon,
+                        color: isSelected ? color : Colors.grey[600],
+                        size: 22,
+                      ),
                     ),
                   ),
-                ),
-              ],
-              if (widget.isExpanded && isSelected)
-                Container(
-                  width: 8,
-                  height: 8,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: color,
-                  ),
-                ),
-            ],
-          ),
         ),
       ),
     );
