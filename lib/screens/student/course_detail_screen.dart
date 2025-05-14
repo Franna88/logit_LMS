@@ -2,6 +2,27 @@ import 'package:flutter/material.dart';
 import '../../widgets/modern_layout.dart';
 import '../../screens/modules/content_navigator.dart';
 
+// Define the content types
+enum ContentType { introduction, video, lesson, exercise, quiz, assessment }
+
+// Class to hold content item data
+class ContentItem {
+  final String title;
+  final ContentType type;
+  final String duration;
+  final bool isCompleted;
+  final Map<String, dynamic>?
+  additionalData; // Add this field for storing slide data
+
+  ContentItem({
+    required this.title,
+    required this.type,
+    required this.duration,
+    required this.isCompleted,
+    this.additionalData,
+  });
+}
+
 class CourseDetailScreen extends StatefulWidget {
   const CourseDetailScreen({super.key});
 
@@ -1239,22 +1260,6 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
 }
 
 // Helper classes
-enum ContentType { introduction, video, lesson, exercise, quiz, assessment }
-
-class ContentItem {
-  final String title;
-  final ContentType type;
-  final String duration;
-  final bool isCompleted;
-
-  ContentItem({
-    required this.title,
-    required this.type,
-    required this.duration,
-    required this.isCompleted,
-  });
-}
-
 class Resource {
   final String title;
   final String fileType;

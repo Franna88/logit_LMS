@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import '../../widgets/modern_layout.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class LessonScreen extends StatefulWidget {
   final String moduleTitle;
   final String lessonTitle;
   final String lessonContent;
   final List<String>? imageUrls;
+  final Map<String, dynamic>? slideData;
   final bool isCompleted;
   final VoidCallback onComplete;
   final VoidCallback onNext;
@@ -19,6 +21,7 @@ class LessonScreen extends StatefulWidget {
     required this.lessonTitle,
     required this.lessonContent,
     this.imageUrls,
+    this.slideData,
     required this.isCompleted,
     required this.onComplete,
     required this.onNext,
@@ -85,12 +88,22 @@ class _LessonScreenState extends State<LessonScreen> {
                 ),
                 const SizedBox(height: 16),
 
-                // Display images if available
-                if (widget.imageUrls != null && widget.imageUrls!.isNotEmpty)
-                  _buildImageSection(widget.imageUrls!),
+                // If Firebase slide data is available, use it instead of local data
+                if (widget.slideData != null)
+                  _buildSlideContent(widget.slideData!)
+                else
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Display images if available (legacy support)
+                      if (widget.imageUrls != null &&
+                          widget.imageUrls!.isNotEmpty)
+                        _buildImageSection(widget.imageUrls!),
 
-                // Lesson Content Text
-                _buildContentText(widget.lessonContent),
+                      // Lesson Content Text (legacy support)
+                      _buildContentText(widget.lessonContent),
+                    ],
+                  ),
 
                 // Bottom padding to ensure content isn't hidden behind the navigation bar
                 const SizedBox(height: 80),
@@ -110,6 +123,99 @@ class _LessonScreenState extends State<LessonScreen> {
     );
   }
 
+  // New method to build content from Firebase slide data
+  Widget _buildSlideContent(Map<String, dynamic> slideData) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        // Display slide title and content
+        if (slideData.containsKey('title'))
+          _buildContentText(slideData['title']),
+
+        // Display any additional content fields
+        if (slideData.containsKey('content'))
+          _buildContentMetadata(slideData['content']),
+
+        // Display images if available
+        if (slideData.containsKey('images') &&
+            slideData['images'] is List &&
+            (slideData['images'] as List).isNotEmpty)
+          _buildFirebaseImageSection(slideData['images']),
+      ],
+    );
+  }
+
+  // Method to display content metadata like course code, section, etc.
+  Widget _buildContentMetadata(dynamic content) {
+    if (content is List && content.isNotEmpty) {
+      return Container(
+        margin: const EdgeInsets.only(bottom: 16),
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: Colors.blue.withOpacity(0.1),
+          borderRadius: BorderRadius.circular(8),
+          border: Border.all(color: Colors.blue.withOpacity(0.3)),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children:
+              content
+                  .map(
+                    (item) => Padding(
+                      padding: const EdgeInsets.only(bottom: 4),
+                      child: Text(
+                        item.toString(),
+                        style: const TextStyle(
+                          fontSize: 14,
+                          color: Colors.blue,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                  )
+                  .toList(),
+        ),
+      );
+    }
+    return const SizedBox.shrink();
+  }
+
+  // New method to display Firebase images
+  Widget _buildFirebaseImageSection(List<dynamic> imageData) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        for (var image in imageData)
+          if (image is Map && image.containsKey('url'))
+            Padding(
+              padding: const EdgeInsets.only(bottom: 16.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: CachedNetworkImage(
+                  imageUrl: image['url'],
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                  placeholder:
+                      (context, url) => Container(
+                        height: 200,
+                        color: Colors.grey[300],
+                        child: const Center(child: CircularProgressIndicator()),
+                      ),
+                  errorWidget:
+                      (context, url, error) => Container(
+                        height: 100,
+                        color: Colors.grey[300],
+                        child: const Center(child: Icon(Icons.error)),
+                      ),
+                ),
+              ),
+            ),
+        const SizedBox(height: 16),
+      ],
+    );
+  }
+
+  // Legacy method for local image URLs (keep for backward compatibility)
   Widget _buildImageSection(List<String> imageUrls) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
