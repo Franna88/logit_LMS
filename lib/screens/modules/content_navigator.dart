@@ -78,6 +78,10 @@ class _ContentNavigatorState extends State<ContentNavigator> {
     final bool hasNext = _currentContentIndex < widget.contentItems.length - 1;
     final bool hasPrevious = _currentContentIndex > 0;
 
+    // Check if this content has Firebase slide data
+    final slideData = currentContent.additionalData;
+    final bool hasFirebaseData = slideData != null;
+
     // Navigate to appropriate screen based on content type
     switch (currentContent.type) {
       case ContentType.introduction:
@@ -85,8 +89,13 @@ class _ContentNavigatorState extends State<ContentNavigator> {
         return LessonScreen(
           moduleTitle: widget.moduleTitle,
           lessonTitle: currentContent.title,
-          lessonContent: _getSampleContent(currentContent),
-          imageUrls: ['lib/assets/images/course.jpg'], // Sample image
+          lessonContent:
+              hasFirebaseData ? '' : _getSampleContent(currentContent),
+          imageUrls:
+              hasFirebaseData
+                  ? null
+                  : ['lib/assets/images/course.jpg'], // Sample image
+          slideData: slideData, // Pass Firebase slide data to the lesson screen
           isCompleted: currentContent.isCompleted,
           onComplete: _markContentComplete,
           onNext: _navigateToNext,
@@ -131,6 +140,7 @@ class _ContentNavigatorState extends State<ContentNavigator> {
           lessonTitle: currentContent.title,
           lessonContent: _getSampleExerciseContent(currentContent),
           imageUrls: ['lib/assets/images/course2.jpg'], // Sample image
+          slideData: slideData, // Pass Firebase slide data if available
           isCompleted: currentContent.isCompleted,
           onComplete: _markContentComplete,
           onNext: _navigateToNext,

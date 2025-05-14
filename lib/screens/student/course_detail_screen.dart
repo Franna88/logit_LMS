@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../widgets/modern_layout.dart';
 import '../../screens/modules/content_navigator.dart';
+import '../../services/lesson_service.dart';
 
 // Define the content types
 enum ContentType { introduction, video, lesson, exercise, quiz, assessment }
@@ -33,11 +34,41 @@ class CourseDetailScreen extends StatefulWidget {
 class _CourseDetailScreenState extends State<CourseDetailScreen>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
+  final LessonService _lessonService = LessonService();
+  bool _isLoading = true;
+  List<ContentItem> _lesson01Content = [];
+  List<ContentItem> _lesson02Content = [];
 
   @override
   void initState() {
     super.initState();
     _tabController = TabController(length: 3, vsync: this);
+    _loadLessonData();
+  }
+
+  Future<void> _loadLessonData() async {
+    setState(() {
+      _isLoading = true;
+    });
+
+    try {
+      // Load Lesson 01 content
+      final lesson01Items = await _lessonService.getLesson01ContentItems();
+
+      // Load Lesson 02 content
+      final lesson02Items = await _lessonService.getLesson02ContentItems();
+
+      setState(() {
+        _lesson01Content = lesson01Items;
+        _lesson02Content = lesson02Items;
+        _isLoading = false;
+      });
+    } catch (e) {
+      debugPrint('Error loading lesson data: $e');
+      setState(() {
+        _isLoading = false;
+      });
+    }
   }
 
   @override
@@ -87,12 +118,25 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
             child: TabBarView(
               controller: _tabController,
               children: [
-                _buildModulesTab(),
+                _isLoading ? _buildLoadingIndicator() : _buildModulesTab(),
                 _buildDiscussionTab(),
                 _buildResourcesTab(),
               ],
             ),
           ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildLoadingIndicator() {
+    return const Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CircularProgressIndicator(),
+          SizedBox(height: 16),
+          Text('Loading lesson content...'),
         ],
       ),
     );
@@ -236,6 +280,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
         vertical: 6,
       ), // Further reduced padding
       children: [
+        // Use real lesson data in Module 3: Emergency Procedures
         _buildModuleCard(
           title: 'Module 1: Introduction to Diving Safety',
           completedLessons: 4,
@@ -312,88 +357,20 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
         const SizedBox(height: 6), // Further reduced spacing
         _buildModuleCard(
           title: 'Module 3: Emergency Procedures',
-          completedLessons: 2,
-          totalLessons: 6,
-          progress: 0.33,
+          completedLessons: _countCompletedLessons(_lesson01Content),
+          totalLessons: _lesson01Content.length,
+          progress: _calculateProgress(_lesson01Content),
           isCompleted: false,
-          contentItems: [
-            ContentItem(
-              title: 'Recognizing Diving Emergencies',
-              type: ContentType.video,
-              duration: '20 min',
-              isCompleted: true,
-            ),
-            ContentItem(
-              title: 'First Aid for Divers',
-              type: ContentType.lesson,
-              duration: '15 min',
-              isCompleted: true,
-            ),
-            ContentItem(
-              title: 'Rescue Techniques',
-              type: ContentType.video,
-              duration: '30 min',
-              isCompleted: false,
-            ),
-            ContentItem(
-              title: 'Emergency Ascent Procedures',
-              type: ContentType.exercise,
-              duration: '50 min',
-              isCompleted: false,
-            ),
-            ContentItem(
-              title: 'Oxygen Administration',
-              type: ContentType.lesson,
-              duration: '25 min',
-              isCompleted: false,
-            ),
-            ContentItem(
-              title: 'Module Quiz',
-              type: ContentType.quiz,
-              duration: '15 min',
-              isCompleted: false,
-            ),
-          ],
+          contentItems: _lesson01Content,
         ),
         const SizedBox(height: 6), // Further reduced spacing
         _buildModuleCard(
           title: 'Module 4: Equipment Safety',
-          completedLessons: 0,
-          totalLessons: 5,
-          progress: 0.0,
+          completedLessons: _countCompletedLessons(_lesson02Content),
+          totalLessons: _lesson02Content.length,
+          progress: _calculateProgress(_lesson02Content),
           isCompleted: false,
-          contentItems: [
-            ContentItem(
-              title: 'Gear Inspection and Maintenance',
-              type: ContentType.video,
-              duration: '20 min',
-              isCompleted: false,
-            ),
-            ContentItem(
-              title: 'Regulator Safety',
-              type: ContentType.lesson,
-              duration: '15 min',
-              isCompleted: false,
-            ),
-            ContentItem(
-              title: 'Buoyancy Control Devices',
-              type: ContentType.video,
-              duration: '25 min',
-              isCompleted: false,
-            ),
-            ContentItem(
-              title: 'Equipment Troubleshooting',
-              type: ContentType.exercise,
-              duration: '45 min',
-              isCompleted: false,
-            ),
-            ContentItem(
-              title: 'Module Quiz',
-              type: ContentType.quiz,
-              duration: '15 min',
-              isCompleted: false,
-            ),
-          ],
+          contentItems: _lesson02Content,
         ),
         const SizedBox(height: 6), // Further reduced spacing
         _buildModuleCard(
@@ -483,6 +460,16 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
         ),
       ],
     );
+  }
+
+  // Helper methods for lesson progress
+  int _countCompletedLessons(List<ContentItem> items) {
+    return items.where((item) => item.isCompleted).length;
+  }
+
+  double _calculateProgress(List<ContentItem> items) {
+    if (items.isEmpty) return 0.0;
+    return _countCompletedLessons(items) / items.length;
   }
 
   Widget _buildModuleCard({
