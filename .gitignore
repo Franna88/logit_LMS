@@ -43,3 +43,9 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Ignore Firebase service account credentials
+config/service_account.json
+**/service_account*.json
+**/*.serviceaccount.json
+**/firebase-adminsdk-*.json
