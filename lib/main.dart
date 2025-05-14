@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'firebase_options.dart';
 import 'screens/login_screen.dart';
 import 'screens/student/dashboard_screen.dart';
@@ -109,7 +110,27 @@ class MyApp extends StatelessWidget {
           contentPadding: const EdgeInsets.all(16),
         ),
       ),
-      initialRoute: '/login',
+      home: StreamBuilder<User?>(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          // If Firebase is still initializing or checking auth state
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Scaffold(
+              body: Center(child: CircularProgressIndicator()),
+            );
+          }
+
+          // If user is logged in
+          if (snapshot.hasData && snapshot.data != null) {
+            // You could add logic here to check if user is admin or student
+            // For now, redirect to student dashboard
+            return const StudentDashboardScreen();
+          }
+
+          // If user is not logged in
+          return const LoginScreen();
+        },
+      ),
       routes: {
         '/login': (context) => const LoginScreen(),
         '/student_dashboard': (context) => const StudentDashboardScreen(),

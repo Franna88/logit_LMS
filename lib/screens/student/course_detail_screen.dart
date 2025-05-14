@@ -36,8 +36,10 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
   late TabController _tabController;
   final LessonService _lessonService = LessonService();
   bool _isLoading = true;
-  List<ContentItem> _lesson01Content = [];
-  List<ContentItem> _lesson02Content = [];
+  List<ContentItem> _courseContent =
+      []; // Changed from separate lesson lists to a single course content list
+  final String _courseId =
+      "diving_safety_course"; // Example course ID - replace with actual course ID from navigation
 
   @override
   void initState() {
@@ -52,17 +54,25 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
     });
 
     try {
-      // Load Lesson 01 content
-      final lesson01Items = await _lessonService.getLesson01ContentItems();
+      // Load all lessons for the course
+      final lessons = await _lessonService.getLessonsForCourse(_courseId);
 
-      // Load Lesson 02 content
-      final lesson02Items = await _lessonService.getLesson02ContentItems();
-
-      setState(() {
-        _lesson01Content = lesson01Items;
-        _lesson02Content = lesson02Items;
-        _isLoading = false;
-      });
+      // If no lessons found, attempt to create sample data
+      if (lessons.isEmpty) {
+        debugPrint('No lessons found. Creating sample data...');
+        await _lessonService.createSampleDataIfNeeded();
+        // Try loading lessons again
+        final newLessons = await _lessonService.getLessonsForCourse(_courseId);
+        setState(() {
+          _courseContent = newLessons;
+          _isLoading = false;
+        });
+      } else {
+        setState(() {
+          _courseContent = lessons;
+          _isLoading = false;
+        });
+      }
     } catch (e) {
       debugPrint('Error loading lesson data: $e');
       setState(() {
@@ -274,429 +284,131 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
   }
 
   Widget _buildModulesTab() {
+    if (_courseContent.isEmpty) {
+      return const Center(
+        child: Text(
+          'No lessons available for this course',
+          style: TextStyle(fontSize: 16, color: Colors.grey),
+        ),
+      );
+    }
+
     return ListView(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 12,
-        vertical: 6,
-      ), // Further reduced padding
+      padding: const EdgeInsets.all(16),
       children: [
-        // Use real lesson data in Module 3: Emergency Procedures
-        _buildModuleCard(
-          title: 'Module 1: Introduction to Diving Safety',
-          completedLessons: 4,
-          totalLessons: 4,
-          progress: 1.0,
-          isCompleted: true,
-          contentItems: [
-            ContentItem(
-              title: 'Introduction to the Course',
-              type: ContentType.introduction,
-              duration: '5 min',
-              isCompleted: true,
-            ),
-            ContentItem(
-              title: 'Diving Equipment Overview',
-              type: ContentType.video,
-              duration: '15 min',
-              isCompleted: true,
-            ),
-            ContentItem(
-              title: 'Pre-Dive Safety Checks',
-              type: ContentType.lesson,
-              duration: '25 min',
-              isCompleted: true,
-            ),
-            ContentItem(
-              title: 'Module Quiz',
-              type: ContentType.quiz,
-              duration: '10 min',
-              isCompleted: true,
-            ),
-          ],
-        ),
-        const SizedBox(height: 6), // Further reduced spacing between modules
-        _buildModuleCard(
-          title: 'Module 2: Dive Planning and Risk Assessment',
-          completedLessons: 5,
-          totalLessons: 5,
-          progress: 1.0,
-          isCompleted: true,
-          contentItems: [
-            ContentItem(
-              title: 'Dive Planning Basics',
-              type: ContentType.video,
-              duration: '20 min',
-              isCompleted: true,
-            ),
-            ContentItem(
-              title: 'Weather and Water Conditions',
-              type: ContentType.video,
-              duration: '25 min',
-              isCompleted: true,
-            ),
-            ContentItem(
-              title: 'Risk Assessment Techniques',
-              type: ContentType.lesson,
-              duration: '15 min',
-              isCompleted: true,
-            ),
-            ContentItem(
-              title: 'Creating a Dive Plan',
-              type: ContentType.exercise,
-              duration: '45 min',
-              isCompleted: true,
-            ),
-            ContentItem(
-              title: 'Module Quiz',
-              type: ContentType.quiz,
-              duration: '15 min',
-              isCompleted: true,
-            ),
-          ],
-        ),
-        const SizedBox(height: 6), // Further reduced spacing
-        _buildModuleCard(
-          title: 'Module 3: Emergency Procedures',
-          completedLessons: 0,
-          totalLessons: 5,
-          progress: 0.0,
-          isCompleted: false,
-          contentItems: _getContentItemsForModule(
-            2,
-          ), // Get bleeding content from module index 2
-        ),
-        const SizedBox(height: 6), // Further reduced spacing
-        _buildModuleCard(
-          title: 'Module 4: Equipment Safety',
-          completedLessons: _countCompletedLessons(_lesson02Content),
-          totalLessons: _lesson02Content.length,
-          progress: _calculateProgress(_lesson02Content),
-          isCompleted: false,
-          contentItems: _lesson02Content,
-        ),
-        const SizedBox(height: 6), // Further reduced spacing
-        _buildModuleCard(
-          title: 'Module 5: Environmental Awareness',
-          completedLessons: 0,
-          totalLessons: 6,
-          progress: 0.0,
-          isCompleted: false,
-          contentItems: [
-            ContentItem(
-              title: 'Marine Hazards and Precautions',
-              type: ContentType.video,
-              duration: '25 min',
-              isCompleted: false,
-            ),
-            ContentItem(
-              title: 'Conservation Practices',
-              type: ContentType.lesson,
-              duration: '20 min',
-              isCompleted: false,
-            ),
-            ContentItem(
-              title: 'Current and Tide Safety',
-              type: ContentType.video,
-              duration: '30 min',
-              isCompleted: false,
-            ),
-            ContentItem(
-              title: 'Night Diving Safety',
-              type: ContentType.video,
-              duration: '35 min',
-              isCompleted: false,
-            ),
-            ContentItem(
-              title: 'Environmental Impact Assessment',
-              type: ContentType.exercise,
-              duration: '60 min',
-              isCompleted: false,
-            ),
-            ContentItem(
-              title: 'Module Quiz',
-              type: ContentType.quiz,
-              duration: '15 min',
-              isCompleted: false,
-            ),
-          ],
-        ),
-        const SizedBox(height: 6), // Further reduced spacing
-        _buildModuleCard(
-          title: 'Module 6: Advanced Safety Techniques',
-          completedLessons: 0,
-          totalLessons: 5,
-          progress: 0.0,
-          isCompleted: false,
-          contentItems: [
-            ContentItem(
-              title: 'Deep Diving Safety',
-              type: ContentType.video,
-              duration: '35 min',
-              isCompleted: false,
-            ),
-            ContentItem(
-              title: 'Decompression Procedures',
-              type: ContentType.lesson,
-              duration: '30 min',
-              isCompleted: false,
-            ),
-            ContentItem(
-              title: 'Dive Computer Usage',
-              type: ContentType.video,
-              duration: '25 min',
-              isCompleted: false,
-            ),
-            ContentItem(
-              title: 'Buddy System Protocols',
-              type: ContentType.lesson,
-              duration: '20 min',
-              isCompleted: false,
-            ),
-            ContentItem(
-              title: 'Final Safety Assessment',
-              type: ContentType.assessment,
-              duration: '120 min',
-              isCompleted: false,
-            ),
-          ],
+        _buildModuleSection(
+          'Module 1: Introduction to Diving Safety',
+          _courseContent,
         ),
       ],
     );
   }
 
-  // Helper methods for lesson progress
-  int _countCompletedLessons(List<ContentItem> items) {
-    return items.where((item) => item.isCompleted).length;
-  }
-
-  double _calculateProgress(List<ContentItem> items) {
-    if (items.isEmpty) return 0.0;
-    return _countCompletedLessons(items) / items.length;
-  }
-
-  Widget _buildModuleCard({
-    required String title,
-    required int completedLessons,
-    required int totalLessons,
-    required double progress,
-    required bool isCompleted,
-    required List<ContentItem> contentItems,
-  }) {
-    return Card(
-      elevation: 2,
-      margin: const EdgeInsets.symmetric(vertical: 6), // Reduced margin
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-      ), // Reduced radius
-      child: ExpansionTile(
-        title: Text(
+  Widget _buildModuleSection(String title, List<ContentItem> contentItems) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
           title,
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 15,
-          ), // Reduced font size
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
-        tilePadding: const EdgeInsets.symmetric(
-          horizontal: 12,
-          vertical: 0,
-        ), // Reduced padding
-        subtitle: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 4), // Reduced spacing
-            Text(
-              '$completedLessons of $totalLessons lessons completed',
-              style: TextStyle(
-                fontSize: 12,
-                color: Colors.grey[600],
-              ), // Smaller font
-            ),
-            const SizedBox(height: 6), // Reduced spacing
-            LinearProgressIndicator(
-              value: progress,
-              backgroundColor: Colors.grey[200],
-              valueColor: AlwaysStoppedAnimation<Color>(
-                isCompleted ? Colors.green : Colors.blue,
-              ),
-              minHeight: 4, // Thinner progress bar
-            ),
-          ],
-        ),
-        leading: Container(
-          width: 32, // Smaller icon container
-          height: 32,
-          decoration: BoxDecoration(
-            color:
-                isCompleted
-                    ? Colors.green.withOpacity(0.2)
-                    : Colors.blue.withOpacity(0.2),
-            shape: BoxShape.circle,
+        const SizedBox(height: 12),
+        Card(
+          elevation: 2,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
           ),
-          child: Center(
-            child: Icon(
-              isCompleted ? Icons.check_circle : Icons.play_circle_fill,
-              color: isCompleted ? Colors.green : Colors.blue,
-              size: 20, // Smaller icon
-            ),
-          ),
-        ),
-        trailing: const Icon(
-          Icons.keyboard_arrow_down,
-          size: 20,
-        ), // Smaller icon
-        children: contentItems.map((item) => _buildContentItem(item)).toList(),
-      ),
-    );
-  }
-
-  Widget _buildContentItem(ContentItem item) {
-    IconData getIcon() {
-      switch (item.type) {
-        case ContentType.introduction:
-          return Icons.info_outline;
-        case ContentType.video:
-          return Icons.videocam;
-        case ContentType.lesson:
-          return Icons.article;
-        case ContentType.exercise:
-          return Icons.code;
-        case ContentType.quiz:
-          return Icons.quiz;
-        case ContentType.assessment:
-          return Icons.assessment;
-      }
-    }
-
-    Color getColor() {
-      if (item.isCompleted) {
-        return Colors.green;
-      }
-      switch (item.type) {
-        case ContentType.introduction:
-          return Colors.blue;
-        case ContentType.video:
-          return Colors.red;
-        case ContentType.lesson:
-          return Colors.orange;
-        case ContentType.exercise:
-          return Colors.purple;
-        case ContentType.quiz:
-          return Colors.amber;
-        case ContentType.assessment:
-          return Colors.indigo;
-      }
-    }
-
-    // Return a more visually engaging content item with hover effect
-    return Card(
-      margin: const EdgeInsets.symmetric(vertical: 6, horizontal: 8),
-      elevation: 2,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
-        side: BorderSide(color: getColor().withOpacity(0.3), width: 1.5),
-      ),
-      child: InkWell(
-        onTap: () => _launchContent(item),
-        borderRadius: BorderRadius.circular(10),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-          child: Row(
-            children: [
-              // Icon with colored background
-              Container(
-                width: 36,
-                height: 36,
-                decoration: BoxDecoration(
-                  color: getColor().withOpacity(0.15),
-                  shape: BoxShape.circle,
-                  border: Border.all(color: getColor(), width: 1.5),
+          child: ListView.separated(
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemCount: contentItems.length,
+            separatorBuilder: (context, index) => const Divider(height: 1),
+            itemBuilder: (context, index) {
+              final item = contentItems[index];
+              return ListTile(
+                leading: Container(
+                  width: 36,
+                  height: 36,
+                  decoration: BoxDecoration(
+                    color:
+                        item.isCompleted
+                            ? Colors.green.withOpacity(0.2)
+                            : Colors.blue.withOpacity(0.2),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Center(
+                    child: Icon(
+                      _getContentTypeIcon(item.type),
+                      color: item.isCompleted ? Colors.green : Colors.blue,
+                      size: 18,
+                    ),
+                  ),
                 ),
-                child: Center(
-                  child: Icon(getIcon(), color: getColor(), size: 18),
+                title: Text(
+                  item.title,
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: item.isCompleted ? Colors.grey[600] : Colors.black87,
+                    decoration:
+                        item.isCompleted ? TextDecoration.lineThrough : null,
+                  ),
                 ),
-              ),
-              const SizedBox(width: 12),
-
-              // Title and completion status
-              Expanded(
-                child: Column(
+                subtitle: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    const SizedBox(height: 4),
                     Text(
-                      item.title,
+                      _getContentTypeLabel(item.type),
                       style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
+                        fontSize: 12,
                         color:
                             item.isCompleted
                                 ? Colors.grey[600]
                                 : Colors.black87,
-                        decoration:
-                            item.isCompleted
-                                ? TextDecoration.lineThrough
-                                : null,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
-                    const SizedBox(height: 4),
-                    Row(
-                      children: [
-                        Text(
-                          _getContentTypeLabel(item.type),
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: getColor(),
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        const SizedBox(width: 8),
-                        Text(
-                          item.duration,
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.grey[600],
-                          ),
-                        ),
-                      ],
+                    const SizedBox(height: 6),
+                    Text(
+                      item.duration,
+                      style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                     ),
                   ],
                 ),
-              ),
-
-              // Status icon
-              if (item.isCompleted)
-                Container(
-                  padding: const EdgeInsets.all(4),
-                  decoration: BoxDecoration(
-                    color: Colors.green.withOpacity(0.1),
-                    shape: BoxShape.circle,
-                  ),
-                  child: const Icon(
-                    Icons.check_circle,
-                    color: Colors.green,
-                    size: 18,
-                  ),
-                )
-              else
-                Container(
-                  padding: const EdgeInsets.all(4),
-                  decoration: BoxDecoration(
-                    color: Colors.blue.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Text(
-                    'Start',
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blue[700],
-                    ),
-                  ),
+                trailing: IconButton(
+                  icon: const Icon(Icons.download),
+                  onPressed: () {
+                    // Download file
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('Downloading ${item.title}...')),
+                    );
+                  },
                 ),
-            ],
+                onTap: () => _launchContent(item),
+              );
+            },
           ),
         ),
-      ),
+      ],
     );
+  }
+
+  IconData _getContentTypeIcon(ContentType type) {
+    switch (type) {
+      case ContentType.introduction:
+        return Icons.info_outline;
+      case ContentType.video:
+        return Icons.videocam;
+      case ContentType.lesson:
+        return Icons.article;
+      case ContentType.exercise:
+        return Icons.code;
+      case ContentType.quiz:
+        return Icons.quiz;
+      case ContentType.assessment:
+        return Icons.assessment;
+    }
   }
 
   String _getContentTypeLabel(ContentType type) {

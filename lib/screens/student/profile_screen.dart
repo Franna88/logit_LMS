@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import '../../widgets/modern_layout.dart';
 
 class StudentProfileScreen extends StatefulWidget {
@@ -275,56 +276,40 @@ class _StudentProfileScreenState extends State<StudentProfileScreen> {
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 16),
-            _buildSettingsItem(
-              icon: Icons.lock,
-              title: 'Change Password',
+            ListTile(
+              leading: const Icon(Icons.lock, color: Colors.blue),
+              title: const Text('Change Password'),
+              trailing: const Icon(Icons.chevron_right),
               onTap: () {
-                // Navigate to change password screen
+                // Change password functionality
               },
             ),
             const Divider(),
-            _buildSettingsItem(
-              icon: Icons.notifications,
-              title: 'Notification Preferences',
+            ListTile(
+              leading: const Icon(Icons.notifications, color: Colors.blue),
+              title: const Text('Notification Settings'),
+              trailing: const Icon(Icons.chevron_right),
               onTap: () {
-                // Navigate to notification settings
+                // Notification settings
               },
             ),
             const Divider(),
-            _buildSettingsItem(
-              icon: Icons.privacy_tip,
-              title: 'Privacy Settings',
+            ListTile(
+              leading: const Icon(Icons.privacy_tip, color: Colors.blue),
+              title: const Text('Privacy Settings'),
+              trailing: const Icon(Icons.chevron_right),
               onTap: () {
-                // Navigate to privacy settings
+                // Privacy settings
               },
             ),
             const Divider(),
-            _buildSettingsItem(
-              icon: Icons.help,
-              title: 'Help & Support',
-              onTap: () {
-                // Navigate to help & support
-              },
-            ),
-            const SizedBox(height: 16),
-            SizedBox(
-              width: double.infinity,
-              child: OutlinedButton.icon(
-                onPressed: () {
-                  // Show logout confirmation
-                  _showLogoutConfirmation();
-                },
-                icon: const Icon(Icons.logout),
-                label: const Text('Log Out'),
-                style: OutlinedButton.styleFrom(
-                  foregroundColor: Colors.red,
-                  side: const BorderSide(color: Colors.red),
-                  padding: const EdgeInsets.symmetric(vertical: 12),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
+            ListTile(
+              leading: const Icon(Icons.logout, color: Colors.red),
+              title: const Text(
+                'Sign Out',
+                style: TextStyle(color: Colors.red),
               ),
+              onTap: _signOut,
             ),
           ],
         ),
@@ -332,17 +317,68 @@ class _StudentProfileScreenState extends State<StudentProfileScreen> {
     );
   }
 
-  Widget _buildSettingsItem({
-    required IconData icon,
-    required String title,
-    required VoidCallback onTap,
-  }) {
-    return ListTile(
-      leading: Icon(icon, color: Colors.blue),
-      title: Text(title),
-      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-      contentPadding: EdgeInsets.zero,
-      onTap: onTap,
+  // Sign out the current user
+  Future<void> _signOut() async {
+    showDialog(
+      context: context,
+      builder:
+          (context) => AlertDialog(
+            title: const Text('Sign Out'),
+            content: const Text('Are you sure you want to sign out?'),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text('Cancel'),
+              ),
+              TextButton(
+                onPressed: () async {
+                  Navigator.pop(context);
+
+                  // Show loading indicator
+                  showDialog(
+                    context: context,
+                    barrierDismissible: false,
+                    builder:
+                        (context) =>
+                            const Center(child: CircularProgressIndicator()),
+                  );
+
+                  try {
+                    await FirebaseAuth.instance.signOut();
+
+                    // Close the loading indicator
+                    Navigator.pop(context);
+
+                    // Navigate to login screen
+                    if (context.mounted) {
+                      Navigator.pushNamedAndRemoveUntil(
+                        context,
+                        '/login',
+                        (route) => false,
+                      );
+                    }
+                  } catch (e) {
+                    // Close the loading indicator
+                    Navigator.pop(context);
+
+                    // Show error
+                    if (context.mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text('Error signing out: $e'),
+                          backgroundColor: Colors.red,
+                        ),
+                      );
+                    }
+                  }
+                },
+                child: const Text(
+                  'Sign Out',
+                  style: TextStyle(color: Colors.red),
+                ),
+              ),
+            ],
+          ),
     );
   }
 
@@ -396,38 +432,6 @@ class _StudentProfileScreenState extends State<StudentProfileScreen> {
                 foregroundColor: Colors.white,
               ),
               child: const Text('Save'),
-            ),
-          ],
-        );
-      },
-    );
-  }
-
-  void _showLogoutConfirmation() {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: const Text('Log Out'),
-          content: const Text('Are you sure you want to log out?'),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: const Text('Cancel'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-                // Navigate to login screen
-                Navigator.of(context).pushReplacementNamed('/login');
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red,
-                foregroundColor: Colors.white,
-              ),
-              child: const Text('Log Out'),
             ),
           ],
         );
