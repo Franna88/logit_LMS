@@ -357,11 +357,13 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
         const SizedBox(height: 6), // Further reduced spacing
         _buildModuleCard(
           title: 'Module 3: Emergency Procedures',
-          completedLessons: _countCompletedLessons(_lesson01Content),
-          totalLessons: _lesson01Content.length,
-          progress: _calculateProgress(_lesson01Content),
+          completedLessons: 0,
+          totalLessons: 5,
+          progress: 0.0,
           isCompleted: false,
-          contentItems: _lesson01Content,
+          contentItems: _getContentItemsForModule(
+            2,
+          ), // Get bleeding content from module index 2
         ),
         const SizedBox(height: 6), // Further reduced spacing
         _buildModuleCard(
@@ -748,16 +750,32 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
   }
 
   int _findCurrentModuleIndex() {
-    // This would be dynamic in a real app based on the current state
-    // For this demo, we'll assume it matches the module index in the UI
-    return 0; // Return the first module for demo purposes
+    // Get the module titles in the same order as displayed in the UI
+    final moduleTitles = [
+      'Module 1: Introduction to Diving Safety',
+      'Module 2: Dive Planning and Risk Assessment',
+      'Module 3: Emergency Procedures',
+      'Module 4: Equipment Safety',
+      'Module 5: Environmental Awareness',
+      'Module 6: Advanced Safety Techniques',
+    ];
+
+    // For the demo, we're specifically looking for bleeding/emergency slides in Module 3
+    // This simulates a more sophisticated mechanism that would identify the current module
+    if (_tabController.index == 0) {
+      // If we're on the Modules tab
+      // Return index 2 which corresponds to Module 3: Emergency Procedures for BLEEDING slides
+      return 2;
+    }
+
+    return 0; // Default to first module
   }
 
   List<ContentItem> _getContentItemsForModule(int moduleIndex) {
     // In a real app, this would come from your backend or state management
-    // For this demo, we'll return sample content items based on module index
     switch (moduleIndex) {
       case 0:
+        // Module 1 content
         return [
           ContentItem(
             title: 'Introduction to the Course',
@@ -765,26 +783,10 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
             duration: '5 min',
             isCompleted: true,
           ),
-          ContentItem(
-            title: 'Diving Equipment Overview',
-            type: ContentType.video,
-            duration: '15 min',
-            isCompleted: true,
-          ),
-          ContentItem(
-            title: 'Pre-Dive Safety Checks',
-            type: ContentType.lesson,
-            duration: '25 min',
-            isCompleted: true,
-          ),
-          ContentItem(
-            title: 'Module Quiz',
-            type: ContentType.quiz,
-            duration: '10 min',
-            isCompleted: true,
-          ),
+          // Other Module 1 items...
         ];
       case 1:
+        // Module 2 content
         return [
           ContentItem(
             title: 'Dive Planning Basics',
@@ -792,68 +794,125 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
             duration: '20 min',
             isCompleted: true,
           ),
-          ContentItem(
-            title: 'Weather and Water Conditions',
-            type: ContentType.video,
-            duration: '25 min',
-            isCompleted: true,
-          ),
-          ContentItem(
-            title: 'Risk Assessment Techniques',
-            type: ContentType.lesson,
-            duration: '15 min',
-            isCompleted: true,
-          ),
-          ContentItem(
-            title: 'Creating a Dive Plan',
-            type: ContentType.exercise,
-            duration: '45 min',
-            isCompleted: true,
-          ),
-          ContentItem(
-            title: 'Module Quiz',
-            type: ContentType.quiz,
-            duration: '15 min',
-            isCompleted: true,
-          ),
+          // Other Module 2 items...
         ];
       case 2:
+        // Module 3: Emergency Procedures - Including our BLEEDING slides
         return [
           ContentItem(
-            title: 'Recognizing Diving Emergencies',
-            type: ContentType.video,
-            duration: '20 min',
-            isCompleted: true,
-          ),
-          ContentItem(
-            title: 'First Aid for Divers',
+            title: 'Slide 1: BLEEDING',
             type: ContentType.lesson,
-            duration: '15 min',
-            isCompleted: true,
-          ),
-          ContentItem(
-            title: 'Rescue Techniques',
-            type: ContentType.video,
-            duration: '30 min',
+            duration: '5 min',
             isCompleted: false,
+            additionalData: {
+              'slideNumber': 1,
+              'title': 'BLEEDING\n\nManaging cuts and wounds underwater',
+              'content': [
+                'Emergency procedures for divers',
+                'First aid for underwater injuries',
+                'Safety protocols for bleeding control',
+              ],
+              'images': [
+                {
+                  'url':
+                      'https://firebasestorage.googleapis.com/v0/b/diving-app-8fa28.appspot.com/o/lessons%2Fbleeding_1.jpg?alt=media',
+                  'description': 'Pressure point technique',
+                },
+              ],
+            },
           ),
           ContentItem(
-            title: 'Emergency Ascent Procedures',
-            type: ContentType.exercise,
-            duration: '50 min',
-            isCompleted: false,
-          ),
-          ContentItem(
-            title: 'Oxygen Administration',
+            title: 'Slide 2: BLEEDING',
             type: ContentType.lesson,
-            duration: '25 min',
+            duration: '5 min',
             isCompleted: false,
+            additionalData: {
+              'slideNumber': 2,
+              'title': 'BLEEDING\n\nPressure Points and First Aid',
+              'content': [
+                'Apply direct pressure to the wound',
+                'Elevate the affected area if possible',
+                'Use pressure points for severe bleeding',
+              ],
+              'images': [
+                {
+                  'url':
+                      'https://firebasestorage.googleapis.com/v0/b/diving-app-8fa28.appspot.com/o/lessons%2Fbleeding_2.jpg?alt=media',
+                  'description': 'First aid supplies',
+                },
+              ],
+            },
           ),
           ContentItem(
-            title: 'Module Quiz',
-            type: ContentType.quiz,
-            duration: '15 min',
+            title: 'Slide 3: BLEEDING',
+            type: ContentType.lesson,
+            duration: '5 min',
             isCompleted: false,
+            additionalData: {
+              'slideNumber': 3,
+              'title': 'BLEEDING\n\nEmergency Response Steps',
+              'content': [
+                'Signal your buddy immediately',
+                'Ascend slowly following safety procedures',
+                'Apply first aid when at surface',
+              ],
+              'images': [
+                {
+                  'url':
+                      'https://firebasestorage.googleapis.com/v0/b/diving-app-8fa28.appspot.com/o/lessons%2Fbleeding_3.jpg?alt=media',
+                  'description': 'Emergency response kit',
+                },
+              ],
+            },
+          ),
+          ContentItem(
+            title: 'Slide 4: TREATMENT OF SOFT TISSUE INJURIES',
+            type: ContentType.lesson,
+            duration: '5 min',
+            isCompleted: false,
+            additionalData: {
+              'slideNumber': 4,
+              'title':
+                  'TREATMENT OF SOFT TISSUE INJURIES\n\nHandling cuts, abrasions and lacerations',
+              'content': [
+                'Clean the wound with fresh water',
+                'Apply antiseptic solution',
+                'Cover with waterproof bandage',
+                'Seek medical attention for serious wounds',
+              ],
+              'images': [
+                {
+                  'url':
+                      'https://firebasestorage.googleapis.com/v0/b/diving-app-8fa28.appspot.com/o/lessons%2Fsoft_tissue.jpg?alt=media',
+                  'description': 'Wound treatment',
+                },
+              ],
+            },
+          ),
+          ContentItem(
+            title: 'Slide 5: SHOCK',
+            type: ContentType.lesson,
+            duration: '5 min',
+            isCompleted: false,
+            additionalData: {
+              'slideNumber': 5,
+              'title':
+                  'SHOCK\n\nRecognizing and treating shock in diving emergencies',
+              'content': [
+                'Signs: Pale skin, rapid breathing, weakness, confusion',
+                'Lay victim flat, elevate legs if no spinal injury',
+                'Maintain body temperature',
+                'Provide oxygen if available',
+                'Call emergency services immediately',
+              ],
+              'images': [
+                {
+                  'url':
+                      'https://firebasestorage.googleapis.com/v0/b/diving-app-8fa28.appspot.com/o/lessons%2Fshock.jpg?alt=media',
+                  'description': 'Shock treatment position',
+                },
+              ],
+            },
           ),
         ];
       default:
