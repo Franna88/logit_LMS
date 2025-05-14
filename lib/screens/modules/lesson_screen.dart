@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import '../../widgets/modern_layout.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:image_network/image_network.dart';
+import 'dart:html' as html;
+import 'dart:ui_web' as ui_web;
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class LessonScreen extends StatefulWidget {
   final String moduleTitle;
@@ -180,35 +184,196 @@ class _LessonScreenState extends State<LessonScreen> {
     return const SizedBox.shrink();
   }
 
-  // New method to display Firebase images
+  // New method to display Firebase images with ImageNetwork
   Widget _buildFirebaseImageSection(List<dynamic> imageData) {
+    // Calculate responsive width based on screen size
+    final screenWidth = MediaQuery.of(context).size.width;
+    final imageWidth = screenWidth > 600 ? 600.0 : screenWidth - 32;
+
+    // Debug: Print image data for troubleshooting
+    print('Image data: $imageData');
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         for (var image in imageData)
           if (image is Map && image.containsKey('url'))
-            Padding(
-              padding: const EdgeInsets.only(bottom: 16.0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: CachedNetworkImage(
-                  imageUrl: image['url'],
-                  width: double.infinity,
-                  fit: BoxFit.cover,
-                  placeholder:
-                      (context, url) => Container(
+            Builder(
+              builder: (context) {
+                final imageUrl = image['url'] as String;
+                // Debug: Print each image URL
+                print('Loading image from URL: $imageUrl');
+
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Image with border
+                      Container(
+                        width: imageWidth,
                         height: 200,
-                        color: Colors.grey[300],
-                        child: const Center(child: CircularProgressIndicator()),
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300),
+                          borderRadius: BorderRadius.circular(12),
+                          color: Colors.grey[100],
+                        ),
+                        child: Stack(
+                          children: [
+                            // Fallback image for testing
+                            Positioned.fill(
+                              child: Center(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.image,
+                                      color: Colors.grey[400],
+                                      size: 48,
+                                    ),
+                                    const SizedBox(height: 8),
+                                    Text(
+                                      'Loading image...',
+                                      style: TextStyle(
+                                        color: Colors.grey[600],
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(11),
+                              child:
+                                  kIsWeb
+                                      ?
+                                      // Use plain Image.network for web to avoid CORS issues
+                                      Image.network(
+                                        imageUrl,
+                                        height: 200,
+                                        width: imageWidth,
+                                        fit: BoxFit.contain,
+                                        loadingBuilder: (
+                                          context,
+                                          child,
+                                          loadingProgress,
+                                        ) {
+                                          if (loadingProgress == null)
+                                            return child;
+                                          return Center(
+                                            child: CircularProgressIndicator(
+                                              value:
+                                                  loadingProgress
+                                                              .expectedTotalBytes !=
+                                                          null
+                                                      ? loadingProgress
+                                                              .cumulativeBytesLoaded /
+                                                          loadingProgress
+                                                              .expectedTotalBytes!
+                                                      : null,
+                                              color: Colors.blue,
+                                            ),
+                                          );
+                                        },
+                                        errorBuilder: (
+                                          context,
+                                          error,
+                                          stackTrace,
+                                        ) {
+                                          print('Error loading image: $error');
+                                          print('URL: $imageUrl');
+                                          return Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              const Icon(
+                                                Icons.error,
+                                                color: Colors.red,
+                                              ),
+                                              const SizedBox(height: 8),
+                                              Text(
+                                                'Error loading image',
+                                                style: TextStyle(
+                                                  color: Colors.red[700],
+                                                  fontSize: 12,
+                                                ),
+                                              ),
+                                            ],
+                                          );
+                                        },
+                                      )
+                                      // Use ImageNetwork for mobile platforms
+                                      : ImageNetwork(
+                                        image: imageUrl,
+                                        height: 200,
+                                        width: imageWidth,
+                                        duration: 1000,
+                                        curve: Curves.easeIn,
+                                        onPointer: true,
+                                        debugPrint:
+                                            true, // Enable debug printing
+                                        fitAndroidIos: BoxFit.contain,
+                                        fitWeb: BoxFitWeb.contain,
+                                        onLoading: const Center(
+                                          child: CircularProgressIndicator(
+                                            color: Colors.blue,
+                                          ),
+                                        ),
+                                        onError: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            const Icon(
+                                              Icons.error,
+                                              color: Colors.red,
+                                            ),
+                                            const SizedBox(height: 8),
+                                            Text(
+                                              'Error loading image',
+                                              style: TextStyle(
+                                                color: Colors.red[700],
+                                                fontSize: 12,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                            ),
+                          ],
+                        ),
                       ),
-                  errorWidget:
-                      (context, url, error) => Container(
-                        height: 100,
-                        color: Colors.grey[300],
-                        child: const Center(child: Icon(Icons.error)),
-                      ),
-                ),
-              ),
+
+                      // Image caption/description if available
+                      if (image.containsKey('description') &&
+                          image['description'] != null)
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0, left: 4.0),
+                          child: Row(
+                            children: [
+                              const Icon(
+                                Icons.photo,
+                                size: 14,
+                                color: Colors.grey,
+                              ),
+                              const SizedBox(width: 6),
+                              Expanded(
+                                child: Text(
+                                  image['description'],
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontStyle: FontStyle.italic,
+                                    color: Colors.grey[700],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                    ],
+                  ),
+                );
+              },
             ),
         const SizedBox(height: 16),
       ],

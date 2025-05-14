@@ -815,8 +815,8 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
               'images': [
                 {
                   'url':
-                      'https://firebasestorage.googleapis.com/v0/b/diving-app-8fa28.appspot.com/o/lessons%2Fbleeding_1.jpg?alt=media',
-                  'description': 'Pressure point technique',
+                      'https://cdn.pixabay.com/photo/2017/05/08/13/15/spring-bird-2295434_1280.jpg',
+                  'description': 'Example image for demonstration purposes',
                 },
               ],
             },
@@ -837,8 +837,8 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
               'images': [
                 {
                   'url':
-                      'https://firebasestorage.googleapis.com/v0/b/diving-app-8fa28.appspot.com/o/lessons%2Fbleeding_2.jpg?alt=media',
-                  'description': 'First aid supplies',
+                      'https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg',
+                  'description': 'Example image for demonstration purposes',
                 },
               ],
             },
@@ -859,8 +859,8 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
               'images': [
                 {
                   'url':
-                      'https://firebasestorage.googleapis.com/v0/b/diving-app-8fa28.appspot.com/o/lessons%2Fbleeding_3.jpg?alt=media',
-                  'description': 'Emergency response kit',
+                      'https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg',
+                  'description': 'Example image for demonstration purposes',
                 },
               ],
             },
@@ -883,8 +883,8 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
               'images': [
                 {
                   'url':
-                      'https://firebasestorage.googleapis.com/v0/b/diving-app-8fa28.appspot.com/o/lessons%2Fsoft_tissue.jpg?alt=media',
-                  'description': 'Wound treatment',
+                      'https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313_1280.jpg',
+                  'description': 'Example image for demonstration purposes',
                 },
               ],
             },
@@ -908,8 +908,8 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
               'images': [
                 {
                   'url':
-                      'https://firebasestorage.googleapis.com/v0/b/diving-app-8fa28.appspot.com/o/lessons%2Fshock.jpg?alt=media',
-                  'description': 'Shock treatment position',
+                      'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg',
+                  'description': 'Example image for demonstration purposes',
                 },
               ],
             },
