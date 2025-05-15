@@ -252,6 +252,25 @@ class _LessonScreenState extends State<LessonScreen> {
 
   // Method to build content from Firebase slide data
   Widget _buildSlideContent(Map<String, dynamic> slideData) {
+    // Process image data to ensure asset paths are properly formatted
+    List<dynamic> processImageData(List<dynamic> imageData) {
+      return imageData.map((image) {
+        if (image is Map) {
+          // Handle 'path' field structure (used for local assets)
+          if (image.containsKey('path') && !image.containsKey('url')) {
+            // Add the URL field based on the path
+            String path = image['path'] as String;
+            return {
+              ...image,
+              'url': 'output/$path', // Add prefix for asset path
+              'isAsset': true, // Flag to indicate this is a local asset
+            };
+          }
+        }
+        return image;
+      }).toList();
+    }
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -268,7 +287,9 @@ class _LessonScreenState extends State<LessonScreen> {
         if (slideData.containsKey('images') &&
             slideData['images'] is List &&
             (slideData['images'] as List).isNotEmpty)
-          _buildFirebaseImageSection(slideData['images']),
+          _buildFirebaseImageSection(
+            processImageData(slideData['images'] as List<dynamic>),
+          ),
       ],
     );
   }
@@ -351,22 +372,76 @@ class _LessonScreenState extends State<LessonScreen> {
     return const SizedBox.shrink();
   }
 
-  // Enhanced method to display Firebase images with better styling
+  // Enhanced method to display Firebase images with better styling and local fallbacks
   Widget _buildFirebaseImageSection(List<dynamic> imageData) {
     // Calculate responsive width based on screen size
     final screenWidth = MediaQuery.of(context).size.width;
     final imageWidth = screenWidth > 600 ? 600.0 : screenWidth - 80;
+
+    // Prepare fallback images based on lesson title
+    List<String> getFallbackImages() {
+      final lessonTitle = widget.lessonTitle;
+      if (lessonTitle.contains("Bleeding") ||
+          lessonTitle.contains("BLEEDING")) {
+        return [
+          'output/images/Lesson_01_slide_1_a5708d93-bb45-4572-9616-69c45188d6fa.png',
+          'output/images/Lesson_01_slide_4_2379cb9f-b8e6-417a-bebb-9ccb546977c3.png',
+          'output/images/Lesson_01_slide_5_5cd6309f-1f57-4a19-87e9-ec5279ddd360.png',
+        ];
+      } else if (lessonTitle.contains("Emergency") ||
+          lessonTitle.contains("First Aid")) {
+        return [
+          'output/images/Lesson_01_slide_6_ae28a4dc-4a14-4397-82f1-a1aae2c7aba8.png',
+          'output/images/Lesson_02_slide_11_849d2d38-dc02-4db8-a7aa-17e87cae7a73.png',
+        ];
+      } else if (lessonTitle.contains("Pneumothorax") ||
+          lessonTitle.contains("Chest")) {
+        return [
+          'output/images/Lesson_02_slide_1_37374d19-33c2-4c33-8f26-d0eb1ef05112.png',
+          'output/images/Lesson_02_slide_3_517abed7-fe91-4901-8ff2-b5fd9322a4ad.png',
+        ];
+      } else if (lessonTitle.contains("Burns") ||
+          lessonTitle.contains("Skin")) {
+        return [
+          'output/images/Lesson_02_slide_6_3963ee76-2390-439f-8216-2723cc1431b7.png',
+          'output/images/Lesson_02_slide_10_ce4f234e-96e6-45f4-a677-f44040018d80.png',
+        ];
+      } else {
+        return [
+          'output/images/Lesson_01_slide_1_a5708d93-bb45-4572-9616-69c45188d6fa.png',
+          'output/images/Lesson_02_slide_1_37374d19-33c2-4c33-8f26-d0eb1ef05112.png',
+        ];
+      }
+    }
+
+    final fallbackImages = getFallbackImages();
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(height: 16),
 
-        for (var image in imageData)
-          if (image is Map && image.containsKey('url'))
+        for (var i = 0; i < imageData.length; i++)
+          if (imageData[i] is Map)
             Builder(
               builder: (context) {
-                final imageUrl = image['url'] as String;
+                final imageMap = imageData[i] as Map;
+                final bool isAsset =
+                    imageMap.containsKey('isAsset') &&
+                    imageMap['isAsset'] == true;
+                final String imageUrl =
+                    imageMap.containsKey('url')
+                        ? imageMap['url'] as String
+                        : '';
+                final String fallbackImage =
+                    i < fallbackImages.length
+                        ? fallbackImages[i]
+                        : fallbackImages[0];
+
+                // Track if remote image failed to load
+                final ValueNotifier<bool> useFallback = ValueNotifier<bool>(
+                  isAsset,
+                );
 
                 return Container(
                   margin: const EdgeInsets.only(bottom: 24),
@@ -390,90 +465,26 @@ class _LessonScreenState extends State<LessonScreen> {
                           borderRadius: BorderRadius.circular(12),
                           child: AspectRatio(
                             aspectRatio: 16 / 9, // Standard aspect ratio
-                            child: Stack(
-                              fit: StackFit.expand,
-                              children: [
-                                // Shimmer loading background
-                                Container(color: Colors.grey[200]),
-
-                                // Image with proper loading states
-                                kIsWeb
-                                    ? Image.network(
-                                      imageUrl,
-                                      fit: BoxFit.cover,
-                                      loadingBuilder: (
-                                        context,
-                                        child,
-                                        loadingProgress,
-                                      ) {
-                                        if (loadingProgress == null)
-                                          return child;
-                                        return Center(
-                                          child: CircularProgressIndicator(
-                                            value:
-                                                loadingProgress
-                                                            .expectedTotalBytes !=
-                                                        null
-                                                    ? loadingProgress
-                                                            .cumulativeBytesLoaded /
-                                                        loadingProgress
-                                                            .expectedTotalBytes!
-                                                    : null,
-                                            color: Colors.blue,
-                                            strokeWidth: 3,
-                                          ),
-                                        );
-                                      },
-                                      errorBuilder: (
-                                        context,
-                                        error,
-                                        stackTrace,
-                                      ) {
-                                        return Center(
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              const Icon(
-                                                Icons.error_outline,
-                                                color: Colors.red,
-                                                size: 32,
-                                              ),
-                                              const SizedBox(height: 8),
-                                              Text(
-                                                'Unable to load image',
-                                                style: TextStyle(
-                                                  color: Colors.red[700],
-                                                  fontSize: 14,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        );
-                                      },
-                                    )
-                                    : ImageNetwork(
-                                      image: imageUrl,
-                                      width: imageWidth,
-                                      height: imageWidth * 9 / 16,
-                                      duration: 800,
-                                      curve: Curves.easeIn,
-                                      onPointer: true,
-                                      debugPrint: true,
-                                      fitAndroidIos: BoxFit.cover,
-                                      fitWeb: BoxFitWeb.cover,
-                                      onLoading: const Center(
-                                        child: CircularProgressIndicator(
-                                          color: Colors.blue,
-                                          strokeWidth: 3,
-                                        ),
-                                      ),
-                                      onError: Center(
+                            child: ValueListenableBuilder<bool>(
+                              valueListenable: useFallback,
+                              builder: (context, useLocalImage, child) {
+                                if (useLocalImage) {
+                                  // If it's an asset, use Image.asset directly
+                                  final assetPath =
+                                      isAsset ? imageUrl : fallbackImage;
+                                  return Image.asset(
+                                    assetPath,
+                                    fit: BoxFit.cover,
+                                    errorBuilder: (context, error, stackTrace) {
+                                      // If asset fails, show error
+                                      print('Error loading asset: $assetPath');
+                                      print('Error: $error');
+                                      return Center(
                                         child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
                                           children: [
-                                            const Icon(
+                                            Icon(
                                               Icons.error_outline,
                                               color: Colors.red,
                                               size: 32,
@@ -486,52 +497,153 @@ class _LessonScreenState extends State<LessonScreen> {
                                                 fontSize: 14,
                                               ),
                                             ),
+                                            const SizedBox(height: 8),
+                                            Text(
+                                              assetPath,
+                                              style: TextStyle(
+                                                color: Colors.grey[600],
+                                                fontSize: 12,
+                                              ),
+                                            ),
                                           ],
                                         ),
-                                      ),
-                                    ),
-                              ],
+                                      );
+                                    },
+                                  );
+                                }
+
+                                // Otherwise try to load remote image
+                                return Stack(
+                                  fit: StackFit.expand,
+                                  children: [
+                                    // Shimmer loading background
+                                    Container(color: Colors.grey[200]),
+
+                                    // Try to load remote image
+                                    kIsWeb
+                                        ? Image.network(
+                                          imageUrl,
+                                          fit: BoxFit.cover,
+                                          loadingBuilder: (
+                                            context,
+                                            child,
+                                            loadingProgress,
+                                          ) {
+                                            if (loadingProgress == null)
+                                              return child;
+                                            return Center(
+                                              child: CircularProgressIndicator(
+                                                value:
+                                                    loadingProgress
+                                                                .expectedTotalBytes !=
+                                                            null
+                                                        ? loadingProgress
+                                                                .cumulativeBytesLoaded /
+                                                            loadingProgress
+                                                                .expectedTotalBytes!
+                                                        : null,
+                                                color: Colors.blue,
+                                                strokeWidth: 3,
+                                              ),
+                                            );
+                                          },
+                                          errorBuilder: (
+                                            context,
+                                            error,
+                                            stackTrace,
+                                          ) {
+                                            // On error, trigger fallback
+                                            Future.microtask(
+                                              () => useFallback.value = true,
+                                            );
+                                            return const SizedBox();
+                                          },
+                                        )
+                                        : ImageNetwork(
+                                          image: imageUrl,
+                                          width: imageWidth,
+                                          height: imageWidth * 9 / 16,
+                                          duration: 800,
+                                          curve: Curves.easeIn,
+                                          onPointer: true,
+                                          debugPrint: false,
+                                          fitAndroidIos: BoxFit.cover,
+                                          fitWeb: BoxFitWeb.cover,
+                                          onLoading: const Center(
+                                            child: CircularProgressIndicator(
+                                              color: Colors.blue,
+                                              strokeWidth: 3,
+                                            ),
+                                          ),
+                                          onError: Center(
+                                            child: Builder(
+                                              builder: (context) {
+                                                // On error, trigger fallback
+                                                Future.microtask(
+                                                  () =>
+                                                      useFallback.value = true,
+                                                );
+                                                return const SizedBox();
+                                              },
+                                            ),
+                                          ),
+                                        ),
+                                  ],
+                                );
+                              },
                             ),
                           ),
                         ),
                       ),
 
                       // Enhanced image caption with clearer styling
-                      if (image.containsKey('description') &&
-                          image['description'] != null)
-                        Container(
-                          margin: const EdgeInsets.only(top: 12, left: 4),
-                          padding: const EdgeInsets.symmetric(
-                            vertical: 8,
-                            horizontal: 12,
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.grey[100],
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Icon(
-                                Icons.info_outline,
-                                size: 16,
-                                color: Colors.grey,
-                              ),
-                              const SizedBox(width: 8),
-                              Expanded(
-                                child: Text(
-                                  image['description'],
-                                  style: const TextStyle(
-                                    fontSize: 14,
-                                    fontStyle: FontStyle.italic,
-                                    color: Colors.black87,
-                                    height: 1.4,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
+                      Container(
+                        margin: const EdgeInsets.only(top: 12, left: 4),
+                        padding: const EdgeInsets.symmetric(
+                          vertical: 8,
+                          horizontal: 12,
                         ),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[100],
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Icon(
+                              Icons.info_outline,
+                              size: 16,
+                              color: Colors.grey,
+                            ),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              child: ValueListenableBuilder<bool>(
+                                valueListenable: useFallback,
+                                builder: (context, useLocalImage, child) {
+                                  // Use description if available
+                                  final hasDescription =
+                                      imageMap.containsKey('description') &&
+                                      imageMap['description'] != null;
+
+                                  return Text(
+                                    hasDescription
+                                        ? imageMap['description']
+                                        : useLocalImage
+                                        ? _getImageCaption(fallbackImage, i)
+                                        : 'Image for ${widget.lessonTitle}',
+                                    style: const TextStyle(
+                                      fontSize: 14,
+                                      fontStyle: FontStyle.italic,
+                                      color: Colors.black87,
+                                      height: 1.4,
+                                    ),
+                                  );
+                                },
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 );
@@ -549,30 +661,214 @@ class _LessonScreenState extends State<LessonScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        for (String imageUrl in imageUrls)
+        const SizedBox(height: 16),
+
+        if (imageUrls.length > 1)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 16),
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+              decoration: BoxDecoration(
+                color: Colors.blue.withOpacity(0.05),
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: Colors.blue.withOpacity(0.2)),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.photo_library, color: Colors.blue, size: 18),
+                  const SizedBox(width: 8),
+                  Text(
+                    '${imageUrls.length} images for this lesson',
+                    style: const TextStyle(
+                      fontSize: 14,
+                      color: Colors.blue,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+        for (int i = 0; i < imageUrls.length; i++)
           Container(
             margin: const EdgeInsets.only(bottom: 24),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.1),
-                  blurRadius: 10,
-                  offset: const Offset(0, 4),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Image container with shadow
+                Container(
+                  width: imageWidth,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        blurRadius: 10,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: AspectRatio(
+                      aspectRatio: 16 / 9,
+                      child: Image.asset(
+                        imageUrls[i],
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          return Container(
+                            color: Colors.grey[200],
+                            child: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.broken_image,
+                                    color: Colors.grey[400],
+                                    size: 48,
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Text(
+                                    "Image not available",
+                                    style: TextStyle(
+                                      color: Colors.grey[600],
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+
+                // Auto-generated caption for local images
+                Container(
+                  margin: const EdgeInsets.only(top: 12, left: 4),
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 8,
+                    horizontal: 12,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.grey[100],
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Icon(
+                        Icons.info_outline,
+                        size: 16,
+                        color: Colors.grey,
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          // Extract a caption from the image filename
+                          _getImageCaption(imageUrls[i], i),
+                          style: const TextStyle(
+                            fontSize: 14,
+                            fontStyle: FontStyle.italic,
+                            color: Colors.black87,
+                            height: 1.4,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(12),
-              child: Image.asset(
-                imageUrl,
-                width: imageWidth,
-                fit: BoxFit.cover,
-              ),
             ),
           ),
       ],
     );
+  }
+
+  // Helper method to generate captions for local images
+  String _getImageCaption(String imagePath, int index) {
+    // Extract filename from path
+    final filename = imagePath.split('/').last;
+
+    // Map specific image filenames to descriptive captions
+    if (filename.contains('Lesson_01_slide_1')) {
+      return "Bleeding management procedures for open wounds";
+    } else if (filename.contains('Lesson_01_slide_4')) {
+      return "RICER treatment protocol for soft tissue injuries";
+    } else if (filename.contains('Lesson_01_slide_5')) {
+      return "Signs and symptoms of shock in emergency situations";
+    } else if (filename.contains('Lesson_01_slide_6')) {
+      return "Different types of shock and their characteristics";
+    } else if (filename.contains('Lesson_01_slide_12')) {
+      return "Anatomical illustration of chest trauma and injuries";
+    } else if (filename.contains('Lesson_01_slide_14')) {
+      return "Flail chest treatment and management procedure";
+    } else if (filename.contains('Lesson_01_slide_15')) {
+      return "Contusions and hematoma identification and treatment";
+    } else if (filename.contains('Lesson_02_slide_1')) {
+      return "Pneumothorax diagnosis and emergency management";
+    } else if (filename.contains('Lesson_02_slide_3')) {
+      return "Pulmonary embolism identification and treatment protocols";
+    } else if (filename.contains('Lesson_02_slide_6')) {
+      return "Anatomy of skin layers relevant to burn treatment";
+    } else if (filename.contains('Lesson_02_slide_10')) {
+      return "Burn severity assessment chart based on body percentage";
+    } else if (filename.contains('Lesson_02_slide_11')) {
+      return "Proper treatment procedure for different types of burns";
+    } else if (filename.contains('Lesson_02_slide_12')) {
+      return "Electrical injuries and associated treatment protocols";
+    } else if (filename.contains('Lesson_02_slide_13')) {
+      return "Types of poisoning and exposure routes identification";
+    } else if (filename.contains('Lesson_02_slide_14')) {
+      return "Signs and symptoms of various types of poisoning";
+    }
+
+    // Generic captions based on lesson title and index
+    final lessonTitle = widget.lessonTitle;
+    if (lessonTitle.contains("Bleeding") || lessonTitle.contains("BLEEDING")) {
+      final topics = [
+        "Proper wound management procedure illustration",
+        "Bleeding control techniques demonstration",
+        "First aid protocol for severe bleeding",
+        "Emergency response flowchart for bleeding",
+        "Patient assessment for bleeding injuries",
+      ];
+      return _getSafeCaption(topics, index);
+    } else if (lessonTitle.contains("Emergency") ||
+        lessonTitle.contains("Procedures")) {
+      final topics = [
+        "Emergency procedure protocol illustration",
+        "Critical response steps in emergency situations",
+        "First responder techniques for urgent care",
+        "Patient stabilization procedure diagram",
+        "Safety protocol for emergency management",
+      ];
+      return _getSafeCaption(topics, index);
+    } else if (lessonTitle.contains("Injury") ||
+        lessonTitle.contains("Trauma")) {
+      final topics = [
+        "Trauma assessment checklist visualization",
+        "Injury classification and management guide",
+        "Treatment protocol for traumatic injuries",
+        "Patient care procedure for trauma",
+        "Injury evaluation flowchart",
+      ];
+      return _getSafeCaption(topics, index);
+    }
+
+    // Default caption
+    return "Illustration for ${widget.lessonTitle}";
+  }
+
+  // Helper to safely get a caption by index with fallback
+  String _getSafeCaption(List<String> options, int index) {
+    if (index < options.length) {
+      return options[index];
+    }
+    return options.first;
   }
 
   // Enhanced content text building with better typography and styling

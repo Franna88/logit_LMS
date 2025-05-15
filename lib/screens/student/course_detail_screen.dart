@@ -814,9 +814,10 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
               ],
               'images': [
                 {
-                  'url':
-                      'https://cdn.pixabay.com/photo/2017/05/08/13/15/spring-bird-2295434_1280.jpg',
-                  'description': 'Example image for demonstration purposes',
+                  'path':
+                      'images/Lesson_01_slide_1_a5708d93-bb45-4572-9616-69c45188d6fa.png',
+                  'description':
+                      'Bleeding management procedures for open wounds',
                 },
               ],
             },
@@ -828,17 +829,18 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
             isCompleted: false,
             additionalData: {
               'slideNumber': 2,
-              'title': 'BLEEDING\n\nPressure Points and First Aid',
+              'title': 'BLEEDING\n\nCLOSED WOUNDS',
               'content': [
-                'Apply direct pressure to the wound',
-                'Elevate the affected area if possible',
-                'Use pressure points for severe bleeding',
+                'Unlike open wounds, closed wounds do not break the skin\'s surface',
+                'Assess for pain, swelling and bruising in the affected area',
+                'Check for contusions, strains and sprains',
               ],
               'images': [
                 {
-                  'url':
-                      'https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg',
-                  'description': 'Example image for demonstration purposes',
+                  'path':
+                      'images/Lesson_01_slide_4_2379cb9f-b8e6-417a-bebb-9ccb546977c3.png',
+                  'description':
+                      'RICER treatment protocol for soft tissue injuries',
                 },
               ],
             },
@@ -858,9 +860,10 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
               ],
               'images': [
                 {
-                  'url':
-                      'https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg',
-                  'description': 'Example image for demonstration purposes',
+                  'path':
+                      'images/Lesson_01_slide_5_5cd6309f-1f57-4a19-87e9-ec5279ddd360.png',
+                  'description':
+                      'Signs and symptoms of shock in emergency situations',
                 },
               ],
             },
@@ -872,19 +875,20 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
             isCompleted: false,
             additionalData: {
               'slideNumber': 4,
-              'title':
-                  'TREATMENT OF SOFT TISSUE INJURIES\n\nHandling cuts, abrasions and lacerations',
+              'title': 'TREATMENT OF SOFT TISSUE INJURIES\n\nRICER Protocol',
               'content': [
-                'Clean the wound with fresh water',
-                'Apply antiseptic solution',
-                'Cover with waterproof bandage',
-                'Seek medical attention for serious wounds',
+                'Rest - prevent further damage',
+                'Ice - decrease swelling and pain',
+                'Compression - reduce internal bleeding',
+                'Elevation - reduce swelling',
+                'Referral/Diagnosis - seek medical attention',
               ],
               'images': [
                 {
-                  'url':
-                      'https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313_1280.jpg',
-                  'description': 'Example image for demonstration purposes',
+                  'path':
+                      'images/Lesson_01_slide_6_ae28a4dc-4a14-4397-82f1-a1aae2c7aba8.png',
+                  'description':
+                      'Different types of shock and their characteristics',
                 },
               ],
             },
@@ -907,9 +911,16 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
               ],
               'images': [
                 {
-                  'url':
-                      'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg',
-                  'description': 'Example image for demonstration purposes',
+                  'path':
+                      'images/Lesson_02_slide_1_37374d19-33c2-4c33-8f26-d0eb1ef05112.png',
+                  'description':
+                      'Pneumothorax diagnosis and emergency management',
+                },
+                {
+                  'path':
+                      'images/Lesson_01_slide_14_51d20603-dd70-47d3-8dba-e2f776ed5b8b.png',
+                  'description':
+                      'Flail chest treatment and management procedure',
                 },
               ],
             },

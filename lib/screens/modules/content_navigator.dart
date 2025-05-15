@@ -82,6 +82,73 @@ class _ContentNavigatorState extends State<ContentNavigator> {
     final slideData = currentContent.additionalData;
     final bool hasFirebaseData = slideData != null;
 
+    // Get appropriate local image for this content
+    List<String> getContentImages(ContentItem content) {
+      // First check if lesson matches any of our extracted lesson content
+      if (content.title.contains("Bleeding") ||
+          content.title.contains("BLEEDING") ||
+          content.title.contains("First Aid") ||
+          content.title.contains("Emergency Procedures")) {
+        // Use images from Lesson_01 - Bleeding
+        return [
+          'output/images/Lesson_01_slide_1_a5708d93-bb45-4572-9616-69c45188d6fa.png',
+          'output/images/Lesson_01_slide_4_2379cb9f-b8e6-417a-bebb-9ccb546977c3.png',
+          'output/images/Lesson_01_slide_5_5cd6309f-1f57-4a19-87e9-ec5279ddd360.png',
+          'output/images/Lesson_01_slide_6_ae28a4dc-4a14-4397-82f1-a1aae2c7aba8.png',
+        ];
+      } else if (content.title.contains("Chest") ||
+          content.title.contains("Trauma") ||
+          content.title.contains("Pneumothorax") ||
+          content.title.contains("Burns") ||
+          content.title.contains("Injuries") ||
+          content.title.contains("Poison")) {
+        // Use images from Lesson_02 - Chest Trauma and other injuries
+        return [
+          'output/images/Lesson_02_slide_1_37374d19-33c2-4c33-8f26-d0eb1ef05112.png',
+          'output/images/Lesson_02_slide_3_517abed7-fe91-4901-8ff2-b5fd9322a4ad.png',
+          'output/images/Lesson_02_slide_6_3963ee76-2390-439f-8216-2723cc1431b7.png',
+          'output/images/Lesson_02_slide_10_ce4f234e-96e6-45f4-a677-f44040018d80.png',
+          'output/images/Lesson_02_slide_11_849d2d38-dc02-4db8-a7aa-17e87cae7a73.png',
+        ];
+      }
+      // Default mapping based on general lesson topics
+      else if (content.title.contains("Introduction")) {
+        return [
+          'output/images/Lesson_01_slide_1_a5708d93-bb45-4572-9616-69c45188d6fa.png',
+        ];
+      } else if (content.title.contains("Equipment") ||
+          content.title.contains("Gear")) {
+        return [
+          'output/images/Lesson_02_slide_6_3963ee76-2390-439f-8216-2723cc1431b7.png',
+        ];
+      } else if (content.title.contains("Safety") ||
+          content.title.contains("Checks")) {
+        return [
+          'output/images/Lesson_01_slide_4_2379cb9f-b8e6-417a-bebb-9ccb546977c3.png',
+          'output/images/Lesson_02_slide_11_849d2d38-dc02-4db8-a7aa-17e87cae7a73.png',
+        ];
+      } else if (content.title.contains("Planning") ||
+          content.title.contains("Risk")) {
+        return [
+          'output/images/Lesson_02_slide_10_ce4f234e-96e6-45f4-a677-f44040018d80.png',
+        ];
+      } else if (content.title.contains("Emergency") ||
+          content.title.contains("Emergencies")) {
+        return [
+          'output/images/Lesson_01_slide_5_5cd6309f-1f57-4a19-87e9-ec5279ddd360.png',
+          'output/images/Lesson_01_slide_6_ae28a4dc-4a14-4397-82f1-a1aae2c7aba8.png',
+          'output/images/Lesson_01_slide_12_b75cffc4-6ebe-4eda-bfcb-a74aa2c45d88.png',
+          'output/images/Lesson_01_slide_14_51d20603-dd70-47d3-8dba-e2f776ed5b8b.png',
+        ];
+      } else {
+        // Default images for any other lesson
+        return [
+          'output/images/Lesson_01_slide_1_a5708d93-bb45-4572-9616-69c45188d6fa.png',
+          'output/images/Lesson_02_slide_1_37374d19-33c2-4c33-8f26-d0eb1ef05112.png',
+        ];
+      }
+    }
+
     // Navigate to appropriate screen based on content type
     switch (currentContent.type) {
       case ContentType.introduction:
@@ -94,7 +161,9 @@ class _ContentNavigatorState extends State<ContentNavigator> {
           imageUrls:
               hasFirebaseData
                   ? null
-                  : ['lib/assets/images/course.jpg'], // Sample image
+                  : getContentImages(
+                    currentContent,
+                  ), // Use appropriate local images
           slideData: slideData, // Pass Firebase slide data to the lesson screen
           isCompleted: currentContent.isCompleted,
           onComplete: _markContentComplete,
@@ -139,7 +208,9 @@ class _ContentNavigatorState extends State<ContentNavigator> {
           moduleTitle: widget.moduleTitle,
           lessonTitle: currentContent.title,
           lessonContent: _getSampleExerciseContent(currentContent),
-          imageUrls: ['lib/assets/images/course2.jpg'], // Sample image
+          imageUrls: getContentImages(
+            currentContent,
+          ), // Use appropriate local images
           slideData: slideData, // Pass Firebase slide data if available
           isCompleted: currentContent.isCompleted,
           onComplete: _markContentComplete,
