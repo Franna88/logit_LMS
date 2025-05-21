@@ -1,905 +1,252 @@
 [
   {
-    "active": true,
+    "_id": "question1",
     "content": {
-      "text": "![CDATA[What is the name of this device?]]",
+      "text": "What is the name of the device used to provide oxygen to a conscious diver?",
       "images": [
         {
-          "height": "",
-          "alt": "",
-          "src": "/ImageUpload/Lesstof/MOD_20180601010933_32e2db72-3aa2-4454-9/Oxygen%20Pocket%20Mask.jpg",
-          "width": ""
+          "src": "oxygen_DV.jpg",
+          "alt": "A demand valve oxygen delivery device",
+          "width": "240",
+          "height": "151"
         }
       ],
-      "html": "![CDATA[<div class=\"Vraag\">What is the name of this device?</div>\n<p class=\"Vraag\"><img alt=\"\" src=\"/ImageUpload/Lesstof/MOD_20180601010933_32e2db72-3aa2-4454-9/Oxygen%20Pocket%20Mask.jpg\" style=\"width: 249px; height: 141px;\" /></p>\n<p class=\"Vraag\">&nbsp;</p>]]"
+      "html": "<div>What is the name of the device used to provide oxygen to a conscious diver?</div>"
     },
     "type": "meerkeuze",
-    "id": "VID_20180531233947_38db66f7-c025-4f34-a",
-    "code": "FA OAS04",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
     "options": [
       {
+        "id": "option1",
         "text": "Demand Inhalator Valve and Mask",
-        "is_correct": false,
-        "id": "ANT_20180531233947_0fe6bfb9-0131-4ca8-8"
+        "is_correct": true
       },
       {
+        "id": "option2",
         "text": "Pocket Mask Resuscitator",
-        "is_correct": true,
-        "id": "ANT_20180531233947_92a5825e-2620-4fb5-a"
+        "is_correct": false
       },
       {
-        "text": "Built in Breathing System (BIBS)",
-        "is_correct": false,
-        "id": "ANT_20180531233947_d4bd4675-f23d-4a74-a"
-      },
-      {
+        "id": "option3",
         "text": "Bag Valve Mask (BVM) resuscitator",
-        "is_correct": false,
-        "id": "ANT_20180531233947_e1a23e70-f28d-49e2-9"
+        "is_correct": false
       }
     ],
-    "categoryId": "VRC_20180210065458_b7fffa30-3551-445d-8",
-    "_id": "VID_20180531233947_38db66f7-c025-4f34-a",
-    "_path": "questions/VID_20180531233947_38db66f7-c025-4f34-a",
-    "_collection": "questions"
+    "code": "OX-Q1"
   },
   {
-    "active": true,
+    "_id": "question2",
     "content": {
-      "text": "What is the expected response time for provision of basic First-Aid   including Oxygen administration?",
+      "text": "What is the expected response time for provision of basic First-Aid including Oxygen administration?",
       "images": [],
-      "html": "<div class=\"Vraag\">What is the expected response time for provision of basic First-Aid   including Oxygen administration?</div>"
+      "html": "<div>What is the expected response time for provision of basic First-Aid including Oxygen administration?</div>"
     },
     "type": "meerkeuze",
-    "id": "VID_20180531233947_3a0a39b0-4151-4b08-b",
-    "code": "FA OAS01 ",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
     "options": [
       {
+        "id": "option1",
         "text": "4 minutes",
-        "is_correct": true,
-        "id": "ANT_20180531233947_37f3d6db-cf80-42f0-8"
+        "is_correct": true
       },
       {
-        "text": "60 minutes",
-        "is_correct": false,
-        "id": "ANT_20180531233947_9d1f7a77-4311-40dc-8"
-      },
-      {
+        "id": "option2",
         "text": "20 minutes",
-        "is_correct": false,
-        "id": "ANT_20180531233947_d564444f-9c8e-44bd-9"
+        "is_correct": false
+      },
+      {
+        "id": "option3",
+        "text": "60 minutes",
+        "is_correct": false
       }
     ],
-    "categoryId": "VRC_20180901093144_9f83ad1b-4d65-4fd4-8",
-    "_id": "VID_20180531233947_3a0a39b0-4151-4b08-b",
-    "_path": "questions/VID_20180531233947_3a0a39b0-4151-4b08-b",
-    "_collection": "questions"
+    "code": "OX-Q2"
   },
   {
-    "active": true,
+    "_id": "question3",
     "content": {
       "text": "The duties and responsibilities of the designated oxygen provider are: (multiple correct answers)",
       "images": [],
-      "html": "<div class=\"Vraag\">The duties and responsibilities of the designated oxygen provider are: (multiple correct answers)</div>"
+      "html": "<div>The duties and responsibilities of the designated oxygen provider are: (multiple correct answers)</div>"
     },
     "type": "meermeerkeuze",
-    "id": "VID_20180531233947_4ad129f5-9a9e-49bd-a",
-    "code": "FA OAS02",
-    "scoreType": "spa",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
     "options": [
       {
+        "id": "option1",
         "text": "Make sure the oxygen cylinder is re-filled and all used items replaced after any incident",
-        "is_correct": true,
-        "id": "ANT_20180531233947_005fe216-a343-4640-a"
+        "is_correct": true
       },
       {
-        "text": "To be competent in the correct use of oxygen at the surface and within the chamber. Have a sound knowledge of airway management.",
-        "is_correct": true,
-        "id": "ANT_20180531233947_175b28a5-2430-473d-8"
+        "id": "option2",
+        "text": "To be competent in the correct use of oxygen at the surface and within the chamber",
+        "is_correct": true
       },
       {
-        "text": "To complete daily checks to ensure all components are present and function tested according to a check list.",
-        "is_correct": true,
-        "id": "ANT_20180531233947_923bacf1-0c1d-4459-a"
+        "id": "option3",
+        "text": "To complete daily checks to ensure all components are present and function tested",
+        "is_correct": true
       },
       {
-        "text": "To check and record the pressure in the oxygen system prior to commencing diving operations.",
-        "is_correct": true,
-        "id": "ANT_20180531233947_cfe3df4c-98d8-4bd0-9"
-      },
-      {
-        "text": "To ensure oxygen is on site, clearly labeled and accessible.",
-        "is_correct": true,
-        "id": "ANT_20180531233947_ebd4d7c5-b664-4a91-9"
+        "id": "option4",
+        "text": "To ensure oxygen is on site, clearly labeled and accessible",
+        "is_correct": true
       }
     ],
-    "categoryId": "VRC_20180901093144_9f83ad1b-4d65-4fd4-8",
-    "_id": "VID_20180531233947_4ad129f5-9a9e-49bd-a",
-    "_path": "questions/VID_20180531233947_4ad129f5-9a9e-49bd-a",
-    "_collection": "questions"
+    "code": "OX-Q3"
   },
   {
-    "active": true,
+    "_id": "question4",
     "content": {
-      "text": "Which oxygen delivery device can be used on an Injured Person who is \u00a0 conscious, alert and orientated?\u00a0(multiple correct answers)",
+      "text": "Which oxygen delivery device can be used on an Injured Person who is conscious, alert and orientated? (multiple correct answers)",
       "images": [],
-      "html": "<div class=\"Vraag\">Which oxygen delivery device can be used on an Injured Person who is &nbsp; conscious, alert and orientated?&nbsp;(multiple correct answers)</div>"
+      "html": "<div>Which oxygen delivery device can be used on an Injured Person who is conscious, alert and orientated? (multiple correct answers)</div>"
     },
     "type": "meermeerkeuze",
-    "id": "VID_20180531233947_62e20f93-5604-40ad-a",
-    "code": "FA OAS07",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
     "options": [
       {
+        "id": "option1",
         "text": "Demand Inhalator Valve and Mask",
-        "is_correct": true,
-        "id": "ANT_20180531233947_0721406a-2e21-4bd8-8"
+        "is_correct": true
       },
       {
+        "id": "option2",
         "text": "Pocket Mask Resuscitator",
-        "is_correct": false,
-        "id": "ANT_20180531233947_0c94b3d3-5084-4bd1-8"
+        "is_correct": false
       },
       {
+        "id": "option3",
         "text": "Bag Valve Mask (BVM) Resuscitator",
-        "is_correct": false,
-        "id": "ANT_20180531233947_c6baff4b-8d75-4617-a"
+        "is_correct": false
       },
       {
+        "id": "option4",
         "text": "Non Rebreather Mask",
-        "is_correct": true,
-        "id": "ANT_20180531233947_f69860c0-2bc4-4807-a"
+        "is_correct": true
       }
     ],
-    "categoryId": "VRC_20180901093144_9f83ad1b-4d65-4fd4-8",
-    "_id": "VID_20180531233947_62e20f93-5604-40ad-a",
-    "_path": "questions/VID_20180531233947_62e20f93-5604-40ad-a",
-    "_collection": "questions"
+    "code": "OX-Q4"
   },
   {
-    "active": true,
+    "_id": "question5",
     "content": {
-      "text": "![CDATA[What is the name of this device?]]",
+      "text": "On what flow rate must this device be used on?",
       "images": [
         {
-          "height": "",
-          "alt": "",
-          "src": "/ImageUpload/Lesstof/MOD_20180601010933_32e2db72-3aa2-4454-9/oxygen%20DV%20Low%20%20Pix%20shutterstock_309677624.jpg",
-          "width": ""
+          "src": "oxygen_NRM.png",
+          "alt": "A non-rebreather mask",
+          "width": "216",
+          "height": "167"
         }
       ],
-      "html": "![CDATA[<div class=\"Vraag\">What is the name of this device?</div>\n<p class=\"Vraag\"><img alt=\"\" src=\"/ImageUpload/Lesstof/MOD_20180601010933_32e2db72-3aa2-4454-9/oxygen%20DV%20Low%20%20Pix%20shutterstock_309677624.jpg\" style=\"width: 229px; height: 148px;\" /></p>]]"
+      "html": "<div>On what flow rate must this device be used on?</div>"
     },
     "type": "meerkeuze",
-    "id": "VID_20180531233947_68f850a1-e0cb-4f2b-8",
-    "code": "FA OAS03",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
     "options": [
       {
-        "text": "Bag Valve Mask Resuscitator",
-        "is_correct": false,
-        "id": "ANT_20180531233947_556ee4bf-48d2-4192-b"
-      },
-      {
-        "text": "Demand Inhalator Valve",
-        "is_correct": true,
-        "id": "ANT_20180531233947_66a9d929-69f5-44d0-a"
-      },
-      {
-        "text": "Pocket Mask Resuscitator",
-        "is_correct": false,
-        "id": "ANT_20180531233947_803ada8c-ee82-4086-9"
-      },
-      {
-        "text": "Non- Rebreather Mask",
-        "is_correct": false,
-        "id": "ANT_20180531233947_b9e37817-a80a-46d3-a"
-      }
-    ],
-    "categoryId": "VRC_20180210065458_b7fffa30-3551-445d-8",
-    "_id": "VID_20180531233947_68f850a1-e0cb-4f2b-8",
-    "_path": "questions/VID_20180531233947_68f850a1-e0cb-4f2b-8",
-    "_collection": "questions"
-  },
-  {
-    "active": true,
-    "content": {
-      "text": "![CDATA[On what flow rate must this device be on]]",
-      "images": [
-        {
-          "height": "",
-          "alt": "",
-          "src": "/ImageUpload/Lesstof/MOD_20180601010933_32e2db72-3aa2-4454-9/Oxygen%20BVM_1.jpg",
-          "width": ""
-        }
-      ],
-      "html": "![CDATA[<div class=\"Vraag\">On what flow rate must this device be on&nbsp;</div>\n<p class=\"Vraag\"><img alt=\"\" src=\"/ImageUpload/Lesstof/MOD_20180601010933_32e2db72-3aa2-4454-9/Oxygen%20BVM_1.jpg\" style=\"width: 243px; height: 156px; border-width: 1px; border-style: solid;\" /></p>]]"
-    },
-    "type": "meerkeuze",
-    "id": "VID_20180531233947_95fc3879-7a70-44fe-b",
-    "code": "FA OAS06",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
-    "options": [
-      {
+        "id": "option1",
         "text": "Four (4) LPM",
-        "is_correct": false,
-        "id": "ANT_20180531233947_64447efc-e5b2-4c6f-b"
+        "is_correct": false
       },
       {
+        "id": "option2",
+        "text": "Zero (0) LPM",
+        "is_correct": false
+      },
+      {
+        "id": "option3",
         "text": "Fifteen (15) LPM",
-        "is_correct": true,
-        "id": "ANT_20180531233947_7960c8e0-a2ef-482c-a"
-      },
-      {
-        "text": "Zero (0) LPM",
-        "is_correct": false,
-        "id": "ANT_20180531233947_92a68fc5-1ab5-486e-8"
+        "is_correct": true
       }
     ],
-    "categoryId": "VRC_20180210065458_b7fffa30-3551-445d-8",
-    "_id": "VID_20180531233947_95fc3879-7a70-44fe-b",
-    "_path": "questions/VID_20180531233947_95fc3879-7a70-44fe-b",
-    "_collection": "questions"
+    "code": "OX-Q5"
   },
   {
-    "active": true,
-    "content": {
-      "text": "![CDATA[On what flow rate must this device be used on;]]",
-      "images": [
-        {
-          "height": "",
-          "alt": "",
-          "src": "/ImageUpload/Lesstof/MOD_20180601010933_32e2db72-3aa2-4454-9/oxygen%20DV%20Low%20%20Pix%20shutterstock_309677624.jpg",
-          "width": ""
-        }
-      ],
-      "html": "![CDATA[<div class=\"Vraag\">On what flow rate must this device be used on;</div>\n<p class=\"Vraag\"><img alt=\"\" src=\"/ImageUpload/Lesstof/MOD_20180601010933_32e2db72-3aa2-4454-9/oxygen%20DV%20Low%20%20Pix%20shutterstock_309677624.jpg\" style=\"width: 240px; height: 151px;\" /></p>]]"
-    },
-    "type": "meerkeuze",
-    "id": "VID_20180531233947_af03af63-878f-435f-8",
-    "code": "FA OAS05",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
-    "options": [
-      {
-        "text": "15 LPM",
-        "is_correct": false,
-        "id": "ANT_20180531233947_28f39188-9bcf-4470-8"
-      },
-      {
-        "text": "4 LPM",
-        "is_correct": false,
-        "id": "ANT_20180531233947_9cf84d99-fc28-4238-9"
-      },
-      {
-        "text": "Zero (0) LPM",
-        "is_correct": true,
-        "id": "ANT_20180531233947_de9c2a3d-dd53-4f54-b"
-      }
-    ],
-    "categoryId": "VRC_20180901093144_9f83ad1b-4d65-4fd4-8",
-    "_id": "VID_20180531233947_af03af63-878f-435f-8",
-    "_path": "questions/VID_20180531233947_af03af63-878f-435f-8",
-    "_collection": "questions"
-  },
-  {
-    "active": true,
-    "content": {
-      "text": "![CDATA[What is the name of this device?]]",
-      "images": [
-        {
-          "height": "",
-          "alt": "",
-          "src": "/ImageUpload/Lesstof/MOD_20180601010933_32e2db72-3aa2-4454-9/Oxygen%20-%20NRM.png",
-          "width": ""
-        }
-      ],
-      "html": "![CDATA[<div class=\"Vraag\">What is the name of this device?</div>\n<img alt=\"\" src=\"/ImageUpload/Lesstof/MOD_20180601010933_32e2db72-3aa2-4454-9/Oxygen%20-%20NRM.png\" style=\"width: 216.605px; height: 167.84px;\" />]]"
-    },
-    "type": "meerkeuze",
-    "id": "VID_20180531233948_03abc0ba-be44-4eb6-b",
-    "code": "Practest 04",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
-    "options": [
-      {
-        "text": "Pocket Mask Resuscitator",
-        "is_correct": false,
-        "id": "ANT_20180531233948_17ff3070-d7ba-452f-8"
-      },
-      {
-        "text": "Non- Rebreather Mask",
-        "is_correct": true,
-        "id": "ANT_20180531233948_27844643-8829-4daf-8"
-      },
-      {
-        "text": "Demand Inhalator Valve",
-        "is_correct": false,
-        "id": "ANT_20180531233948_af4d530a-f416-4eef-9"
-      },
-      {
-        "text": "Bag Valve Mask Resuscitator",
-        "is_correct": false,
-        "id": "ANT_20180531233948_bff8b8d1-bc50-4fd7-a"
-      }
-    ],
-    "categoryId": "VRC_20180901093144_9f83ad1b-4d65-4fd4-8",
-    "_id": "VID_20180531233948_03abc0ba-be44-4eb6-b",
-    "_path": "questions/VID_20180531233948_03abc0ba-be44-4eb6-b",
-    "_collection": "questions"
-  },
-  {
-    "active": true,
-    "content": {
-      "text": "![CDATA[On what flow rate must this device be used on;]]",
-      "images": [
-        {
-          "height": "",
-          "alt": "",
-          "src": "/ImageUpload/Lesstof/MOD_20180601010933_32e2db72-3aa2-4454-9/Oxygen%20Pocket%20Mask.jpg",
-          "width": ""
-        }
-      ],
-      "html": "![CDATA[<div class=\"Vraag\">On what flow rate must this device be used on;</div>\n<img alt=\"\" src=\"/ImageUpload/Lesstof/MOD_20180601010933_32e2db72-3aa2-4454-9/Oxygen%20Pocket%20Mask.jpg\" style=\"width: 284.449px; height: 163.68px;\" />]]"
-    },
-    "type": "meerkeuze",
-    "id": "VID_20180531233948_1497fb27-e60b-4ab3-a",
-    "code": "Practest 06",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
-    "options": [
-      {
-        "text": "15 LPM",
-        "is_correct": true,
-        "id": "ANT_20180531233948_0bed4a8b-2406-4ed2-9"
-      },
-      {
-        "text": "4 LPM",
-        "is_correct": false,
-        "id": "ANT_20180531233948_10e1cf7c-2b93-4e69-b"
-      },
-      {
-        "text": "Zero (0) LPM",
-        "is_correct": false,
-        "id": "ANT_20180531233948_3aab9d2f-ed84-41d9-9"
-      }
-    ],
-    "categoryId": "VRC_20180901093144_9f83ad1b-4d65-4fd4-8",
-    "_id": "VID_20180531233948_1497fb27-e60b-4ab3-a",
-    "_path": "questions/VID_20180531233948_1497fb27-e60b-4ab3-a",
-    "_collection": "questions"
-  },
-  {
-    "active": true,
-    "content": {
-      "text": "List the seven (7) steps of the Primary Survey",
-      "images": [],
-      "html": "<div class=\"Vraag\">List the seven (7) steps of the Primary Survey&nbsp;</div>"
-    },
-    "type": "meerkeuze",
-    "id": "VID_20180531233948_197f6786-01ed-4f84-a",
-    "code": "Practest 10",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
-    "options": [
-      {
-        "text": "Vital sign,Neurological, Head-to-toe, Pain assessments and patient history",
-        "is_correct": false,
-        "id": "ANT_20180531233948_3fe9c2c2-d3a7-4ba2-a"
-      },
-      {
-        "text": "Hazards (Dangers), Hello (Response), Help (Send for Help), Airway, Breathing, Circulation and Rapid assessment and treatment of obvious injury or illness.",
-        "is_correct": true,
-        "id": "ANT_20180531233948_53537ad4-5bc1-44db-9"
-      },
-      {
-        "text": "Send for Help, Airway, Breathing, Circulation, Hazards (Dangers), Hello (Response) and Rapid assessment and treatment of obvious injury or illness.",
-        "is_correct": false,
-        "id": "ANT_20180531233948_67339c6e-5000-4490-9"
-      },
-      {
-        "text": "Rapid assessment and treatment of obvious injury or illness, Send for Help, Hazards (Dangers), Hello (Response),  Airway, Breathing, Circulation",
-        "is_correct": false,
-        "id": "ANT_20180531233948_ecb53543-ff37-4e2d-9"
-      }
-    ],
-    "categoryId": "VRC_20180210065458_b7fffa30-3551-445d-8",
-    "_id": "VID_20180531233948_197f6786-01ed-4f84-a",
-    "_path": "questions/VID_20180531233948_197f6786-01ed-4f84-a",
-    "_collection": "questions"
-  },
-  {
-    "active": true,
-    "content": {
-      "text": "In what position to you place an Injured Person who is unconscious?",
-      "images": [],
-      "html": "<div class=\"Vraag\">In what position to you place an Injured Person who is unconscious?</div>"
-    },
-    "type": "meerkeuze",
-    "id": "VID_20180531233948_1bcfbc72-4b8c-45f0-9",
-    "code": "Practest 11",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
-    "options": [
-      {
-        "text": "Place them flat on their back (supine)",
-        "is_correct": false,
-        "id": "ANT_20180531233948_687e43fc-0783-48aa-9"
-      },
-      {
-        "text": "Place them in a semi-seated position",
-        "is_correct": false,
-        "id": "ANT_20180531233948_91d72fbd-e172-408c-b"
-      },
-      {
-        "text": "Allow them to maintain a position of comfort",
-        "is_correct": false,
-        "id": "ANT_20180531233948_c6dd3535-da86-47e2-9"
-      },
-      {
-        "text": "Place them on their side (recovery position)",
-        "is_correct": true,
-        "id": "ANT_20180531233948_c739719d-1730-45b6-9"
-      }
-    ],
-    "categoryId": "VRC_20180901093144_9f83ad1b-4d65-4fd4-8",
-    "_id": "VID_20180531233948_1bcfbc72-4b8c-45f0-9",
-    "_path": "questions/VID_20180531233948_1bcfbc72-4b8c-45f0-9",
-    "_collection": "questions"
-  },
-  {
-    "active": true,
-    "content": {
-      "text": "![CDATA[On what flow rate must this device be on]]",
-      "images": [
-        {
-          "height": "",
-          "alt": "",
-          "src": "/ImageUpload/Lesstof/MOD_20180601010933_32e2db72-3aa2-4454-9/Oxygen%20-%20NRM.png",
-          "width": ""
-        }
-      ],
-      "html": "![CDATA[<div class=\"Vraag\">On what flow rate must this device be on&nbsp;</div>\n<img alt=\"\" src=\"/ImageUpload/Lesstof/MOD_20180601010933_32e2db72-3aa2-4454-9/Oxygen%20-%20NRM.png\" style=\"width: 300px; height: 207px;\" />]]"
-    },
-    "type": "meerkeuze",
-    "id": "VID_20180531233948_2330bd6b-94d5-4675-b",
-    "code": "Practest 07",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
-    "options": [
-      {
-        "text": "Four (4) LPM",
-        "is_correct": false,
-        "id": "ANT_20180531233948_2a473f0d-9d1c-4ddc-9"
-      },
-      {
-        "text": "Zero (0) LPM",
-        "is_correct": false,
-        "id": "ANT_20180531233948_72e2367d-ad6d-4ca8-8"
-      },
-      {
-        "text": "Fifteen (15) LPM",
-        "is_correct": true,
-        "id": "ANT_20180531233948_cf53001d-e5fc-4c06-8"
-      }
-    ],
-    "categoryId": "VRC_20180210065458_b7fffa30-3551-445d-8",
-    "_id": "VID_20180531233948_2330bd6b-94d5-4675-b",
-    "_path": "questions/VID_20180531233948_2330bd6b-94d5-4675-b",
-    "_collection": "questions"
-  },
-  {
-    "active": true,
+    "_id": "question6",
     "content": {
       "text": "All oxygen pressure regulators are to have: (multiple correct answers)",
       "images": [],
-      "html": "<div class=\"Vraag\">All oxygen pressure regulators are to have: (multiple correct answers)</div>"
+      "html": "<div>All oxygen pressure regulators are to have: (multiple correct answers)</div>"
     },
     "type": "meermeerkeuze",
-    "id": "VID_20180531233948_24a9d5ef-a16d-4a67-b",
-    "code": "Practest 13",
-    "scoreType": "spa",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
     "options": [
       {
+        "id": "option1",
         "text": "A contents gauge to indicate how much oxygen is available",
-        "is_correct": true,
-        "id": "ANT_20180531233948_6173e8ec-9c76-42af-8"
+        "is_correct": true
       },
       {
+        "id": "option2",
         "text": "A functioning flow meter to set the oxygen flow control in Liter(s) per minute (LPM)",
-        "is_correct": true,
-        "id": "ANT_20180531233948_85bc975c-a34b-4326-8"
+        "is_correct": true
       },
       {
+        "id": "option3",
         "text": "To be well oiled and greased",
-        "is_correct": false,
-        "id": "ANT_20180531233948_8aa831b7-fa5f-49df-9"
+        "is_correct": false
       },
       {
+        "id": "option4",
         "text": "Have a o-ring and correct lubrication",
-        "is_correct": false,
-        "id": "ANT_20180531233948_e37125c3-6378-41e9-9"
+        "is_correct": false
       }
     ],
-    "categoryId": "VRC_20180901093144_9f83ad1b-4d65-4fd4-8",
-    "_id": "VID_20180531233948_24a9d5ef-a16d-4a67-b",
-    "_path": "questions/VID_20180531233948_24a9d5ef-a16d-4a67-b",
-    "_collection": "questions"
+    "code": "OX-Q6"
   },
   {
-    "active": true,
+    "_id": "question7",
     "content": {
-      "text": "Which pressure regulator has a unique configuration of holes and pins which match precisely to eliminate connection of the wrong cylinder to the wrong pressure regulator?",
+      "text": "In what position to you place an Injured Person who is unconscious?",
       "images": [],
-      "html": "<div class=\"Vraag\">Which pressure regulator has a unique configuration of holes and pins which match precisely to eliminate connection of the wrong cylinder to the wrong pressure regulator?</div>"
+      "html": "<div>In what position to you place an Injured Person who is unconscious?</div>"
     },
     "type": "meerkeuze",
-    "id": "VID_20180531233948_2d97e860-6015-476a-b",
-    "code": "Practest 12",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
     "options": [
       {
-        "text": "Bull nose\u00a0fitting",
-        "is_correct": false,
-        "id": "ANT_20180531233948_375dba4b-d291-47df-9"
+        "id": "option1",
+        "text": "Place them flat on their back (supine)",
+        "is_correct": false
       },
       {
-        "text": "Pin Index fitting",
-        "is_correct": true,
-        "id": "ANT_20180531233948_85b09447-a70c-4d6c-9"
+        "id": "option2",
+        "text": "Place them in a semi-seated position",
+        "is_correct": false
       },
       {
-        "text": "A-Clamp fitting",
-        "is_correct": false,
-        "id": "ANT_20180531233948_9aa1405c-229e-44d3-b"
+        "id": "option3",
+        "text": "Allow them to maintain a position of comfort",
+        "is_correct": false
       },
       {
-        "text": "DIN fitting",
-        "is_correct": false,
-        "id": "ANT_20180531233948_d006af0f-cf0a-4f46-8"
+        "id": "option4",
+        "text": "Place them on their side (recovery position)",
+        "is_correct": true
       }
     ],
-    "categoryId": "VRC_20180210065458_b7fffa30-3551-445d-8",
-    "_id": "VID_20180531233948_2d97e860-6015-476a-b",
-    "_path": "questions/VID_20180531233948_2d97e860-6015-476a-b",
-    "_collection": "questions"
+    "code": "OX-Q7"
   },
   {
-    "active": true,
+    "_id": "question8",
     "content": {
-      "text": "![CDATA[What is the name of this device?]]",
-      "images": [
-        {
-          "height": "",
-          "alt": "",
-          "src": "/ImageUpload/Lesstof/MOD_20180601010933_32e2db72-3aa2-4454-9/Oxygen%20BVM_1.jpg",
-          "width": ""
-        }
-      ],
-      "html": "![CDATA[<div class=\"Vraag\">What is the name of this device?</div>\n<img alt=\"\" src=\"/ImageUpload/Lesstof/MOD_20180601010933_32e2db72-3aa2-4454-9/Oxygen%20BVM_1.jpg\" style=\"width: 274.723px; height: 167.848px;\" />\n<p class=\"Vraag\">&nbsp;</p>]]"
+      "text": "The brain can only survive short periods of time without oxygen?",
+      "images": [],
+      "html": "<div>The brain can only survive short periods of time without oxygen?</div>"
     },
     "type": "meerkeuze",
-    "id": "VID_20180531233948_35034c0c-e269-4d43-a",
-    "code": "Practest 05",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
     "options": [
       {
-        "text": "Bag Valve Mask (BVM) resuscitator",
-        "is_correct": false,
-        "id": "ANT_20180531233948_1d512ee9-a562-4a5f-8"
-      },
-      {
-        "text": "Pocket Mask Resuscitator",
-        "is_correct": true,
-        "id": "ANT_20180531233948_8bc27e2e-5f84-48d6-8"
-      },
-      {
-        "text": "Demand Inhalator Valve and Mask",
-        "is_correct": false,
-        "id": "ANT_20180531233948_957c9c80-ce11-45f5-8"
-      },
-      {
-        "text": "Built in Breathing System (BIBS)",
-        "is_correct": false,
-        "id": "ANT_20180531233948_ba6adf81-0f22-4f0c-b"
-      }
-    ],
-    "categoryId": "VRC_20180210065458_b7fffa30-3551-445d-8",
-    "_id": "VID_20180531233948_35034c0c-e269-4d43-a",
-    "_path": "questions/VID_20180531233948_35034c0c-e269-4d43-a",
-    "_collection": "questions"
-  },
-  {
-    "active": true,
-    "content": {
-      "text": "Which oxygen delivery device can be used on an Injured Person who is not breathing ?(multiple correct answers)",
-      "images": [],
-      "html": "<div class=\"Vraag\">Which oxygen delivery device can be used on an Injured Person who is not breathing ?(multiple correct answers)</div>"
-    },
-    "type": "meermeerkeuze",
-    "id": "VID_20180531233948_3e794a3f-16b6-4dda-9",
-    "code": "Practest 09",
-    "scoreType": "spa",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
-    "options": [
-      {
-        "text": "Pocket Mask resuscitator",
-        "is_correct": true,
-        "id": "ANT_20180531233948_068b27ed-e2e2-4ff1-b"
-      },
-      {
-        "text": "Non Rebreather Mask",
-        "is_correct": false,
-        "id": "ANT_20180531233948_6e7ed84e-8e89-4e3c-8"
-      },
-      {
-        "text": "Demand Inhalator Valve and Mask",
-        "is_correct": false,
-        "id": "ANT_20180531233948_a5557397-a9a6-4b76-8"
-      },
-      {
-        "text": "Bag Valve Mask Resuscitator",
-        "is_correct": true,
-        "id": "ANT_20180531233948_c65c2917-4ef7-4c3b-b"
-      }
-    ],
-    "categoryId": "VRC_20180901093144_9f83ad1b-4d65-4fd4-8",
-    "_id": "VID_20180531233948_3e794a3f-16b6-4dda-9",
-    "_path": "questions/VID_20180531233948_3e794a3f-16b6-4dda-9",
-    "_collection": "questions"
-  },
-  {
-    "active": true,
-    "content": {
-      "text": "![CDATA[How long will a\u00a03l cylinder pressurized to 140 bar containing 420l of available oxygen last, if using a continuous flow mask at 15 LPM?]]",
-      "images": [],
-      "html": "![CDATA[<div class=\"Vraag\">\n<ul style=\"color: #222222; padding: 0px; list-style-type: none; list-style-image: initial;\">\n    <li style=\"padding: 0px; list-style-type: disc;\">How long will a&nbsp;3l cylinder pressurized to 140 bar containing 420l of available oxygen last, if using a continuous flow mask at 15 LPM?</li>\n</ul>\n</div>]]"
-    },
-    "type": "meerkeuze",
-    "id": "VID_20180531233948_52eb5485-8272-4466-9",
-    "code": "Practest 14",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
-    "options": [
-      {
-        "text": "Have no flippin\\\" clue",
-        "is_correct": false,
-        "id": "ANT_20180531233948_28ba8a7e-90a5-4f1c-8"
-      },
-      {
-        "text": "30 minutes of oxygen supply",
-        "is_correct": false,
-        "id": "ANT_20180531233948_303ad890-8255-4463-8"
-      },
-      {
-        "text": "9 minutes of oxygen supply",
-        "is_correct": false,
-        "id": "ANT_20180531233948_7419b5f6-e867-4294-9"
-      },
-      {
-        "text": "28 minutes of oxygen supply",
-        "is_correct": true,
-        "id": "ANT_20180531233948_867ef3a9-58fe-434b-9"
-      }
-    ],
-    "categoryId": "VRC_20180901093144_9f83ad1b-4d65-4fd4-8",
-    "_id": "VID_20180531233948_52eb5485-8272-4466-9",
-    "_path": "questions/VID_20180531233948_52eb5485-8272-4466-9",
-    "_collection": "questions"
-  },
-  {
-    "active": true,
-    "content": {
-      "text": "The use of 100% inhaled oxygen is considered the standard care of diving emergencies?",
-      "images": [],
-      "html": "<div class=\"Vraag\">The use of 100% inhaled oxygen is considered the standard care of diving emergencies?</div>"
-    },
-    "type": "meerkeuze",
-    "id": "VID_20180531233948_65983235-ee0b-4398-8",
-    "code": "Pre test 21",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
-    "options": [
-      {
-        "text": "False",
-        "is_correct": false,
-        "id": "ANT_20180531233948_31686ea5-2d16-429e-8"
-      },
-      {
-        "text": "True",
-        "is_correct": true,
-        "id": "ANT_20180531233948_51af56ff-8266-4ab4-8"
-      }
-    ],
-    "categoryId": "VRC_20180210065458_b7fffa30-3551-445d-8",
-    "_id": "VID_20180531233948_65983235-ee0b-4398-8",
-    "_path": "questions/VID_20180531233948_65983235-ee0b-4398-8",
-    "_collection": "questions"
-  },
-  {
-    "active": true,
-    "content": {
-      "text": "Portable oxygen systems can be taken into the chamber to deliver oxygen to an injured person during recompression?",
-      "images": [],
-      "html": "<div class=\"Vraag\">Portable oxygen systems can be taken into the chamber to deliver oxygen to an injured person during recompression?</div>"
-    },
-    "type": "meerkeuze",
-    "id": "VID_20180531233948_b38427bc-925b-4ea9-8",
-    "code": "Pre test 13",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
-    "options": [
-      {
-        "text": "True",
-        "is_correct": false,
-        "id": "ANT_20180531233948_578a99b6-472a-421e-b"
-      },
-      {
-        "text": "False",
-        "is_correct": true,
-        "id": "ANT_20180531233948_74384fc7-c628-434b-a"
-      }
-    ],
-    "categoryId": "VRC_20180901093144_9f83ad1b-4d65-4fd4-8",
-    "_id": "VID_20180531233948_b38427bc-925b-4ea9-8",
-    "_path": "questions/VID_20180531233948_b38427bc-925b-4ea9-8",
-    "_collection": "questions"
-  },
-  {
-    "active": true,
-    "content": {
-      "text": "The brain can only survive short periods of time without oxygen\u00a0?",
-      "images": [],
-      "html": "<div class=\"Vraag\">The brain can only survive short periods of time without oxygen&nbsp;?</div>"
-    },
-    "type": "meerkeuze",
-    "id": "VID_20180531233948_c313ae2c-9a3b-483a-8",
-    "code": "Pre test 20",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
-    "options": [
-      {
+        "id": "option1",
         "text": "30 minutes to 1 hour",
-        "is_correct": false,
-        "id": "ANT_20180531233948_096ed0e6-80ef-4636-a"
+        "is_correct": false
       },
       {
+        "id": "option2",
         "text": "4-6 minutes",
-        "is_correct": true,
-        "id": "ANT_20180531233948_4ebc5672-7dcc-4a49-9"
+        "is_correct": true
       },
       {
-        "text": "2- 4 hours",
-        "is_correct": false,
-        "id": "ANT_20180531233948_7e79c9ec-22d9-4b9a-a"
+        "id": "option3",
+        "text": "2-4 hours",
+        "is_correct": false
       }
     ],
-    "categoryId": "VRC_20180210065458_b7fffa30-3551-445d-8",
-    "_id": "VID_20180531233948_c313ae2c-9a3b-483a-8",
-    "_path": "questions/VID_20180531233948_c313ae2c-9a3b-483a-8",
-    "_collection": "questions"
-  },
-  {
-    "active": true,
-    "content": {
-      "text": "The filling pressure of \u00a0the light weight aluminium portable oxygen cylinders is usually?",
-      "images": [],
-      "html": "<div class=\"Vraag\">The filling pressure of &nbsp;the light weight aluminium portable oxygen cylinders is usually?</div>"
-    },
-    "type": "meerkeuze",
-    "id": "VID_20180531233948_e40e5e1d-de0c-4ae7-8",
-    "code": "Pre test 11",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
-    "options": [
-      {
-        "text": "140 \u00a0- 150 bar",
-        "is_correct": true,
-        "id": "ANT_20180531233948_42df6b1a-db6f-411d-b"
-      },
-      {
-        "text": "140 up to 230bar.",
-        "is_correct": false,
-        "id": "ANT_20180531233948_5988dc18-764f-49d9-a"
-      },
-      {
-        "text": "250 -300 bar",
-        "is_correct": false,
-        "id": "ANT_20180531233948_d00d7325-4c9f-47ef-a"
-      }
-    ],
-    "categoryId": "VRC_20180210065458_b7fffa30-3551-445d-8",
-    "_id": "VID_20180531233948_e40e5e1d-de0c-4ae7-8",
-    "_path": "questions/VID_20180531233948_e40e5e1d-de0c-4ae7-8",
-    "_collection": "questions"
-  },
-  {
-    "active": true,
-    "content": {
-      "text": "When using the AED what should you do first ?",
-      "images": [],
-      "html": "<div class=\"Vraag\">When using the AED what should you do first ?</div>"
-    },
-    "type": "meerkeuze",
-    "id": "VID_20180531233948_f3cbc2c4-1704-409b-9",
-    "code": "Pre test 01",
-    "scoreType": "spv",
-    "createdAt": "2025-05-18T19:26:47.913000+00:00",
-    "moduleId": "MOD_20180601010933_32e2db72-3aa2-4454-9",
-    "updatedAt": "2025-05-18T19:26:47.913000+00:00",
-    "options": [
-      {
-        "text": "Press the \"power on\" Button",
-        "is_correct": true,
-        "id": "ANT_20180531233948_38d151ba-2725-42df-a"
-      },
-      {
-        "text": "Attach the pads",
-        "is_correct": false,
-        "id": "ANT_20180531233948_59703360-016e-4658-9"
-      },
-      {
-        "text": "Press the\u00a0\"Shock\" Button",
-        "is_correct": false,
-        "id": "ANT_20180531233948_a301a76d-d1db-4886-b"
-      }
-    ],
-    "categoryId": "VRC_20180210065458_b7fffa30-3551-445d-8",
-    "_id": "VID_20180531233948_f3cbc2c4-1704-409b-9",
-    "_path": "questions/VID_20180531233948_f3cbc2c4-1704-409b-9",
-    "_collection": "questions"
+    "code": "OX-Q8"
   }
 ]

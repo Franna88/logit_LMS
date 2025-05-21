@@ -124,16 +124,16 @@ class _StudentCoursesScreenState extends State<StudentCoursesScreen> {
   Widget _buildCourseStats() {
     return Row(
       children: [
-        _buildStatCard('5', 'Total Courses', Icons.book, Colors.blue),
+        _buildStatCard('2', 'Total Courses', Icons.book, Colors.blue),
         const SizedBox(width: 16),
         _buildStatCard(
-          '3',
+          '1',
           'In Progress',
           Icons.play_circle_fill,
           Colors.orange,
         ),
         const SizedBox(width: 16),
-        _buildStatCard('2', 'Completed', Icons.check_circle, Colors.green),
+        _buildStatCard('1', 'Completed', Icons.check_circle, Colors.green),
       ],
     );
   }
@@ -207,7 +207,7 @@ class _StudentCoursesScreenState extends State<StudentCoursesScreen> {
     } else {
       // List view for phones
       return ListView.separated(
-        itemCount: 4,
+        itemCount: 2,
         separatorBuilder: (context, index) => const SizedBox(height: 12),
         itemBuilder: (context, index) => _buildCourseCards()[index],
       );
@@ -243,32 +243,6 @@ class _StudentCoursesScreenState extends State<StudentCoursesScreen> {
             context,
             MaterialPageRoute(builder: (context) => const OxygenCourseScreen()),
           );
-        },
-      ),
-      ModernCourseCard(
-        imageAsset: 'lib/assets/images/course2.jpg',
-        courseName: 'Advanced Scuba Techniques',
-        courseDescription:
-            'Master advanced diving techniques including buoyancy control, navigation and night diving.',
-        authorName: 'Sarah Johnson',
-        rating: 4.5,
-        studentCount: 3267,
-        status: 'owned',
-        onTap: () {
-          Navigator.pushNamed(context, '/course_detail');
-        },
-      ),
-      ModernCourseCard(
-        imageAsset: 'lib/assets/images/course.jpg',
-        courseName: 'Underwater Photography',
-        courseDescription:
-            'Capture stunning underwater images with proper lighting and composition techniques.',
-        authorName: 'David Chen',
-        rating: 4.7,
-        studentCount: 2189,
-        status: 'owned',
-        onTap: () {
-          Navigator.pushNamed(context, '/course_detail');
         },
       ),
     ];

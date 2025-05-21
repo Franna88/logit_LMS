@@ -44,6 +44,7 @@ dependencies:
   firebase_auth_web: ^5.14.2
   cloud_firestore_web: ^4.4.7
   image_network: ^2.6.0
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +73,8 @@ flutter:
     - lib/assets/images/
     - lib/assets/images/courses/
     - lib/assets/manual_plaintext.json
+    - lib/assets/output/images/
+    - lib/assets/output/images/questions.json
     - output/
     - output/images/
 

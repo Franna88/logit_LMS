@@ -1,6 +1,79 @@
 import 'package:flutter/material.dart';
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
 import '../../widgets/modern_layout.dart';
 import '../../services/course_service.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+// Model class for quiz questions
+class QuizQuestion {
+  final String id;
+  final String text;
+  final List<Map<String, dynamic>> images;
+  final String type;
+  final List<QuizOption> options;
+  final String code;
+
+  QuizQuestion({
+    required this.id,
+    required this.text,
+    required this.images,
+    required this.type,
+    required this.options,
+    required this.code,
+  });
+
+  factory QuizQuestion.fromJson(Map<String, dynamic> json) {
+    // Extract text content from HTML or plain text
+    String questionText = json['content']['text'] ?? '';
+    if (questionText.contains('![CDATA[')) {
+      questionText = questionText
+          .replaceAll('![CDATA[', '')
+          .replaceAll(']]', '');
+    }
+
+    // Extract images from the content
+    List<Map<String, dynamic>> questionImages = [];
+    if (json['content']['images'] != null) {
+      questionImages = List<Map<String, dynamic>>.from(
+        json['content']['images'],
+      );
+    }
+
+    // Parse options
+    List<QuizOption> questionOptions = [];
+    if (json['options'] != null) {
+      questionOptions = List<QuizOption>.from(
+        json['options'].map((option) => QuizOption.fromJson(option)),
+      );
+    }
+
+    return QuizQuestion(
+      id: json['_id'] ?? '',
+      text: questionText,
+      images: questionImages,
+      type: json['type'] ?? 'meerkeuze',
+      options: questionOptions,
+      code: json['code'] ?? '',
+    );
+  }
+}
+
+class QuizOption {
+  final String id;
+  final String text;
+  final bool isCorrect;
+
+  QuizOption({required this.id, required this.text, required this.isCorrect});
+
+  factory QuizOption.fromJson(Map<String, dynamic> json) {
+    return QuizOption(
+      id: json['id'] ?? '',
+      text: json['text'] ?? '',
+      isCorrect: json['is_correct'] ?? false,
+    );
+  }
+}
 
 class OxygenCourseScreen extends StatefulWidget {
   const OxygenCourseScreen({super.key});
@@ -17,19 +90,294 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
   Course? _course;
   List<Module> _modules = [];
   Map<String, List<Section>> _moduleSections = {};
+  Map<String, List<bool>> _completedSections = {}; // Track completed sections
   int _selectedModuleIndex = 0;
+
+  // Quiz related properties
+  List<QuizQuestion> _quizQuestions = [];
+  bool _isLoadingQuiz = true;
+  Map<String, List<String>> _userAnswers =
+      {}; // Track user's answers by question ID
+  Map<String, bool> _completedQuizzes = {}; // Track completed quizzes
 
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(
+      length: 4,
+      vsync: this,
+    ); // Updated to 4 tabs (added Assessment)
     _loadCourseData();
+    _loadQuizData();
   }
 
   @override
   void dispose() {
     _tabController.dispose();
     super.dispose();
+  }
+
+  // Load quiz questions from the JSON file
+  Future<void> _loadQuizData() async {
+    setState(() {
+      _isLoadingQuiz = true;
+    });
+
+    try {
+      // Use hardcoded data since we're experiencing asset loading issues
+      String jsonString = '''
+      [
+        {
+          "_id": "question1",
+          "content": {
+            "text": "What is the name of the device used to provide oxygen to a conscious diver?",
+            "images": []
+          },
+          "type": "meerkeuze",
+          "options": [
+            {"id": "option1", "text": "Demand Inhalator Valve and Mask", "is_correct": true},
+            {"id": "option2", "text": "Pocket Mask Resuscitator", "is_correct": false},
+            {"id": "option3", "text": "Bag Valve Mask (BVM) resuscitator", "is_correct": false}
+          ],
+          "code": "OX-Q1"
+        },
+        {
+          "_id": "question2",
+          "content": {
+            "text": "What is the expected response time for provision of basic First-Aid including Oxygen administration?",
+            "images": []
+          },
+          "type": "meerkeuze",
+          "options": [
+            {"id": "option1", "text": "4 minutes", "is_correct": true},
+            {"id": "option2", "text": "20 minutes", "is_correct": false},
+            {"id": "option3", "text": "60 minutes", "is_correct": false}
+          ],
+          "code": "OX-Q2"
+        },
+        {
+          "_id": "question3",
+          "content": {
+            "text": "The duties and responsibilities of the designated oxygen provider are: (multiple correct answers)",
+            "images": []
+          },
+          "type": "meermeerkeuze",
+          "options": [
+            {"id": "option1", "text": "Make sure the oxygen cylinder is re-filled and all used items replaced after any incident", "is_correct": true},
+            {"id": "option2", "text": "To be competent in the correct use of oxygen at the surface and within the chamber", "is_correct": true},
+            {"id": "option3", "text": "To complete daily checks to ensure all components are present and function tested", "is_correct": true},
+            {"id": "option4", "text": "To ensure oxygen is on site, clearly labeled and accessible", "is_correct": true}
+          ],
+          "code": "OX-Q3"
+        },
+        {
+          "_id": "question4",
+          "content": {
+            "text": "Which oxygen delivery device can be used on an Injured Person who is conscious, alert and orientated?",
+            "images": []
+          },
+          "type": "meerkeuze",
+          "options": [
+            {"id": "option1", "text": "Demand Inhalator Valve and Mask", "is_correct": true},
+            {"id": "option2", "text": "Pocket Mask Resuscitator", "is_correct": false},
+            {"id": "option3", "text": "Bag Valve Mask (BVM) Resuscitator", "is_correct": false}
+          ],
+          "code": "OX-Q4"
+        },
+        {
+          "_id": "question5",
+          "content": {
+            "text": "What flow rate should be used with a non-rebreather mask?",
+            "images": []
+          },
+          "type": "meerkeuze",
+          "options": [
+            {"id": "option1", "text": "15 LPM", "is_correct": true},
+            {"id": "option2", "text": "4 LPM", "is_correct": false},
+            {"id": "option3", "text": "0 LPM", "is_correct": false}
+          ],
+          "code": "OX-Q5"
+        }
+      ]
+      ''';
+
+      // Parse questions
+      final List<dynamic> jsonData = json.decode(jsonString);
+      _quizQuestions =
+          jsonData.map((data) => QuizQuestion.fromJson(data)).toList();
+
+      // Load user answers and completed quizzes
+      await _loadQuizProgress();
+    } catch (e) {
+      debugPrint('Error loading quiz data: $e');
+      // Set up some sample questions so the UI isn't empty
+      _setupSampleQuestions();
+    } finally {
+      setState(() {
+        _isLoadingQuiz = false;
+      });
+    }
+  }
+
+  // Setup some sample questions if loading fails
+  void _setupSampleQuestions() {
+    _quizQuestions = [
+      QuizQuestion(
+        id: 'sample1',
+        text: 'What flow rate should be used with a non-rebreather mask?',
+        images: [],
+        type: 'meerkeuze',
+        options: [
+          QuizOption(id: 'opt1', text: '15 LPM', isCorrect: true),
+          QuizOption(id: 'opt2', text: '4 LPM', isCorrect: false),
+          QuizOption(id: 'opt3', text: '0 LPM', isCorrect: false),
+        ],
+        code: 'SAMPLE-1',
+      ),
+      QuizQuestion(
+        id: 'sample2',
+        text:
+            'Which of the following are part of the primary survey? (Select all that apply)',
+        images: [],
+        type: 'meermeerkeuze',
+        options: [
+          QuizOption(id: 'opt1', text: 'Hazards assessment', isCorrect: true),
+          QuizOption(
+            id: 'opt2',
+            text: 'Assessing responsiveness',
+            isCorrect: true,
+          ),
+          QuizOption(id: 'opt3', text: 'Airway check', isCorrect: true),
+          QuizOption(
+            id: 'opt4',
+            text: 'Recording vital signs',
+            isCorrect: false,
+          ),
+        ],
+        code: 'SAMPLE-2',
+      ),
+    ];
+  }
+
+  // Load user's quiz progress from SharedPreferences
+  Future<void> _loadQuizProgress() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+
+      // Load user answers
+      for (var question in _quizQuestions) {
+        final answersKey = 'quiz_answers_${question.id}';
+        final List<String>? answers = prefs.getStringList(answersKey);
+        if (answers != null) {
+          _userAnswers[question.id] = answers;
+        }
+      }
+
+      // Load completed quizzes
+      for (var question in _quizQuestions) {
+        final completedKey = 'quiz_completed_${question.id}';
+        final bool isCompleted = prefs.getBool(completedKey) ?? false;
+        _completedQuizzes[question.id] = isCompleted;
+      }
+    } catch (e) {
+      debugPrint('Error loading quiz progress: $e');
+    }
+  }
+
+  // Save user's answer for a quiz question
+  Future<void> _saveQuizAnswer(
+    String questionId,
+    String optionId,
+    bool isMultipleChoice,
+  ) async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+
+      // Get current answers or initialize empty list
+      List<String> currentAnswers = _userAnswers[questionId] ?? [];
+
+      if (isMultipleChoice) {
+        // For multiple choice: toggle the selection
+        if (currentAnswers.contains(optionId)) {
+          currentAnswers.remove(optionId);
+        } else {
+          currentAnswers.add(optionId);
+        }
+      } else {
+        // For single choice: replace with the selected option
+        currentAnswers = [optionId];
+      }
+
+      // Save to state and preferences
+      setState(() {
+        _userAnswers[questionId] = currentAnswers;
+      });
+
+      await prefs.setStringList('quiz_answers_${questionId}', currentAnswers);
+    } catch (e) {
+      debugPrint('Error saving quiz answer: $e');
+    }
+  }
+
+  // Mark a quiz as completed
+  Future<void> _markQuizCompleted(String questionId, bool isCompleted) async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+
+      setState(() {
+        _completedQuizzes[questionId] = isCompleted;
+      });
+
+      await prefs.setBool('quiz_completed_${questionId}', isCompleted);
+    } catch (e) {
+      debugPrint('Error marking quiz as completed: $e');
+    }
+  }
+
+  // Check if an answer is correct
+  bool _isAnswerCorrect(QuizQuestion question) {
+    // Get user's answers for this question
+    final userAnswerIds = _userAnswers[question.id] ?? [];
+
+    if (question.type == 'meerkeuze') {
+      // Single choice: user must select the one correct option
+      if (userAnswerIds.isEmpty) return false;
+
+      // Find the selected option
+      final selectedOption = question.options.firstWhere(
+        (option) => option.id == userAnswerIds.first,
+        orElse: () => QuizOption(id: '', text: '', isCorrect: false),
+      );
+
+      return selectedOption.isCorrect;
+    } else if (question.type == 'meermeerkeuze') {
+      // Multiple choice: user must select all correct options and no incorrect ones
+
+      // Check if all user selected options are correct
+      bool allSelectedOptionsCorrect = true;
+      for (var answerId in userAnswerIds) {
+        final option = question.options.firstWhere(
+          (opt) => opt.id == answerId,
+          orElse: () => QuizOption(id: '', text: '', isCorrect: false),
+        );
+
+        if (!option.isCorrect) {
+          allSelectedOptionsCorrect = false;
+          break;
+        }
+      }
+
+      // Check if all correct options are selected
+      final correctOptions =
+          question.options.where((opt) => opt.isCorrect).toList();
+      bool allCorrectOptionsSelected = correctOptions.every(
+        (correctOpt) => userAnswerIds.contains(correctOpt.id),
+      );
+
+      return allSelectedOptionsCorrect && allCorrectOptionsSelected;
+    }
+
+    return false;
   }
 
   Future<void> _loadCourseData() async {
@@ -50,6 +398,9 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
             module.id,
           );
           _moduleSections[module.id] = sections;
+
+          // Initialize completion tracking for each section
+          await _loadCompletionData(module.id, sections.length);
         }
       }
     } catch (e) {
@@ -59,6 +410,76 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
         _isLoading = false;
       });
     }
+  }
+
+  // Load completion data from SharedPreferences
+  Future<void> _loadCompletionData(String moduleId, int sectionCount) async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      List<bool> completionStatus = [];
+
+      for (int i = 0; i < sectionCount; i++) {
+        final key = 'module_${moduleId}_section_$i';
+        final isCompleted = prefs.getBool(key) ?? false;
+        completionStatus.add(isCompleted);
+      }
+
+      setState(() {
+        _completedSections[moduleId] = completionStatus;
+      });
+    } catch (e) {
+      debugPrint('Error loading completion data: $e');
+      // Initialize with false if error
+      _completedSections[moduleId] = List.generate(sectionCount, (_) => false);
+    }
+  }
+
+  // Save completion data for a section
+  Future<void> _markSectionCompleted(String moduleId, int sectionIndex) async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final key = 'module_${moduleId}_section_$sectionIndex';
+      await prefs.setBool(key, true);
+
+      setState(() {
+        if (_completedSections.containsKey(moduleId)) {
+          if (sectionIndex < _completedSections[moduleId]!.length) {
+            _completedSections[moduleId]![sectionIndex] = true;
+          }
+        }
+      });
+    } catch (e) {
+      debugPrint('Error saving completion data: $e');
+    }
+  }
+
+  // Check if a module is completely done
+  bool _isModuleCompleted(String moduleId) {
+    if (!_completedSections.containsKey(moduleId)) return false;
+
+    final sectionsCompleted = _completedSections[moduleId]!;
+    // All sections must be completed
+    return sectionsCompleted.every((isCompleted) => isCompleted);
+  }
+
+  // Calculate module progress
+  double _getModuleProgress(String moduleId) {
+    if (!_completedSections.containsKey(moduleId)) return 0.0;
+
+    final sectionsCompleted = _completedSections[moduleId]!;
+    if (sectionsCompleted.isEmpty) return 0.0;
+
+    int completedCount =
+        sectionsCompleted.where((isCompleted) => isCompleted).length;
+    return completedCount / sectionsCompleted.length;
+  }
+
+  // Get completed sections count
+  int _getCompletedSectionsCount(String moduleId) {
+    if (!_completedSections.containsKey(moduleId)) return 0;
+
+    final sectionsCompleted = _completedSections[moduleId]!;
+    return sectionsCompleted.where((isCompleted) => isCompleted).length;
   }
 
   @override
@@ -102,6 +523,7 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
               Tab(text: 'Modules', height: 36),
               Tab(text: 'Discussion', height: 36),
               Tab(text: 'Resources', height: 36),
+              Tab(text: 'Assessment', height: 36), // New Assessment tab
             ],
           ),
         ),
@@ -114,6 +536,9 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
               _buildModulesTab(),
               _buildPlaceholderTab('Discussion'),
               _buildPlaceholderTab('Resources'),
+              _isLoadingQuiz
+                  ? const Center(child: CircularProgressIndicator())
+                  : _buildAssessmentTab(), // New Assessment tab content
             ],
           ),
         ),
@@ -122,6 +547,27 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
   }
 
   Widget _buildCourseHeader() {
+    // Calculate total course progress
+    int totalSections = 0;
+    int totalCompletedSections = 0;
+
+    _modules.forEach((module) {
+      final sectionCount = _moduleSections[module.id]?.length ?? 0;
+      totalSections += sectionCount;
+      totalCompletedSections += _getCompletedSectionsCount(module.id);
+    });
+
+    final courseProgress =
+        totalSections > 0 ? totalCompletedSections / totalSections : 0.0;
+
+    // Count completed modules
+    int completedModules = 0;
+    for (var module in _modules) {
+      if (_isModuleCompleted(module.id)) {
+        completedModules++;
+      }
+    }
+
     return Container(
       padding: const EdgeInsets.all(10),
       color: Colors.white,
@@ -234,7 +680,7 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
                   children: [
                     Expanded(
                       child: LinearProgressIndicator(
-                        value: 0.3, // Example value
+                        value: courseProgress,
                         backgroundColor: Colors.grey[200],
                         valueColor: const AlwaysStoppedAnimation<Color>(
                           Colors.blue,
@@ -245,7 +691,7 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
                     ),
                     const SizedBox(width: 8),
                     Text(
-                      '30%',
+                      '${(courseProgress * 100).toInt()}%',
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
@@ -258,7 +704,7 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
 
                 // Modules completed
                 Text(
-                  '2 of ${_modules.length} modules completed',
+                  '$completedModules of ${_modules.length} modules completed',
                   style: TextStyle(fontSize: 11, color: Colors.grey[600]),
                 ),
               ],
@@ -277,10 +723,10 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
         final module = _modules[index];
         final sections = _moduleSections[module.id] ?? [];
 
-        // Calculate module progress for demo
-        bool isCompleted = index < 2; // First two modules completed for demo
-        double progress = isCompleted ? 1.0 : (index == 2 ? 0.0 : 0.0);
-        int completedSections = isCompleted ? sections.length : 0;
+        // Calculate module progress based on actual completion
+        bool isCompleted = _isModuleCompleted(module.id);
+        double progress = _getModuleProgress(module.id);
+        int completedSections = _getCompletedSectionsCount(module.id);
 
         return Card(
           elevation: 2,
@@ -340,8 +786,12 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
                 itemCount: sections.length,
                 itemBuilder: (context, sectionIndex) {
                   final section = sections[sectionIndex];
+
+                  // Check if this section is completed
                   bool isSectionCompleted =
-                      isCompleted || (index == 2 && sectionIndex < 2);
+                      _completedSections[module.id] != null &&
+                      sectionIndex < _completedSections[module.id]!.length &&
+                      _completedSections[module.id]![sectionIndex];
 
                   return ListTile(
                     onTap: () {
@@ -448,10 +898,502 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
         builder:
             (context) => SectionContentScreen(
               moduleTitle: module.title,
+              moduleId: module.id,
               section: section,
               sectionIndex: sectionIndex,
               sections: _moduleSections[module.id] ?? [],
+              onSectionCompleted: (moduleId, sectionIndex) {
+                _markSectionCompleted(moduleId, sectionIndex);
+              },
             ),
+      ),
+    ).then((_) {
+      // Refresh UI when returning from section content
+      setState(() {});
+    });
+  }
+
+  // Build the Assessment tab content
+  Widget _buildAssessmentTab() {
+    // Make sure we always have questions to display
+    if (_quizQuestions.isEmpty) {
+      _setupSampleQuestions();
+    }
+
+    // Calculate quiz progress
+    int totalQuizzes = _quizQuestions.length;
+    int completedQuizzes =
+        _completedQuizzes.values.where((isCompleted) => isCompleted).length;
+    double completionPercentage =
+        totalQuizzes > 0 ? completedQuizzes / totalQuizzes : 0.0;
+
+    return Column(
+      children: [
+        // Progress section
+        Container(
+          padding: const EdgeInsets.all(16),
+          color: Colors.blue.shade50,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Icon(Icons.assessment, color: Colors.blue.shade700),
+                  const SizedBox(width: 8),
+                  Text(
+                    'Assessment Progress',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue.shade700,
+                    ),
+                  ),
+                  const Spacer(),
+                  Text(
+                    '$completedQuizzes of $totalQuizzes completed',
+                    style: TextStyle(fontSize: 14, color: Colors.blue.shade700),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 8),
+              LinearProgressIndicator(
+                value: completionPercentage,
+                backgroundColor: Colors.grey.shade200,
+                valueColor: AlwaysStoppedAnimation<Color>(
+                  completionPercentage == 1.0 ? Colors.green : Colors.blue,
+                ),
+                minHeight: 6,
+                borderRadius: BorderRadius.circular(3),
+              ),
+            ],
+          ),
+        ),
+
+        // Questions list
+        Expanded(
+          child:
+              _quizQuestions.isEmpty
+                  ? Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.quiz, size: 64, color: Colors.blue.shade200),
+                        const SizedBox(height: 16),
+                        const Text(
+                          'No assessment questions available',
+                          style: TextStyle(fontSize: 16),
+                        ),
+                        const SizedBox(height: 8),
+                        ElevatedButton(
+                          onPressed: () {
+                            _setupSampleQuestions();
+                            setState(() {});
+                          },
+                          child: const Text('Load Sample Questions'),
+                        ),
+                      ],
+                    ),
+                  )
+                  : ListView.builder(
+                    itemCount: _quizQuestions.length,
+                    padding: const EdgeInsets.all(16),
+                    itemBuilder: (context, index) {
+                      final question = _quizQuestions[index];
+                      bool isAnswered =
+                          _userAnswers.containsKey(question.id) &&
+                          (_userAnswers[question.id]?.isNotEmpty == true);
+                      bool isCorrect = _isAnswerCorrect(question);
+                      bool isMultipleChoice = question.type == 'meermeerkeuze';
+
+                      return Card(
+                        elevation: 2,
+                        margin: const EdgeInsets.only(bottom: 16),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          side: BorderSide(
+                            color:
+                                isAnswered
+                                    ? (isCorrect
+                                        ? Colors.green.shade200
+                                        : Colors.red.shade200)
+                                    : Colors.transparent,
+                            width: 1.5,
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(16),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // Question number and type indicator
+                              Row(
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 8,
+                                      vertical: 4,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: Colors.blue.shade100,
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: Text(
+                                      'Question ${index + 1}',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.blue.shade700,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 8),
+                                  if (isMultipleChoice)
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 8,
+                                        vertical: 4,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: Colors.purple.shade100,
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      child: Text(
+                                        'Multiple Choice',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.purple.shade700,
+                                        ),
+                                      ),
+                                    ),
+                                  const Spacer(),
+                                  if (isAnswered)
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 8,
+                                        vertical: 4,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color:
+                                            isCorrect
+                                                ? Colors.green.shade100
+                                                : Colors.red.shade100,
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          Icon(
+                                            isCorrect
+                                                ? Icons.check
+                                                : Icons.close,
+                                            size: 16,
+                                            color:
+                                                isCorrect
+                                                    ? Colors.green.shade700
+                                                    : Colors.red.shade700,
+                                          ),
+                                          const SizedBox(width: 4),
+                                          Text(
+                                            isCorrect ? 'Correct' : 'Incorrect',
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.bold,
+                                              color:
+                                                  isCorrect
+                                                      ? Colors.green.shade700
+                                                      : Colors.red.shade700,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                ],
+                              ),
+
+                              const SizedBox(height: 16),
+
+                              // Question text
+                              Text(
+                                question.text,
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+
+                              // Images if present
+                              if (question.images.isNotEmpty) ...[
+                                const SizedBox(height: 16),
+                                Center(
+                                  child: Builder(
+                                    builder: (context) {
+                                      final String imagePath =
+                                          question.images.first['src'] ?? '';
+                                      // Try to extract just the image filename from the path
+                                      final filename =
+                                          imagePath.split('/').last;
+
+                                      // First try loading from network if URL looks valid
+                                      if (imagePath.startsWith('http')) {
+                                        return Image.network(
+                                          imagePath,
+                                          errorBuilder:
+                                              (context, error, stackTrace) =>
+                                                  _buildErrorImage(),
+                                        );
+                                      }
+
+                                      // Try different asset paths
+                                      try {
+                                        return Image.asset(
+                                          'lib/assets/output/images/$filename',
+                                          width: 250,
+                                          errorBuilder: (
+                                            context,
+                                            error,
+                                            stackTrace,
+                                          ) {
+                                            try {
+                                              return Image.asset(
+                                                'assets/lib/assets/output/images/$filename',
+                                                width: 250,
+                                                errorBuilder:
+                                                    (
+                                                      context,
+                                                      error,
+                                                      stackTrace,
+                                                    ) => _buildErrorImage(),
+                                              );
+                                            } catch (e) {
+                                              return _buildErrorImage();
+                                            }
+                                          },
+                                        );
+                                      } catch (e) {
+                                        return _buildErrorImage();
+                                      }
+                                    },
+                                  ),
+                                ),
+                              ],
+
+                              const SizedBox(height: 16),
+                              const Divider(),
+                              const SizedBox(height: 8),
+
+                              // Options
+                              ...question.options.map((option) {
+                                bool isSelected =
+                                    _userAnswers[question.id]?.contains(
+                                      option.id,
+                                    ) ??
+                                    false;
+                                bool showCorrectness = isAnswered;
+
+                                return Padding(
+                                  padding: const EdgeInsets.only(bottom: 8),
+                                  child: InkWell(
+                                    onTap:
+                                        isAnswered
+                                            ? null
+                                            : () {
+                                              _saveQuizAnswer(
+                                                question.id,
+                                                option.id,
+                                                isMultipleChoice,
+                                              );
+                                            },
+                                    borderRadius: BorderRadius.circular(8),
+                                    child: Container(
+                                      padding: const EdgeInsets.all(12),
+                                      decoration: BoxDecoration(
+                                        color:
+                                            isSelected
+                                                ? (showCorrectness
+                                                    ? (option.isCorrect
+                                                        ? Colors.green.shade50
+                                                        : Colors.red.shade50)
+                                                    : Colors.blue.shade50)
+                                                : Colors.grey.shade50,
+                                        borderRadius: BorderRadius.circular(8),
+                                        border: Border.all(
+                                          color:
+                                              isSelected
+                                                  ? (showCorrectness
+                                                      ? (option.isCorrect
+                                                          ? Colors.green
+                                                          : Colors.red)
+                                                      : Colors.blue)
+                                                  : Colors.grey.shade300,
+                                          width: 1.5,
+                                        ),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          // Selection indicator
+                                          Container(
+                                            width: 24,
+                                            height: 24,
+                                            decoration: BoxDecoration(
+                                              shape:
+                                                  isMultipleChoice
+                                                      ? BoxShape.rectangle
+                                                      : BoxShape.circle,
+                                              borderRadius:
+                                                  isMultipleChoice
+                                                      ? BorderRadius.circular(4)
+                                                      : null,
+                                              border: Border.all(
+                                                color:
+                                                    isSelected
+                                                        ? (showCorrectness
+                                                            ? (option.isCorrect
+                                                                ? Colors.green
+                                                                : Colors.red)
+                                                            : Colors.blue)
+                                                        : Colors.grey,
+                                                width: 1.5,
+                                              ),
+                                              color:
+                                                  isSelected
+                                                      ? (showCorrectness
+                                                          ? (option.isCorrect
+                                                              ? Colors
+                                                                  .green
+                                                                  .shade100
+                                                              : Colors
+                                                                  .red
+                                                                  .shade100)
+                                                          : Colors
+                                                              .blue
+                                                              .shade100)
+                                                      : Colors.transparent,
+                                            ),
+                                            child:
+                                                isSelected
+                                                    ? Center(
+                                                      child: Icon(
+                                                        isMultipleChoice
+                                                            ? Icons.check
+                                                            : Icons.circle,
+                                                        size: 16,
+                                                        color:
+                                                            showCorrectness
+                                                                ? (option
+                                                                        .isCorrect
+                                                                    ? Colors
+                                                                        .green
+                                                                    : Colors
+                                                                        .red)
+                                                                : Colors.blue,
+                                                      ),
+                                                    )
+                                                    : null,
+                                          ),
+
+                                          const SizedBox(width: 12),
+
+                                          // Option text
+                                          Expanded(
+                                            child: Text(
+                                              option.text,
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                color:
+                                                    isSelected
+                                                        ? (showCorrectness
+                                                            ? (option.isCorrect
+                                                                ? Colors
+                                                                    .green
+                                                                    .shade800
+                                                                : Colors
+                                                                    .red
+                                                                    .shade800)
+                                                            : Colors
+                                                                .blue
+                                                                .shade800)
+                                                        : Colors.black87,
+                                              ),
+                                            ),
+                                          ),
+
+                                          // Correctness indicator when answered
+                                          if (showCorrectness &&
+                                              option.isCorrect)
+                                            Icon(
+                                              Icons.check_circle,
+                                              color: Colors.green,
+                                              size: 20,
+                                            ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              }).toList(),
+
+                              const SizedBox(height: 8),
+
+                              // Submit button for questions that aren't answered yet
+                              if (!isAnswered &&
+                                  _userAnswers[question.id]?.isNotEmpty == true)
+                                Center(
+                                  child: ElevatedButton(
+                                    onPressed: () {
+                                      bool correct = _isAnswerCorrect(question);
+                                      _markQuizCompleted(question.id, true);
+
+                                      // Show feedback
+                                      ScaffoldMessenger.of(
+                                        context,
+                                      ).showSnackBar(
+                                        SnackBar(
+                                          content: Text(
+                                            correct
+                                                ? 'Correct answer!'
+                                                : 'Incorrect. Try reviewing the course material.',
+                                          ),
+                                          backgroundColor:
+                                              correct
+                                                  ? Colors.green
+                                                  : Colors.red,
+                                        ),
+                                      );
+                                    },
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.blue,
+                                      foregroundColor: Colors.white,
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 24,
+                                        vertical: 12,
+                                      ),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                    ),
+                                    child: const Text('Submit Answer'),
+                                  ),
+                                ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+        ),
+      ],
+    );
+  }
+
+  // Helper method to display error image when images fail to load
+  Widget _buildErrorImage() {
+    return Container(
+      height: 100,
+      width: 150,
+      color: Colors.grey.shade200,
+      child: Center(
+        child: Icon(Icons.image_not_supported, color: Colors.grey.shade400),
       ),
     );
   }
@@ -460,16 +1402,20 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
 // New screen for section content
 class SectionContentScreen extends StatefulWidget {
   final String moduleTitle;
+  final String moduleId;
   final Section section;
   final int sectionIndex;
   final List<Section> sections;
+  final Function(String moduleId, int sectionIndex) onSectionCompleted;
 
   const SectionContentScreen({
     super.key,
     required this.moduleTitle,
+    required this.moduleId,
     required this.section,
     required this.sectionIndex,
     required this.sections,
+    required this.onSectionCompleted,
   });
 
   @override
@@ -477,6 +1423,30 @@ class SectionContentScreen extends StatefulWidget {
 }
 
 class _SectionContentScreenState extends State<SectionContentScreen> {
+  bool _hasViewedContent = false;
+
+  @override
+  void initState() {
+    super.initState();
+    // Mark as viewed after a delay (simulating content viewing)
+    Future.delayed(const Duration(seconds: 5), () {
+      if (mounted) {
+        setState(() {
+          _hasViewedContent = true;
+        });
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    // Mark this section as completed when navigating away
+    if (_hasViewedContent) {
+      widget.onSectionCompleted(widget.moduleId, widget.sectionIndex);
+    }
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -829,9 +1799,11 @@ class _SectionContentScreenState extends State<SectionContentScreen> {
           builder:
               (context) => SectionContentScreen(
                 moduleTitle: widget.moduleTitle,
+                moduleId: widget.moduleId,
                 section: widget.sections[index],
                 sectionIndex: index,
                 sections: widget.sections,
+                onSectionCompleted: widget.onSectionCompleted,
               ),
         ),
       );
