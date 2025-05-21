@@ -71,6 +71,7 @@ flutter:
   assets:
     - lib/assets/images/
     - lib/assets/images/courses/
+    - lib/assets/manual_plaintext.json
     - output/
     - output/images/
 

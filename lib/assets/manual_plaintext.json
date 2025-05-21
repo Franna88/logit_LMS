@@ -1,0 +1,1106 @@
+{
+  "course": {
+    "id": "oxygen_course",
+    "title": "Oxygen",
+    "description": "Comprehensive course on Oxygen administration and safety in diving operations.",
+    "instructor": "Diving Safety Team",
+    "duration": "5 weeks",
+    "status": "active",
+    "modules": [
+      {
+        "id": "module_1",
+        "title": "Introduction to Oxygen",
+        "sections": [
+          "section_1",
+          "section_2",
+          "section_3",
+          "section_4",
+          "section_5"
+        ]
+      },
+      {
+        "id": "module_2",
+        "title": "Oxygen Equipment and Systems",
+        "sections": [
+          "section_6",
+          "section_7",
+          "section_8",
+          "section_9",
+          "section_10",
+          "section_11"
+        ]
+      },
+      {
+        "id": "module_3",
+        "title": "Oxygen Delivery and Masks",
+        "sections": [
+          "section_12",
+          "section_13",
+          "section_14",
+          "section_15",
+          "section_16",
+          "section_17"
+        ]
+      },
+      {
+        "id": "module_4",
+        "title": "Oxygen Calculations and Safety",
+        "sections": [
+          "section_18",
+          "section_19",
+          "section_20"
+        ]
+      },
+      {
+        "id": "module_5",
+        "title": "Life Support and Emergency Procedures",
+        "sections": [
+          "section_21",
+          "section_22",
+          "section_23",
+          "section_24"
+        ]
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "Have you Completed your PRE-TEST",
+      "level": 1,
+      "content": "If not, close this manual and Select the Pre-Test\n\nA pre-test helps measure true learning.  You are not expected to know the answers to all of the questions.\n\nA pre-test helps you:\n\nIdentify your knowledge gaps (topics you don't know or have forgotten!).\n\nIdentify where you need to focus (pay attention to your weaker areas).\n\nThe pre-test is done once. It is not a a pass/fail test. Enjoy!\n\n2. Introduction",
+      "id": "section_1",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_1",
+      "_path": "manual_plaintext/section_1",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "content": "Legislative requirements require that oxygen be available at the dive site.\n\nWarning:No portable oxygen systems are to be taken into the chamber.",
+      "id": "section_2",
+      "title": "Introduction",
+      "level": 1,
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "subsections": [
+        {
+          "title": "When to Provide Oxygen",
+          "level": 2,
+          "content": "Oxygen provides life support by restoring tissue oxygen levels in a range of conditions,\n\nSerious illness\n\nSerious injury\n\nHeart Attack and Stroke\n\nBreathing difficulty (Drowning, suffocation, running out of air)\n\nCarbon monoxide poisoning or other gas contamination\n\nDecompression Illness (DCI)",
+          "id": "section_2_sub_1"
+        },
+        {
+          "title": "Roles and Responsibilities of an Operational Dive Team",
+          "level": 2,
+          "content": "It is generally accepted that the diving team has been systematically and thoroughly informed and trained with regards to the procedures to be followed in the case of an emergency. \nIt also advises that when diving operations are undertaken, sufficient stored quantities of medical oxygen is available at the dive site so that an emergency may be dealt with effectively.\n\nThe Diving Supervisor\n\nThe Diving Supervisor is ultimately responsible for the safety of the divers during the course of the Diving Operation. The supervisor should appoint a competent oxygen provider in the event of an emergency.",
+          "id": "section_2_sub_2"
+        },
+        {
+          "title": "The Oxygen Provider",
+          "level": 2,
+          "content": "The Oxygen Provider will be responsible for the Oxygen Administration System.",
+          "id": "section_2_sub_3"
+        },
+        {
+          "title": "Duties of the Oxygen Provider",
+          "level": 2,
+          "content": "To ensure oxygen is on site, clearly labeled and easily accessible.\n\nTo ensure daily checks and function tested according to a check list.\n\nTo be familiar with the oxygen administration system.\n\nTo check and record the pressure in the oxygen system prior to commencing diving operations. (Ensure oxygen is full)\n\nTo ensure the oxygen cylinder is re-filled and all disposable items are replaced after any incident.",
+          "id": "section_2_sub_4"
+        },
+        {
+          "title": "Responsibilities of the Oxygen Provider in an Emergency",
+          "level": 2,
+          "content": "Safe Set Up\u2013 To ensure safe connection of oxygen administration systems.\n\nSecure Positioning\u2013 To ensure the cylinder is prevented from falling or rolling.\n\nRight Mask- To select the right mask for the right patient and connect appropriately.\n\nRight Flow- To ensure the right flow rate is used.\n\nGood Fit- To ensure a good mask seal or fit.\n\nGood Airway -To ensure an open airway and effective breathing.\n\nPositioning-To ensure the correct positioning of the injured person.\n\nDocumentation and Good House Keeping \u2013To maintain the oxygen check lists, documentation in the event of an incident.\n\nGood House Keeping -To maintain, cleaning, restocking, refilling cylinder and correct storage.",
+          "id": "section_2_sub_5"
+        },
+        {
+          "title": "Location of Oxygen at the Dive Site",
+          "level": 2,
+          "content": "",
+          "id": "section_2_sub_6"
+        }
+      ],
+      "_id": "section_2",
+      "_path": "manual_plaintext/section_2",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "content": "The Bullnose pressure regulator has a thread.  They can be used on different cylinders containing different gasses therefore wrong connections can be made.\n\nThey should NOT be used unless they are oxygen clean and correctly certified.\n\nThe Pressure regulator should be well protected at all times.",
+      "id": "section_10",
+      "title": "Types of Oxygen Pressure Regulators",
+      "level": 1,
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "subsections": [
+        {
+          "title": "Pin Index",
+          "level": 2,
+          "content": "The pin index is a unique configuration of holes and pins which match precisely to eliminate connection of the wrong cylinder to equipment. All pin index systems have anoxygen washer(Bodok seal).\n\nOxygen washers(bodok seals) are an essential part of the system, without them the oxygen will leak out.  Always ensure the correct washer is in place and keep one spare.\n\nThe washer comes in a sealed packet so they can not get contaminated with oil and grease!",
+          "id": "section_10_sub_1"
+        },
+        {
+          "title": "Bullnose and O-ring",
+          "level": 2,
+          "content": "",
+          "id": "section_10_sub_2"
+        }
+      ],
+      "_id": "section_10",
+      "_path": "manual_plaintext/section_10",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Pin Index",
+      "level": 2,
+      "content": "The pin index is a unique configuration of holes and pins which match precisely to eliminate connection of the wrong cylinder to equipment. All pin index systems have anoxygen washer(Bodok seal).\n\nOxygen washers(bodok seals) are an essential part of the system, without them the oxygen will leak out.  Always ensure the correct washer is in place and keep one spare.\n\nThe washer comes in a sealed packet so they can not get contaminated with oil and grease!",
+      "id": "section_10_sub_1",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_10_sub_1",
+      "_path": "manual_plaintext/section_10_sub_1",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Bullnose and O-ring",
+      "level": 2,
+      "content": "",
+      "id": "section_10_sub_2",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_10_sub_2",
+      "_path": "manual_plaintext/section_10_sub_2",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "content": "Inexpensive, single function, for one (1) person only.\n\nBreathing on a Non re-breather mask (Alive diver).\n\nUsing a pocket mask or Bag Valve Mask (BVM) (Dead Diver).\n\nMulti-function Pressure Regulator (Pin Index)\n\nMore expensive, multi-function (standard continuous flow and Demand) for maximum of two (2) persons.\n\nCan deliver by Demand and Non-Rebreather mask to 2 Alive Divers.\n\nCan deliver by Manually Triggered Ventilator (MTV) and Pocket Mask or Bag Valve Mask (BVM) to a Dead Diver.\n\nAny combination of above.\n\nCylinders containing oxygen should be fitted with an approved regulator by which the rate of flow can be controlled.  It is important that the regulator be free from oil or grease, otherwise a violent explosion may occur.",
+      "id": "section_11",
+      "title": "Standard vs Multi-functional Regulators",
+      "level": 1,
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "subsections": [
+        {
+          "title": "Standard Constant Flow Pressure Regulator (Pin Index)",
+          "level": 2,
+          "content": "",
+          "id": "section_11_sub_1"
+        }
+      ],
+      "_id": "section_11",
+      "_path": "manual_plaintext/section_11",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Standard Constant Flow Pressure Regulator (Pin Index)",
+      "level": 2,
+      "content": "",
+      "id": "section_11_sub_1",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_11_sub_1",
+      "_path": "manual_plaintext/section_11_sub_1",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "content": "A specialised combined Demand inhalator valve with a Manually Triggered Ventilator (MTV) can be used to treat either:\n\nAn alert and orientated diver who is conscious and breathing with enough effort to activate the demand system or\n\nan unresponsive diver with no effective breathing or only occasional gasps.   To administer breaths the purge button is to be depressed over 1 second,. This will manually trigger a ventilation.\n\nMultifunction Regulator with MTV\n\nDemand inhalator valve with a Manually Triggered Ventilator (MTV)",
+      "id": "section_12",
+      "title": "Oxygen Delivery Devices",
+      "level": 1,
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "subsections": [
+        {
+          "title": "Oxygen Masks for the Breathing Casualty (Alive diver)",
+          "level": 2,
+          "content": "Demand Inhalator Valve and Mask - Conscious, Alert and Orientated Injured Person (IP) (diver with life signs)\n\nNon Rebreather Mask  - Conscious or Unconscious and Breathing Injured Person (IP) (diver with life signs)\n\nDemand Inhalator Valve and Mask\n\nNon Rebreather Mask",
+          "id": "section_12_sub_1"
+        },
+        {
+          "title": "Oxygen Mask for the Non-Breathing Casualty (Dead Diver )",
+          "level": 2,
+          "content": "Pocket Mask (Oronasal) Resuscitator - Unresponsive without life signs.\n\nBag Valve Mask (BVM) Resuscitator - Unresponsive without life signs.\n\nPocket Mask Resuscitator\n\nBag Valve mask Resuscitator",
+          "id": "section_12_sub_2"
+        },
+        {
+          "title": "Combination",
+          "level": 2,
+          "content": "",
+          "id": "section_12_sub_3"
+        }
+      ],
+      "_id": "section_12",
+      "_path": "manual_plaintext/section_12",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Oxygen Masks for the Breathing Casualty (Alive diver)",
+      "level": 2,
+      "content": "Demand Inhalator Valve and Mask - Conscious, Alert and Orientated Injured Person (IP) (diver with life signs)\n\nNon Rebreather Mask  - Conscious or Unconscious and Breathing Injured Person (IP) (diver with life signs)\n\nDemand Inhalator Valve and Mask\n\nNon Rebreather Mask",
+      "id": "section_12_sub_1",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_12_sub_1",
+      "_path": "manual_plaintext/section_12_sub_1",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Oxygen Mask for the Non-Breathing Casualty (Dead Diver )",
+      "level": 2,
+      "content": "Pocket Mask (Oronasal) Resuscitator - Unresponsive without life signs.\n\nBag Valve Mask (BVM) Resuscitator - Unresponsive without life signs.\n\nPocket Mask Resuscitator\n\nBag Valve mask Resuscitator",
+      "id": "section_12_sub_2",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_12_sub_2",
+      "_path": "manual_plaintext/section_12_sub_2",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Combination",
+      "level": 2,
+      "content": "",
+      "id": "section_12_sub_3",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_12_sub_3",
+      "_path": "manual_plaintext/section_12_sub_3",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Oxygen Mask Summary",
+      "level": 1,
+      "content": "3.1. Assembling Portable Oxygen",
+      "id": "section_13",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_13",
+      "_path": "manual_plaintext/section_13",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Assembly of Portable Oxygen Systems",
+      "level": 1,
+      "content": "Make sure you know this well in preparation for your work place assessment!\n\nCare should be taken in the handling and use of medical oxygen cylinders.\n\nNever attempt to fit a regulator to an incompatible cylinder.  Ensure that you have the correct regulator for the type of cylinder you are intending to use.\n\nNever use medical oxygen from a cylinder without reducing the pressure through a suitable regulator intended for that gas.\n\nNever permit compressed medical oxygen to suddenly enter the Pressure Regulator.  Open valves slowly.\n\nAvoid carrying the portable oxygen system by the valve.  If carrying the systems carry with two hands.\n\nAll gauges must read ZERO prior to disconnecting the components.  Never work on a pressurised system.\n\nAlways close the cylinder valve and disconnect the regulator when not in use.\n\nNever immerse the regulator in any fluid.\n\nNo adhesive tape should be put around the cylinder pillar valve, or regulator assembly as it can increase fire hazard risk.\n\n4. Oxygen Masks",
+      "id": "section_14",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_14",
+      "_path": "manual_plaintext/section_14",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "content": "Manually Triggered Ventilator\n\nThe device can be used as:\n\nDemand inhalator valve for the Injured Person (IP) is breathing or\n\nManually Triggered Ventilator (MTV) for the non breathing injured diver. The button can be depressed over one (1) second to deliver a breath.\n\nWarning:Oxygen supports combustion and smoking should be prohibited when oxygen is in use.\n\nWarning:No portable oxygen can be taken into the chamber.\n\n4.1. Breathing Casualty",
+      "id": "section_15",
+      "title": "Summary of Oxygen Delivery Devices (Masks)",
+      "level": 1,
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "subsections": [
+        {
+          "title": "Alive Diver",
+          "level": 2,
+          "content": "Oxygen can be provided to any Injured Person (IP), who is breathing effectively, using the following oxygen masks:\n\nDemand Inhalator Valve and Mask- for use by the Injured Person (IP) with life signs - Conscious, Alert and Orientated.\n\nNon Rebreather Mask- for use by the Injured Person (IP) who is\n\nconscious but can not tolerate the Demand Valve or\n\nunconscious Injured Persons with effective breathing. (Life signs)",
+          "id": "section_15_sub_1"
+        },
+        {
+          "title": "Dead Diver",
+          "level": 2,
+          "content": "Oxygen can be provided to any Injured Person (IP), who is not breathing effectively, using the following oxygen masks:\n\nPocket mask (Oronasal) Resuscitator- Unresponsive with no life signs.\n\nBag Valve Mask (BVM) Resuscitator- Unresponsive with no life signs.",
+          "id": "section_15_sub_2"
+        },
+        {
+          "title": "Combination Oxygen Delivery Device",
+          "level": 2,
+          "content": "",
+          "id": "section_15_sub_3"
+        }
+      ],
+      "_id": "section_15",
+      "_path": "manual_plaintext/section_15",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Alive Diver",
+      "level": 2,
+      "content": "Oxygen can be provided to any Injured Person (IP), who is breathing effectively, using the following oxygen masks:\n\nDemand Inhalator Valve and Mask- for use by the Injured Person (IP) with life signs - Conscious, Alert and Orientated.\n\nNon Rebreather Mask- for use by the Injured Person (IP) who is\n\nconscious but can not tolerate the Demand Valve or\n\nunconscious Injured Persons with effective breathing. (Life signs)",
+      "id": "section_15_sub_1",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_15_sub_1",
+      "_path": "manual_plaintext/section_15_sub_1",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Dead Diver",
+      "level": 2,
+      "content": "Oxygen can be provided to any Injured Person (IP), who is not breathing effectively, using the following oxygen masks:\n\nPocket mask (Oronasal) Resuscitator- Unresponsive with no life signs.\n\nBag Valve Mask (BVM) Resuscitator- Unresponsive with no life signs.",
+      "id": "section_15_sub_2",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_15_sub_2",
+      "_path": "manual_plaintext/section_15_sub_2",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Combination Oxygen Delivery Device",
+      "level": 2,
+      "content": "",
+      "id": "section_15_sub_3",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_15_sub_3",
+      "_path": "manual_plaintext/section_15_sub_3",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "content": "An Injured Person who is conscious, alert and orientated.\n\nTo activate the Demand Valve (DV) the Injured Person must hold the mask, create an adequate seal and breathe with enough effort to activate the system.\n\nWhen using oxygen on demand remember the oxygen cylinder must be open and the flow rate meter must be on Zero (0) LPM.\n\nAdvantages:\n\nHigh concentrations of oxygen.\n\nIf sealed correctly to the face the Demand Valve (DV) delivers 100% oxygen - True Fit Mask.\n\nThe mask is clear so the airway and breathing can be monitored easily.\n\nThe oxygen supply lasts longer.\n\nDisadvantages:\n\nOnly ideal for Injured Persons (IP) who is conscious and alert.\n\nThe Injured Person (IP) must hold the mask.\n\nRequires a good seal and enough breathing effort to activate the demand valve.\n\nIt is not ideal if the Injured Person (IP) loses consciousness.\n\nConstant Flow - Non-Rebreather Mask (NRM)\n\nThe non rebreather mask can be used on either:\n\nAn Injured Person who is conscious, alert and orientated and who cannot tolerate the Demand Valve (DV) or\n\nAn Injured Person who is unconscious with effective breathing (life signs).\n\nWhen using the Non-Rebreather Mask the oxygen flow meter must be on 15LPM.\n\nAdvantages:\n\nHigh concentrations of oxygen.\n\nProvides up to 90% oxygen from the attached reservoir bag. (Percentage depends on the depth and rate of breathing.)\n\nLight weight.\n\nEasily fitted to the face.\n\nNo need to hold the mask.\n\nWell tolerated.\n\nRequires no effort to breathe from.\n\nThe mask is clear so the airway and breathing can be monitored easily.\n\nDisadvantages:\n\nOnly for use on Injured Persons (IP) who are breathing effectively.\n\nContinuous flow uses up oxygen supply quicker than demand oxygen supply.\n\nThe components are:\n\nClear oral nasal maskwith a metal strip over the nose and an elastic strap to ensure correct fit.\n\nA reservoir bagwith a one-way valve to prevent any rebreathing (hence the name non-rebreather mask)\n\nTwo exhalation portswith one-way valves to direct the exhaled breath out of the mask.\n\nGood Practice point:Reservoir bag must always be fully inflated (primed) before administering oxygen to the Injured Person (IP).  Always use a flow of 15L/min.\n\nDO NOT cover the reservoir bag with a blanket.  Continuously ensure an adequate airway and effective breathing.  Do not accidentally step on or disconnect the tubing.\n\n4.2. Non - Breathing Casualty",
+      "id": "section_16",
+      "title": "Oxygen Masks for the Breathing Casualty  (Alive Diver)",
+      "level": 1,
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "subsections": [
+        {
+          "title": "Demand Valve Inhalator and Mask (DV)",
+          "level": 2,
+          "content": "A conscious, alert and orientated Injured Person (IP) can speak in full sentences is able to manage and protect their own airway.",
+          "id": "section_16_sub_1"
+        },
+        {
+          "title": "The Demand Valve Inhalator Mask can only be used on:",
+          "level": 2,
+          "content": "",
+          "id": "section_16_sub_2"
+        }
+      ],
+      "_id": "section_16",
+      "_path": "manual_plaintext/section_16",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Demand Valve Inhalator and Mask (DV)",
+      "level": 2,
+      "content": "A conscious, alert and orientated Injured Person (IP) can speak in full sentences is able to manage and protect their own airway.",
+      "id": "section_16_sub_1",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_16_sub_1",
+      "_path": "manual_plaintext/section_16_sub_1",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "The Demand Valve Inhalator Mask can only be used on:",
+      "level": 2,
+      "content": "",
+      "id": "section_16_sub_2",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_16_sub_2",
+      "_path": "manual_plaintext/section_16_sub_2",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "content": "Pocket mask contains a replaceable one-way valve that safeguards you as the First-Aider from viruses and bacteria that cause diseases such as tuberculosis and hepatitis.\n\nThe pocket mask can deliver:\n\n50% oxygen at 10 LPM\n\n80% oxygen at 15 LPM\n\nThe pocket mask is used on a dead person who is not breathing effectively and only occasionally gasping or not breathing at all. (Unresponsive with no life signs).\n\nAdvantages:\n\nEasy to use\n\nEliminates direct mouth to mouth contact.\n\nThe one way valve prevents exhaled air and body fluids from coming into contact with the First-Aider or Oxygen Provider. Body Substance Isolation (BSI)\n\nUse of oxygen inlets provides a high concentration of oxygen.\n\nDisadvantages:\n\nWarning- No effective mask seal = No effective Breathing\n\nIf using incorrect position it may close off the airway.\n\nIf no effective face to mask seal is made then there will be no effective breath.\n\nThe Pocket Mask should never be coupled to advanced breathing equipment or to the Bag Valve Mask.\n\nRemove air filters - if they get wet they prevent effective ventilation.\n\nCompetence in using a Pocket Mask\n\nManage the Injured Persons (IP) airway using the Head tilt-Chin lift or Jaw Thrust and create a tight seal.\n\nAlways ensure a good seal. If the seal is inadequate then so are the ventilations!\n\nGive two (2) gentle breaths. Each breath should be given over one (1) second. Look for the rise and fall of the chest.\n\nDuring compressions the mask can be removed and the head turned to the side to prevent any inhalation of body fluids.\n\nContinue with two (2) breaths to thirty (30) good quality chest compressions.\n\nGood practice Point -Look for adequate chest rise and fall to ensure breathing is EFFECTIVE and VENTILATION is adequate.\n\n5. How Much Oxygen",
+      "id": "section_17",
+      "title": "Oxygen Masks - Non Breathing Casualty (Dead Diver)",
+      "level": 1,
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "subsections": [
+        {
+          "title": "Barrier Devices",
+          "level": 2,
+          "content": "All Injured Person (IP) that are not breathing or giving an occasional gasp will need assistance with ventilation.\n\nOxygen masks are transparent so you can see the face and monitor the airway and breathing. If any signs of body fluid is seen collecting in the mask the head must be immediately turned to the side and the mask must be removed\n\nAny Injured Person (IP) receiving CPR needs to be lying on a firm flat surface.\n\nThe barrier device protects the First-Aider from disease transmission whilst giving effective ventilation. Use of barrier devices follows the advice of the world health organisation (WHO) regarding Standard Precautions (SP) and Body Substance Isolation (BSI).\n\nThe following barrier devices can be used if there is no effective breathing or the Injured Person (IP) is in Sudden Cardiac Arrest (SCA):\n\nFace Shield\n\nPocket mask Resuscitator with oxygen\n\nGood Practice Point:It is important to ensure an open airway when using a Pocket Mask or Bag Valve Mask Resuscitator.",
+          "id": "section_17_sub_1"
+        },
+        {
+          "title": "The Face Shield",
+          "level": 2,
+          "content": "This the most basic of barrier devices.  It cannot be connected to oxygen.",
+          "id": "section_17_sub_2"
+        },
+        {
+          "title": "Pocket Mask Resuscitator",
+          "level": 2,
+          "content": "",
+          "id": "section_17_sub_3"
+        }
+      ],
+      "_id": "section_17",
+      "_path": "manual_plaintext/section_17",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Barrier Devices",
+      "level": 2,
+      "content": "All Injured Person (IP) that are not breathing or giving an occasional gasp will need assistance with ventilation.\n\nOxygen masks are transparent so you can see the face and monitor the airway and breathing. If any signs of body fluid is seen collecting in the mask the head must be immediately turned to the side and the mask must be removed\n\nAny Injured Person (IP) receiving CPR needs to be lying on a firm flat surface.\n\nThe barrier device protects the First-Aider from disease transmission whilst giving effective ventilation. Use of barrier devices follows the advice of the world health organisation (WHO) regarding Standard Precautions (SP) and Body Substance Isolation (BSI).\n\nThe following barrier devices can be used if there is no effective breathing or the Injured Person (IP) is in Sudden Cardiac Arrest (SCA):\n\nFace Shield\n\nPocket mask Resuscitator with oxygen\n\nGood Practice Point:It is important to ensure an open airway when using a Pocket Mask or Bag Valve Mask Resuscitator.",
+      "id": "section_17_sub_1",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_17_sub_1",
+      "_path": "manual_plaintext/section_17_sub_1",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "The Face Shield",
+      "level": 2,
+      "content": "This the most basic of barrier devices.  It cannot be connected to oxygen.",
+      "id": "section_17_sub_2",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_17_sub_2",
+      "_path": "manual_plaintext/section_17_sub_2",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Pocket Mask Resuscitator",
+      "level": 2,
+      "content": "",
+      "id": "section_17_sub_3",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_17_sub_3",
+      "_path": "manual_plaintext/section_17_sub_3",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "content": "If you select a non-rebreather mask on a flow of 15 liters per minute then you will use 15 liters of gas every minute so the consumption is 15lpm.  To figure out how long this will last you take the available gas and divide is by the consumption.\n\nTime = available gas \u00f7 consumption\n\nTime  = 420l \u00f7 15 LPM = 28 minutes of oxygen supply!\n\nHope you got it!!\n\nAlthough not ideal, you can breathe the oxygen contents to Zero (0) in an emergency - no need to leave 50 bar in the cylinder!!\n\n6. Oxygen Safety",
+      "id": "section_18",
+      "title": "How Much Oxygen",
+      "level": 1,
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "subsections": [
+        {
+          "title": "Available Gas",
+          "level": 2,
+          "content": "There is guidance in many countries regarding the amount of oxygen that is required at the dive site, for example in South Africa there is a requirement that:  \u201cwhen diving operations are undertaken, sufficient stored quantities of medical oxygen is available at the dive site so that an emergency may be dealt with effectively\u201d.\n\nOther references, such as IMCA state\n\n\"...quantities of gases needed ... for therapeutic treatments and emergencies will need to be calculated when planning a diving project\"\n\n\"and the risk assessment should address the method of evacuation of the diver with adequate oxygen and medical supplies during transit to the designated chamber identified for recompression\"\n\nGood Practice Point.The guidance in many countries, in support of inshore diving, recommends that there is a sufficient portable supply of oxygen to last until arrival at the designated chamber facility or other appropriate medical facility, usually deemed to be between 1-2 hours.\n\nWhen ever you look at a cylinder you must find out two (2) things;\n\nThe size of the cylinder (found on the neck of a cylinder and indicated as water capacity (WC))\n\nThe pressure of the cylinder (found by opening the cylinder and reading the contents or pressure gauge)\n\nAlways remember the available gas is found by multiplying the size of the cylinder by the pressure.\n\nCylinder size x Cylinder Pressure = Available Oxygen\n\nFor example:\n\na 3l cylinder pressurised to 140bar\n\nAvailable oxygen = Cylinder size x Cylinder Pressure\n\nAvailable oxygen = 3l x 140bar =420l of available oxygen",
+          "id": "section_18_sub_1"
+        },
+        {
+          "title": "How long will this last?",
+          "level": 2,
+          "content": "",
+          "id": "section_18_sub_2"
+        }
+      ],
+      "_id": "section_18",
+      "_path": "manual_plaintext/section_18",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Available Gas",
+      "level": 2,
+      "content": "There is guidance in many countries regarding the amount of oxygen that is required at the dive site, for example in South Africa there is a requirement that:  \u201cwhen diving operations are undertaken, sufficient stored quantities of medical oxygen is available at the dive site so that an emergency may be dealt with effectively\u201d.\n\nOther references, such as IMCA state\n\n\"...quantities of gases needed ... for therapeutic treatments and emergencies will need to be calculated when planning a diving project\"\n\n\"and the risk assessment should address the method of evacuation of the diver with adequate oxygen and medical supplies during transit to the designated chamber identified for recompression\"\n\nGood Practice Point.The guidance in many countries, in support of inshore diving, recommends that there is a sufficient portable supply of oxygen to last until arrival at the designated chamber facility or other appropriate medical facility, usually deemed to be between 1-2 hours.\n\nWhen ever you look at a cylinder you must find out two (2) things;\n\nThe size of the cylinder (found on the neck of a cylinder and indicated as water capacity (WC))\n\nThe pressure of the cylinder (found by opening the cylinder and reading the contents or pressure gauge)\n\nAlways remember the available gas is found by multiplying the size of the cylinder by the pressure.\n\nCylinder size x Cylinder Pressure = Available Oxygen\n\nFor example:\n\na 3l cylinder pressurised to 140bar\n\nAvailable oxygen = Cylinder size x Cylinder Pressure\n\nAvailable oxygen = 3l x 140bar =420l of available oxygen",
+      "id": "section_18_sub_1",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_18_sub_1",
+      "_path": "manual_plaintext/section_18_sub_1",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "How long will this last?",
+      "level": 2,
+      "content": "",
+      "id": "section_18_sub_2",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_18_sub_2",
+      "_path": "manual_plaintext/section_18_sub_2",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "content": "Good Practice Point.Always remove the pressure regulator and keep main cylinder valve closed during storage.\n\nGood Practice Point.Always keepall components, dry and free from oils and grease.\n\nGood Practice Point.Always check the storage area is well ventilated\n\nGood Practice Point.Alwaysprotect all components and prevent any rolling or falling of the cylinder. This may damage the valve and/or the regulator.\n\n6.1. Safety Flashes",
+      "id": "section_19",
+      "title": "Oxygen Safety",
+      "level": 1,
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "subsections": [
+        {
+          "title": "General Safety",
+          "level": 2,
+          "content": "Always be aware of the dangers of oxygen - if in doubt ask.\n\nGood Practice Point.Always ensure equipment is oxygen clean and in good working order.\n\nGood Practice Point.Prevent cylinders from rolling or falling. It may damage the valve and/or the regulator.\n\nGood Practice Point.Maintain all hoses, valves and connections in good condition.\n\nCheck for rust or corrosion - If noted remove from service.\n\nNever use near machinery that produces sparks.\n\nNever smoke where oxygen is being used.",
+          "id": "section_19_sub_1"
+        },
+        {
+          "title": "Preparation",
+          "level": 2,
+          "content": "Good Practice Point.  Carry the cylinder with both hands and never by the valve or regulator.\n\nGood Practice Point.  Always ensure your hands or gloves are clean.\n\nGood Practice Point.Always connect cylinder and pressure regulator carefully and open valves slowly.\n\nAlways ensure equipment has no leaks.\n\nGood Practice Point.Remember to turn on required flow when using oxygen masks.\n\nWhen using an AED remember to move oxygen away when a shock is required.",
+          "id": "section_19_sub_2"
+        },
+        {
+          "title": "Warnings",
+          "level": 2,
+          "content": "Any fire or spark is highly dangerous in the presence of increased oxygen concentrations.\n\nCylinders containing oxygen should be fitted with an approved regulator by which the rate of flow can be controlled.\n\nIt is important that the regulator be free from oil or grease, otherwise a violent explosion may occur.\n\nPortable oxygen can not be take into the chamber.",
+          "id": "section_19_sub_3"
+        },
+        {
+          "title": "Storage",
+          "level": 2,
+          "content": "",
+          "id": "section_19_sub_4"
+        }
+      ],
+      "_id": "section_19",
+      "_path": "manual_plaintext/section_19",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "General Safety",
+      "level": 2,
+      "content": "Always be aware of the dangers of oxygen - if in doubt ask.\n\nGood Practice Point.Always ensure equipment is oxygen clean and in good working order.\n\nGood Practice Point.Prevent cylinders from rolling or falling. It may damage the valve and/or the regulator.\n\nGood Practice Point.Maintain all hoses, valves and connections in good condition.\n\nCheck for rust or corrosion - If noted remove from service.\n\nNever use near machinery that produces sparks.\n\nNever smoke where oxygen is being used.",
+      "id": "section_19_sub_1",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_19_sub_1",
+      "_path": "manual_plaintext/section_19_sub_1",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Preparation",
+      "level": 2,
+      "content": "Good Practice Point.  Carry the cylinder with both hands and never by the valve or regulator.\n\nGood Practice Point.  Always ensure your hands or gloves are clean.\n\nGood Practice Point.Always connect cylinder and pressure regulator carefully and open valves slowly.\n\nAlways ensure equipment has no leaks.\n\nGood Practice Point.Remember to turn on required flow when using oxygen masks.\n\nWhen using an AED remember to move oxygen away when a shock is required.",
+      "id": "section_19_sub_2",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_19_sub_2",
+      "_path": "manual_plaintext/section_19_sub_2",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Warnings",
+      "level": 2,
+      "content": "Any fire or spark is highly dangerous in the presence of increased oxygen concentrations.\n\nCylinders containing oxygen should be fitted with an approved regulator by which the rate of flow can be controlled.\n\nIt is important that the regulator be free from oil or grease, otherwise a violent explosion may occur.\n\nPortable oxygen can not be take into the chamber.",
+      "id": "section_19_sub_3",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_19_sub_3",
+      "_path": "manual_plaintext/section_19_sub_3",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Storage",
+      "level": 2,
+      "content": "",
+      "id": "section_19_sub_4",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_19_sub_4",
+      "_path": "manual_plaintext/section_19_sub_4",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "content": "Legislative requirements require that oxygen be available at the dive site.\n\nWarning:No portable oxygen systems are to be taken into the chamber.",
+      "id": "section_2",
+      "title": "Introduction",
+      "level": 1,
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "subsections": [
+        {
+          "title": "When to Provide Oxygen",
+          "level": 2,
+          "content": "Oxygen provides life support by restoring tissue oxygen levels in a range of conditions,\n\nSerious illness\n\nSerious injury\n\nHeart Attack and Stroke\n\nBreathing difficulty (Drowning, suffocation, running out of air)\n\nCarbon monoxide poisoning or other gas contamination\n\nDecompression Illness (DCI)",
+          "id": "section_2_sub_1"
+        },
+        {
+          "title": "Roles and Responsibilities of an Operational Dive Team",
+          "level": 2,
+          "content": "It is generally accepted that the diving team has been systematically and thoroughly informed and trained with regards to the procedures to be followed in the case of an emergency. \nIt also advises that when diving operations are undertaken, sufficient stored quantities of medical oxygen is available at the dive site so that an emergency may be dealt with effectively.\n\nThe Diving Supervisor\n\nThe Diving Supervisor is ultimately responsible for the safety of the divers during the course of the Diving Operation. The supervisor should appoint a competent oxygen provider in the event of an emergency.",
+          "id": "section_2_sub_2"
+        },
+        {
+          "title": "The Oxygen Provider",
+          "level": 2,
+          "content": "The Oxygen Provider will be responsible for the Oxygen Administration System.",
+          "id": "section_2_sub_3"
+        },
+        {
+          "title": "Duties of the Oxygen Provider",
+          "level": 2,
+          "content": "To ensure oxygen is on site, clearly labeled and easily accessible.\n\nTo ensure daily checks and function tested according to a check list.\n\nTo be familiar with the oxygen administration system.\n\nTo check and record the pressure in the oxygen system prior to commencing diving operations. (Ensure oxygen is full)\n\nTo ensure the oxygen cylinder is re-filled and all disposable items are replaced after any incident.",
+          "id": "section_2_sub_4"
+        },
+        {
+          "title": "Responsibilities of the Oxygen Provider in an Emergency",
+          "level": 2,
+          "content": "Safe Set Up\u2013 To ensure safe connection of oxygen administration systems.\n\nSecure Positioning\u2013 To ensure the cylinder is prevented from falling or rolling.\n\nRight Mask- To select the right mask for the right patient and connect appropriately.\n\nRight Flow- To ensure the right flow rate is used.\n\nGood Fit- To ensure a good mask seal or fit.\n\nGood Airway -To ensure an open airway and effective breathing.\n\nPositioning-To ensure the correct positioning of the injured person.\n\nDocumentation and Good House Keeping \u2013To maintain the oxygen check lists, documentation in the event of an incident.\n\nGood House Keeping -To maintain, cleaning, restocking, refilling cylinder and correct storage.",
+          "id": "section_2_sub_5"
+        },
+        {
+          "title": "Location of Oxygen at the Dive Site",
+          "level": 2,
+          "content": "",
+          "id": "section_2_sub_6"
+        }
+      ],
+      "_id": "section_2",
+      "_path": "manual_plaintext/section_2",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Safety Flash",
+      "level": 1,
+      "content": "The following is a safety flash put out by industry. It relates to large oxygen systems but can apply to portable systems as well.\n\n7. Basic Life Support (Review)",
+      "id": "section_20",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_20",
+      "_path": "manual_plaintext/section_20",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Basic Life Support",
+      "level": 1,
+      "content": "CPR for Every One - South African example\n\n8. Standards of Care (Review)",
+      "id": "section_21",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_21",
+      "_path": "manual_plaintext/section_21",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "content": "Check for obvious life signs or a pulse.\n\nA pulse check may be done however if an injured person is breathing it is assumed they have a pulse.\n\nGasping often occurs just before someone stops breathing and the heart stops. If the person looks like they are gasping for air (like a goldfish!) either forcefully or weak and there are long pauses between breaths, then immediately commence continuous chest compressions (CPR).\n\n7) Rapid Assessment\n\nCheck for obvious injuries\n\nLook for and treat any obvious Injury or Illness.\n\n9. Practical Skill Sheet",
+      "id": "section_22",
+      "title": "Standards of Care (review)",
+      "level": 1,
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "subsections": [
+        {
+          "title": "Review of the Primary Survey (7 Steps)",
+          "level": 2,
+          "content": "Definition:Everyone has the belief (expectation) that people called to help with an emergency are able to give care with an acceptable (adequate) level of knowledge and skill. This is referred to as the \u2018Standards of Care\u2019.  This systematic standard approach helps to maintain and improve the quality of care.\n\nThe Standards of Care should be communicated effectively and well understood by everyone involved in the management of an injured person (IP).\n\nHazards\n\nHelp\n\nHello\n\nAirway\n\nBreathing\n\nCirculation\n\nRapid Assessment.",
+          "id": "section_22_sub_1"
+        },
+        {
+          "title": "1) Hazards",
+          "level": 2,
+          "content": "Identify and eliminate any work place dangers\n\nSafeguard yourself.\n\nSafeguard the scene (area) - no smoking, stop all activities nearby that may be generating a sparks or flame.\n\nSafeguard the Injured Person.",
+          "id": "section_22_sub_2"
+        },
+        {
+          "title": "2) Hello",
+          "level": 2,
+          "content": "Check for response. Assess if the Injured Person is conscious or unconscious.\n\nAnyone who is conscious is alert, awake and orientated. The can manage their own airway, breathe effectively and speak using full sentences.\n\nAnyone who is unconscious and not making any sound or movement should be assessed to see if they are breathing (alive) or not breathing (dead).\nEarly recognition helps you to choose the right oxygen delivery device.",
+          "id": "section_22_sub_3"
+        },
+        {
+          "title": "3) Help",
+          "level": 2,
+          "content": "Send for help.\n\nNotify the supervisor and request help from your fellow team mates.\n\nAccess the Portable Oxygen",
+          "id": "section_22_sub_4"
+        },
+        {
+          "title": "4) Airway",
+          "level": 2,
+          "content": "Open the airway.\n\nThe First Responder must ensure the airway is clear and there are no obstructions.\n\nThe conscious Injured Person (IP) will be able to manage their own airway\n\nThe unconscious Injured Person (IP) will not be able to manage their own airway effectively. The most common obstruction is the tongue. Open the airway using either:\n\nHead Tilt Chin Lift (No neck injury)\n\nJaw Thrust with motion restriction (if a neck injury is suspected)",
+          "id": "section_22_sub_5"
+        },
+        {
+          "title": "5) Breathing",
+          "level": 2,
+          "content": "Look, Listen and Feel for effective breathing over 10 seconds.\n\nLook:    \tfor movement of the chest.\n\nListen:  \tfor noisy breathing.\n\nFeel:     \tfor exhaled air against your cheek and place a hand on the chest to feel for movement.\n\nGood Practice Point -Breathing must be normal and regular. Ideally a minimum of 2 breaths should be taken during the 10 second check.\n\nOxygen Administration\n\nConscious and Breathing: Request oxygen and administer using a Demand Valve Mask (flow rate 0) or a Non-Re-Breather Mask (flow rate 15 Lpm).\n\nUnconscious and Breathing:  Request oxygen and administer using a Non-Re-Breather Mask (flow rate of 15 Lpm).  Place the injured person in recovery position.\n\nIneffective Breathing, gasping or No Breathing at All\u2013 Deliver breaths using a pocket mask resuscitator attached to oxygen at a flow rate 15 lpm.",
+          "id": "section_22_sub_6"
+        },
+        {
+          "title": "6) Circulation",
+          "level": 2,
+          "content": "",
+          "id": "section_22_sub_7"
+        }
+      ],
+      "_id": "section_22",
+      "_path": "manual_plaintext/section_22",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Review of the Primary Survey (7 Steps)",
+      "level": 2,
+      "content": "Definition:Everyone has the belief (expectation) that people called to help with an emergency are able to give care with an acceptable (adequate) level of knowledge and skill. This is referred to as the \u2018Standards of Care\u2019.  This systematic standard approach helps to maintain and improve the quality of care.\n\nThe Standards of Care should be communicated effectively and well understood by everyone involved in the management of an injured person (IP).\n\nHazards\n\nHelp\n\nHello\n\nAirway\n\nBreathing\n\nCirculation\n\nRapid Assessment.",
+      "id": "section_22_sub_1",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_22_sub_1",
+      "_path": "manual_plaintext/section_22_sub_1",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "1) Hazards",
+      "level": 2,
+      "content": "Identify and eliminate any work place dangers\n\nSafeguard yourself.\n\nSafeguard the scene (area) - no smoking, stop all activities nearby that may be generating a sparks or flame.\n\nSafeguard the Injured Person.",
+      "id": "section_22_sub_2",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_22_sub_2",
+      "_path": "manual_plaintext/section_22_sub_2",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "2) Hello",
+      "level": 2,
+      "content": "Check for response. Assess if the Injured Person is conscious or unconscious.\n\nAnyone who is conscious is alert, awake and orientated. The can manage their own airway, breathe effectively and speak using full sentences.\n\nAnyone who is unconscious and not making any sound or movement should be assessed to see if they are breathing (alive) or not breathing (dead).\nEarly recognition helps you to choose the right oxygen delivery device.",
+      "id": "section_22_sub_3",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_22_sub_3",
+      "_path": "manual_plaintext/section_22_sub_3",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "3) Help",
+      "level": 2,
+      "content": "Send for help.\n\nNotify the supervisor and request help from your fellow team mates.\n\nAccess the Portable Oxygen",
+      "id": "section_22_sub_4",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_22_sub_4",
+      "_path": "manual_plaintext/section_22_sub_4",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "4) Airway",
+      "level": 2,
+      "content": "Open the airway.\n\nThe First Responder must ensure the airway is clear and there are no obstructions.\n\nThe conscious Injured Person (IP) will be able to manage their own airway\n\nThe unconscious Injured Person (IP) will not be able to manage their own airway effectively. The most common obstruction is the tongue. Open the airway using either:\n\nHead Tilt Chin Lift (No neck injury)\n\nJaw Thrust with motion restriction (if a neck injury is suspected)",
+      "id": "section_22_sub_5",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_22_sub_5",
+      "_path": "manual_plaintext/section_22_sub_5",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "5) Breathing",
+      "level": 2,
+      "content": "Look, Listen and Feel for effective breathing over 10 seconds.\n\nLook:    \tfor movement of the chest.\n\nListen:  \tfor noisy breathing.\n\nFeel:     \tfor exhaled air against your cheek and place a hand on the chest to feel for movement.\n\nGood Practice Point -Breathing must be normal and regular. Ideally a minimum of 2 breaths should be taken during the 10 second check.\n\nOxygen Administration\n\nConscious and Breathing: Request oxygen and administer using a Demand Valve Mask (flow rate 0) or a Non-Re-Breather Mask (flow rate 15 Lpm).\n\nUnconscious and Breathing:  Request oxygen and administer using a Non-Re-Breather Mask (flow rate of 15 Lpm).  Place the injured person in recovery position.\n\nIneffective Breathing, gasping or No Breathing at All\u2013 Deliver breaths using a pocket mask resuscitator attached to oxygen at a flow rate 15 lpm.",
+      "id": "section_22_sub_6",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_22_sub_6",
+      "_path": "manual_plaintext/section_22_sub_6",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "6) Circulation",
+      "level": 2,
+      "content": "",
+      "id": "section_22_sub_7",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_22_sub_7",
+      "_path": "manual_plaintext/section_22_sub_7",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Practical Skill Sheet",
+      "level": 1,
+      "content": "Ensure you are well prepared for your work place assessment and can carry out all the steps.",
+      "id": "section_23",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_23",
+      "_path": "manual_plaintext/section_23",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Administration of Oxygen -Conscious (responsive) and Breathing",
+      "level": 1,
+      "content": "Make sure you know this well in preparation for your practical assessment!\n\nVerbalise the steps as you go to show you level of knowledge and competence.",
+      "id": "section_24",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_24",
+      "_path": "manual_plaintext/section_24",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "When to Provide Oxygen",
+      "level": 2,
+      "content": "Oxygen provides life support by restoring tissue oxygen levels in a range of conditions,\n\nSerious illness\n\nSerious injury\n\nHeart Attack and Stroke\n\nBreathing difficulty (Drowning, suffocation, running out of air)\n\nCarbon monoxide poisoning or other gas contamination\n\nDecompression Illness (DCI)",
+      "id": "section_2_sub_1",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_2_sub_1",
+      "_path": "manual_plaintext/section_2_sub_1",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Roles and Responsibilities of an Operational Dive Team",
+      "level": 2,
+      "content": "It is generally accepted that the diving team has been systematically and thoroughly informed and trained with regards to the procedures to be followed in the case of an emergency. \nIt also advises that when diving operations are undertaken, sufficient stored quantities of medical oxygen is available at the dive site so that an emergency may be dealt with effectively.\n\nThe Diving Supervisor\n\nThe Diving Supervisor is ultimately responsible for the safety of the divers during the course of the Diving Operation. The supervisor should appoint a competent oxygen provider in the event of an emergency.",
+      "id": "section_2_sub_2",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_2_sub_2",
+      "_path": "manual_plaintext/section_2_sub_2",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "The Oxygen Provider",
+      "level": 2,
+      "content": "The Oxygen Provider will be responsible for the Oxygen Administration System.",
+      "id": "section_2_sub_3",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_2_sub_3",
+      "_path": "manual_plaintext/section_2_sub_3",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Duties of the Oxygen Provider",
+      "level": 2,
+      "content": "To ensure oxygen is on site, clearly labeled and easily accessible.\n\nTo ensure daily checks and function tested according to a check list.\n\nTo be familiar with the oxygen administration system.\n\nTo check and record the pressure in the oxygen system prior to commencing diving operations. (Ensure oxygen is full)\n\nTo ensure the oxygen cylinder is re-filled and all disposable items are replaced after any incident.",
+      "id": "section_2_sub_4",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_2_sub_4",
+      "_path": "manual_plaintext/section_2_sub_4",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Responsibilities of the Oxygen Provider in an Emergency",
+      "level": 2,
+      "content": "Safe Set Up\u2013 To ensure safe connection of oxygen administration systems.\n\nSecure Positioning\u2013 To ensure the cylinder is prevented from falling or rolling.\n\nRight Mask- To select the right mask for the right patient and connect appropriately.\n\nRight Flow- To ensure the right flow rate is used.\n\nGood Fit- To ensure a good mask seal or fit.\n\nGood Airway -To ensure an open airway and effective breathing.\n\nPositioning-To ensure the correct positioning of the injured person.\n\nDocumentation and Good House Keeping \u2013To maintain the oxygen check lists, documentation in the event of an incident.\n\nGood House Keeping -To maintain, cleaning, restocking, refilling cylinder and correct storage.",
+      "id": "section_2_sub_5",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_2_sub_5",
+      "_path": "manual_plaintext/section_2_sub_5",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Location of Oxygen at the Dive Site",
+      "level": 2,
+      "content": "",
+      "id": "section_2_sub_6",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_2_sub_6",
+      "_path": "manual_plaintext/section_2_sub_6",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "content": "Good Practice Point- The Dive Team must be able to react in an emergency and should be familiar with the first aid equipment provided at the dive site and the required response to a medical emergency.\n\nThe response time for provision of First-Aid or Basic Life Support (BLS) should be less than 4 minutes this includes the use of oxygen and an Automated External Defibrillator (AED).\n\nAny form of Decompression Illness (DCI) must be treated immediately.\n\n2.1. Glossary",
+      "id": "section_3",
+      "title": "Summary",
+      "level": 1,
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "subsections": [
+        {
+          "title": "Response Times",
+          "level": 2,
+          "content": "",
+          "id": "section_3_sub_1"
+        }
+      ],
+      "_id": "section_3",
+      "_path": "manual_plaintext/section_3",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Response Times",
+      "level": 2,
+      "content": "",
+      "id": "section_3_sub_1",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_3_sub_1",
+      "_path": "manual_plaintext/section_3_sub_1",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Big medical words and abbreviations",
+      "level": 1,
+      "content": "In no particular order. There is no  need to study big words for exams but these are nice to know!\n\nStandards of Care:Everyone has the belief (expectation) that people called to help with an emergency are able to give care with an acceptable (adequate) level of knowledge and skill.  This is referred to as the \u2018Standards of Care\u2019.  This systematic standard approach helps to maintain and improve the quality of care.HHH ABC + Rapid Assessment:Hazards: Hello: Help: Airway: Breathing: Circulation and a rapid assessment to identify obvious injury or illness.Non Rebreather Mask:An oxygen delivery device (face mask) that can be used to continuously administer oxygen to an Injured Person (Alive Diver).Demand Valve Inhalator:An oxygen delivery device (face mask) that can be used to administer oxygen on demand to an Injured Person (Alive Diver).Regurgitation:Passive expulsion of stomach contents (Dead diver - this is dangerous as the Injured Person (IP) can not protect their own airway and may breathe in their own vomit!).Vomiting:Forceful expulsion of stomach contents (Alive Diver - this generally is OK as it means the Injured Person can protect their own airway!).Hypoxia:Lack of (hypo) Oxygen (oxia).Diffusion:Movement of gases.Perfusion:Movement of blood / blood circulation.Ventilation:Process of breathing in and out.\n\nOccasional Gasps or Agonal Respiration:Abnormal breathing pattern caused by the body's attempt to breathe after the heart has stopped.\n\nIt is important to note that that gasping can be mistaken as normal breathing. They key difference is that the gasps are irregular when compared to normal regular breathing. Therefore, always start CPR in an unresponsive person who is gasping.\n\nBasic life support:BLS:The foundation of saving lives after the heart has stopped beating.CPR:Cardiopulmonary ResuscitationAutomated External Defibrillator:AEDAirway Adjunct:Devices to assist keeping the airway open.Barrier Device:A face mask designed to protect the First-Aider from having any contact with the Injured Persons (IP) body fluids!Pocket Mask Resuscitator:A barrier device that can be used to administer breaths to an Injured Person with no life signs (Dead Diver).Bag Valve Mask (BVM) Resuscitator:A barrier device that can be used to deliver breaths to an Injured Person with no life signs (Dead Diver).\n\n2.2. Review of Physiology",
+      "id": "section_4",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_4",
+      "_path": "manual_plaintext/section_4",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "content": "Oxygen is vital to life.\n\nNo living cell can survive long without oxygen.\n\nThe brain and heart will begin to die if they receive to little oxygen supply (Hypoxia). They will die and never be replaced after 4-10 minutes.\n\nGood Practice Point- Oxygen is provided to prevent hypoxia (lack of oxygen).\n\n3. Portable Oxygen Systems",
+      "id": "section_5",
+      "title": "Basic Physics and Physiology",
+      "level": 1,
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "subsections": [
+        {
+          "title": "Physics",
+          "level": 2,
+          "content": "Oxygen reaches the body according to Daltons law and Henrys law.\n\nVery basically, as the oxygen percentage is increased so is the partial pressure of the gasses that are breathed (Daltons Law). The breathed gasses become soluble, and dissolves with in your body (Henrys Law).\n\nPhysiology\n\nGas exchange in the body is a process of adequate:\n\nVentilation- Breathing\n\nDiffusion\u2013 Gas exchange\n\nPerfusion\u2013 Blood Flow",
+          "id": "section_5_sub_1"
+        },
+        {
+          "title": "How Does Oxygen get into the body",
+          "level": 2,
+          "content": "Ventilationis the movement of a volume of gas into and out of the lungs.\n\nAir must be drawn through the nose and mouth, down the airways, all the way to the tiny little air sacs known as alveoli. These little air sacs (alveoli) are surrounded by tiny blood vessels known as capillaries. The alveoli and tiny blood vessels are only one cell thick  - about 1/20th the thickness of a piece of paper!\n\nGood Practice Point.Gas exchange can only take place in the alveoli.\n\nRespirationis the exchange of oxygen and carbon dioxide.\n\nOxygen and carbon dioxide passes into the blood and is transported throughout the body by the process of diffusion.\n\nGood Practice Point -The normal breathing rate for an adult is 10 - 20 breaths per minute\n\nHow is Oxygen Transported to the Body\n\nOxygen (O2) is not a very soluble gas and therefore needs help to get to the body tissues. It is carried to the body via the Red Blood Cells (RBC).\n\nHaemoglobin (HB) is a protein found in the red blood blood cell and is designed to carry oxygen so it can be transported throughout the body.\n\nRed Blood Cells (RBC) get their red colour from the combination of haemoglobin (Hb) and oxygen (O2)\n\n97% of oxygen (O2) is carried by the haemoglobin (Hb)\n\n3% is dissolved in the plasma of the blood.",
+          "id": "section_5_sub_2"
+        },
+        {
+          "title": "Time",
+          "level": 2,
+          "content": "",
+          "id": "section_5_sub_3"
+        }
+      ],
+      "_id": "section_5",
+      "_path": "manual_plaintext/section_5",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Physics",
+      "level": 2,
+      "content": "Oxygen reaches the body according to Daltons law and Henrys law.\n\nVery basically, as the oxygen percentage is increased so is the partial pressure of the gasses that are breathed (Daltons Law). The breathed gasses become soluble, and dissolves with in your body (Henrys Law).\n\nPhysiology\n\nGas exchange in the body is a process of adequate:\n\nVentilation- Breathing\n\nDiffusion\u2013 Gas exchange\n\nPerfusion\u2013 Blood Flow",
+      "id": "section_5_sub_1",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_5_sub_1",
+      "_path": "manual_plaintext/section_5_sub_1",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "How Does Oxygen get into the body",
+      "level": 2,
+      "content": "Ventilationis the movement of a volume of gas into and out of the lungs.\n\nAir must be drawn through the nose and mouth, down the airways, all the way to the tiny little air sacs known as alveoli. These little air sacs (alveoli) are surrounded by tiny blood vessels known as capillaries. The alveoli and tiny blood vessels are only one cell thick  - about 1/20th the thickness of a piece of paper!\n\nGood Practice Point.Gas exchange can only take place in the alveoli.\n\nRespirationis the exchange of oxygen and carbon dioxide.\n\nOxygen and carbon dioxide passes into the blood and is transported throughout the body by the process of diffusion.\n\nGood Practice Point -The normal breathing rate for an adult is 10 - 20 breaths per minute\n\nHow is Oxygen Transported to the Body\n\nOxygen (O2) is not a very soluble gas and therefore needs help to get to the body tissues. It is carried to the body via the Red Blood Cells (RBC).\n\nHaemoglobin (HB) is a protein found in the red blood blood cell and is designed to carry oxygen so it can be transported throughout the body.\n\nRed Blood Cells (RBC) get their red colour from the combination of haemoglobin (Hb) and oxygen (O2)\n\n97% of oxygen (O2) is carried by the haemoglobin (Hb)\n\n3% is dissolved in the plasma of the blood.",
+      "id": "section_5_sub_2",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_5_sub_2",
+      "_path": "manual_plaintext/section_5_sub_2",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Time",
+      "level": 2,
+      "content": "",
+      "id": "section_5_sub_3",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_5_sub_3",
+      "_path": "manual_plaintext/section_5_sub_3",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "content": "Portable oxygen administration systems must be at the site of a diving operation.  The oxygen administration system must be:\n\nEasily accessible\n\nClearly labeled\n\nSufficient supply to last until the next point of access\n\nAll components must be rated oxygen clean to prevent any risk of fire or explosion.\n\nHigh Pressure (HP) oxygen Cylinder with pillar valve (on/off valve)\n\nPressure Regulator\n\nConnecting tubing or hose\n\nOxygen Delivery Device (Mask)\n\nCare should be taken in the handling and use of medical oxygen cylinders.",
+      "id": "section_6",
+      "title": "Portable Oxygen Administration Systems",
+      "level": 1,
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "subsections": [
+        {
+          "title": "Components",
+          "level": 2,
+          "content": "",
+          "id": "section_6_sub_1"
+        }
+      ],
+      "_id": "section_6",
+      "_path": "manual_plaintext/section_6",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Components",
+      "level": 2,
+      "content": "",
+      "id": "section_6_sub_1",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_6_sub_1",
+      "_path": "manual_plaintext/section_6_sub_1",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "content": "All cylinders should be in-date. Make sure you can locate the visual test date (usually a sticker) and the hydrostatic test date (Usually stamped into the cylinder neck).\n\nVisual required every two (2) years\n\nHydro required every four (4) years",
+      "id": "section_7",
+      "title": "High Pressure Oxygen Cylinders",
+      "level": 1,
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "subsections": [
+        {
+          "title": "Identification",
+          "level": 2,
+          "content": "All cylinders containing compressed medical oxygen shall be colour coded in accordance with local regulation.  In South Africa it is controlled by SANS 1006 and the cylinder shall have a black body and white shoulder. In other countriess it may be colour coded all white or Green.\n\nIn every country there is a series of regulations and standards for the manufacturing and use of oxygen cylinders.  This is a general overview.  Please ensure you are familiar with the systems you are using to ensure safety.",
+          "id": "section_7_sub_1"
+        },
+        {
+          "title": "Small Portable Cylinders (Pin Index)",
+          "level": 2,
+          "content": "The cylinders are usually small and easy to carry.\n\n3L aluminum pin index cylinders or approximately 0.49kg, containing approximately 420L of oxygen (D)\n\n10L aluminum pin index cylinders or approximately 1.84 kg, containing approximately 1400L of oxygen (F)\n\nThe filling pressure for smaller portable oxygen cylinders is usually 140  - 150 bar (\u00b12,200psi)",
+          "id": "section_7_sub_2"
+        },
+        {
+          "title": "Servicing (Indate)",
+          "level": 2,
+          "content": "",
+          "id": "section_7_sub_3"
+        }
+      ],
+      "_id": "section_7",
+      "_path": "manual_plaintext/section_7",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Identification",
+      "level": 2,
+      "content": "All cylinders containing compressed medical oxygen shall be colour coded in accordance with local regulation.  In South Africa it is controlled by SANS 1006 and the cylinder shall have a black body and white shoulder. In other countriess it may be colour coded all white or Green.\n\nIn every country there is a series of regulations and standards for the manufacturing and use of oxygen cylinders.  This is a general overview.  Please ensure you are familiar with the systems you are using to ensure safety.",
+      "id": "section_7_sub_1",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_7_sub_1",
+      "_path": "manual_plaintext/section_7_sub_1",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Small Portable Cylinders (Pin Index)",
+      "level": 2,
+      "content": "The cylinders are usually small and easy to carry.\n\n3L aluminum pin index cylinders or approximately 0.49kg, containing approximately 420L of oxygen (D)\n\n10L aluminum pin index cylinders or approximately 1.84 kg, containing approximately 1400L of oxygen (F)\n\nThe filling pressure for smaller portable oxygen cylinders is usually 140  - 150 bar (\u00b12,200psi)",
+      "id": "section_7_sub_2",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_7_sub_2",
+      "_path": "manual_plaintext/section_7_sub_2",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Servicing (Indate)",
+      "level": 2,
+      "content": "",
+      "id": "section_7_sub_3",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_7_sub_3",
+      "_path": "manual_plaintext/section_7_sub_3",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Pillar Valves (on/off valves)",
+      "level": 1,
+      "content": "This valve is the most fragile component and allows the cylinder to be turned on and off.\n\nThe most common type of valve used is thePin Indexand is usually opened using a \"key\".\n\nSafety First.The unique configuration of holes and pins match precisely to eliminate connection of the wrong cylinder to the wrong pressure regulator.\n\nAlways open valves slowly.Rapidly opening valves can cause flash fires.",
+      "id": "section_8",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_8",
+      "_path": "manual_plaintext/section_8",
+      "_collection": "manual_plaintext"
+    },
+    {
+      "title": "Pressure Regulator",
+      "level": 1,
+      "content": "The pressure regulator controls the flow rate of oxygen delivery.\n\nAlways ensure the pressure regulator is designed for use with cylinder pressures up to 3,000 psi/200 bar.\n\nIt is important that the oxygen regulator be free from oil or grease, otherwise a violent explosion may occur.",
+      "id": "section_9",
+      "updatedAt": "2025-05-18T19:40:27.519000+00:00",
+      "createdAt": "2025-05-18T19:40:27.519000+00:00",
+      "_id": "section_9",
+      "_path": "manual_plaintext/section_9",
+      "_collection": "manual_plaintext"
+    }
+  ]
+}

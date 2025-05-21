@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../widgets/modern_layout.dart';
 import '../../widgets/modern_course_card.dart';
+import '../student/oxygen_course_screen.dart';
 
 class StudentCoursesScreen extends StatefulWidget {
   const StudentCoursesScreen({super.key});
@@ -230,6 +231,22 @@ class _StudentCoursesScreenState extends State<StudentCoursesScreen> {
       ),
       ModernCourseCard(
         imageAsset: 'lib/assets/images/course2.jpg',
+        courseName: 'Oxygen',
+        courseDescription:
+            'Comprehensive course on Oxygen administration and safety in diving operations.',
+        authorName: 'Diving Safety Team',
+        rating: 4.9,
+        studentCount: 1420,
+        status: 'owned',
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const OxygenCourseScreen()),
+          );
+        },
+      ),
+      ModernCourseCard(
+        imageAsset: 'lib/assets/images/course2.jpg',
         courseName: 'Advanced Scuba Techniques',
         courseDescription:
             'Master advanced diving techniques including buoyancy control, navigation and night diving.',
@@ -249,19 +266,6 @@ class _StudentCoursesScreenState extends State<StudentCoursesScreen> {
         authorName: 'David Chen',
         rating: 4.7,
         studentCount: 2189,
-        status: 'owned',
-        onTap: () {
-          Navigator.pushNamed(context, '/course_detail');
-        },
-      ),
-      ModernCourseCard(
-        imageAsset: 'lib/assets/images/course2.jpg',
-        courseName: 'Marine Life Identification',
-        courseDescription:
-            'Learn to identify various marine species and understand their behaviors and habitats.',
-        authorName: 'Maria Garcia',
-        rating: 4.9,
-        studentCount: 1845,
         status: 'owned',
         onTap: () {
           Navigator.pushNamed(context, '/course_detail');

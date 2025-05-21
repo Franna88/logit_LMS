@@ -1,0 +1,399 @@
+[
+  {
+    "imageUrl": "",
+    "description": "Imported from Company A JSON files",
+    "categories": [
+      "Imported"
+    ],
+    "instructor": "Company A",
+    "price": 0,
+    "rating": 5.0,
+    "isAvailable": true,
+    "status": "active",
+    "updatedAt": "2025-05-20T22:56:28.410987+00:00",
+    "totalStudents": 0,
+    "isFree": true,
+    "title": "Company A Course",
+    "createdAt": "2025-05-20T22:56:28.410987+00:00",
+    "modules": [
+      "509c4a84-ce62-422c-adfe-73b720fa58c5",
+      "ae75baaf-d81f-4e51-bc9b-5c0c811ef28b"
+    ],
+    "sourceCompany": "A",
+    "_id": "68c4b990-80fa-424e-9ac8-0b53e58432b0",
+    "_path": "courses/68c4b990-80fa-424e-9ac8-0b53e58432b0",
+    "_collection": "courses"
+  },
+  {
+    "imageUrl": "",
+    "description": "Imported from Company A JSON files",
+    "categories": [
+      "Imported"
+    ],
+    "instructor": "Company A",
+    "price": 0,
+    "rating": 5.0,
+    "isAvailable": true,
+    "status": "active",
+    "updatedAt": "2025-05-20T22:48:38.853271+00:00",
+    "totalStudents": 0,
+    "isFree": true,
+    "title": "Company A Course",
+    "createdAt": "2025-05-20T22:48:38.853271+00:00",
+    "modules": [
+      "6c5cf4d4-8178-40b3-ad3c-580f994c78e3",
+      "e5724e6a-b54c-446c-8fdd-980355a0441e"
+    ],
+    "sourceCompany": "A",
+    "_id": "8a418d9a-9b51-4c0f-a39a-ac591a08c74f",
+    "_path": "courses/8a418d9a-9b51-4c0f-a39a-ac591a08c74f",
+    "_collection": "courses"
+  },
+  {
+    "isFree": true,
+    "imageUrl": "https://picsum.photos/id/1040/500/300",
+    "description": "Learn to navigate underwater environments effectively and safely.",
+    "dateCreated": "2025-04-28T15:59:26.360191+00:00",
+    "categories": [
+      "navigation",
+      "safety",
+      "diving"
+    ],
+    "instructor": "Michael Brown",
+    "price": 0.0,
+    "rating": 4.2,
+    "title": "Underwater Navigation",
+    "isAvailable": true,
+    "status": "active",
+    "totalStudents": 35,
+    "modules": [
+      "Map Reading",
+      "Compass Use",
+      "Natural Navigation",
+      "Navigation Exercises"
+    ],
+    "_id": "Boxjpe2dT9stdtuDrght",
+    "_path": "courses/Boxjpe2dT9stdtuDrght",
+    "_collection": "courses"
+  },
+  {
+    "active": true,
+    "title": "Offshore Diver Medic - Continuous Professional Development (CPD)",
+    "description": "DMT Continuous Professional Development Modules ",
+    "id": "OPL_20160902144151_225c110a-fa54-4b9b-a",
+    "group_id": "CLU_20180105090625_19e405bc-faad-48c5-b",
+    "code": "IMCA DMT CPD",
+    "_id": "OPL_20160902144151_225c110a-fa54-4b9b-a",
+    "_path": "courses/OPL_20160902144151_225c110a-fa54-4b9b-a",
+    "_collection": "courses"
+  },
+  {
+    "active": true,
+    "title": " Offshore Diver Medic Refresher Course",
+    "description": "![CDATA[DMT - Air Formative Studies Refresher Course<br>\nDMT - Sat Formative Studies]]",
+    "id": "OPL_20180105090740_af1417f0-381e-4190-a",
+    "group_id": "CLU_20180105090625_19e405bc-faad-48c5-b",
+    "code": "CD DMTR",
+    "_id": "OPL_20180105090740_af1417f0-381e-4190-a",
+    "_path": "courses/OPL_20180105090740_af1417f0-381e-4190-a",
+    "_collection": "courses"
+  },
+  {
+    "active": true,
+    "title": "Offshore Air Diving Supervisors Resource Module",
+    "description": "![CDATA[Modules: for Offshore Supervisors <br>\nComplies with IMCA Trainee Air Diving Supervisor (TADS)]]",
+    "id": "OPL_20180105090856_e465ba59-40f9-46d7-b",
+    "group_id": "CLU_20180105090637_8a1294ff-b0b8-427a-9",
+    "code": "CD TADS",
+    "_id": "OPL_20180105090856_e465ba59-40f9-46d7-b",
+    "_path": "courses/OPL_20180105090856_e465ba59-40f9-46d7-b",
+    "_collection": "courses"
+  },
+  {
+    "active": true,
+    "title": "Diving Safety",
+    "description": "![CDATA[Modules : SD CLASS IV / III / II and Supervisors <br>\nApproaches to Safety (QCTO)<br>\nDiving Medical Emergency Response Plan<br>\n<br>\n]]",
+    "id": "OPL_20180105090935_18e42b4d-83e9-4969-8",
+    "group_id": "CLU_20180105090647_82b343f7-542f-49eb-a",
+    "code": "SD Saf",
+    "_id": "OPL_20180105090935_18e42b4d-83e9-4969-8",
+    "_path": "courses/OPL_20180105090935_18e42b4d-83e9-4969-8",
+    "_collection": "courses"
+  },
+  {
+    "active": true,
+    "title": "DoL Diving Supervisor",
+    "description": "![CDATA[Module: SD Sups<br>\nDoL Supervisor - Formative Studies]]",
+    "id": "OPL_20180105091059_ca040220-4537-4afc-9",
+    "group_id": "CLU_20180428103913_12c9f8e4-2e9e-4376-a",
+    "code": "DoL Sup ",
+    "_id": "OPL_20180105091059_ca040220-4537-4afc-9",
+    "_path": "courses/OPL_20180105091059_ca040220-4537-4afc-9",
+    "_collection": "courses"
+  },
+  {
+    "active": true,
+    "title": "Air Chamber Operator",
+    "description": "![CDATA[SD CLASS II<br>\nAir Chamber Operations - Offshore]]",
+    "id": "OPL_20180210060127_4fa60ddb-0f3f-4fb0-8",
+    "group_id": "CLU_20180105090655_bcc057be-fe37-4f48-a",
+    "code": "AC CHOP",
+    "_id": "OPL_20180210060127_4fa60ddb-0f3f-4fb0-8",
+    "_path": "courses/OPL_20180210060127_4fa60ddb-0f3f-4fb0-8",
+    "_collection": "courses"
+  },
+  {
+    "active": true,
+    "title": "C-DOC FA Diving First Aid at Work ",
+    "description": "FA Diving First Aid at Work ",
+    "id": "OPL_20180210064924_515c94b1-1fe7-446c-8",
+    "group_id": "CLU_20180210064747_37b9b001-670f-4e90-a",
+    "code": "CD DFA1",
+    "_id": "OPL_20180210064924_515c94b1-1fe7-446c-8",
+    "_path": "courses/OPL_20180210064924_515c94b1-1fe7-446c-8",
+    "_collection": "courses"
+  },
+  {
+    "active": true,
+    "title": "Q KM06  Wet Bell",
+    "description": "![CDATA[Module: SD CLASS II<br>\nWet Bell (KM-06-KT03)]]",
+    "id": "OPL_20180416102712_fe3837f1-c145-4dda-8",
+    "group_id": "CLU_20180416010141_6580819a-d3fb-4eb0-a",
+    "code": "QCTO KM06",
+    "_id": "OPL_20180416102712_fe3837f1-c145-4dda-8",
+    "_path": "courses/OPL_20180416102712_fe3837f1-c145-4dda-8",
+    "_collection": "courses"
+  },
+  {
+    "active": true,
+    "title": "DMAC 11",
+    "description": "DMAC 11 Provision of First Aid and the Training of Divers, Supervisors and Members of Dive Teams in First Aid",
+    "id": "OPL_20180427081315_b75ddf4e-89c3-497d-8",
+    "group_id": "CLU_20181004164409_ff982458-78d3-4c35-9",
+    "code": "DMAC 11",
+    "_id": "OPL_20180427081315_b75ddf4e-89c3-497d-8",
+    "_path": "courses/OPL_20180427081315_b75ddf4e-89c3-497d-8",
+    "_collection": "courses"
+  },
+  {
+    "active": true,
+    "title": "Diving Equipment -SCUBA KM07",
+    "description": "Basic design and operating principals of equipment ",
+    "id": "OPL_20180514042000_8130b70f-def4-42cf-a",
+    "group_id": "CLU_20180427113945_75cd514e-57f0-45b1-8",
+    "code": "Q KM07 4 SCUAB Equip",
+    "_id": "OPL_20180514042000_8130b70f-def4-42cf-a",
+    "_path": "courses/OPL_20180514042000_8130b70f-def4-42cf-a",
+    "_collection": "courses"
+  },
+  {
+    "active": true,
+    "title": "Surface Decompression ",
+    "description": "Modes of Decompression KM08",
+    "id": "OPL_20180522072052_05fb9043-d381-4c3a-8",
+    "group_id": "CLU_20180427130730_6ca6d8b7-eca0-46bc-9",
+    "code": "SurD02",
+    "_id": "OPL_20180522072052_05fb9043-d381-4c3a-8",
+    "_path": "courses/OPL_20180522072052_05fb9043-d381-4c3a-8",
+    "_collection": "courses"
+  },
+  {
+    "active": true,
+    "title": "Umbilical Management",
+    "description": "",
+    "id": "OPL_20180529105752_ce0ec327-79a8-48af-b",
+    "group_id": "CLU_20180427130713_67bf9977-4cb1-4ebc-9",
+    "code": "Q3KM09KT01",
+    "_id": "OPL_20180529105752_ce0ec327-79a8-48af-b",
+    "_path": "courses/OPL_20180529105752_ce0ec327-79a8-48af-b",
+    "_collection": "courses"
+  },
+  {
+    "active": true,
+    "title": "A-ADHD in the Workplace Survey ",
+    "description": "A-ADHD in the Workplace Survey ",
+    "id": "OPL_20180629114301_7458ec03-889c-4ce2-8",
+    "group_id": "CLU_20180629114632_5f76cbfa-c39b-4170-a",
+    "code": "DMP",
+    "_id": "OPL_20180629114301_7458ec03-889c-4ce2-8",
+    "_path": "courses/OPL_20180629114301_7458ec03-889c-4ce2-8",
+    "_collection": "courses"
+  },
+  {
+    "active": true,
+    "title": "Offshore Diver Medic -  Full Course Theory Module",
+    "description": "DMT Full Course ",
+    "id": "OPL_20180906175039_49fe9716-4162-4245-a",
+    "group_id": "CLU_20180105090625_19e405bc-faad-48c5-b",
+    "code": "DMTF",
+    "_id": "OPL_20180906175039_49fe9716-4162-4245-a",
+    "_path": "courses/OPL_20180906175039_49fe9716-4162-4245-a",
+    "_collection": "courses"
+  },
+  {
+    "active": true,
+    "title": "Pre-Sea",
+    "description": "Pre Sea",
+    "id": "OPL_20180907141908_72e1ad0e-643d-4bfe-8",
+    "group_id": "CLU_20180907141826_90a3080e-6f8f-4914-8",
+    "code": "Presea",
+    "_id": "OPL_20180907141908_72e1ad0e-643d-4bfe-8",
+    "_path": "courses/OPL_20180907141908_72e1ad0e-643d-4bfe-8",
+    "_collection": "courses"
+  },
+  {
+    "active": false,
+    "title": "07 Import HSE to be complted ",
+    "description": "",
+    "id": "OPL_20181106053928_cb5cc125-d012-4c97-9",
+    "group_id": "CLU_20181108100220_1d9685e8-d98b-4c2c-a",
+    "code": "07",
+    "_id": "OPL_20181106053928_cb5cc125-d012-4c97-9",
+    "_path": "courses/OPL_20181106053928_cb5cc125-d012-4c97-9",
+    "_collection": "courses"
+  },
+  {
+    "active": true,
+    "title": "Class IV Scientific Diver: Research Diving Unit ",
+    "description": "Class IV Scientific Diver: Research Diving Unit ",
+    "id": "OPL_20181110070013_a50692f4-be53-4cd2-8",
+    "group_id": "CLU_20180416010141_6580819a-d3fb-4eb0-a",
+    "code": "01",
+    "_id": "OPL_20181110070013_a50692f4-be53-4cd2-8",
+    "_path": "courses/OPL_20181110070013_a50692f4-be53-4cd2-8",
+    "_collection": "courses"
+  },
+  {
+    "isFree": false,
+    "imageUrl": "https://picsum.photos/id/1036/500/300",
+    "description": "Master advanced diving methods for professional divers.",
+    "dateCreated": "2025-04-28T15:59:26.360189+00:00",
+    "categories": [
+      "advanced",
+      "diving",
+      "professional"
+    ],
+    "instructor": "Sarah Johnson",
+    "price": 299.99,
+    "rating": 4.8,
+    "title": "Advanced Diving Techniques",
+    "isAvailable": true,
+    "status": "active",
+    "totalStudents": 22,
+    "modules": [
+      "Advanced Equipment",
+      "Deep Diving",
+      "Night Operations",
+      "Rescue Techniques",
+      "Leadership"
+    ],
+    "_id": "XXWQnNZR9XCv4IMU02Gt",
+    "_path": "courses/XXWQnNZR9XCv4IMU02Gt",
+    "_collection": "courses"
+  },
+  {
+    "imageUrl": "",
+    "description": "Imported from Company A JSON files",
+    "categories": [
+      "Imported"
+    ],
+    "instructor": "Company A",
+    "price": 0,
+    "rating": 5.0,
+    "isAvailable": true,
+    "status": "active",
+    "updatedAt": "2025-05-20T22:54:51.737221+00:00",
+    "totalStudents": 0,
+    "isFree": true,
+    "title": "Company A Course",
+    "createdAt": "2025-05-20T22:54:51.737221+00:00",
+    "modules": [
+      "58915f80-d3ab-44fe-90c7-f84e1bbe9f88",
+      "eaac1b99-2e61-4fb9-b260-173422d5dc2f"
+    ],
+    "sourceCompany": "A",
+    "_id": "a45773ca-5a3c-4030-b8c9-f0a0ee8fdfa8",
+    "_path": "courses/a45773ca-5a3c-4030-b8c9-f0a0ee8fdfa8",
+    "_collection": "courses"
+  },
+  {
+    "isFree": false,
+    "imageUrl": "https://picsum.photos/id/1019/500/300",
+    "description": "Comprehensive guide to planning safe and effective diving operations.",
+    "dateCreated": "2025-04-28T15:59:26.360193+00:00",
+    "categories": [
+      "planning",
+      "operations",
+      "safety"
+    ],
+    "instructor": "Emily Davis",
+    "price": 149.99,
+    "rating": 4.6,
+    "title": "Dive Planning",
+    "isAvailable": false,
+    "status": "draft",
+    "totalStudents": 19,
+    "modules": [
+      "Risk Assessment",
+      "Team Planning",
+      "Environmental Factors",
+      "Emergency Procedures"
+    ],
+    "_id": "azZkRy4vI2aOZq4zX2I1",
+    "_path": "courses/azZkRy4vI2aOZq4zX2I1",
+    "_collection": "courses"
+  },
+  {
+    "imageUrl": "",
+    "description": "Imported from Company A JSON files",
+    "categories": [
+      "Imported"
+    ],
+    "instructor": "Company A",
+    "price": 0,
+    "rating": 5.0,
+    "isAvailable": true,
+    "status": "active",
+    "updatedAt": "2025-05-20T22:49:26.263874+00:00",
+    "totalStudents": 0,
+    "isFree": true,
+    "title": "Company A Course",
+    "createdAt": "2025-05-20T22:49:26.263874+00:00",
+    "modules": [
+      "2ba09541-e050-41c5-bbce-040cf4607c82",
+      "48810288-2d75-4e3e-804a-b151f34ccf8a"
+    ],
+    "sourceCompany": "A",
+    "_id": "e070a0c3-36e7-4e06-bffd-5d58edfa8334",
+    "_path": "courses/e070a0c3-36e7-4e06-bffd-5d58edfa8334",
+    "_collection": "courses"
+  },
+  {
+    "isFree": false,
+    "imageUrl": "https://picsum.photos/id/1025/500/300",
+    "description": "Learn the foundations of surface supplied diving techniques and equipment.",
+    "dateCreated": "2025-04-28T15:59:26.360181+00:00",
+    "categories": [
+      "diving",
+      "equipment",
+      "safety"
+    ],
+    "instructor": "John Smith",
+    "price": 199.99,
+    "rating": 4.5,
+    "title": "Surface Supplied Diving",
+    "isAvailable": true,
+    "status": "active",
+    "totalStudents": 28,
+    "modules": [
+      "Introduction",
+      "Equipment",
+      "Safety Procedures",
+      "Practical Techniques",
+      "Certification"
+    ],
+    "_id": "j4LAiAEMn2sGgo0Z5z7b",
+    "_path": "courses/j4LAiAEMn2sGgo0Z5z7b",
+    "_collection": "courses"
+  }
+]

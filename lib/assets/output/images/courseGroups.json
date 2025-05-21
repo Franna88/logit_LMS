@@ -1,0 +1,114 @@
+[
+  {
+    "sortcode": "16",
+    "description": "C-DOC IMCA Diver Medic Technician (DMT)",
+    "id": "CLU_20180105090625_19e405bc-faad-48c5-b",
+    "_id": "CLU_20180105090625_19e405bc-faad-48c5-b",
+    "_path": "courseGroups/CLU_20180105090625_19e405bc-faad-48c5-b",
+    "_collection": "courseGroups"
+  },
+  {
+    "sortcode": "17",
+    "description": "C-DOC Offshore Air Diving Supervisor  (TADS)",
+    "id": "CLU_20180105090637_8a1294ff-b0b8-427a-9",
+    "_id": "CLU_20180105090637_8a1294ff-b0b8-427a-9",
+    "_path": "courseGroups/CLU_20180105090637_8a1294ff-b0b8-427a-9",
+    "_collection": "courseGroups"
+  },
+  {
+    "sortcode": "21",
+    "description": "SEADOG Diver Training",
+    "id": "CLU_20180105090647_82b343f7-542f-49eb-a",
+    "_id": "CLU_20180105090647_82b343f7-542f-49eb-a",
+    "_path": "courseGroups/CLU_20180105090647_82b343f7-542f-49eb-a",
+    "_collection": "courseGroups"
+  },
+  {
+    "sortcode": "14",
+    "description": "C-DOC Chambers",
+    "id": "CLU_20180105090655_bcc057be-fe37-4f48-a",
+    "_id": "CLU_20180105090655_bcc057be-fe37-4f48-a",
+    "_path": "courseGroups/CLU_20180105090655_bcc057be-fe37-4f48-a",
+    "_collection": "courseGroups"
+  },
+  {
+    "sortcode": "15",
+    "description": "C-DOC First Aid ",
+    "id": "CLU_20180210064747_37b9b001-670f-4e90-a",
+    "_id": "CLU_20180210064747_37b9b001-670f-4e90-a",
+    "_path": "courseGroups/CLU_20180210064747_37b9b001-670f-4e90-a",
+    "_collection": "courseGroups"
+  },
+  {
+    "sortcode": "20",
+    "description": "QCTO",
+    "id": "CLU_20180416010141_6580819a-d3fb-4eb0-a",
+    "_id": "CLU_20180416010141_6580819a-d3fb-4eb0-a",
+    "_path": "courseGroups/CLU_20180416010141_6580819a-d3fb-4eb0-a",
+    "_collection": "courseGroups"
+  },
+  {
+    "sortcode": "23",
+    "description": "SEADOG Class IV ",
+    "id": "CLU_20180427113945_75cd514e-57f0-45b1-8",
+    "_id": "CLU_20180427113945_75cd514e-57f0-45b1-8",
+    "_path": "courseGroups/CLU_20180427113945_75cd514e-57f0-45b1-8",
+    "_collection": "courseGroups"
+  },
+  {
+    "sortcode": "24",
+    "description": "SEADOG Class III",
+    "id": "CLU_20180427130713_67bf9977-4cb1-4ebc-9",
+    "_id": "CLU_20180427130713_67bf9977-4cb1-4ebc-9",
+    "_path": "courseGroups/CLU_20180427130713_67bf9977-4cb1-4ebc-9",
+    "_collection": "courseGroups"
+  },
+  {
+    "sortcode": "25",
+    "description": "SEADOG Class II",
+    "id": "CLU_20180427130730_6ca6d8b7-eca0-46bc-9",
+    "_id": "CLU_20180427130730_6ca6d8b7-eca0-46bc-9",
+    "_path": "courseGroups/CLU_20180427130730_6ca6d8b7-eca0-46bc-9",
+    "_collection": "courseGroups"
+  },
+  {
+    "sortcode": "26",
+    "description": "SEADOG DoL Supervisor Training",
+    "id": "CLU_20180428103913_12c9f8e4-2e9e-4376-a",
+    "_id": "CLU_20180428103913_12c9f8e4-2e9e-4376-a",
+    "_path": "courseGroups/CLU_20180428103913_12c9f8e4-2e9e-4376-a",
+    "_collection": "courseGroups"
+  },
+  {
+    "sortcode": "12",
+    "description": "The Diving Doctor ",
+    "id": "CLU_20180629114632_5f76cbfa-c39b-4170-a",
+    "_id": "CLU_20180629114632_5f76cbfa-c39b-4170-a",
+    "_path": "courseGroups/CLU_20180629114632_5f76cbfa-c39b-4170-a",
+    "_collection": "courseGroups"
+  },
+  {
+    "sortcode": "6",
+    "description": "Maritime STCW",
+    "id": "CLU_20180907141826_90a3080e-6f8f-4914-8",
+    "_id": "CLU_20180907141826_90a3080e-6f8f-4914-8",
+    "_path": "courseGroups/CLU_20180907141826_90a3080e-6f8f-4914-8",
+    "_collection": "courseGroups"
+  },
+  {
+    "sortcode": "5",
+    "description": "DMAC 11 Provision of First Aid and the Training of Divers, Supervisors and Members of Dive Teams in First Aid",
+    "id": "CLU_20181004164409_ff982458-78d3-4c35-9",
+    "_id": "CLU_20181004164409_ff982458-78d3-4c35-9",
+    "_path": "courseGroups/CLU_20181004164409_ff982458-78d3-4c35-9",
+    "_collection": "courseGroups"
+  },
+  {
+    "sortcode": "3",
+    "description": "GDS - Staff",
+    "id": "CLU_20181108100220_1d9685e8-d98b-4c2c-a",
+    "_id": "CLU_20181108100220_1d9685e8-d98b-4c2c-a",
+    "_path": "courseGroups/CLU_20181108100220_1d9685e8-d98b-4c2c-a",
+    "_collection": "courseGroups"
+  }
+]
