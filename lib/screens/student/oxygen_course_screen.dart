@@ -75,6 +75,19 @@ class QuizOption {
   }
 }
 
+// At the top of the file, add the AssessmentItem class
+class AssessmentItem {
+  final String title;
+  final String description;
+  String competencyLevel; // Changed from final to mutable
+
+  AssessmentItem({
+    required this.title,
+    required this.description,
+    required this.competencyLevel,
+  });
+}
+
 class OxygenCourseScreen extends StatefulWidget {
   const OxygenCourseScreen({super.key});
 
@@ -523,7 +536,7 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
               Tab(text: 'Modules', height: 36),
               Tab(text: 'Discussion', height: 36),
               Tab(text: 'Resources', height: 36),
-              Tab(text: 'Assessment', height: 36), // New Assessment tab
+              Tab(text: 'Workplace Assessment', height: 36),
             ],
           ),
         ),
@@ -536,9 +549,7 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
               _buildModulesTab(),
               _buildPlaceholderTab('Discussion'),
               _buildPlaceholderTab('Resources'),
-              _isLoadingQuiz
-                  ? const Center(child: CircularProgressIndicator())
-                  : _buildAssessmentTab(), // New Assessment tab content
+              _buildWorkplaceAssessmentTab(),
             ],
           ),
         ),
@@ -913,19 +924,76 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
     });
   }
 
-  // Build the Assessment tab content
-  Widget _buildAssessmentTab() {
-    // Make sure we always have questions to display
-    if (_quizQuestions.isEmpty) {
-      _setupSampleQuestions();
+  // Build the Workplace Assessment tab content
+  Widget _buildWorkplaceAssessmentTab() {
+    // The workplace assessment data from the file
+    final List<AssessmentItem> assessmentItems = [
+      // Safety First
+      AssessmentItem(
+        title: 'Safety First',
+        description:
+            'Ensures hands are clean and free from hand creams, oil and grease',
+        competencyLevel: 'Not Yet Competent',
+      ),
+      AssessmentItem(
+        title: 'Safety First',
+        description: 'Ensure no open flames or sparks in work area',
+        competencyLevel: 'Not Yet Competent',
+      ),
+      // Check the cylinder
+      AssessmentItem(
+        title: 'Check the cylinder',
+        description:
+            'Safety - Proper Position: Oxygen cylinder securely upright or lying down',
+        competencyLevel: 'Not Yet Competent',
+      ),
+      AssessmentItem(
+        title: 'Check the cylinder',
+        description: 'Safety - no part of body over cylinder valve',
+        competencyLevel: 'Not Yet Competent',
+      ),
+      AssessmentItem(
+        title: 'Check the cylinder',
+        description: 'Safety - correct cylinder colour coding and in date',
+        competencyLevel: 'Not Yet Competent',
+      ),
+      AssessmentItem(
+        title: 'Step 9: Re-stock',
+        description: 'Follows company procedure for restocking DMAC 015',
+        competencyLevel: 'Not Yet Competent',
+      ),
+      AssessmentItem(
+        title: 'Attitude',
+        description: 'Student displays proper attitude during assessment',
+        competencyLevel: 'Negative',
+      ),
+    ];
+
+    // Group items by title
+    Map<String, List<AssessmentItem>> groupedItems = {};
+    for (var item in assessmentItems) {
+      if (!groupedItems.containsKey(item.title)) {
+        groupedItems[item.title] = [];
+      }
+      groupedItems[item.title]!.add(item);
     }
 
-    // Calculate quiz progress
-    int totalQuizzes = _quizQuestions.length;
-    int completedQuizzes =
-        _completedQuizzes.values.where((isCompleted) => isCompleted).length;
-    double completionPercentage =
-        totalQuizzes > 0 ? completedQuizzes / totalQuizzes : 0.0;
+    // Calculate assessment progress - items with competent status
+    int completedItems =
+        assessmentItems
+            .where(
+              (item) =>
+                  item.competencyLevel == 'Competent' ||
+                  item.competencyLevel == 'Positive',
+            )
+            .length;
+
+    double progress =
+        assessmentItems.isEmpty ? 0.0 : completedItems / assessmentItems.length;
+
+    // Current score value (this would be calculated based on the assessment)
+    double scoreValue = 7.5;
+    TextEditingController remarksController = TextEditingController();
 
     return Column(
       children: [
@@ -950,17 +1018,17 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
                   ),
                   const Spacer(),
                   Text(
-                    '$completedQuizzes of $totalQuizzes completed',
+                    '$completedItems of ${assessmentItems.length} completed',
                     style: TextStyle(fontSize: 14, color: Colors.blue.shade700),
                   ),
                 ],
               ),
               const SizedBox(height: 8),
               LinearProgressIndicator(
-                value: completionPercentage,
+                value: progress,
                 backgroundColor: Colors.grey.shade200,
                 valueColor: AlwaysStoppedAnimation<Color>(
-                  completionPercentage == 1.0 ? Colors.green : Colors.blue,
+                  progress == 1.0 ? Colors.green : Colors.blue,
                 ),
                 minHeight: 6,
                 borderRadius: BorderRadius.circular(3),
@@ -969,420 +1037,538 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
           ),
         ),
 
-        // Questions list
+        // Assessment items
         Expanded(
-          child:
-              _quizQuestions.isEmpty
-                  ? Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.quiz, size: 64, color: Colors.blue.shade200),
-                        const SizedBox(height: 16),
-                        const Text(
-                          'No assessment questions available',
-                          style: TextStyle(fontSize: 16),
-                        ),
-                        const SizedBox(height: 8),
-                        ElevatedButton(
-                          onPressed: () {
-                            _setupSampleQuestions();
-                            setState(() {});
-                          },
-                          child: const Text('Load Sample Questions'),
-                        ),
-                      ],
-                    ),
-                  )
-                  : ListView.builder(
-                    itemCount: _quizQuestions.length,
-                    padding: const EdgeInsets.all(16),
-                    itemBuilder: (context, index) {
-                      final question = _quizQuestions[index];
-                      bool isAnswered =
-                          _userAnswers.containsKey(question.id) &&
-                          (_userAnswers[question.id]?.isNotEmpty == true);
-                      bool isCorrect = _isAnswerCorrect(question);
-                      bool isMultipleChoice = question.type == 'meermeerkeuze';
+          child: ListView(
+            padding: const EdgeInsets.all(16),
+            children: [
+              // Assessment items grouped by section
+              ...groupedItems.entries.map((entry) {
+                String title = entry.key;
+                List<AssessmentItem> items = entry.value;
 
-                      return Card(
-                        elevation: 2,
-                        margin: const EdgeInsets.only(bottom: 16),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          side: BorderSide(
-                            color:
-                                isAnswered
-                                    ? (isCorrect
-                                        ? Colors.green.shade200
-                                        : Colors.red.shade200)
-                                    : Colors.transparent,
-                            width: 1.5,
+                return Card(
+                  margin: const EdgeInsets.only(bottom: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Title section
+                      Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Text(
+                          title,
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              // Question number and type indicator
-                              Row(
-                                children: [
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 8,
-                                      vertical: 4,
-                                    ),
-                                    decoration: BoxDecoration(
-                                      color: Colors.blue.shade100,
-                                      borderRadius: BorderRadius.circular(8),
-                                    ),
-                                    child: Text(
-                                      'Question ${index + 1}',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.blue.shade700,
+                      ),
+
+                      // Assessment items
+                      ...items.map((item) {
+                        if (item.title == 'Attitude') {
+                          return _buildAttitudeRow(item);
+                        } else {
+                          return _buildAssessmentItemRow(item);
+                        }
+                      }),
+
+                      const SizedBox(height: 8),
+                    ],
+                  ),
+                );
+              }).toList(),
+
+              // Remarks section
+              Card(
+                margin: const EdgeInsets.only(bottom: 16),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.all(16),
+                      child: Text(
+                        'Remarks',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 8,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Extra remarks regarding this assessment',
+                            style: TextStyle(fontSize: 16),
+                          ),
+                          const SizedBox(height: 8),
+                          Container(
+                            height: 150,
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.grey.shade300),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: TextField(
+                              controller: remarksController,
+                              maxLines: null,
+                              decoration: const InputDecoration(
+                                contentPadding: EdgeInsets.all(12),
+                                border: InputBorder.none,
+                                hintText: 'Enter additional remarks here...',
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                  ],
+                ),
+              ),
+
+              // Score section
+              Card(
+                margin: const EdgeInsets.only(bottom: 16),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.all(16),
+                      child: Text(
+                        'Score',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 8,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            height: 40,
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.grey.shade300),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 40,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    border: Border(
+                                      right: BorderSide(
+                                        color: Colors.grey.shade300,
                                       ),
                                     ),
                                   ),
-                                  const SizedBox(width: 8),
-                                  if (isMultipleChoice)
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 8,
-                                        vertical: 4,
-                                      ),
-                                      decoration: BoxDecoration(
-                                        color: Colors.purple.shade100,
-                                        borderRadius: BorderRadius.circular(8),
-                                      ),
-                                      child: Text(
-                                        'Multiple Choice',
-                                        style: TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.purple.shade700,
-                                        ),
-                                      ),
-                                    ),
-                                  const Spacer(),
-                                  if (isAnswered)
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 8,
-                                        vertical: 4,
-                                      ),
-                                      decoration: BoxDecoration(
-                                        color:
-                                            isCorrect
-                                                ? Colors.green.shade100
-                                                : Colors.red.shade100,
-                                        borderRadius: BorderRadius.circular(8),
-                                      ),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          Icon(
-                                            isCorrect
-                                                ? Icons.check
-                                                : Icons.close,
-                                            size: 16,
-                                            color:
-                                                isCorrect
-                                                    ? Colors.green.shade700
-                                                    : Colors.red.shade700,
-                                          ),
-                                          const SizedBox(width: 4),
-                                          Text(
-                                            isCorrect ? 'Correct' : 'Incorrect',
-                                            style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.bold,
-                                              color:
-                                                  isCorrect
-                                                      ? Colors.green.shade700
-                                                      : Colors.red.shade700,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                ],
-                              ),
-
-                              const SizedBox(height: 16),
-
-                              // Question text
-                              Text(
-                                question.text,
-                                style: const TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
+                                  child: const Text(
+                                    '0',
+                                    style: TextStyle(fontSize: 16),
+                                  ),
                                 ),
-                              ),
-
-                              // Images if present
-                              if (question.images.isNotEmpty) ...[
-                                const SizedBox(height: 16),
-                                Center(
-                                  child: Builder(
-                                    builder: (context) {
-                                      final String imagePath =
-                                          question.images.first['src'] ?? '';
-                                      // Try to extract just the image filename from the path
-                                      final filename =
-                                          imagePath.split('/').last;
-
-                                      // First try loading from network if URL looks valid
-                                      if (imagePath.startsWith('http')) {
-                                        return Image.network(
-                                          imagePath,
-                                          errorBuilder:
-                                              (context, error, stackTrace) =>
-                                                  _buildErrorImage(),
-                                        );
-                                      }
-
-                                      // Try different asset paths
-                                      try {
-                                        return Image.asset(
-                                          'lib/assets/output/images/$filename',
-                                          width: 250,
-                                          errorBuilder: (
-                                            context,
-                                            error,
-                                            stackTrace,
-                                          ) {
-                                            try {
-                                              return Image.asset(
-                                                'assets/lib/assets/output/images/$filename',
-                                                width: 250,
-                                                errorBuilder:
-                                                    (
-                                                      context,
-                                                      error,
-                                                      stackTrace,
-                                                    ) => _buildErrorImage(),
-                                              );
-                                            } catch (e) {
-                                              return _buildErrorImage();
-                                            }
-                                          },
-                                        );
-                                      } catch (e) {
-                                        return _buildErrorImage();
-                                      }
-                                    },
+                                Expanded(
+                                  child: SliderTheme(
+                                    data: SliderThemeData(
+                                      trackHeight: 8,
+                                      thumbShape: const RoundSliderThumbShape(
+                                        enabledThumbRadius: 8,
+                                      ),
+                                      overlayShape:
+                                          const RoundSliderOverlayShape(
+                                            overlayRadius: 16,
+                                          ),
+                                      activeTrackColor: Colors.blue,
+                                      inactiveTrackColor: Colors.grey.shade200,
+                                      thumbColor: Colors.blue,
+                                    ),
+                                    child: Slider(
+                                      value: scoreValue,
+                                      min: 0,
+                                      max: 10,
+                                      divisions: 20,
+                                      onChanged: (value) {
+                                        setState(() {
+                                          scoreValue = value;
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 40,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    border: Border(
+                                      left: BorderSide(
+                                        color: Colors.grey.shade300,
+                                      ),
+                                    ),
+                                  ),
+                                  child: const Text(
+                                    '10',
+                                    style: TextStyle(fontSize: 16),
                                   ),
                                 ),
                               ],
-
-                              const SizedBox(height: 16),
-                              const Divider(),
-                              const SizedBox(height: 8),
-
-                              // Options
-                              ...question.options.map((option) {
-                                bool isSelected =
-                                    _userAnswers[question.id]?.contains(
-                                      option.id,
-                                    ) ??
-                                    false;
-                                bool showCorrectness = isAnswered;
-
-                                return Padding(
-                                  padding: const EdgeInsets.only(bottom: 8),
-                                  child: InkWell(
-                                    onTap:
-                                        isAnswered
-                                            ? null
-                                            : () {
-                                              _saveQuizAnswer(
-                                                question.id,
-                                                option.id,
-                                                isMultipleChoice,
-                                              );
-                                            },
-                                    borderRadius: BorderRadius.circular(8),
-                                    child: Container(
-                                      padding: const EdgeInsets.all(12),
-                                      decoration: BoxDecoration(
-                                        color:
-                                            isSelected
-                                                ? (showCorrectness
-                                                    ? (option.isCorrect
-                                                        ? Colors.green.shade50
-                                                        : Colors.red.shade50)
-                                                    : Colors.blue.shade50)
-                                                : Colors.grey.shade50,
-                                        borderRadius: BorderRadius.circular(8),
-                                        border: Border.all(
-                                          color:
-                                              isSelected
-                                                  ? (showCorrectness
-                                                      ? (option.isCorrect
-                                                          ? Colors.green
-                                                          : Colors.red)
-                                                      : Colors.blue)
-                                                  : Colors.grey.shade300,
-                                          width: 1.5,
-                                        ),
-                                      ),
-                                      child: Row(
-                                        children: [
-                                          // Selection indicator
-                                          Container(
-                                            width: 24,
-                                            height: 24,
-                                            decoration: BoxDecoration(
-                                              shape:
-                                                  isMultipleChoice
-                                                      ? BoxShape.rectangle
-                                                      : BoxShape.circle,
-                                              borderRadius:
-                                                  isMultipleChoice
-                                                      ? BorderRadius.circular(4)
-                                                      : null,
-                                              border: Border.all(
-                                                color:
-                                                    isSelected
-                                                        ? (showCorrectness
-                                                            ? (option.isCorrect
-                                                                ? Colors.green
-                                                                : Colors.red)
-                                                            : Colors.blue)
-                                                        : Colors.grey,
-                                                width: 1.5,
-                                              ),
-                                              color:
-                                                  isSelected
-                                                      ? (showCorrectness
-                                                          ? (option.isCorrect
-                                                              ? Colors
-                                                                  .green
-                                                                  .shade100
-                                                              : Colors
-                                                                  .red
-                                                                  .shade100)
-                                                          : Colors
-                                                              .blue
-                                                              .shade100)
-                                                      : Colors.transparent,
-                                            ),
-                                            child:
-                                                isSelected
-                                                    ? Center(
-                                                      child: Icon(
-                                                        isMultipleChoice
-                                                            ? Icons.check
-                                                            : Icons.circle,
-                                                        size: 16,
-                                                        color:
-                                                            showCorrectness
-                                                                ? (option
-                                                                        .isCorrect
-                                                                    ? Colors
-                                                                        .green
-                                                                    : Colors
-                                                                        .red)
-                                                                : Colors.blue,
-                                                      ),
-                                                    )
-                                                    : null,
-                                          ),
-
-                                          const SizedBox(width: 12),
-
-                                          // Option text
-                                          Expanded(
-                                            child: Text(
-                                              option.text,
-                                              style: TextStyle(
-                                                fontSize: 14,
-                                                color:
-                                                    isSelected
-                                                        ? (showCorrectness
-                                                            ? (option.isCorrect
-                                                                ? Colors
-                                                                    .green
-                                                                    .shade800
-                                                                : Colors
-                                                                    .red
-                                                                    .shade800)
-                                                            : Colors
-                                                                .blue
-                                                                .shade800)
-                                                        : Colors.black87,
-                                              ),
-                                            ),
-                                          ),
-
-                                          // Correctness indicator when answered
-                                          if (showCorrectness &&
-                                              option.isCorrect)
-                                            Icon(
-                                              Icons.check_circle,
-                                              color: Colors.green,
-                                              size: 20,
-                                            ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                );
-                              }).toList(),
-
-                              const SizedBox(height: 8),
-
-                              // Submit button for questions that aren't answered yet
-                              if (!isAnswered &&
-                                  _userAnswers[question.id]?.isNotEmpty == true)
-                                Center(
-                                  child: ElevatedButton(
-                                    onPressed: () {
-                                      bool correct = _isAnswerCorrect(question);
-                                      _markQuizCompleted(question.id, true);
-
-                                      // Show feedback
-                                      ScaffoldMessenger.of(
-                                        context,
-                                      ).showSnackBar(
-                                        SnackBar(
-                                          content: Text(
-                                            correct
-                                                ? 'Correct answer!'
-                                                : 'Incorrect. Try reviewing the course material.',
-                                          ),
-                                          backgroundColor:
-                                              correct
-                                                  ? Colors.green
-                                                  : Colors.red,
-                                        ),
-                                      );
-                                    },
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.blue,
-                                      foregroundColor: Colors.white,
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 24,
-                                        vertical: 12,
-                                      ),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(8),
-                                      ),
-                                    ),
-                                    child: const Text('Submit Answer'),
-                                  ),
-                                ),
-                            ],
+                            ),
                           ),
-                        ),
-                      );
-                    },
+                          const SizedBox(height: 8),
+                          Text(
+                            'Current score: ${scoreValue.toStringAsFixed(1)}',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.grey.shade700,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+
+        // Bottom action buttons
+        Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                blurRadius: 4,
+                offset: const Offset(0, -2),
+              ),
+            ],
+          ),
+          child: Row(
+            children: [
+              const Spacer(),
+              ElevatedButton(
+                onPressed: () {
+                  // Save the assessment data
+                  _saveAssessmentData(
+                    assessmentItems,
+                    remarksController.text,
+                    scoreValue,
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 24,
+                    vertical: 12,
                   ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+                child: const Text('Save'),
+              ),
+            ],
+          ),
         ),
       ],
+    );
+  }
+
+  // Save assessment data to shared preferences or backend
+  Future<void> _saveAssessmentData(
+    List<AssessmentItem> items,
+    String remarks,
+    double score,
+  ) async {
+    try {
+      // Here you would save to SharedPreferences or to a backend
+      // For this demo we'll just show a success message
+
+      // Show success message
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: const Text('Assessment saved successfully'),
+          backgroundColor: Colors.green,
+          duration: const Duration(seconds: 2),
+        ),
+      );
+    } catch (e) {
+      // Show error message
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Error saving assessment: $e'),
+          backgroundColor: Colors.red,
+          duration: const Duration(seconds: 2),
+        ),
+      );
+    }
+  }
+
+  Widget _buildAssessmentItemRow(AssessmentItem item) {
+    bool hasSelection =
+        item.competencyLevel != 'Not Yet Competent' &&
+        item.competencyLevel != 'Negative';
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      child: Container(
+        decoration: BoxDecoration(
+          color:
+              hasSelection ? Colors.amber.withOpacity(0.2) : Colors.transparent,
+          borderRadius: BorderRadius.circular(8),
+          border:
+              hasSelection
+                  ? Border.all(color: Colors.amber.withOpacity(0.5), width: 1.5)
+                  : null,
+        ),
+        padding: const EdgeInsets.all(8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Description
+            Text(item.description, style: const TextStyle(fontSize: 16)),
+            const SizedBox(height: 8),
+
+            // Competency level selector
+            _buildCompetencySelector(item),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildCompetencySelector(AssessmentItem item) {
+    bool isPositive =
+        item.competencyLevel == 'Competent' ||
+        item.competencyLevel == 'Positive';
+
+    // This matches the screenshot with competency levels
+    return Row(
+      children: [
+        Expanded(
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.grey.shade300),
+              borderRadius: BorderRadius.circular(4),
+            ),
+            child: Row(
+              children: [
+                _buildCompetencyOption(
+                  'Not Yet Competent',
+                  item.competencyLevel == 'Not Yet Competent',
+                  () => _updateCompetencyLevel(item, 'Not Yet Competent'),
+                ),
+                _buildCompetencyOption(
+                  'Skill gap',
+                  item.competencyLevel == 'Skill gap',
+                  () => _updateCompetencyLevel(item, 'Skill gap'),
+                ),
+                _buildCompetencyOption(
+                  'Knowledge Gap',
+                  item.competencyLevel == 'Knowledge Gap',
+                  () => _updateCompetencyLevel(item, 'Knowledge Gap'),
+                ),
+                _buildCompetencyOption(
+                  'Competent',
+                  item.competencyLevel == 'Competent',
+                  () => _updateCompetencyLevel(item, 'Competent'),
+                ),
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(width: 8),
+        GestureDetector(
+          onTap: () {
+            // Toggle between Competent and Not Yet Competent when clicking the checkmark
+            setState(() {
+              if (item.title == 'Attitude') {
+                item.competencyLevel =
+                    (item.competencyLevel == 'Positive')
+                        ? 'Negative'
+                        : 'Positive';
+              } else {
+                item.competencyLevel =
+                    (item.competencyLevel == 'Competent')
+                        ? 'Not Yet Competent'
+                        : 'Competent';
+              }
+            });
+          },
+          child: Container(
+            width: 36,
+            height: 36,
+            decoration: BoxDecoration(
+              color: isPositive ? Colors.green : Colors.amber,
+              shape: BoxShape.circle,
+            ),
+            child: Icon(
+              isPositive ? Icons.check : Icons.pending,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildCompetencyOption(
+    String label,
+    bool isSelected,
+    VoidCallback onTap,
+  ) {
+    return Expanded(
+      child: InkWell(
+        onTap: onTap,
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          decoration: BoxDecoration(
+            color: isSelected ? Colors.blue : Colors.grey.shade200,
+            border: Border(right: BorderSide(color: Colors.grey.shade300)),
+          ),
+          child: Center(
+            child: Text(
+              label,
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                color: isSelected ? Colors.white : Colors.black87,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  // Method to update competency level
+  void _updateCompetencyLevel(AssessmentItem item, String newLevel) {
+    setState(() {
+      // Only update if this is a different selection
+      if (item.competencyLevel != newLevel) {
+        item.competencyLevel = newLevel;
+        // Show visual feedback for selection
+        ScaffoldMessenger.of(context).clearSnackBars();
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Assessment marked as: $newLevel'),
+            backgroundColor: Colors.blue,
+            duration: const Duration(seconds: 1),
+            behavior: SnackBarBehavior.floating,
+          ),
+        );
+      }
+    });
+  }
+
+  // For the attitude row, we need a special widget
+  Widget _buildAttitudeRow(AssessmentItem item) {
+    bool isPositive = item.competencyLevel == 'Positive';
+    bool hasSelection = item.competencyLevel != 'Negative';
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      child: Container(
+        decoration: BoxDecoration(
+          color:
+              hasSelection ? Colors.amber.withOpacity(0.2) : Colors.transparent,
+          borderRadius: BorderRadius.circular(8),
+          border:
+              hasSelection
+                  ? Border.all(color: Colors.amber.withOpacity(0.5), width: 1.5)
+                  : null,
+        ),
+        padding: const EdgeInsets.all(8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Description
+            Text(item.description, style: const TextStyle(fontSize: 16)),
+            const SizedBox(height: 8),
+
+            // Attitude selector
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey.shade300),
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    child: Row(
+                      children: [
+                        _buildCompetencyOption(
+                          'Negative',
+                          item.competencyLevel == 'Negative',
+                          () => _updateCompetencyLevel(item, 'Negative'),
+                        ),
+                        _buildCompetencyOption(
+                          'Lacks attention',
+                          item.competencyLevel == 'Lacks attention',
+                          () => _updateCompetencyLevel(item, 'Lacks attention'),
+                        ),
+                        _buildCompetencyOption(
+                          'Positive',
+                          item.competencyLevel == 'Positive',
+                          () => _updateCompetencyLevel(item, 'Positive'),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 8),
+                GestureDetector(
+                  onTap: () {
+                    // Toggle between Positive and Negative when clicking the checkmark
+                    setState(() {
+                      item.competencyLevel =
+                          isPositive ? 'Negative' : 'Positive';
+                    });
+                  },
+                  child: Container(
+                    width: 36,
+                    height: 36,
+                    decoration: BoxDecoration(
+                      color: isPositive ? Colors.green : Colors.amber,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(
+                      isPositive ? Icons.check : Icons.pending,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 

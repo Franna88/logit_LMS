@@ -2,9 +2,23 @@ import 'package:flutter/material.dart';
 import '../../widgets/modern_layout.dart';
 import '../../screens/modules/content_navigator.dart';
 import '../../services/lesson_service.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 // Define the content types
 enum ContentType { introduction, video, lesson, exercise, quiz, assessment }
+
+// Define the assessment item class
+class AssessmentItem {
+  final String title;
+  final String description;
+  String competencyLevel; // Changed to mutable
+
+  AssessmentItem({
+    required this.title,
+    required this.description,
+    required this.competencyLevel,
+  });
+}
 
 // Class to hold content item data
 class ContentItem {
@@ -39,11 +53,65 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
   List<ContentItem> _lesson01Content = [];
   List<ContentItem> _lesson02Content = [];
 
+  // For workplace assessment
+  List<AssessmentItem> _assessmentItems =
+      []; // Will be initialized in initState
+  double _scoreValue = 7.5;
+  TextEditingController _remarksController = TextEditingController();
+
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 4, vsync: this);
     _loadLessonData();
+    _initializeAssessmentItems();
+  }
+
+  void _initializeAssessmentItems() {
+    // Initialize the assessment items with default values
+    _assessmentItems = [
+      // Safety First
+      AssessmentItem(
+        title: 'Safety First',
+        description:
+            'Ensures hands are clean and free from hand creams, oil and grease',
+        competencyLevel: 'Not Yet Competent',
+      ),
+      AssessmentItem(
+        title: 'Safety First',
+        description: 'Ensure no open flames or sparks in work area',
+        competencyLevel: 'Not Yet Competent',
+      ),
+      // Check the cylinder
+      AssessmentItem(
+        title: 'Check the cylinder',
+        description:
+            'Safety - Proper Position: Oxygen cylinder securely upright or lying down',
+        competencyLevel: 'Not Yet Competent',
+      ),
+      AssessmentItem(
+        title: 'Check the cylinder',
+        description: 'Safety - no part of body over cylinder valve',
+        competencyLevel: 'Not Yet Competent',
+      ),
+      AssessmentItem(
+        title: 'Check the cylinder',
+        description: 'Safety - correct cylinder colour coding and in date',
+        competencyLevel: 'Not Yet Competent',
+      ),
+      // Step 9: Re-stock
+      AssessmentItem(
+        title: 'Step 9: Re-stock',
+        description: 'Follows company procedure for restocking DMAC 015',
+        competencyLevel: 'Not Yet Competent',
+      ),
+      // Attitude
+      AssessmentItem(
+        title: 'Attitude',
+        description: 'Student displays proper attitude during assessment',
+        competencyLevel: 'Negative',
+      ),
+    ];
   }
 
   Future<void> _loadLessonData() async {
@@ -109,6 +177,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
                 Tab(text: 'Modules', height: 36), // Further reduced height
                 Tab(text: 'Discussion', height: 36), // Further reduced height
                 Tab(text: 'Resources', height: 36), // Further reduced height
+                Tab(text: 'Workplace Assessment', height: 36), // New tab
               ],
             ),
           ),
@@ -121,6 +190,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
                 _isLoading ? _buildLoadingIndicator() : _buildModulesTab(),
                 _buildDiscussionTab(),
                 _buildResourcesTab(),
+                _buildWorkplaceAssessmentTab(), // New tab content
               ],
             ),
           ),
@@ -1310,6 +1380,490 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
               );
             },
           ),
+        ),
+      ],
+    );
+  }
+
+  // Build the Workplace Assessment tab content
+  Widget _buildWorkplaceAssessmentTab() {
+    // Group items by title
+    Map<String, List<AssessmentItem>> groupedItems = {};
+    for (var item in _assessmentItems) {
+      if (!groupedItems.containsKey(item.title)) {
+        groupedItems[item.title] = [];
+      }
+      groupedItems[item.title]!.add(item);
+    }
+
+    // Calculate assessment progress - items with competent status
+    int completedItems =
+        _assessmentItems
+            .where(
+              (item) =>
+                  item.competencyLevel == 'Competent' ||
+                  item.competencyLevel == 'Positive',
+            )
+            .length;
+    double progress =
+        _assessmentItems.isEmpty
+            ? 0.0
+            : completedItems / _assessmentItems.length;
+
+    return Column(
+      children: [
+        // Progress section
+        Container(
+          padding: const EdgeInsets.all(16),
+          color: Colors.blue.shade50,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Icon(Icons.assessment, color: Colors.blue.shade700),
+                  const SizedBox(width: 8),
+                  Text(
+                    'Assessment Progress',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue.shade700,
+                    ),
+                  ),
+                  const Spacer(),
+                  Text(
+                    '${completedItems} of ${_assessmentItems.length} completed',
+                    style: TextStyle(fontSize: 14, color: Colors.blue.shade700),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 8),
+              LinearProgressIndicator(
+                value: progress,
+                backgroundColor: Colors.grey.shade200,
+                valueColor: AlwaysStoppedAnimation<Color>(
+                  progress == 1.0 ? Colors.green : Colors.blue,
+                ),
+                minHeight: 6,
+                borderRadius: BorderRadius.circular(3),
+              ),
+            ],
+          ),
+        ),
+
+        // Assessment items
+        Expanded(
+          child: ListView(
+            padding: const EdgeInsets.all(16),
+            children: [
+              // Assessment items grouped by section
+              ...groupedItems.entries.map((entry) {
+                String title = entry.key;
+                List<AssessmentItem> items = entry.value;
+
+                return Card(
+                  margin: const EdgeInsets.only(bottom: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Title section
+                      Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Text(
+                          title,
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+
+                      // Assessment items
+                      ...items.map((item) {
+                        if (item.title == 'Attitude') {
+                          return _buildAttitudeRow(item);
+                        } else {
+                          return _buildAssessmentItemRow(item);
+                        }
+                      }),
+
+                      const SizedBox(height: 8),
+                    ],
+                  ),
+                );
+              }).toList(),
+
+              // Remarks section
+              Card(
+                margin: const EdgeInsets.only(bottom: 16),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.all(16),
+                      child: Text(
+                        'Remarks',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 8,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Extra remarks regarding this assessment',
+                            style: TextStyle(fontSize: 16),
+                          ),
+                          const SizedBox(height: 8),
+                          Container(
+                            height: 150,
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.grey.shade300),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: TextField(
+                              controller: _remarksController,
+                              maxLines: null,
+                              decoration: const InputDecoration(
+                                contentPadding: EdgeInsets.all(12),
+                                border: InputBorder.none,
+                                hintText: 'Enter additional remarks here...',
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                  ],
+                ),
+              ),
+
+              // Score section
+              Card(
+                margin: const EdgeInsets.only(bottom: 16),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.all(16),
+                      child: Text(
+                        'Score',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 8,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            height: 40,
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.grey.shade300),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 40,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    border: Border(
+                                      right: BorderSide(
+                                        color: Colors.grey.shade300,
+                                      ),
+                                    ),
+                                  ),
+                                  child: const Text(
+                                    '0',
+                                    style: TextStyle(fontSize: 16),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: SliderTheme(
+                                    data: SliderThemeData(
+                                      trackHeight: 8,
+                                      thumbShape: const RoundSliderThumbShape(
+                                        enabledThumbRadius: 8,
+                                      ),
+                                      overlayShape:
+                                          const RoundSliderOverlayShape(
+                                            overlayRadius: 16,
+                                          ),
+                                      activeTrackColor: Colors.blue,
+                                      inactiveTrackColor: Colors.grey.shade200,
+                                      thumbColor: Colors.blue,
+                                    ),
+                                    child: Slider(
+                                      value: _scoreValue,
+                                      min: 0,
+                                      max: 10,
+                                      divisions: 20,
+                                      onChanged: (value) {
+                                        setState(() {
+                                          _scoreValue = value;
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 40,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    border: Border(
+                                      left: BorderSide(
+                                        color: Colors.grey.shade300,
+                                      ),
+                                    ),
+                                  ),
+                                  child: const Text(
+                                    '10',
+                                    style: TextStyle(fontSize: 16),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+
+        // Bottom action buttons
+        Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                blurRadius: 4,
+                offset: const Offset(0, -2),
+              ),
+            ],
+          ),
+          child: Row(
+            children: [
+              const Spacer(),
+              ElevatedButton(
+                onPressed: () {
+                  // Handle save action
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Assessment saved successfully'),
+                      backgroundColor: Colors.green,
+                      duration: Duration(seconds: 2),
+                    ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 24,
+                    vertical: 12,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+                child: const Text('Save'),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildAssessmentItemRow(AssessmentItem item) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Description
+          Text(item.description, style: const TextStyle(fontSize: 16)),
+          const SizedBox(height: 8),
+
+          // Competency level selector
+          _buildCompetencySelector(item),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildCompetencySelector(AssessmentItem item) {
+    // This matches the screenshot with competency levels
+    return Row(
+      children: [
+        Expanded(
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.grey.shade300),
+              borderRadius: BorderRadius.circular(4),
+            ),
+            child: Row(
+              children: [
+                _buildCompetencyOption(
+                  'Not Yet Competent',
+                  item.competencyLevel == 'Not Yet Competent',
+                  item,
+                ),
+                _buildCompetencyOption(
+                  'Skill gap',
+                  item.competencyLevel == 'Skill gap',
+                  item,
+                ),
+                _buildCompetencyOption(
+                  'Knowledge Gap',
+                  item.competencyLevel == 'Knowledge Gap',
+                  item,
+                ),
+                _buildCompetencyOption(
+                  'Competent',
+                  item.competencyLevel == 'Competent',
+                  item,
+                ),
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Container(
+          width: 36,
+          height: 36,
+          decoration: BoxDecoration(
+            color: Colors.amber,
+            shape: BoxShape.circle,
+          ),
+          child: const Icon(Icons.check, color: Colors.white),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildCompetencyOption(
+    String label,
+    bool isSelected,
+    AssessmentItem item,
+  ) {
+    return Expanded(
+      child: InkWell(
+        onTap: () {
+          // Update the competency level directly in the AssessmentItem
+          setState(() {
+            // This will trigger a rebuild with the new selection
+            if (item.competencyLevel != label) {
+              item.competencyLevel = label;
+
+              // Show feedback for selection
+              ScaffoldMessenger.of(context).clearSnackBars();
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Assessment marked as: $label'),
+                  backgroundColor: Colors.blue,
+                  duration: const Duration(seconds: 1),
+                  behavior: SnackBarBehavior.floating,
+                ),
+              );
+            }
+          });
+        },
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          decoration: BoxDecoration(
+            // Use blue for selected option, grey for unselected
+            color: isSelected ? Colors.blue : Colors.grey.shade200,
+            border: Border(right: BorderSide(color: Colors.grey.shade300)),
+          ),
+          child: Center(
+            child: Text(
+              label,
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                color: isSelected ? Colors.white : Colors.black87,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  // For the attitude row, we need a special widget
+  Widget _buildAttitudeRow(AssessmentItem item) {
+    return Row(
+      children: [
+        Expanded(
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.grey.shade300),
+              borderRadius: BorderRadius.circular(4),
+            ),
+            child: Row(
+              children: [
+                _buildCompetencyOption(
+                  'Negative',
+                  item.competencyLevel == 'Negative',
+                  item,
+                ),
+                _buildCompetencyOption(
+                  'Lacks attention',
+                  item.competencyLevel == 'Lacks attention',
+                  item,
+                ),
+                _buildCompetencyOption(
+                  'Positive',
+                  item.competencyLevel == 'Positive',
+                  item,
+                ),
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Container(
+          width: 36,
+          height: 36,
+          decoration: BoxDecoration(
+            color: Colors.amber,
+            shape: BoxShape.circle,
+          ),
+          child: const Icon(Icons.check, color: Colors.white),
         ),
       ],
     );
