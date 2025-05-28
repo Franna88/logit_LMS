@@ -933,39 +933,39 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
         title: 'Safety First',
         description:
             'Ensures hands are clean and free from hand creams, oil and grease',
-        competencyLevel: 'Not Yet Competent',
+        competencyLevel: '',
       ),
       AssessmentItem(
         title: 'Safety First',
         description: 'Ensure no open flames or sparks in work area',
-        competencyLevel: 'Not Yet Competent',
+        competencyLevel: '',
       ),
       // Check the cylinder
       AssessmentItem(
         title: 'Check the cylinder',
         description:
             'Safety - Proper Position: Oxygen cylinder securely upright or lying down',
-        competencyLevel: 'Not Yet Competent',
+        competencyLevel: '',
       ),
       AssessmentItem(
         title: 'Check the cylinder',
         description: 'Safety - no part of body over cylinder valve',
-        competencyLevel: 'Not Yet Competent',
+        competencyLevel: '',
       ),
       AssessmentItem(
         title: 'Check the cylinder',
         description: 'Safety - correct cylinder colour coding and in date',
-        competencyLevel: 'Not Yet Competent',
+        competencyLevel: '',
       ),
       AssessmentItem(
         title: 'Step 9: Re-stock',
         description: 'Follows company procedure for restocking DMAC 015',
-        competencyLevel: 'Not Yet Competent',
+        competencyLevel: '',
       ),
       AssessmentItem(
         title: 'Attitude',
         description: 'Student displays proper attitude during assessment',
-        competencyLevel: 'Negative',
+        competencyLevel: '',
       ),
     ];
 
@@ -1332,7 +1332,7 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
   Widget _buildAssessmentItemRow(AssessmentItem item) {
     bool hasSelection =
         item.competencyLevel != 'Not Yet Competent' &&
-        item.competencyLevel != 'Negative';
+        item.competencyLevel != '';
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -1366,6 +1366,8 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
     bool isPositive =
         item.competencyLevel == 'Competent' ||
         item.competencyLevel == 'Positive';
+
+    bool hasSelection = item.competencyLevel != '';
 
     // This matches the screenshot with competency levels
     return Row(
@@ -1409,14 +1411,10 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
             setState(() {
               if (item.title == 'Attitude') {
                 item.competencyLevel =
-                    (item.competencyLevel == 'Positive')
-                        ? 'Negative'
-                        : 'Positive';
+                    (item.competencyLevel == 'Positive') ? '' : 'Positive';
               } else {
                 item.competencyLevel =
-                    (item.competencyLevel == 'Competent')
-                        ? 'Not Yet Competent'
-                        : 'Competent';
+                    (item.competencyLevel == 'Competent') ? '' : 'Competent';
               }
             });
           },
@@ -1424,12 +1422,17 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
             width: 36,
             height: 36,
             decoration: BoxDecoration(
-              color: isPositive ? Colors.green : Colors.amber,
+              color:
+                  !hasSelection
+                      ? Colors.grey.shade300
+                      : (isPositive ? Colors.green : Colors.amber),
               shape: BoxShape.circle,
             ),
             child: Icon(
-              isPositive ? Icons.check : Icons.pending,
-              color: Colors.white,
+              !hasSelection
+                  ? Icons.circle_outlined
+                  : (isPositive ? Icons.check : Icons.pending),
+              color: !hasSelection ? Colors.grey.shade600 : Colors.white,
             ),
           ),
         ),
@@ -1448,7 +1451,7 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 8),
           decoration: BoxDecoration(
-            color: isSelected ? Colors.blue : Colors.grey.shade200,
+            color: isSelected ? Colors.blue : Colors.transparent,
             border: Border(right: BorderSide(color: Colors.grey.shade300)),
           ),
           child: Center(
@@ -1473,16 +1476,6 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
       // Only update if this is a different selection
       if (item.competencyLevel != newLevel) {
         item.competencyLevel = newLevel;
-        // Show visual feedback for selection
-        ScaffoldMessenger.of(context).clearSnackBars();
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Assessment marked as: $newLevel'),
-            backgroundColor: Colors.blue,
-            duration: const Duration(seconds: 1),
-            behavior: SnackBarBehavior.floating,
-          ),
-        );
       }
     });
   }
@@ -1490,7 +1483,7 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
   // For the attitude row, we need a special widget
   Widget _buildAttitudeRow(AssessmentItem item) {
     bool isPositive = item.competencyLevel == 'Positive';
-    bool hasSelection = item.competencyLevel != 'Negative';
+    bool hasSelection = item.competencyLevel != '';
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -1547,20 +1540,25 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
                   onTap: () {
                     // Toggle between Positive and Negative when clicking the checkmark
                     setState(() {
-                      item.competencyLevel =
-                          isPositive ? 'Negative' : 'Positive';
+                      item.competencyLevel = isPositive ? '' : 'Positive';
                     });
                   },
                   child: Container(
                     width: 36,
                     height: 36,
                     decoration: BoxDecoration(
-                      color: isPositive ? Colors.green : Colors.amber,
+                      color:
+                          !hasSelection
+                              ? Colors.grey.shade300
+                              : (isPositive ? Colors.green : Colors.amber),
                       shape: BoxShape.circle,
                     ),
                     child: Icon(
-                      isPositive ? Icons.check : Icons.pending,
-                      color: Colors.white,
+                      !hasSelection
+                          ? Icons.circle_outlined
+                          : (isPositive ? Icons.check : Icons.pending),
+                      color:
+                          !hasSelection ? Colors.grey.shade600 : Colors.white,
                     ),
                   ),
                 ),
