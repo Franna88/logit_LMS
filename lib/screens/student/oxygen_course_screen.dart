@@ -113,6 +113,9 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
       {}; // Track user's answers by question ID
   Map<String, bool> _completedQuizzes = {}; // Track completed quizzes
 
+  // List to store assessment items
+  List<AssessmentItem> _assessmentItems = [];
+
   @override
   void initState() {
     super.initState();
@@ -122,6 +125,7 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
     ); // Updated to 4 tabs (added Assessment)
     _loadCourseData();
     _loadQuizData();
+    _loadAssessmentData(); // Add this line to load assessment data
   }
 
   @override
@@ -493,6 +497,391 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
 
     final sectionsCompleted = _completedSections[moduleId]!;
     return sectionsCompleted.where((isCompleted) => isCompleted).length;
+  }
+
+  // Method to load assessment data from file
+  Future<void> _loadAssessmentData() async {
+    try {
+      // For reliability, we'll use the hardcoded data directly from the file
+      _assessmentItems = [
+        // Safety First
+        AssessmentItem(
+          title: 'Safety First',
+          description:
+              'Safety - Ensures hands are clean and free from hand creams, oil and grease',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Safety First',
+          description: 'Safety - Ensure no open flames or sparks in work area',
+          competencyLevel: '',
+        ),
+
+        // Check the cylinder
+        AssessmentItem(
+          title: 'Check the cylinder',
+          description:
+              'Safety - Proper Position: Oxygen cylinder securely upright or lying down',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Check the cylinder',
+          description: 'Safety - no part of body over cylinder valve',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Check the cylinder',
+          description: 'Safety - correct cylinder colour coding and in date',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Check the cylinder',
+          description:
+              'Identifies pillar valve as a pin index or bull nose fitting (Portable systems should be pin index)',
+          competencyLevel: '',
+        ),
+
+        // Oxygen Clean
+        AssessmentItem(
+          title: 'Oxygen Clean',
+          description:
+              'Safety - Ensures all components are oxygen clean and designed for safe use with oxygen.',
+          competencyLevel: '',
+        ),
+
+        // Identify the pillar valve and Pressure Regulator
+        AssessmentItem(
+          title: 'Identify the pillar valve and Pressure Regulator',
+          description:
+              'Safety - Check valve and connections in good condition (no rust)',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Identify the pillar valve and Pressure Regulator',
+          description: 'Checks for Pin Index or bull nose fitting',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Identify the pillar valve and Pressure Regulator',
+          description: 'Checks for intact oxygen washer (Bodok seal)',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Identify the pillar valve and Pressure Regulator',
+          description: 'Checks flow meter dialed to Zero (0) LPM',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Identify the pillar valve and Pressure Regulator',
+          description: 'Aligns Pin Index system correctly to cylinder valve.',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Identify the pillar valve and Pressure Regulator',
+          description:
+              'Secures Pressure regulator so as to avoid any leaks - DOES NOT OVER TIGHTEN',
+          competencyLevel: '',
+        ),
+
+        // Opening the Cylinder
+        AssessmentItem(
+          title: 'Opening the Cylinder',
+          description:
+              'Opens 1 turn cylinder pillar valve slowly and ensures safe pressurization of pressure regulator',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Opening the Cylinder',
+          description: 'Checks for leaks or other defects',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Opening the Cylinder',
+          description: 'Turns to full open position',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Opening the Cylinder',
+          description: 'Applies the 1/4 turn back rule',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Opening the Cylinder',
+          description:
+              'Checks the contents gauge is indicating a full cylinder(in the green)',
+          competencyLevel: '',
+        ),
+
+        // Selection of Oxygen Delivery Device (Mask)
+        AssessmentItem(
+          title: 'Selection of Oxygen Delivery Device (Mask)',
+          description:
+              'Conscious - demand valve mask or non rebreather mask (which one is available at the work site)',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Selection of Oxygen Delivery Device (Mask)',
+          description:
+              'Correctly connects the oxygen tubing or hose to the appropriate port on the pressure regulator',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Selection of Oxygen Delivery Device (Mask)',
+          description:
+              'Correctly connects the oxygen tubing or hose to the appropriate port on the oxygen delivery device',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Selection of Oxygen Delivery Device (Mask)',
+          description: 'Non - Rebreather Mask - Dial Flow Meter to 15LPM.',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Selection of Oxygen Delivery Device (Mask)',
+          description: 'Non - Rebreather Mask - Prime the reservoir bag',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Selection of Oxygen Delivery Device (Mask)',
+          description: 'Demand Valve and Mask - flow is to be kept on Zero (0)',
+          competencyLevel: '',
+        ),
+
+        // Administration of Oxygen
+        AssessmentItem(
+          title: 'Administration of Oxygen',
+          description:
+              'Place the Oxygen cylinder appropriately and prevents from falling or rolling.',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Administration of Oxygen',
+          description:
+              'Correctly positions oxygen delivery device to Injured Persons face',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Administration of Oxygen',
+          description:
+              'Non - Rebreather Mask - Ensure good fit by adjusting the elastics and nose piece',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Administration of Oxygen',
+          description:
+              'Non - Rebreather Mask - verbalises reservoir bag to remain inflated and in full view and unobstructed by blankets',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Administration of Oxygen',
+          description:
+              'Demand Valve and Mask - Ensures a perfect face seal otherwise the administration of oxygen will be ineffective.',
+          competencyLevel: '',
+        ),
+
+        // Reports for Radio Medial Advice
+        AssessmentItem(
+          title:
+              'Reports for Radio Medial Advice and documentation using the Primary Survey (HHHABC/DRsABC',
+          description:
+              'Hazards – Verbalises the Injured Person (IP) is in a safe, ventilated, no smoking area and not close to open flames or sparks',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title:
+              'Reports for Radio Medial Advice and documentation using the Primary Survey (HHHABC/DRsABC',
+          description: 'Hello - Verbalise the IP is Alert and Orientated',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title:
+              'Reports for Radio Medial Advice and documentation using the Primary Survey (HHHABC/DRsABC',
+          description: 'Help - Verbalises when oxygen was commenced',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title:
+              'Reports for Radio Medial Advice and documentation using the Primary Survey (HHHABC/DRsABC',
+          description:
+              'Airway - Verbalises the Injured Person (IP) can mange their own airway',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title:
+              'Reports for Radio Medial Advice and documentation using the Primary Survey (HHHABC/DRsABC',
+          description:
+              'Breathing - Verbalises the Injured Person (IP) to breathe normally (12-20 breaths per minute)',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title:
+              'Reports for Radio Medial Advice and documentation using the Primary Survey (HHHABC/DRsABC',
+          description:
+              'Circulation - verbalises there are obvious signs of life',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title:
+              'Reports for Radio Medial Advice and documentation using the Primary Survey (HHHABC/DRsABC',
+          description:
+              'Positioning - Verbalise that the Injured Person (IP) can maintain a position of comfort or semi seated position or be placed in shock position (Semi seated with legs elevated)',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title:
+              'Reports for Radio Medial Advice and documentation using the Primary Survey (HHHABC/DRsABC',
+          description:
+              'Rapid assessment - At this stage ensure participant has demonstrated safe use and correct administration of oxygen with in 4 minutes. Then ask them to disassemble the system',
+          competencyLevel: '',
+        ),
+
+        // Taking oxygen off the Injured Person
+        AssessmentItem(
+          title: 'Taking oxygen off the Injured Person (discontinuing oxygen)',
+          description: 'Remove the oxygen delivery device (mask)',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Taking oxygen off the Injured Person (discontinuing oxygen)',
+          description:
+              'Turn the flow meter on the pressure regulator to Zero (0) LPM',
+          competencyLevel: '',
+        ),
+
+        // Dismantle, Clean and Re-stock
+        AssessmentItem(
+          title: 'Dismantle, Clean and Re-stock',
+          description: 'Closes of the pillar valve of the oxygen cylinder',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Dismantle, Clean and Re-stock',
+          description: 'Open the flow meter to depressurize the system',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Dismantle, Clean and Re-stock',
+          description: 'Ensure all gauges read ZERO (0)',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Dismantle, Clean and Re-stock',
+          description: 'Safely removes the pressure regulator',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Dismantle, Clean and Re-stock',
+          description:
+              'Discard all used disposable items (no rebreather masks)',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Dismantle, Clean and Re-stock',
+          description: 'Cleans (Decontaminates) all other items',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Dismantle, Clean and Re-stock',
+          description: 'Maintenance, clean and restock',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Dismantle, Clean and Re-stock',
+          description: 'Tags cylinder pressure or send for re-filling',
+          competencyLevel: '',
+        ),
+
+        // Documentation
+        AssessmentItem(
+          title: 'Documentation',
+          description: 'Records Time On Oxygen / Time Off Oxygen',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Documentation',
+          description:
+              'Completes required Incident forms and re-stocking forms',
+          competencyLevel: '',
+        ),
+
+        // Competency
+        AssessmentItem(
+          title: 'Competency',
+          description:
+              'Preformed with basic knowledge and skill and provided oxygen to the Injured Person with in 4 minutes.',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Competency',
+          description: 'Demonstrated safe Oxygen handling and adminstration',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Competency',
+          description:
+              'I, the assessor, verify the candidate performed this activity with basic understanding of theory and practice with out assistance or direct supervision at an appropriate pace of 4 minutes',
+          competencyLevel: '',
+        ),
+        AssessmentItem(
+          title: 'Competency',
+          description:
+              'Shows understanding of the use of the demand valve and or non rebreather mask for the conscious Injured Person.',
+          competencyLevel: '',
+        ),
+      ];
+
+      debugPrint(
+        'Loaded ${_assessmentItems.length} hardcoded assessment items',
+      );
+    } catch (e) {
+      debugPrint('Error setting up assessment data: $e');
+      _setupFallbackAssessmentItems();
+    }
+  }
+
+  // Setup fallback assessment items
+  void _setupFallbackAssessmentItems() {
+    _assessmentItems = [
+      // Safety First
+      AssessmentItem(
+        title: 'Safety First',
+        description:
+            'Ensures hands are clean and free from hand creams, oil and grease',
+        competencyLevel: '',
+      ),
+      AssessmentItem(
+        title: 'Safety First',
+        description: 'Ensure no open flames or sparks in work area',
+        competencyLevel: '',
+      ),
+      // Check the cylinder
+      AssessmentItem(
+        title: 'Check the cylinder',
+        description:
+            'Safety - Proper Position: Oxygen cylinder securely upright or lying down',
+        competencyLevel: '',
+      ),
+      AssessmentItem(
+        title: 'Check the cylinder',
+        description: 'Safety - no part of body over cylinder valve',
+        competencyLevel: '',
+      ),
+      AssessmentItem(
+        title: 'Check the cylinder',
+        description: 'Safety - correct cylinder colour coding and in date',
+        competencyLevel: '',
+      ),
+      AssessmentItem(
+        title: 'Step 9: Re-stock',
+        description: 'Follows company procedure for restocking DMAC 015',
+        competencyLevel: '',
+      ),
+      AssessmentItem(
+        title: 'Attitude',
+        description: 'Student displays proper attitude during assessment',
+        competencyLevel: '',
+      ),
+    ];
   }
 
   @override
@@ -926,52 +1315,13 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
 
   // Build the Workplace Assessment tab content
   Widget _buildWorkplaceAssessmentTab() {
-    // The workplace assessment data from the file
-    final List<AssessmentItem> assessmentItems = [
-      // Safety First
-      AssessmentItem(
-        title: 'Safety First',
-        description:
-            'Ensures hands are clean and free from hand creams, oil and grease',
-        competencyLevel: '',
-      ),
-      AssessmentItem(
-        title: 'Safety First',
-        description: 'Ensure no open flames or sparks in work area',
-        competencyLevel: '',
-      ),
-      // Check the cylinder
-      AssessmentItem(
-        title: 'Check the cylinder',
-        description:
-            'Safety - Proper Position: Oxygen cylinder securely upright or lying down',
-        competencyLevel: '',
-      ),
-      AssessmentItem(
-        title: 'Check the cylinder',
-        description: 'Safety - no part of body over cylinder valve',
-        competencyLevel: '',
-      ),
-      AssessmentItem(
-        title: 'Check the cylinder',
-        description: 'Safety - correct cylinder colour coding and in date',
-        competencyLevel: '',
-      ),
-      AssessmentItem(
-        title: 'Step 9: Re-stock',
-        description: 'Follows company procedure for restocking DMAC 015',
-        competencyLevel: '',
-      ),
-      AssessmentItem(
-        title: 'Attitude',
-        description: 'Student displays proper attitude during assessment',
-        competencyLevel: '',
-      ),
-    ];
+    if (_assessmentItems.isEmpty) {
+      return const Center(child: CircularProgressIndicator());
+    }
 
     // Group items by title
     Map<String, List<AssessmentItem>> groupedItems = {};
-    for (var item in assessmentItems) {
+    for (var item in _assessmentItems) {
       if (!groupedItems.containsKey(item.title)) {
         groupedItems[item.title] = [];
       }
@@ -980,7 +1330,7 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
 
     // Calculate assessment progress - items with competent status
     int completedItems =
-        assessmentItems
+        _assessmentItems
             .where(
               (item) =>
                   item.competencyLevel == 'Competent' ||
@@ -989,7 +1339,9 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
             .length;
 
     double progress =
-        assessmentItems.isEmpty ? 0.0 : completedItems / assessmentItems.length;
+        _assessmentItems.isEmpty
+            ? 0.0
+            : completedItems / _assessmentItems.length;
 
     // Current score value (this would be calculated based on the assessment)
     double scoreValue = 7.5;
@@ -1018,7 +1370,7 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
                   ),
                   const Spacer(),
                   Text(
-                    '$completedItems of ${assessmentItems.length} completed',
+                    '$completedItems of ${_assessmentItems.length} completed',
                     style: TextStyle(fontSize: 14, color: Colors.blue.shade700),
                   ),
                 ],
@@ -1043,44 +1395,57 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
             padding: const EdgeInsets.all(16),
             children: [
               // Assessment items grouped by section
-              ...groupedItems.entries.map((entry) {
-                String title = entry.key;
-                List<AssessmentItem> items = entry.value;
-
-                return Card(
-                  margin: const EdgeInsets.only(bottom: 16),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+              if (groupedItems.isEmpty)
+                const Center(
+                  child: Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text(
+                      'No assessment items available',
+                      style: TextStyle(fontSize: 16),
+                    ),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      // Title section
-                      Padding(
-                        padding: const EdgeInsets.all(16),
-                        child: Text(
-                          title,
-                          style: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
+                )
+              else
+                ...groupedItems.entries.map((entry) {
+                  String title = entry.key;
+                  List<AssessmentItem> items = entry.value;
+
+                  if (items.isEmpty) return const SizedBox.shrink();
+
+                  return Card(
+                    margin: const EdgeInsets.only(bottom: 16),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Title section
+                        Padding(
+                          padding: const EdgeInsets.all(16),
+                          child: Text(
+                            title,
+                            style: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
-                      ),
 
-                      // Assessment items
-                      ...items.map((item) {
-                        if (item.title == 'Attitude') {
-                          return _buildAttitudeRow(item);
-                        } else {
-                          return _buildAssessmentItemRow(item);
-                        }
-                      }),
+                        // Assessment items
+                        ...items.map((item) {
+                          if (item.title == 'Attitude') {
+                            return _buildAttitudeRow(item);
+                          } else {
+                            return _buildAssessmentItemRow(item);
+                          }
+                        }),
 
-                      const SizedBox(height: 8),
-                    ],
-                  ),
-                );
-              }).toList(),
+                        const SizedBox(height: 8),
+                      ],
+                    ),
+                  );
+                }).toList(),
 
               // Remarks section
               Card(
@@ -1274,7 +1639,7 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
                 onPressed: () {
                   // Save the assessment data
                   _saveAssessmentData(
-                    assessmentItems,
+                    _assessmentItems,
                     remarksController.text,
                     scoreValue,
                   );

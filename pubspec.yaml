@@ -73,6 +73,7 @@ flutter:
     - lib/assets/images/
     - lib/assets/images/courses/
     - lib/assets/manual_plaintext.json
+    - lib/assets/workplace_assessmsnet_data
     - lib/assets/output/images/
     - lib/assets/output/images/questions.json
     - output/
