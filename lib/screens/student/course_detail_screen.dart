@@ -12,12 +12,31 @@ class AssessmentItem {
   final String title;
   final String description;
   String competencyLevel; // Changed to mutable
+  double score = 0.0; // Add score property
 
   AssessmentItem({
     required this.title,
     required this.description,
     required this.competencyLevel,
   });
+
+  // Helper method to get score based on competency level
+  double getScoreValue() {
+    switch (competencyLevel) {
+      case 'Competent':
+      case 'Positive':
+        return 1.0; // Full score
+      case 'Knowledge Gap':
+        return 0.75; // 75% score
+      case 'Skill gap':
+        return 0.5; // 50% score
+      case 'Not Yet Competent':
+      case 'Negative':
+      case 'Lacks attention':
+      default:
+        return 0.0; // No score
+    }
+  }
 }
 
 // Class to hold content item data
@@ -112,6 +131,38 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
         competencyLevel: 'Negative',
       ),
     ];
+
+    // Calculate initial score
+    _updateAssessmentScore();
+  }
+
+  // Add a method to calculate and update the assessment score
+  void _updateAssessmentScore() {
+    if (_assessmentItems.isEmpty) return;
+
+    int totalItems = _assessmentItems.length;
+    double totalScore = 0.0;
+
+    // Calculate total score based on competency levels
+    for (var item in _assessmentItems) {
+      totalScore += item.getScoreValue();
+    }
+
+    // Calculate percentage (0-100%)
+    double percentage = (totalScore / totalItems) * 100;
+
+    // Scale to 0-10 range for the scoreValue
+    double newScore = (percentage / 100) * 10;
+
+    // Ensure minimum score of 7.5 if at least 75% competent
+    if (percentage >= 75) {
+      newScore = newScore < 7.5 ? 7.5 : newScore;
+    }
+
+    // Update the score
+    setState(() {
+      _scoreValue = newScore;
+    });
   }
 
   Future<void> _loadLessonData() async {
@@ -1433,7 +1484,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
                   ),
                   const Spacer(),
                   Text(
-                    '${completedItems} of ${_assessmentItems.length} completed',
+                    '$completedItems of ${_assessmentItems.length} completed',
                     style: TextStyle(fontSize: 14, color: Colors.blue.shade700),
                   ),
                 ],
@@ -1447,6 +1498,28 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
                 ),
                 minHeight: 6,
                 borderRadius: BorderRadius.circular(3),
+              ),
+              const SizedBox(height: 8),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Current Score: ${_scoreValue.toStringAsFixed(1)}',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue.shade700,
+                    ),
+                  ),
+                  Text(
+                    _scoreValue >= 7.5 ? 'PASS' : 'NEEDS IMPROVEMENT',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: _scoreValue >= 7.5 ? Colors.green : Colors.red,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
@@ -1553,7 +1626,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
                 ),
               ),
 
-              // Score section
+              // Score Breakdown Card
               Card(
                 margin: const EdgeInsets.only(bottom: 16),
                 shape: RoundedRectangleBorder(
@@ -1565,7 +1638,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
                     const Padding(
                       padding: EdgeInsets.all(16),
                       child: Text(
-                        'Score',
+                        'Score Breakdown',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -1580,6 +1653,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          // Score indicator
                           Container(
                             height: 40,
                             decoration: BoxDecoration(
@@ -1623,11 +1697,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
                                       min: 0,
                                       max: 10,
                                       divisions: 20,
-                                      onChanged: (value) {
-                                        setState(() {
-                                          _scoreValue = value;
-                                        });
-                                      },
+                                      onChanged: null, // Make it read-only
                                     ),
                                   ),
                                 ),
@@ -1649,6 +1719,94 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
                               ],
                             ),
                           ),
+                          const SizedBox(height: 8),
+                          Text(
+                            'Current score: ${_scoreValue.toStringAsFixed(1)}',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.grey.shade700,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            _scoreValue >= 7.5
+                                ? 'Score is sufficient (minimum passing score is 7.5)'
+                                : 'Score needs improvement (minimum passing score is 7.5)',
+                            style: TextStyle(
+                              fontSize: 12,
+                              color:
+                                  _scoreValue >= 7.5
+                                      ? Colors.green
+                                      : Colors.red,
+                              fontStyle: FontStyle.italic,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+
+                          // Score breakdown
+                          const Text(
+                            'Score Breakdown:',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+
+                          // Competent count
+                          _buildScoreBreakdownRow(
+                            'Competent/Positive',
+                            _assessmentItems
+                                .where(
+                                  (item) =>
+                                      item.competencyLevel == 'Competent' ||
+                                      item.competencyLevel == 'Positive',
+                                )
+                                .length,
+                            '(100% value)',
+                            Colors.green,
+                          ),
+
+                          // Knowledge Gap count
+                          _buildScoreBreakdownRow(
+                            'Knowledge Gap',
+                            _assessmentItems
+                                .where(
+                                  (item) =>
+                                      item.competencyLevel == 'Knowledge Gap',
+                                )
+                                .length,
+                            '(75% value)',
+                            Colors.orange,
+                          ),
+
+                          // Skill Gap count
+                          _buildScoreBreakdownRow(
+                            'Skill gap',
+                            _assessmentItems
+                                .where(
+                                  (item) => item.competencyLevel == 'Skill gap',
+                                )
+                                .length,
+                            '(50% value)',
+                            Colors.amber,
+                          ),
+
+                          // Not Competent count
+                          _buildScoreBreakdownRow(
+                            'Not Yet Competent/Empty',
+                            _assessmentItems
+                                .where(
+                                  (item) =>
+                                      item.competencyLevel ==
+                                          'Not Yet Competent' ||
+                                      item.competencyLevel == '',
+                                )
+                                .length,
+                            '(0% value)',
+                            Colors.red,
+                          ),
                         ],
                       ),
                     ),
@@ -1660,7 +1818,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
           ),
         ),
 
-        // Bottom action buttons
+        // Save button section
         Container(
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
@@ -1707,6 +1865,42 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
     );
   }
 
+  // Helper widget to display score breakdown rows
+  Widget _buildScoreBreakdownRow(
+    String label,
+    int count,
+    String valueText,
+    Color color,
+  ) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 4),
+      child: Row(
+        children: [
+          Container(
+            width: 12,
+            height: 12,
+            decoration: BoxDecoration(color: color, shape: BoxShape.circle),
+          ),
+          const SizedBox(width: 8),
+          Text('$label: ', style: const TextStyle(fontSize: 12)),
+          Text(
+            '$count',
+            style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(width: 4),
+          Text(
+            valueText,
+            style: TextStyle(
+              fontSize: 12,
+              color: Colors.grey.shade600,
+              fontStyle: FontStyle.italic,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget _buildAssessmentItemRow(AssessmentItem item) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -1725,6 +1919,13 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
   }
 
   Widget _buildCompetencySelector(AssessmentItem item) {
+    bool isPositive =
+        item.competencyLevel == 'Competent' ||
+        item.competencyLevel == 'Positive';
+    bool hasSelection =
+        item.competencyLevel != '' &&
+        item.competencyLevel != 'Not Yet Competent';
+
     // This matches the screenshot with competency levels
     return Row(
       children: [
@@ -1761,14 +1962,55 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
           ),
         ),
         const SizedBox(width: 8),
-        Container(
-          width: 36,
-          height: 36,
-          decoration: BoxDecoration(
-            color: Colors.amber,
-            shape: BoxShape.circle,
+        GestureDetector(
+          onTap: () {
+            // Toggle between Competent and Not Yet Competent when clicking the checkmark
+            setState(() {
+              if (item.title == 'Attitude') {
+                item.competencyLevel =
+                    (item.competencyLevel == 'Positive')
+                        ? 'Not Yet Competent'
+                        : 'Positive';
+              } else {
+                item.competencyLevel =
+                    (item.competencyLevel == 'Competent')
+                        ? 'Not Yet Competent'
+                        : 'Competent';
+              }
+              // Update score
+              _updateAssessmentScore();
+
+              // Show feedback
+              ScaffoldMessenger.of(context).clearSnackBars();
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(
+                    'Assessment marked as: ${item.competencyLevel}',
+                  ),
+                  backgroundColor: Colors.blue,
+                  duration: const Duration(seconds: 1),
+                  behavior: SnackBarBehavior.floating,
+                ),
+              );
+            });
+          },
+          child: Container(
+            width: 36,
+            height: 36,
+            decoration: BoxDecoration(
+              color:
+                  !hasSelection
+                      ? Colors.grey.shade300
+                      : (isPositive ? Colors.green : Colors.amber),
+              shape: BoxShape.circle,
+            ),
+            child: Icon(
+              !hasSelection
+                  ? Icons.circle_outlined
+                  : (isPositive ? Icons.check : Icons.pending),
+              color: !hasSelection ? Colors.grey.shade600 : Colors.white,
+            ),
           ),
-          child: const Icon(Icons.check, color: Colors.white),
         ),
       ],
     );
@@ -1787,6 +2029,8 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
             // This will trigger a rebuild with the new selection
             if (item.competencyLevel != label) {
               item.competencyLevel = label;
+              // Update the score whenever competency changes
+              _updateAssessmentScore();
 
               // Show feedback for selection
               ScaffoldMessenger.of(context).clearSnackBars();

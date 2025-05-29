@@ -80,12 +80,31 @@ class AssessmentItem {
   final String title;
   final String description;
   String competencyLevel; // Changed from final to mutable
+  double score = 0.0; // Add score property
 
   AssessmentItem({
     required this.title,
     required this.description,
     required this.competencyLevel,
   });
+
+  // Helper method to get score based on competency level
+  double getScoreValue() {
+    switch (competencyLevel) {
+      case 'Competent':
+      case 'Positive':
+        return 1.0; // Full score
+      case 'Knowledge Gap':
+        return 0.75; // 75% score
+      case 'Skill gap':
+        return 0.5; // 50% score
+      case 'Not Yet Competent':
+      case 'Negative':
+      case 'Lacks attention':
+      default:
+        return 0.0; // No score
+    }
+  }
 }
 
 class OxygenCourseScreen extends StatefulWidget {
@@ -115,6 +134,9 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
 
   // List to store assessment items
   List<AssessmentItem> _assessmentItems = [];
+
+  // Assessment score
+  double scoreValue = 7.5;
 
   @override
   void initState() {
@@ -833,6 +855,9 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
       debugPrint(
         'Loaded ${_assessmentItems.length} hardcoded assessment items',
       );
+
+      // Set initial score
+      _updateAssessmentScore();
     } catch (e) {
       debugPrint('Error setting up assessment data: $e');
       _setupFallbackAssessmentItems();
@@ -1344,7 +1369,6 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
             : completedItems / _assessmentItems.length;
 
     // Current score value (this would be calculated based on the assessment)
-    double scoreValue = 7.5;
     TextEditingController remarksController = TextEditingController();
 
     return Column(
@@ -1608,6 +1632,85 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
                               fontWeight: FontWeight.bold,
                             ),
                           ),
+                          const SizedBox(height: 4),
+                          Text(
+                            scoreValue >= 7.5
+                                ? 'Score is sufficient (minimum passing score is 7.5)'
+                                : 'Score needs improvement (minimum passing score is 7.5)',
+                            style: TextStyle(
+                              fontSize: 12,
+                              color:
+                                  scoreValue >= 7.5 ? Colors.green : Colors.red,
+                              fontStyle: FontStyle.italic,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+
+                          // Score breakdown
+                          const Text(
+                            'Score Breakdown:',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+
+                          // Competent count
+                          _buildScoreBreakdownRow(
+                            'Competent/Positive',
+                            _assessmentItems
+                                .where(
+                                  (item) =>
+                                      item.competencyLevel == 'Competent' ||
+                                      item.competencyLevel == 'Positive',
+                                )
+                                .length,
+                            '(100% value)',
+                            Colors.green,
+                          ),
+
+                          // Knowledge Gap count
+                          _buildScoreBreakdownRow(
+                            'Knowledge Gap',
+                            _assessmentItems
+                                .where(
+                                  (item) =>
+                                      item.competencyLevel == 'Knowledge Gap',
+                                )
+                                .length,
+                            '(75% value)',
+                            Colors.orange,
+                          ),
+
+                          // Skill Gap count
+                          _buildScoreBreakdownRow(
+                            'Skill gap',
+                            _assessmentItems
+                                .where(
+                                  (item) => item.competencyLevel == 'Skill gap',
+                                )
+                                .length,
+                            '(50% value)',
+                            Colors.amber,
+                          ),
+
+                          // Not Competent count
+                          _buildScoreBreakdownRow(
+                            'Not Yet Competent/Empty',
+                            _assessmentItems
+                                .where(
+                                  (item) =>
+                                      item.competencyLevel ==
+                                          'Not Yet Competent' ||
+                                      item.competencyLevel == '' ||
+                                      item.competencyLevel == 'Negative' ||
+                                      item.competencyLevel == 'Lacks attention',
+                                )
+                                .length,
+                            '(0% value)',
+                            Colors.red,
+                          ),
                         ],
                       ),
                     ),
@@ -1781,6 +1884,8 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
                 item.competencyLevel =
                     (item.competencyLevel == 'Competent') ? '' : 'Competent';
               }
+              // Update the score when toggling competency
+              _updateAssessmentScore();
             });
           },
           child: Container(
@@ -1841,7 +1946,38 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
       // Only update if this is a different selection
       if (item.competencyLevel != newLevel) {
         item.competencyLevel = newLevel;
+        // Update the score whenever competency changes
+        _updateAssessmentScore();
       }
+    });
+  }
+
+  // Add a method to calculate and update the assessment score
+  void _updateAssessmentScore() {
+    if (_assessmentItems.isEmpty) return;
+
+    int totalItems = _assessmentItems.length;
+    double totalScore = 0.0;
+
+    // Calculate total score based on competency levels
+    for (var item in _assessmentItems) {
+      totalScore += item.getScoreValue();
+    }
+
+    // Calculate percentage (0-100%)
+    double percentage = (totalScore / totalItems) * 100;
+
+    // Scale to 0-10 range for the scoreValue
+    double newScore = (percentage / 100) * 10;
+
+    // Ensure minimum score of 7.5 if at least 75% competent
+    if (percentage >= 75) {
+      newScore = newScore < 7.5 ? 7.5 : newScore;
+    }
+
+    // Update the score
+    setState(() {
+      scoreValue = newScore;
     });
   }
 
@@ -1906,6 +2042,8 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
                     // Toggle between Positive and Negative when clicking the checkmark
                     setState(() {
                       item.competencyLevel = isPositive ? '' : 'Positive';
+                      // Update the score when toggling competency
+                      _updateAssessmentScore();
                     });
                   },
                   child: Container(
@@ -1943,6 +2081,42 @@ class _OxygenCourseScreenState extends State<OxygenCourseScreen>
       color: Colors.grey.shade200,
       child: Center(
         child: Icon(Icons.image_not_supported, color: Colors.grey.shade400),
+      ),
+    );
+  }
+
+  // Helper widget to display score breakdown rows
+  Widget _buildScoreBreakdownRow(
+    String label,
+    int count,
+    String valueText,
+    Color color,
+  ) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 4),
+      child: Row(
+        children: [
+          Container(
+            width: 12,
+            height: 12,
+            decoration: BoxDecoration(color: color, shape: BoxShape.circle),
+          ),
+          const SizedBox(width: 8),
+          Text('$label: ', style: const TextStyle(fontSize: 12)),
+          Text(
+            '$count',
+            style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(width: 4),
+          Text(
+            valueText,
+            style: TextStyle(
+              fontSize: 12,
+              color: Colors.grey.shade600,
+              fontStyle: FontStyle.italic,
+            ),
+          ),
+        ],
       ),
     );
   }
