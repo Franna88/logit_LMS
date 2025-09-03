@@ -1,0 +1,307 @@
+{
+  "lesson_id": "lesson_02",
+  "title": "Drill 2: Accident Management - Training IDs 1.5-1.7 (Fractures, Crush Injuries, Chest Trauma)",
+  "lesson_number": 2,
+  "description": "To refresh the DMT’s and MFA’s fading skill in Accident Management",
+  "duration": "50mins",
+  "target_audience": "DMTs and MFAs",
+  "objectives": [
+    "To refresh the DMT's and MFA's fading skill in Accident Management",
+    "The participants will be able to discuss indication for use of Accident management procedures.",
+    "Discuss basic relevant anatomy.",
+    "Training ID 1.5: Fracture management and splinting techniques.",
+    "Training ID 1.6: Crush injury assessment and treatment.",
+    "Training ID 1.7: Chest trauma recognition and emergency management.",
+    "Discuss the equipment, positioning, step-by-step description of procedure",
+    "Discuss risks and complications.",
+    "Discuss and demonstrate Accident Management techniques.",
+    "Practical Assessment."
+  ],
+  "materials": [
+    "Splints Lecture hand-outs",
+    "sample photos",
+    "videos."
+  ],
+  "content_sections": [],
+  "activities": [
+    "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+    "Demonstration on how to apply the above topics.",
+    "Guided Practice and Independent Practice by the participants and Group Activities."
+  ],
+  "assessment": [
+    {
+      "grade": "Red",
+      "criteria": "Does not meet minimum expectations."
+    },
+    {
+      "grade": "Amber",
+      "criteria": "Meets and demonstrates the basic requirements."
+    },
+    {
+      "grade": "Green",
+      "criteria": "Meets and Demonstrates a thorough understanding."
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        "LESSON TITLE",
+        "Drill 2: Accident Management - Training IDs 1.5-1.7 (Fractures, Crush Injuries, Chest Trauma)"
+      ],
+      "rows": [
+        [
+          "TARGET AUDIENCE",
+          "DMTs and MFAs"
+        ],
+        [
+          "LESSON DURATION",
+          "50mins"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "MAIN OBJECTIVES"
+      ],
+      "rows": [
+        [
+          "To refresh the DMT’s and MFA’s fading skill in Accident Management"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "LEARNING GOALS"
+      ],
+      "rows": [
+        [
+          "The participants will be able to discuss indication for use of Accident management procedures. ☐ Discuss basic relevant anatomy. ☐ Principles of Accident Management. ☐ Discuss the equipment, positioning, step-by-step description of procedure ☐ Discuss risks and complications. ☐ Discuss and demonstrate Accident Management techniques. ☐ Practical Assessment."
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "MATERIALS"
+      ],
+      "rows": [
+        [
+          "Splints Lecture hand-outs and sample photos and videos."
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "PROCEDURES"
+      ],
+      "rows": [
+        [
+          "1st 10 minutes - Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos. 2nd 10 minutes - Demonstration on how to apply the above topics. 3rd 30 minutes - Guided Practice and Independent Practice by the participants and Group Activities."
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "CLOSURE"
+      ],
+      "rows": [
+        [
+          "Group discussion/ Assessment/ Follow-up"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "ASSESSMENT",
+        "ASSESSMENT",
+        "ASSESSMENT"
+      ],
+      "rows": [
+        [
+          "GRADE",
+          "CRITERIA",
+          "TICK",
+          "TICK"
+        ],
+        [
+          "Red",
+          "Does not meet minimum expectations.",
+          "",
+          ""
+        ],
+        [
+          "Amber",
+          "Meets and demonstrates the basic requirements.",
+          "",
+          ""
+        ],
+        [
+          "Green",
+          "Meets and Demonstrates a thorough understanding.",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "SIGN-OFF COMPLETION",
+        "SIGN-OFF COMPLETION",
+        "SIGN-OFF COMPLETION"
+      ],
+      "rows": [
+        [
+          "",
+          "Diver Medic Technician (DMT)",
+          "Doctor Onboard"
+        ],
+        [
+          "Name",
+          "",
+          ""
+        ],
+        [
+          "Grade",
+          "",
+          ""
+        ],
+        [
+          "Signature",
+          "",
+          ""
+        ],
+        [
+          "Date",
+          "",
+          ""
+        ]
+      ]
+    }
+  ],
+  "metadata": {
+    "source_file": "SK-DIV-PLN-002_R0_Lesson Plan 2 - Accident Management (Fractures, Crush Injuries, Chest Trauma).docx",
+    "extraction_date": "2025-09-02T14:16:46.118603",
+    "total_paragraphs": 0,
+    "total_sections": 0,
+    "total_tables": 8
+  },
+  "slides": [
+    {
+      "slideNumber": 1,
+      "title": "Drill 2 Overview: Accident Management - Training IDs 1.5-1.7",
+      "content": [
+        "Duration: 50mins",
+        "Target Audience: DMTs and MFAs",
+        "Prerequisite: Must complete Drill 1 (Training IDs 1.1-1.4) first",
+        "",
+        "This drill covers 3 sequential training scenarios:",
+        "• Training ID 1.5: Fracture Management",
+        "• Training ID 1.6: Crush Injury Management",
+        "• Training ID 1.7: Chest Trauma Management",
+        "Each scenario must be completed before proceeding to the next."
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 2,
+      "title": "Training ID 1.5: Fracture Management",
+      "content": [
+        "Learning Objectives:",
+        "• Identify different types of fractures",
+        "• Apply appropriate splinting techniques",
+        "• Recognize signs of compartment syndrome",
+        "• Demonstrate proper immobilization methods",
+        "",
+        "Key Topics:",
+        "• Open vs closed fractures",
+        "• Splinting principles and materials",
+        "• Neurovascular assessment",
+        "• Pain management considerations"
+      ],
+      "images": [],
+      "trainingId": "1.5",
+      "prerequisite": "1.4"
+    },
+    {
+      "slideNumber": 3,
+      "title": "Training ID 1.6: Crush Injury Management",
+      "content": [
+        "Learning Objectives:",
+        "• Assess severity of crush injuries",
+        "• Understand crush syndrome pathophysiology",
+        "• Apply appropriate treatment protocols",
+        "• Recognize complications and contraindications",
+        "",
+        "Key Topics:",
+        "• Mechanism of injury assessment",
+        "• Rhabdomyolysis and kidney damage",
+        "• Fluid management considerations",
+        "• Extrication and transport priorities"
+      ],
+      "images": [],
+      "trainingId": "1.6",
+      "prerequisite": "1.5"
+    },
+    {
+      "slideNumber": 4,
+      "title": "Training ID 1.7: Chest Trauma Management",
+      "content": [
+        "Learning Objectives:",
+        "• Identify life-threatening chest injuries",
+        "• Apply immediate treatment interventions",
+        "• Recognize pneumothorax and hemothorax",
+        "• Demonstrate chest decompression techniques",
+        "",
+        "Key Topics:",
+        "• Tension pneumothorax recognition",
+        "• Flail chest management",
+        "• Penetrating chest wound care",
+        "• Breathing assessment and support"
+      ],
+      "images": [],
+      "trainingId": "1.7",
+      "prerequisite": "1.6"
+    },
+    {
+      "slideNumber": 5,
+      "title": "Drill 2 Practical Procedures",
+      "content": [
+        "Hands-on Practice Requirements:",
+        "",
+        "Training ID 1.5 - Fracture Management:",
+        "• Demonstrate splinting techniques for various fracture types",
+        "• Practice neurovascular assessment",
+        "",
+        "Training ID 1.6 - Crush Injury:",
+        "• Assess crush injury severity",
+        "• Practice fluid management protocols",
+        "",
+        "Training ID 1.7 - Chest Trauma:",
+        "• Identify chest injury types",
+        "• Practice emergency interventions"
+      ],
+      "images": [],
+      "trainingId": "practical",
+      "prerequisite": "1.7"
+    },
+    {
+      "slideNumber": 6,
+      "title": "Drill 2 Assessment: Training IDs 1.5-1.7",
+      "content": [
+        "Assessment Criteria:",
+        "Red: Does not meet minimum expectations.",
+        "Amber: Meets and demonstrates the basic requirements.",
+        "Green: Meets and demonstrates a thorough understanding.",
+        "",
+        "Practical Assessment Requirements:",
+        "• Demonstrate competent fracture splinting",
+        "• Show understanding of crush syndrome",
+        "• Apply appropriate chest trauma interventions",
+        "",
+        "All 3 training scenarios (1.5-1.7) must be completed successfully before proceeding to Drill 3."
+      ],
+      "images": [],
+      "trainingId": "assessment",
+      "prerequisite": "practical"
+    }
+  ]
+}

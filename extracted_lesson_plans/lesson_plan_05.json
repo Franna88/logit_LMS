@@ -1,0 +1,330 @@
+{
+  "lesson_id": "lesson_05",
+  "title": "Drill 5: Management of Medical Emergencies - Training IDs 3.1-3.5 (Cardiac Arrest, Pulmonary Oedema, Seizures, Hypo/Hyperthermia, Advanced Life Support)",
+  "lesson_number": 5,
+  "description": "To refresh the DMT’s fading skill in Managing Medical Emergencies",
+  "duration": "60 min",
+  "target_audience": "DMTs",
+  "objectives": [
+    "To refresh the DMT's fading skill in Managing Medical Emergencies",
+    "Training ID 3.1: Cardiac Arrest Algorithm and CPR procedures.",
+    "Training ID 3.2: Pulmonary Oedema recognition, causes and treatment.",
+    "Training ID 3.3: Seizure management - causes, types and treatment protocols.",
+    "Training ID 3.4: Hypothermia and Hyperthermia assessment and management.",
+    "Training ID 3.5: Advanced Life Support techniques and procedures.",
+    "Discuss basic anatomy of the heart",
+    "Discuss the equipment, positioning, step-by-step description of procedures.",
+    "Discuss contributing factors, symptoms and treatments for each emergency type.",
+    "Demonstrate practical emergency management techniques.",
+    "Practical assessment"
+  ],
+  "materials": [
+    "Defibrillator",
+    "thermometer Lecture hand-outs",
+    "sample photos",
+    "videos."
+  ],
+  "content_sections": [],
+  "activities": [
+    "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+    "Demonstration on how to apply the above topics.",
+    "Guided Practice and Independent Practice by the participants and Group Activities."
+  ],
+  "assessment": [
+    {
+      "grade": "Red",
+      "criteria": "Does not meet minimum expectations."
+    },
+    {
+      "grade": "Amber",
+      "criteria": "Meets and demonstrates the basic requirements."
+    },
+    {
+      "grade": "Green",
+      "criteria": "Meets and Demonstrates a thorough understanding."
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        "LESSON TITLE",
+        "Management of Medical Emergencies: Cardiac Arrest, Pulmonary Oedema, Seizures, Hypothermia and Hyperthermia"
+      ],
+      "rows": [
+        [
+          "TARGET AUDIENCE",
+          "DMTs"
+        ],
+        [
+          "LESSON DURATION",
+          "60 min"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "MAIN OBJECTIVES"
+      ],
+      "rows": [
+        [
+          "To refresh the DMT’s fading skill in Managing Medical Emergencies"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "LEARNING GOALS"
+      ],
+      "rows": [
+        [
+          "5.1 The participants will be able to discuss Cardiac Arrest Algorithm and perform CPR ☐ Discuss basic anatomy of the heart ☐ Discuss the Cardiac Arrest Algorithm ☐ Discuss the equipment, positioning, step-by-step description of procedure. ☐ Discuss and demonstrate CPR. 5.2 The participants will be able to discuss Pulmonary Oedema ☐ Discuss the causes and symptoms of Pulmonary Oedema ☐ Discuss the investigations and treatment of Pulmonary Oedema 5.3 The participants will be able to discuss Seizures ☐ Discuss the causes, symptoms and types of Seizures ☐ Discuss the treatment of Seizures 5.4 The participants will be able to discuss Hypothermia and Hyperthermia ☐ Discuss the contributing factors that can lead to Hypothermia and Hyperthermia ☐ Discuss the symptoms and treatment of Hypothermia and Hyperthermia ☐ Practical assessment"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "MATERIALS"
+      ],
+      "rows": [
+        [
+          "Defibrillator, thermometer Lecture hand-outs and sample photos and videos."
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "PROCEDURES"
+      ],
+      "rows": [
+        [
+          "1st 30 minutes - Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos. 2nd 15 minutes - Demonstration on how to apply the above topics. 3rd 15 minutes - Guided Practice and Independent Practice by the participants and Group Activities."
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "CLOSURE"
+      ],
+      "rows": [
+        [
+          "Group discussion/ Assessment/ Follow-up"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "ASSESSMENT",
+        "ASSESSMENT",
+        "ASSESSMENT"
+      ],
+      "rows": [
+        [
+          "GRADE",
+          "CRITERIA",
+          "TICK",
+          "TICK"
+        ],
+        [
+          "Red",
+          "Does not meet minimum expectations.",
+          "",
+          ""
+        ],
+        [
+          "Amber",
+          "Meets and demonstrates the basic requirements.",
+          "",
+          ""
+        ],
+        [
+          "Green",
+          "Meets and Demonstrates a thorough understanding.",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "SIGN-OFF COMPLETION",
+        "SIGN-OFF COMPLETION",
+        "SIGN-OFF COMPLETION"
+      ],
+      "rows": [
+        [
+          "",
+          "Diver Medic Technician (DMT)",
+          "Doctor Onboard"
+        ],
+        [
+          "Name",
+          "",
+          ""
+        ],
+        [
+          "Grade",
+          "",
+          ""
+        ],
+        [
+          "Signature",
+          "",
+          ""
+        ],
+        [
+          "Date",
+          "",
+          ""
+        ]
+      ]
+    }
+  ],
+  "metadata": {
+    "source_file": "SK-DIV-PLN-005_R0_Lesson Plan 5 - Management of Medical Emergencies.docx",
+    "extraction_date": "2025-09-02T14:16:46.143966",
+    "total_paragraphs": 0,
+    "total_sections": 0,
+    "total_tables": 8
+  },
+  "slides": [
+    {
+      "slideNumber": 1,
+      "title": "Drill 5 Overview: Management of Medical Emergencies - Training IDs 3.1-3.5",
+      "content": [
+        "Duration: 90 min",
+        "Target Audience: DMTs",
+        "Prerequisite: Must complete Drill 4 (Training IDs 2.1-2.6) first",
+        "",
+        "This drill covers 5 sequential training scenarios:",
+        "• Training ID 3.1: Cardiac Arrest Management",
+        "• Training ID 3.2: Pulmonary Oedema Management",
+        "• Training ID 3.3: Seizure Management",
+        "• Training ID 3.4: Hypo/Hyperthermia Management",
+        "• Training ID 3.5: Advanced Life Support",
+        "Each scenario must be completed before proceeding to the next."
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 2,
+      "title": "Training ID 3.1: Cardiac Arrest Management",
+      "content": [
+        "Learning Objectives:",
+        "• Recognize signs of cardiac arrest",
+        "• Perform high-quality CPR technique",
+        "• Understand cardiac arrest algorithms",
+        "• Operate defibrillation equipment safely",
+        "",
+        "Key Topics:",
+        "• Chain of survival components",
+        "• CPR compression and ventilation ratios",
+        "• AED operation and safety",
+        "• Post-resuscitation care basics"
+      ],
+      "images": [],
+      "trainingId": "3.1",
+      "prerequisite": "2.6"
+    },
+    {
+      "slideNumber": 3,
+      "title": "Training ID 3.2: Pulmonary Oedema Management",
+      "content": [
+        "Learning Objectives:",
+        "• Recognize signs and symptoms of pulmonary oedema",
+        "• Understand causes and pathophysiology",
+        "• Apply appropriate treatment interventions",
+        "• Monitor patient response to treatment",
+        "",
+        "Key Topics:",
+        "• Cardiogenic vs non-cardiogenic causes",
+        "• Assessment of breathing and oxygen saturation",
+        "• Positioning and oxygen therapy",
+        "• Medication administration considerations"
+      ],
+      "images": [],
+      "trainingId": "3.2",
+      "prerequisite": "3.1"
+    },
+    {
+      "slideNumber": 4,
+      "title": "Training ID 3.3: Seizure Management",
+      "content": [
+        "Learning Objectives:",
+        "• Identify different types of seizures",
+        "• Provide appropriate seizure first aid",
+        "• Understand seizure triggers and causes",
+        "• Recognize status epilepticus",
+        "",
+        "Key Topics:",
+        "• Generalized vs focal seizures",
+        "• Safety measures during seizure activity",
+        "• Post-ictal state management",
+        "• When to administer emergency medications"
+      ],
+      "images": [],
+      "trainingId": "3.3",
+      "prerequisite": "3.2"
+    },
+    {
+      "slideNumber": 5,
+      "title": "Training ID 3.4: Hypo/Hyperthermia Management",
+      "content": [
+        "Learning Objectives:",
+        "• Recognize signs of hypothermia and hyperthermia",
+        "• Understand risk factors and prevention",
+        "• Apply appropriate rewarming/cooling techniques",
+        "• Monitor for complications during treatment",
+        "",
+        "Key Topics:",
+        "• Stages of hypothermia and heat illness",
+        "• Active vs passive rewarming methods",
+        "• Cooling techniques for hyperthermia",
+        "• Fluid and electrolyte considerations"
+      ],
+      "images": [],
+      "trainingId": "3.4",
+      "prerequisite": "3.3"
+    },
+    {
+      "slideNumber": 6,
+      "title": "Training ID 3.5: Advanced Life Support",
+      "content": [
+        "Learning Objectives:",
+        "• Integrate advanced assessment and treatment",
+        "• Coordinate team-based resuscitation efforts",
+        "• Understand medication protocols",
+        "• Make critical care decisions",
+        "",
+        "Key Topics:",
+        "• Advanced airway management",
+        "• IV access and fluid resuscitation",
+        "• Emergency medication administration",
+        "• Team leadership and communication"
+      ],
+      "images": [],
+      "trainingId": "3.5",
+      "prerequisite": "3.4"
+    },
+    {
+      "slideNumber": 7,
+      "title": "Drill 5 Assessment: Training IDs 3.1-3.5",
+      "content": [
+        "Assessment Criteria:",
+        "Red: Does not meet minimum expectations.",
+        "Amber: Meets and demonstrates the basic requirements.",
+        "Green: Meets and demonstrates a thorough understanding.",
+        "",
+        "Practical Assessment Requirements:",
+        "• Demonstrate competent CPR and defibrillation",
+        "• Show understanding of medical emergency management",
+        "• Apply appropriate treatment protocols",
+        "• Coordinate advanced life support interventions",
+        "",
+        "All 5 training scenarios (3.1-3.5) must be completed successfully before proceeding to Drill 6."
+      ],
+      "images": [],
+      "trainingId": "assessment",
+      "prerequisite": "3.5"
+    }
+  ]
+}

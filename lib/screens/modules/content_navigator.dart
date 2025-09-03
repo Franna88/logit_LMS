@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'lesson_screen.dart';
+import 'lesson_plan_screen.dart';
 import 'quiz_screen.dart';
 import 'video_screen.dart';
 import '../../screens/student/course_detail_screen.dart';
@@ -149,7 +150,22 @@ class _ContentNavigatorState extends State<ContentNavigator> {
       }
     }
 
-    // Navigate to appropriate screen based on content type
+    // Navigate to appropriate screen based on content type and data
+    // Check if this is a lesson plan
+    if (slideData != null && slideData['type'] == 'lesson_plan') {
+      return LessonPlanScreen(
+        moduleTitle: widget.moduleTitle,
+        lessonTitle: currentContent.title,
+        lessonData: slideData['lesson_data'],
+        isCompleted: currentContent.isCompleted,
+        onComplete: _markContentComplete,
+        onNext: _navigateToNext,
+        onPrevious: _navigateToPrevious,
+        hasNext: hasNext,
+        hasPrevious: hasPrevious,
+      );
+    }
+
     switch (currentContent.type) {
       case ContentType.introduction:
       case ContentType.lesson:

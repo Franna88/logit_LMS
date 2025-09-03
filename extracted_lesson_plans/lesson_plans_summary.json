@@ -1,0 +1,126 @@
+{
+  "total_lessons": 12,
+  "extraction_date": "2025-09-02T14:16:46.208246",
+  "lessons": [
+    {
+      "lesson_id": "lesson_01",
+      "title": "Accident Management (Principles, Bleeding, Soft tissue and Shock)",
+      "lesson_number": 1,
+      "description": "To refresh the DMT’s and MFA’s fading skill in Accident Management",
+      "source_file": "SK-DIV-PLN-001_R0_Lesson Plan 1 - Accident Management (Principles, Bleeding, Soft tissue and Shock).docx",
+      "content_sections_count": 0,
+      "objectives_count": 8,
+      "slides_count": 6
+    },
+    {
+      "lesson_id": "lesson_02",
+      "title": "Accident Management (Fractures, Crush Injuries, Chest Trauma)",
+      "lesson_number": 2,
+      "description": "To refresh the DMT’s and MFA’s fading skill in Accident Management",
+      "source_file": "SK-DIV-PLN-002_R0_Lesson Plan 2 - Accident Management (Fractures, Crush Injuries, Chest Trauma).docx",
+      "content_sections_count": 0,
+      "objectives_count": 8,
+      "slides_count": 6
+    },
+    {
+      "lesson_id": "lesson_03",
+      "title": "Accident Management (Burns, Electrical Injury and Poisoning)",
+      "lesson_number": 3,
+      "description": "To refresh the DMT’s and MFA’s fading skill in Accident Management",
+      "source_file": "SK-DIV-PLN-003_R0_Lesson Plan 3 - Accident Management (Burns, Electrical Injury and Poisoning).docx",
+      "content_sections_count": 0,
+      "objectives_count": 8,
+      "slides_count": 6
+    },
+    {
+      "lesson_id": "lesson_04",
+      "title": "Casualty Assessment",
+      "lesson_number": 4,
+      "description": "To refresh the DMT’s fading skill in Casualty Assessment",
+      "source_file": "SK-DIV-PLN-004_R0_Lesson Plan 4 - Casualty Assessment.docx",
+      "content_sections_count": 0,
+      "objectives_count": 6,
+      "slides_count": 6
+    },
+    {
+      "lesson_id": "lesson_05",
+      "title": "Management of Medical Emergencies",
+      "lesson_number": 5,
+      "description": "To refresh the DMT’s fading skill in Managing Medical Emergencies",
+      "source_file": "SK-DIV-PLN-005_R0_Lesson Plan 5 - Management of Medical Emergencies.docx",
+      "content_sections_count": 0,
+      "objectives_count": 13,
+      "slides_count": 6
+    },
+    {
+      "lesson_id": "lesson_06",
+      "title": "Cannulation",
+      "lesson_number": 6,
+      "description": "To refresh the DMT’s fading skill in Cannulation",
+      "source_file": "SK-DIV-PLN-006_R0_Lesson Plan 6 - Cannulation.docx",
+      "content_sections_count": 0,
+      "objectives_count": 8,
+      "slides_count": 5
+    },
+    {
+      "lesson_id": "lesson_07",
+      "title": "Urethral Catheterisation",
+      "lesson_number": 7,
+      "description": "To refresh the DMT’s fading skill in Urethral Catheterisation for both male and female patients",
+      "source_file": "SK-DIV-PLN-007_R0_Lesson Plan 7 - Urethral Catheterisation.docx",
+      "content_sections_count": 0,
+      "objectives_count": 14,
+      "slides_count": 6
+    },
+    {
+      "lesson_id": "lesson_08",
+      "title": "Airway Management",
+      "lesson_number": 8,
+      "description": "To refresh the DMT’s fading skill in Airway Adjuncts Insertion Procedure To refresh the DMT’s fading skill in Ventilation Bag and Mask",
+      "source_file": "SK-DIV-PLN-008_R0_Lesson Plan 8 - Airway Management.docx",
+      "content_sections_count": 0,
+      "objectives_count": 22,
+      "slides_count": 5
+    },
+    {
+      "lesson_id": "lesson_09",
+      "title": "Chest Drain -Thoracentesis",
+      "lesson_number": 9,
+      "description": "To refresh the DMT’s fading skill in Thoracentesis",
+      "source_file": "SK-DIV-PLN-009_R0_Lesson Plan 9 - Chest Drain -Thoracentesis.docx",
+      "content_sections_count": 0,
+      "objectives_count": 8,
+      "slides_count": 6
+    },
+    {
+      "lesson_id": "lesson_10",
+      "title": "Suturing",
+      "lesson_number": 10,
+      "description": "To refresh the DMT’s fading skill in Suturing",
+      "source_file": "SK-DIV-PLN-010_R0_Lesson Plan 10 - Suturing.docx",
+      "content_sections_count": 0,
+      "objectives_count": 7,
+      "slides_count": 6
+    },
+    {
+      "lesson_id": "lesson_11",
+      "title": "Drug Administration",
+      "lesson_number": 11,
+      "description": "To refresh the DMT’s fading knowledge in the different routes for Drug Administration",
+      "source_file": "SK-DIV-PLN-011_R0_Lesson Plan 11 - Drug Administration.docx",
+      "content_sections_count": 0,
+      "objectives_count": 2,
+      "slides_count": 4
+    },
+    {
+      "lesson_id": "lesson_12",
+      "title": "DMAS",
+      "lesson_number": 12,
+      "description": "To refresh the DMT’s skill in the operation of DMAS Hypersat Unit",
+      "source_file": "SK-DIV-PLN-012_R0_Lesson Plan 12 - DMAS.docx",
+      "content_sections_count": 0,
+      "objectives_count": 6,
+      "slides_count": 6
+    }
+  ]
+}

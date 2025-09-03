@@ -1,0 +1,245 @@
+{
+  "lesson_id": "lesson_12",
+  "title": "Drill 12: DMAS - Training ID 10",
+  "lesson_number": 12,
+  "description": "To refresh the DMT’s skill in the operation of DMAS Hypersat Unit",
+  "duration": "60 min",
+  "target_audience": "DMTs",
+  "objectives": [
+    "To refresh the DMT’s skill in the operation of DMAS Hypersat Unit",
+    "The participants will be able to discuss and perform the operation of DMAS Hypersat Unit.",
+    "Discuss and set up the DMAS Hypersat Unit.",
+    "Discuss the procedure for ECG monitoring, Blood Pressure monitoring, use of pulse oximeter and perform spirometry.",
+    "Able to demonstrate to hook up all equipment accessories to the patient.",
+    "Practical assessment."
+  ],
+  "materials": [
+    "Training videos for the software of the DMAS Hypersat laptop. DMAS Hypersat Unit",
+    "its accessories."
+  ],
+  "content_sections": [],
+  "activities": [
+    "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+    "Demonstration on how to apply the above topics.",
+    "Guided Practice and Independent Practice by the participants and Group Activities."
+  ],
+  "assessment": [
+    {
+      "grade": "Red",
+      "criteria": "Does not meet minimum expectations."
+    },
+    {
+      "grade": "Amber",
+      "criteria": "Meets and demonstrates the basic requirements."
+    },
+    {
+      "grade": "Green",
+      "criteria": "Meets and Demonstrates a thorough understanding."
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        "LESSON TITLE",
+        "DMAS"
+      ],
+      "rows": [
+        [
+          "TARGET AUDIENCE",
+          "DMTs"
+        ],
+        [
+          "LESSON DURATION",
+          "60 min"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "MAIN OBJECTIVES"
+      ],
+      "rows": [
+        [
+          "To refresh the DMT’s skill in the operation of DMAS Hypersat Unit"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "LEARNING GOALS"
+      ],
+      "rows": [
+        [
+          "The participants will be able to discuss and perform the operation of DMAS Hypersat Unit. ☐ Discuss and set up the DMAS Hypersat Unit. ☐ Discuss the procedure for ECG monitoring, Blood Pressure monitoring, use of pulse oximeter and perform spirometry. ☐ Able to demonstrate to hook up all equipment accessories to the patient. ☐ Practical assessment."
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "MATERIALS"
+      ],
+      "rows": [
+        [
+          "Training videos for the software of the DMAS Hypersat laptop. DMAS Hypersat Unit and its accessories."
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "PROCEDURES"
+      ],
+      "rows": [
+        [
+          "1st 15 minutes - Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos. 2nd 15 minutes - Demonstration on how to apply the above topics. 3rd 30 minutes - Guided Practice and Independent Practice by the participants and Group Activities."
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "CLOSURE"
+      ],
+      "rows": [
+        [
+          "Group discussion/ Assessment/ Follow-up"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "ASSESSMENT",
+        "ASSESSMENT",
+        "ASSESSMENT"
+      ],
+      "rows": [
+        [
+          "GRADE",
+          "CRITERIA",
+          "TICK",
+          "TICK"
+        ],
+        [
+          "Red",
+          "Does not meet minimum expectations.",
+          "",
+          ""
+        ],
+        [
+          "Amber",
+          "Meets and demonstrates the basic requirements.",
+          "",
+          ""
+        ],
+        [
+          "Green",
+          "Meets and Demonstrates a thorough understanding.",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "SIGN-OFF COMPLETION",
+        "SIGN-OFF COMPLETION",
+        "SIGN-OFF COMPLETION"
+      ],
+      "rows": [
+        [
+          "",
+          "Diver Medic Technician (DMT)",
+          "Doctor Onboard"
+        ],
+        [
+          "Name",
+          "",
+          ""
+        ],
+        [
+          "Grade",
+          "",
+          ""
+        ],
+        [
+          "Signature",
+          "",
+          ""
+        ],
+        [
+          "Date",
+          "",
+          ""
+        ]
+      ]
+    }
+  ],
+  "metadata": {
+    "source_file": "SK-DIV-PLN-012_R0_Lesson Plan 12 - DMAS.docx",
+    "extraction_date": "2025-09-02T14:16:46.206967",
+    "total_paragraphs": 0,
+    "total_sections": 0,
+    "total_tables": 8
+  },
+  "slides": [
+    {
+      "slideNumber": 1,
+      "title": "DMAS",
+      "content": [
+        "Duration: 60 min",
+        "Target Audience: DMTs",
+        "To refresh the DMT’s skill in the operation of DMAS Hypersat Unit",
+        "The participants will be able to discuss and perform the operation of DMAS Hypersat Unit.",
+        "Discuss and set up the DMAS Hypersat Unit."
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 2,
+      "title": "Learning Objectives",
+      "content": [
+        "To refresh the DMT’s skill in the operation of DMAS Hypersat Unit",
+        "The participants will be able to discuss and perform the operation of DMAS Hypersat Unit.",
+        "Discuss and set up the DMAS Hypersat Unit.",
+        "Discuss the procedure for ECG monitoring, Blood Pressure monitoring, use of pulse oximeter and perform spirometry.",
+        "Able to demonstrate to hook up all equipment accessories to the patient.",
+        "Practical assessment."
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 3,
+      "title": "Materials Required",
+      "content": [
+        "Training videos for the software of the DMAS Hypersat laptop. DMAS Hypersat Unit",
+        "its accessories."
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 4,
+      "title": "Lesson Procedures 1",
+      "content": [
+        "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+        "Demonstration on how to apply the above topics."
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 5,
+      "title": "Lesson Procedures 2",
+      "content": [
+        "Guided Practice and Independent Practice by the participants and Group Activities."
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 6,
+      "title": "Assessment Criteria",
+      "content": [
+        "Red: Does not meet minimum expectations.",
+        "Amber: Meets and demonstrates the basic requirements.",
+        "Green: Meets and Demonstrates a thorough understanding."
+      ],
+      "images": []
+    }
+  ]
+}

@@ -63,7 +63,7 @@ class MyApp extends StatelessWidget {
           ),
           shadowColor: Colors.black.withOpacity(0.1),
         ),
-        cardTheme: CardTheme(
+        cardTheme: CardThemeData(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),

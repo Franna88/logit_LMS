@@ -1,0 +1,44 @@
+{
+  "_id": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+  "_path": "courses/f3dc8d26-1f86-4359-b7a1-079eae961568",
+  "_collection": "courses",
+  "title": "Diver Medic Training (DMT) - Complete Course",
+  "description": "Comprehensive medical training program for Diver Medic Technicians (DMTs) and Medical First Aiders (MFAs). Covers accident management, medical emergencies, and essential medical procedures for diving operations.",
+  "instructor": "Digital Master Training",
+  "categories": [
+    "medical",
+    "diving",
+    "emergency",
+    "training"
+  ],
+  "price": 0.0,
+  "isFree": true,
+  "rating": 5.0,
+  "totalStudents": 0,
+  "isAvailable": true,
+  "status": "active",
+  "imageUrl": "https://picsum.photos/id/1031/500/300",
+  "modules": [
+    "d6b61ac6-712d-4e05-b1df-5be6d2a2aae2",
+    "47dd393c-9bce-4c91-94ac-09de909fb5c9",
+    "21cb89bd-1d1a-4c39-8ca5-4b36fe495e28",
+    "609e6896-af92-43f7-a95e-d24330d3c3eb",
+    "9394e8ea-4af1-42f2-9082-1be0482781ef",
+    "afed577b-18a9-4a6a-af65-496be0b7acf5",
+    "06edcfbe-60b3-49e2-b523-2a728da47865",
+    "534f559e-3a1b-442b-a23b-3a0d20eac337",
+    "a7b33e81-dcdc-4acc-8422-228c572ee470",
+    "4e46f4e5-d7d3-4cf5-b912-f6bffc085e65",
+    "148fe87f-ff04-42e6-96fd-22cac8dd7224",
+    "f61426fd-7cee-4231-8320-6afd816543ae"
+  ],
+  "createdAt": "2025-09-02T14:20:28.846909+00:00",
+  "updatedAt": "2025-09-02T14:20:28.846909+00:00",
+  "sourceType": "lesson_plan_extraction",
+  "metadata": {
+    "total_lessons": 12,
+    "total_slides": 68,
+    "extraction_date": "2025-09-02T14:20:28.846909+00:00",
+    "target_audience": "DMTs and MFAs"
+  }
+}

@@ -78,6 +78,7 @@ flutter:
     - lib/assets/output/images/questions.json
     - output/
     - output/images/
+    - extracted_lesson_plans/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

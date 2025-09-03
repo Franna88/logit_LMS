@@ -1,0 +1,32 @@
+{
+  "integration_date": "2025-09-02T14:31:15.051714",
+  "dmt_course_id": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+  "dmt_course_title": "Diver Medic Training (DMT) - Complete Course",
+  "integration_summary": {
+    "courses_added": 1,
+    "modules_added": 12,
+    "lessons_added": 12,
+    "slides_added": 68
+  },
+  "final_totals": {
+    "total_courses": 26,
+    "total_modules": 21,
+    "total_lessons": 23,
+    "total_slides": 188
+  },
+  "dmt_module_titles": [
+    "Accident Management Fundamentals",
+    "Trauma and Injury Management",
+    "Burns and Environmental Injuries",
+    "Patient Assessment",
+    "Medical Emergency Response",
+    "Vascular Access Procedures",
+    "Urological Procedures",
+    "Airway Management",
+    "Thoracic Procedures",
+    "Surgical Procedures",
+    "Pharmacology and Drug Administration",
+    "Diving Medical Advisory Service (DMAS)"
+  ],
+  "backup_location": "/Users/mac/dev/logit_LMS/backup_before_dmt_integration"
+}

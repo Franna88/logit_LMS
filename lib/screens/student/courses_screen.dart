@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../widgets/modern_layout.dart';
 import '../../widgets/modern_course_card.dart';
 import '../student/oxygen_course_screen.dart';
+import '../student/simple_dmt_course_screen.dart';
 
 class StudentCoursesScreen extends StatefulWidget {
   const StudentCoursesScreen({super.key});
@@ -207,7 +208,7 @@ class _StudentCoursesScreenState extends State<StudentCoursesScreen> {
     } else {
       // List view for phones
       return ListView.separated(
-        itemCount: 2,
+        itemCount: 3, // Updated to 3 courses
         separatorBuilder: (context, index) => const SizedBox(height: 12),
         itemBuilder: (context, index) => _buildCourseCards()[index],
       );
@@ -216,6 +217,23 @@ class _StudentCoursesScreenState extends State<StudentCoursesScreen> {
 
   List<Widget> _buildCourseCards() {
     return [
+      // DMT Course - Our extracted lesson plans
+      ModernCourseCard(
+        imageAsset: 'lib/assets/images/course.jpg',
+        courseName: 'Diver Medic Training (DMT) - Complete Course',
+        courseDescription:
+            'Comprehensive medical training for DMTs and MFAs. Covers accident management, medical emergencies, and essential procedures.',
+        authorName: 'Digital Master Training',
+        rating: 5.0,
+        studentCount: 0,
+        status: 'owned',
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const SimpleDMTCourseScreen()),
+          );
+        },
+      ),
       ModernCourseCard(
         imageAsset: 'lib/assets/images/course.jpg',
         courseName: 'Diving Safety and Awareness',

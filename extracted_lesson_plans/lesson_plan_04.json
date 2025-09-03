@@ -1,0 +1,350 @@
+{
+  "lesson_id": "lesson_04",
+  "title": "Drill 4: Casualty Assessment - Training IDs 2.1-2.6 (Blood Pressure, Temperature, Pulse, Respiration, Capillary Refill, Neurological Assessment)",
+  "lesson_number": 4,
+  "description": "To refresh the DMT’s fading skill in Casualty Assessment",
+  "duration": "40 min",
+  "target_audience": "DMTs",
+  "objectives": [
+    "To refresh the DMT's fading skill in Casualty Assessment",
+    "Training ID 2.1: Blood pressure measurement techniques and interpretation.",
+    "Training ID 2.2: Temperature assessment using various methods.",
+    "Training ID 2.3: Pulse assessment - rate, rhythm, and quality.",
+    "Training ID 2.4: Respiration assessment - rate, depth, and quality.",
+    "Training ID 2.5: Capillary refill testing and interpretation.",
+    "Training ID 2.6: Neurological assessment procedures and documentation.",
+    "Familiarise with the equipment involved in these assessments.",
+    "Practical assessment"
+  ],
+  "materials": [
+    "BP apparatus",
+    "thermometer",
+    "reflex hammer Lecture hand-outs",
+    "sample photos",
+    "videos."
+  ],
+  "content_sections": [],
+  "activities": [
+    "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+    "Demonstration on how to apply the above topics.",
+    "Guided Practice and Independent Practice by the participants and Group Activities."
+  ],
+  "assessment": [
+    {
+      "grade": "Red",
+      "criteria": "Does not meet minimum expectations."
+    },
+    {
+      "grade": "Amber",
+      "criteria": "Meets and demonstrates the basic requirements."
+    },
+    {
+      "grade": "Green",
+      "criteria": "Meets and Demonstrates a thorough understanding."
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        "LESSON TITLE",
+        "Casualty Assessment: Vital Signs, Capillary Refill and Neurological Assessment"
+      ],
+      "rows": [
+        [
+          "TARGET AUDIENCE",
+          "DMTs"
+        ],
+        [
+          "LESSON DURATION",
+          "40 min"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "MAIN OBJECTIVES"
+      ],
+      "rows": [
+        [
+          "To refresh the DMT’s fading skill in Casualty Assessment"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "LEARNING GOALS"
+      ],
+      "rows": [
+        [
+          "The participants will be able to discuss how to take vital signs (blood pressure, temperature, pulse and respiration rate), capillary refill and perform neurological assessment. ☐ Discuss essential body functions: heartbeat, breathing rate, temperature and blood pressure ☐ Discuss how to perform and demonstrate neurological assessment ☐ Familiarise with the equipment involved in these assessments. ☐ Practical assessment"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "MATERIALS"
+      ],
+      "rows": [
+        [
+          "BP apparatus, thermometer, reflex hammer Lecture hand-outs and sample photos and videos."
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "PROCEDURES"
+      ],
+      "rows": [
+        [
+          "1st 10 minutes - Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos. 2nd 10 minutes - Demonstration on how to apply the above topics. 3rd 20 minutes - Guided Practice and Independent Practice by the participants and Group Activities."
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "CLOSURE"
+      ],
+      "rows": [
+        [
+          "Group discussion/ Assessment/ Follow-up"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "ASSESSMENT",
+        "ASSESSMENT",
+        "ASSESSMENT"
+      ],
+      "rows": [
+        [
+          "GRADE",
+          "CRITERIA",
+          "TICK",
+          "TICK"
+        ],
+        [
+          "Red",
+          "Does not meet minimum expectations.",
+          "",
+          ""
+        ],
+        [
+          "Amber",
+          "Meets and demonstrates the basic requirements.",
+          "",
+          ""
+        ],
+        [
+          "Green",
+          "Meets and Demonstrates a thorough understanding.",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "SIGN-OFF COMPLETION",
+        "SIGN-OFF COMPLETION",
+        "SIGN-OFF COMPLETION"
+      ],
+      "rows": [
+        [
+          "",
+          "Diver Medic Technician (DMT)",
+          "Doctor Onboard"
+        ],
+        [
+          "Name",
+          "",
+          ""
+        ],
+        [
+          "Grade",
+          "",
+          ""
+        ],
+        [
+          "Signature",
+          "",
+          ""
+        ],
+        [
+          "Date",
+          "",
+          ""
+        ]
+      ]
+    }
+  ],
+  "metadata": {
+    "source_file": "SK-DIV-PLN-004_R0_Lesson Plan 4 - Casualty Assessment.docx",
+    "extraction_date": "2025-09-02T14:16:46.135349",
+    "total_paragraphs": 0,
+    "total_sections": 0,
+    "total_tables": 8
+  },
+  "slides": [
+    {
+      "slideNumber": 1,
+      "title": "Drill 4 Overview: Casualty Assessment - Training IDs 2.1-2.6",
+      "content": [
+        "Duration: 60 min",
+        "Target Audience: DMTs",
+        "Prerequisite: Must complete Drill 3 (Training IDs 1.8-1.10) first",
+        "",
+        "This drill covers 6 sequential training scenarios:",
+        "• Training ID 2.1: Blood Pressure Assessment",
+        "• Training ID 2.2: Temperature Assessment",
+        "• Training ID 2.3: Pulse Assessment",
+        "• Training ID 2.4: Respiration Assessment",
+        "• Training ID 2.5: Capillary Refill Assessment",
+        "• Training ID 2.6: Neurological Assessment",
+        "Each scenario must be completed before proceeding to the next."
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 2,
+      "title": "Training ID 2.1: Blood Pressure Assessment",
+      "content": [
+        "Learning Objectives:",
+        "• Demonstrate proper blood pressure measurement technique",
+        "• Interpret systolic and diastolic readings",
+        "• Recognize normal and abnormal BP ranges",
+        "• Troubleshoot equipment and technique issues",
+        "",
+        "Key Topics:",
+        "• Manual vs automated BP measurement",
+        "• Proper cuff size selection and placement",
+        "• Korotkoff sounds identification",
+        "• Hypertension and hypotension recognition"
+      ],
+      "images": [],
+      "trainingId": "2.1",
+      "prerequisite": "1.10"
+    },
+    {
+      "slideNumber": 3,
+      "title": "Training ID 2.2: Temperature Assessment",
+      "content": [
+        "Learning Objectives:",
+        "• Select appropriate temperature measurement method",
+        "• Demonstrate accurate temperature taking techniques",
+        "• Recognize fever and hypothermia patterns",
+        "• Understand temperature variation factors",
+        "",
+        "Key Topics:",
+        "• Oral, axillary, and tympanic methods",
+        "• Digital vs mercury thermometers",
+        "• Normal temperature ranges",
+        "• Environmental and physiological factors"
+      ],
+      "images": [],
+      "trainingId": "2.2",
+      "prerequisite": "2.1"
+    },
+    {
+      "slideNumber": 4,
+      "title": "Training ID 2.3: Pulse Assessment",
+      "content": [
+        "Learning Objectives:",
+        "• Locate and palpate various pulse points",
+        "• Assess pulse rate, rhythm, and quality",
+        "• Recognize abnormal pulse patterns",
+        "• Document pulse findings accurately",
+        "",
+        "Key Topics:",
+        "• Radial, carotid, and other pulse sites",
+        "• Normal pulse rates by age group",
+        "• Irregular rhythms and weak pulses",
+        "• Pulse deficit assessment"
+      ],
+      "images": [],
+      "trainingId": "2.3",
+      "prerequisite": "2.2"
+    },
+    {
+      "slideNumber": 5,
+      "title": "Training ID 2.4: Respiration Assessment",
+      "content": [
+        "Learning Objectives:",
+        "• Assess respiratory rate, depth, and pattern",
+        "• Recognize normal and abnormal breathing",
+        "• Identify signs of respiratory distress",
+        "• Monitor oxygen saturation levels",
+        "",
+        "Key Topics:",
+        "• Normal respiratory rates by age",
+        "• Breathing patterns (regular, irregular, labored)",
+        "• Use of pulse oximetry",
+        "• Signs of hypoxia and hyperventilation"
+      ],
+      "images": [],
+      "trainingId": "2.4",
+      "prerequisite": "2.3"
+    },
+    {
+      "slideNumber": 6,
+      "title": "Training ID 2.5: Capillary Refill Assessment",
+      "content": [
+        "Learning Objectives:",
+        "• Perform capillary refill test correctly",
+        "• Interpret refill times and their significance",
+        "• Recognize factors affecting capillary refill",
+        "• Use results to assess perfusion status",
+        "",
+        "Key Topics:",
+        "• Proper technique for nail bed compression",
+        "• Normal vs delayed refill times",
+        "• Environmental factors (temperature, lighting)",
+        "• Correlation with shock and dehydration"
+      ],
+      "images": [],
+      "trainingId": "2.5",
+      "prerequisite": "2.4"
+    },
+    {
+      "slideNumber": 7,
+      "title": "Training ID 2.6: Neurological Assessment",
+      "content": [
+        "Learning Objectives:",
+        "• Assess level of consciousness using AVPU scale",
+        "• Test basic neurological reflexes",
+        "• Recognize signs of neurological impairment",
+        "• Document neurological findings systematically",
+        "",
+        "Key Topics:",
+        "• AVPU scale (Alert, Voice, Pain, Unresponsive)",
+        "• Pupil size and reaction testing",
+        "• Motor and sensory function assessment",
+        "• Glasgow Coma Scale basics"
+      ],
+      "images": [],
+      "trainingId": "2.6",
+      "prerequisite": "2.5"
+    },
+    {
+      "slideNumber": 8,
+      "title": "Drill 4 Assessment: Training IDs 2.1-2.6",
+      "content": [
+        "Assessment Criteria:",
+        "Red: Does not meet minimum expectations.",
+        "Amber: Meets and demonstrates the basic requirements.",
+        "Green: Meets and demonstrates a thorough understanding.",
+        "",
+        "Practical Assessment Requirements:",
+        "• Demonstrate accurate vital signs measurement",
+        "• Show competency in all 6 assessment techniques",
+        "• Interpret findings and identify abnormalities",
+        "• Complete comprehensive casualty assessment",
+        "",
+        "All 6 training scenarios (2.1-2.6) must be completed successfully before proceeding to Drill 5."
+      ],
+      "images": [],
+      "trainingId": "assessment",
+      "prerequisite": "2.6"
+    }
+  ]
+}

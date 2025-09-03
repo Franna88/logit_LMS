@@ -1,0 +1,308 @@
+{
+  "lesson_id": "lesson_03",
+  "title": "Drill 3: Accident Management - Training IDs 1.8-1.10 (Burns, Electrical Injury, Poisoning)",
+  "lesson_number": 3,
+  "description": "To refresh the DMT’s and MFA’s fading skill in Accident Management",
+  "duration": "50mins",
+  "target_audience": "DMTs and MFAs",
+  "objectives": [
+    "To refresh the DMT's and MFA's fading skill in Accident Management",
+    "The participants will be able to discuss indication for use of Accident management procedures.",
+    "Discuss basic relevant anatomy.",
+    "Training ID 1.8: Burns assessment, classification and treatment.",
+    "Training ID 1.9: Electrical injury recognition and emergency management.",
+    "Training ID 1.10: Poisoning identification and treatment protocols.",
+    "Discuss the equipment, positioning, step-by-step description of procedure",
+    "Discuss risks and complications.",
+    "Discuss and demonstrate Accident Management techniques.",
+    "Practical assessment."
+  ],
+  "materials": [
+    "Burn gel",
+    "burn sheet. Lecture hand-outs",
+    "sample photos",
+    "videos."
+  ],
+  "content_sections": [],
+  "activities": [
+    "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+    "Demonstration on how to apply the above topics.",
+    "Guided Practice and Independent Practice by the participants and Group Activities."
+  ],
+  "assessment": [
+    {
+      "grade": "Red",
+      "criteria": "Does not meet minimum expectations."
+    },
+    {
+      "grade": "Amber",
+      "criteria": "Meets and demonstrates the basic requirements."
+    },
+    {
+      "grade": "Green",
+      "criteria": "Meets and Demonstrates a thorough understanding."
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        "LESSON TITLE",
+        "Accident Management: Burns, Electrical Injury and Poisoning"
+      ],
+      "rows": [
+        [
+          "TARGET AUDIENCE",
+          "DMTs and MFAs"
+        ],
+        [
+          "LESSON DURATION",
+          "50mins"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "MAIN OBJECTIVES"
+      ],
+      "rows": [
+        [
+          "To refresh the DMT’s and MFA’s fading skill in Accident Management"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "LEARNING GOALS"
+      ],
+      "rows": [
+        [
+          "The participants will be able to discuss indication for use of Accident management procedures. ☐ Discuss basic relevant anatomy. ☐ Principles of Accident Management. ☐ Discuss the equipment, positioning, step-by-step description of procedure ☐ Discuss risks and complications. ☐ Discuss and demonstrate Accident Management techniques. ☐ Practical assessment."
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "MATERIALS"
+      ],
+      "rows": [
+        [
+          "Burn gel and burn sheet. Lecture hand-outs and sample photos and videos."
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "PROCEDURES"
+      ],
+      "rows": [
+        [
+          "1st 10 minutes - Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos. 2nd 10 minutes - Demonstration on how to apply the above topics. 3rd 30 minutes - Guided Practice and Independent Practice by the participants and Group Activities."
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "CLOSURE"
+      ],
+      "rows": [
+        [
+          "Group discussion/ Assessment/ Follow-up"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "ASSESSMENT",
+        "ASSESSMENT",
+        "ASSESSMENT"
+      ],
+      "rows": [
+        [
+          "GRADE",
+          "CRITERIA",
+          "TICK",
+          "TICK"
+        ],
+        [
+          "Red",
+          "Does not meet minimum expectations.",
+          "",
+          ""
+        ],
+        [
+          "Amber",
+          "Meets and demonstrates the basic requirements.",
+          "",
+          ""
+        ],
+        [
+          "Green",
+          "Meets and Demonstrates a thorough understanding.",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "SIGN-OFF COMPLETION",
+        "SIGN-OFF COMPLETION",
+        "SIGN-OFF COMPLETION"
+      ],
+      "rows": [
+        [
+          "",
+          "Diver Medic Technician (DMT)",
+          "Doctor Onboard"
+        ],
+        [
+          "Name",
+          "",
+          ""
+        ],
+        [
+          "Grade",
+          "",
+          ""
+        ],
+        [
+          "Signature",
+          "",
+          ""
+        ],
+        [
+          "Date",
+          "",
+          ""
+        ]
+      ]
+    }
+  ],
+  "metadata": {
+    "source_file": "SK-DIV-PLN-003_R0_Lesson Plan 3 - Accident Management (Burns, Electrical Injury and Poisoning).docx",
+    "extraction_date": "2025-09-02T14:16:46.126809",
+    "total_paragraphs": 0,
+    "total_sections": 0,
+    "total_tables": 8
+  },
+  "slides": [
+    {
+      "slideNumber": 1,
+      "title": "Drill 3 Overview: Accident Management - Training IDs 1.8-1.10",
+      "content": [
+        "Duration: 50mins",
+        "Target Audience: DMTs and MFAs",
+        "Prerequisite: Must complete Drill 2 (Training IDs 1.5-1.7) first",
+        "",
+        "This drill covers 3 sequential training scenarios:",
+        "• Training ID 1.8: Burns Assessment and Management",
+        "• Training ID 1.9: Electrical Injury Management",
+        "• Training ID 1.10: Poisoning Identification and Treatment",
+        "Each scenario must be completed before proceeding to the next."
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 2,
+      "title": "Training ID 1.8: Burns Assessment and Management",
+      "content": [
+        "Learning Objectives:",
+        "• Classify burn severity and depth",
+        "• Calculate total body surface area affected",
+        "• Apply appropriate burn treatment protocols",
+        "• Recognize signs of inhalation injury",
+        "",
+        "Key Topics:",
+        "• First, second, and third-degree burns",
+        "• Rule of nines assessment",
+        "• Cooling techniques and dressing selection",
+        "• Fluid resuscitation calculations"
+      ],
+      "images": [],
+      "trainingId": "1.8",
+      "prerequisite": "1.7"
+    },
+    {
+      "slideNumber": 3,
+      "title": "Training ID 1.9: Electrical Injury Management",
+      "content": [
+        "Learning Objectives:",
+        "• Understand electrical injury mechanisms",
+        "• Recognize high-voltage vs low-voltage injuries",
+        "• Apply safe rescue and treatment protocols",
+        "• Monitor for cardiac complications",
+        "",
+        "Key Topics:",
+        "• Scene safety and power isolation",
+        "• Entry and exit wound assessment",
+        "• Cardiac monitoring requirements",
+        "• Compartment syndrome risks"
+      ],
+      "images": [],
+      "trainingId": "1.9",
+      "prerequisite": "1.8"
+    },
+    {
+      "slideNumber": 4,
+      "title": "Training ID 1.10: Poisoning Identification and Treatment",
+      "content": [
+        "Learning Objectives:",
+        "• Identify common poisoning scenarios",
+        "• Apply appropriate decontamination methods",
+        "• Understand antidote administration",
+        "• Recognize toxidrome presentations",
+        "",
+        "Key Topics:",
+        "• Ingestion, inhalation, and contact poisoning",
+        "• Activated charcoal indications",
+        "• Specific antidotes and contraindications",
+        "• Poison control center consultation"
+      ],
+      "images": [],
+      "trainingId": "1.10",
+      "prerequisite": "1.9"
+    },
+    {
+      "slideNumber": 5,
+      "title": "Drill 3 Practical Procedures",
+      "content": [
+        "Hands-on Practice Requirements:",
+        "",
+        "Training ID 1.8 - Burns Management:",
+        "• Practice burn assessment using rule of nines",
+        "• Demonstrate proper burn dressing techniques",
+        "",
+        "Training ID 1.9 - Electrical Injury:",
+        "• Practice safe electrical rescue scenarios",
+        "• Demonstrate cardiac monitoring setup",
+        "",
+        "Training ID 1.10 - Poisoning:",
+        "• Practice decontamination procedures",
+        "• Demonstrate antidote preparation"
+      ],
+      "images": [],
+      "trainingId": "practical",
+      "prerequisite": "1.10"
+    },
+    {
+      "slideNumber": 6,
+      "title": "Drill 3 Assessment: Training IDs 1.8-1.10",
+      "content": [
+        "Assessment Criteria:",
+        "Red: Does not meet minimum expectations.",
+        "Amber: Meets and demonstrates the basic requirements.",
+        "Green: Meets and demonstrates a thorough understanding.",
+        "",
+        "Practical Assessment Requirements:",
+        "• Demonstrate accurate burn assessment",
+        "• Show competency in electrical injury management",
+        "• Apply appropriate poisoning treatment protocols",
+        "",
+        "All 3 training scenarios (1.8-1.10) must be completed successfully before proceeding to Drill 4."
+      ],
+      "images": [],
+      "trainingId": "assessment",
+      "prerequisite": "practical"
+    }
+  ]
+}

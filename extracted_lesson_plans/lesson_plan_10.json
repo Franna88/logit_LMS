@@ -1,0 +1,247 @@
+{
+  "lesson_id": "lesson_10",
+  "title": "Drill 10: Suturing - Training ID 8",
+  "lesson_number": 10,
+  "description": "To refresh the DMT’s fading skill in Suturing",
+  "duration": "50 min",
+  "target_audience": "DMT’s",
+  "objectives": [
+    "To refresh the DMT’s fading skill in Suturing",
+    "The participants will be able to discuss indication and contra-indication for Suturing",
+    "Discuss the anatomy of the skin and its functions.",
+    "Discuss the principles of suturing.",
+    "Discuss the procedure and equipment for suturing.",
+    "Discuss and demonstrate the different suturing techniques",
+    "Practical assessment"
+  ],
+  "materials": [
+    "Suturing training kit",
+    "its accompanying accessories"
+  ],
+  "content_sections": [],
+  "activities": [
+    "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+    "Demonstration on how to apply the above topics.",
+    "Guided Practice and Independent Practice by the participants and Group Activities."
+  ],
+  "assessment": [
+    {
+      "grade": "Red",
+      "criteria": "Does not meet minimum expectations."
+    },
+    {
+      "grade": "Amber",
+      "criteria": "Meets and demonstrates the basic requirements."
+    },
+    {
+      "grade": "Green",
+      "criteria": "Meets and Demonstrates a thorough understanding."
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        "LESSON TITLE",
+        "Suturing"
+      ],
+      "rows": [
+        [
+          "TARGET AUDIENCE",
+          "DMT’s"
+        ],
+        [
+          "LESSON DURATION",
+          "50 min"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "MAIN OBJECTIVES"
+      ],
+      "rows": [
+        [
+          "To refresh the DMT’s fading skill in Suturing"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "LEARNING GOALS"
+      ],
+      "rows": [
+        [
+          "The participants will be able to discuss indication and contra-indication for Suturing ☐ Discuss the anatomy of the skin and its functions. ☐ Discuss the principles of suturing. ☐ Discuss the procedure and equipment for suturing. ☐ Discuss and demonstrate the different suturing techniques ☐ Practical assessment"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "MATERIALS"
+      ],
+      "rows": [
+        [
+          "Suturing training kit and its accompanying accessories"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "PROCEDURES"
+      ],
+      "rows": [
+        [
+          "1st 10 minutes - Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos. 2nd 10 minutes - Demonstration on how to apply the above topics. 3rd 30 minutes - Guided Practice and Independent Practice by the participants and Group Activities."
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "CLOSURE"
+      ],
+      "rows": [
+        [
+          "Group Discussion / Assessment/ Follow up"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "ASSESSMENT",
+        "ASSESSMENT",
+        "ASSESSMENT"
+      ],
+      "rows": [
+        [
+          "GRADE",
+          "CRITERIA",
+          "TICK",
+          "TICK"
+        ],
+        [
+          "Red",
+          "Does not meet minimum expectations.",
+          "",
+          ""
+        ],
+        [
+          "Amber",
+          "Meets and demonstrates the basic requirements.",
+          "",
+          ""
+        ],
+        [
+          "Green",
+          "Meets and Demonstrates a thorough understanding.",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "SIGN-OFF COMPLETION",
+        "SIGN-OFF COMPLETION",
+        "SIGN-OFF COMPLETION"
+      ],
+      "rows": [
+        [
+          "",
+          "Diver Medic Technician (DMT)",
+          "Doctor Onboard"
+        ],
+        [
+          "Name",
+          "",
+          ""
+        ],
+        [
+          "Grade",
+          "",
+          ""
+        ],
+        [
+          "Signature",
+          "",
+          ""
+        ],
+        [
+          "Date",
+          "",
+          ""
+        ]
+      ]
+    }
+  ],
+  "metadata": {
+    "source_file": "SK-DIV-PLN-010_R0_Lesson Plan 10 - Suturing.docx",
+    "extraction_date": "2025-09-02T14:16:46.191713",
+    "total_paragraphs": 0,
+    "total_sections": 0,
+    "total_tables": 8
+  },
+  "slides": [
+    {
+      "slideNumber": 1,
+      "title": "Suturing",
+      "content": [
+        "Duration: 50 min",
+        "Target Audience: DMT’s",
+        "To refresh the DMT’s fading skill in Suturing",
+        "The participants will be able to discuss indication and contra-indication for Suturing",
+        "Discuss the anatomy of the skin and its functions."
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 2,
+      "title": "Learning Objectives",
+      "content": [
+        "To refresh the DMT’s fading skill in Suturing",
+        "The participants will be able to discuss indication and contra-indication for Suturing",
+        "Discuss the anatomy of the skin and its functions.",
+        "Discuss the principles of suturing.",
+        "Discuss the procedure and equipment for suturing.",
+        "Discuss and demonstrate the different suturing techniques",
+        "Practical assessment"
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 3,
+      "title": "Materials Required",
+      "content": [
+        "Suturing training kit",
+        "its accompanying accessories"
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 4,
+      "title": "Lesson Procedures 1",
+      "content": [
+        "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+        "Demonstration on how to apply the above topics."
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 5,
+      "title": "Lesson Procedures 2",
+      "content": [
+        "Guided Practice and Independent Practice by the participants and Group Activities."
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 6,
+      "title": "Assessment Criteria",
+      "content": [
+        "Red: Does not meet minimum expectations.",
+        "Amber: Meets and demonstrates the basic requirements.",
+        "Green: Meets and Demonstrates a thorough understanding."
+      ],
+      "images": []
+    }
+  ]
+}

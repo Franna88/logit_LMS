@@ -1,0 +1,1894 @@
+{
+  "course": {
+    "_id": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "_path": "courses/f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "_collection": "courses",
+    "title": "Diver Medic Training (DMT) - Complete Course",
+    "description": "Comprehensive medical training program for Diver Medic Technicians (DMTs) and Medical First Aiders (MFAs). Covers accident management, medical emergencies, and essential medical procedures for diving operations.",
+    "instructor": "Digital Master Training",
+    "categories": [
+      "medical",
+      "diving",
+      "emergency",
+      "training"
+    ],
+    "price": 0.0,
+    "isFree": true,
+    "rating": 5.0,
+    "totalStudents": 0,
+    "isAvailable": true,
+    "status": "active",
+    "imageUrl": "https://picsum.photos/id/1031/500/300",
+    "modules": [
+      "d6b61ac6-712d-4e05-b1df-5be6d2a2aae2",
+      "47dd393c-9bce-4c91-94ac-09de909fb5c9",
+      "21cb89bd-1d1a-4c39-8ca5-4b36fe495e28",
+      "609e6896-af92-43f7-a95e-d24330d3c3eb",
+      "9394e8ea-4af1-42f2-9082-1be0482781ef",
+      "afed577b-18a9-4a6a-af65-496be0b7acf5",
+      "06edcfbe-60b3-49e2-b523-2a728da47865",
+      "534f559e-3a1b-442b-a23b-3a0d20eac337",
+      "a7b33e81-dcdc-4acc-8422-228c572ee470",
+      "4e46f4e5-d7d3-4cf5-b912-f6bffc085e65",
+      "148fe87f-ff04-42e6-96fd-22cac8dd7224",
+      "f61426fd-7cee-4231-8320-6afd816543ae"
+    ],
+    "createdAt": "2025-09-02T14:20:28.846909+00:00",
+    "updatedAt": "2025-09-02T14:20:28.846909+00:00",
+    "sourceType": "lesson_plan_extraction",
+    "metadata": {
+      "total_lessons": 12,
+      "total_slides": 68,
+      "extraction_date": "2025-09-02T14:20:28.846909+00:00",
+      "target_audience": "DMTs and MFAs"
+    }
+  },
+  "modules": [
+    {
+      "_id": "d6b61ac6-712d-4e05-b1df-5be6d2a2aae2",
+      "_path": "modules/d6b61ac6-712d-4e05-b1df-5be6d2a2aae2",
+      "_collection": "modules",
+      "title": "Accident Management Fundamentals",
+      "description": "Core principles of accident management including bleeding control, soft tissue injuries, and shock management",
+      "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+      "lessonIds": [
+        "9df50c0c-7152-4d74-bbf3-56701acef19f"
+      ],
+      "testIds": [],
+      "questionIds": [],
+      "order": 1,
+      "createdAt": "2025-09-02T14:20:28.838264+00:00",
+      "updatedAt": "2025-09-02T14:20:28.838264+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "47dd393c-9bce-4c91-94ac-09de909fb5c9",
+      "_path": "modules/47dd393c-9bce-4c91-94ac-09de909fb5c9",
+      "_collection": "modules",
+      "title": "Trauma and Injury Management",
+      "description": "Advanced trauma management covering fractures, crush injuries, and chest trauma",
+      "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+      "lessonIds": [
+        "c8d16edd-a53f-4f26-a239-0fdd8dc1bfb0"
+      ],
+      "testIds": [],
+      "questionIds": [],
+      "order": 2,
+      "createdAt": "2025-09-02T14:20:28.841209+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841209+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "21cb89bd-1d1a-4c39-8ca5-4b36fe495e28",
+      "_path": "modules/21cb89bd-1d1a-4c39-8ca5-4b36fe495e28",
+      "_collection": "modules",
+      "title": "Burns and Environmental Injuries",
+      "description": "Management of burns, electrical injuries, and poisoning incidents",
+      "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+      "lessonIds": [
+        "60d08e35-8698-454c-82fa-d710f9591128"
+      ],
+      "testIds": [],
+      "questionIds": [],
+      "order": 3,
+      "createdAt": "2025-09-02T14:20:28.841491+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841491+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "609e6896-af92-43f7-a95e-d24330d3c3eb",
+      "_path": "modules/609e6896-af92-43f7-a95e-d24330d3c3eb",
+      "_collection": "modules",
+      "title": "Patient Assessment",
+      "description": "Systematic approach to casualty assessment and triage",
+      "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+      "lessonIds": [
+        "fb51c5a4-b284-4abc-9e8b-aea2b9e7a481"
+      ],
+      "testIds": [],
+      "questionIds": [],
+      "order": 4,
+      "createdAt": "2025-09-02T14:20:28.841768+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841768+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "9394e8ea-4af1-42f2-9082-1be0482781ef",
+      "_path": "modules/9394e8ea-4af1-42f2-9082-1be0482781ef",
+      "_collection": "modules",
+      "title": "Medical Emergency Response",
+      "description": "Management of medical emergencies in diving operations",
+      "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+      "lessonIds": [
+        "5bb6742a-249c-4a3b-bf17-da62a6314c74"
+      ],
+      "testIds": [],
+      "questionIds": [],
+      "order": 5,
+      "createdAt": "2025-09-02T14:20:28.843817+00:00",
+      "updatedAt": "2025-09-02T14:20:28.843817+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "afed577b-18a9-4a6a-af65-496be0b7acf5",
+      "_path": "modules/afed577b-18a9-4a6a-af65-496be0b7acf5",
+      "_collection": "modules",
+      "title": "Vascular Access Procedures",
+      "description": "Cannulation techniques and vascular access procedures",
+      "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+      "lessonIds": [
+        "7f496a27-589c-458d-9c35-08639dd8bd79"
+      ],
+      "testIds": [],
+      "questionIds": [],
+      "order": 6,
+      "createdAt": "2025-09-02T14:20:28.843893+00:00",
+      "updatedAt": "2025-09-02T14:20:28.843893+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "06edcfbe-60b3-49e2-b523-2a728da47865",
+      "_path": "modules/06edcfbe-60b3-49e2-b523-2a728da47865",
+      "_collection": "modules",
+      "title": "Urological Procedures",
+      "description": "Urethral catheterization procedures and techniques",
+      "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+      "lessonIds": [
+        "08a61353-42f6-4d1e-9153-9c23b1c7597a"
+      ],
+      "testIds": [],
+      "questionIds": [],
+      "order": 7,
+      "createdAt": "2025-09-02T14:20:28.845137+00:00",
+      "updatedAt": "2025-09-02T14:20:28.845137+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "534f559e-3a1b-442b-a23b-3a0d20eac337",
+      "_path": "modules/534f559e-3a1b-442b-a23b-3a0d20eac337",
+      "_collection": "modules",
+      "title": "Airway Management",
+      "description": "Advanced airway management techniques and procedures",
+      "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+      "lessonIds": [
+        "9b2836c5-d5e5-4cc2-96fe-cb4516918446"
+      ],
+      "testIds": [],
+      "questionIds": [],
+      "order": 8,
+      "createdAt": "2025-09-02T14:20:28.846077+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846077+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "a7b33e81-dcdc-4acc-8422-228c572ee470",
+      "_path": "modules/a7b33e81-dcdc-4acc-8422-228c572ee470",
+      "_collection": "modules",
+      "title": "Thoracic Procedures",
+      "description": "Chest drain insertion and thoracentesis procedures",
+      "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+      "lessonIds": [
+        "c0e04865-d598-4e2d-9f29-8b381e3cf5ed"
+      ],
+      "testIds": [],
+      "questionIds": [],
+      "order": 9,
+      "createdAt": "2025-09-02T14:20:28.846625+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846625+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "4e46f4e5-d7d3-4cf5-b912-f6bffc085e65",
+      "_path": "modules/4e46f4e5-d7d3-4cf5-b912-f6bffc085e65",
+      "_collection": "modules",
+      "title": "Surgical Procedures",
+      "description": "Basic suturing techniques and wound closure",
+      "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+      "lessonIds": [
+        "4af74aeb-5a04-4a9b-81f9-1959167ec9da"
+      ],
+      "testIds": [],
+      "questionIds": [],
+      "order": 10,
+      "createdAt": "2025-09-02T14:20:28.846685+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846685+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "148fe87f-ff04-42e6-96fd-22cac8dd7224",
+      "_path": "modules/148fe87f-ff04-42e6-96fd-22cac8dd7224",
+      "_collection": "modules",
+      "title": "Pharmacology and Drug Administration",
+      "description": "Drug administration techniques and pharmacological principles",
+      "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+      "lessonIds": [
+        "c465b2f3-35e1-46f4-8e9e-907ed3d188f7"
+      ],
+      "testIds": [],
+      "questionIds": [],
+      "order": 11,
+      "createdAt": "2025-09-02T14:20:28.846743+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846743+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "f61426fd-7cee-4231-8320-6afd816543ae",
+      "_path": "modules/f61426fd-7cee-4231-8320-6afd816543ae",
+      "_collection": "modules",
+      "title": "Diving Medical Advisory Service (DMAS)",
+      "description": "DMAS protocols and procedures for diving medical support",
+      "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+      "lessonIds": [
+        "36486e13-13b9-4494-baa1-5b75832e70e4"
+      ],
+      "testIds": [],
+      "questionIds": [],
+      "order": 12,
+      "createdAt": "2025-09-02T14:20:28.846817+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846817+00:00",
+      "sourceType": "lesson_plan_extraction"
+    }
+  ],
+  "lessons": [
+    {
+      "_id": "9df50c0c-7152-4d74-bbf3-56701acef19f",
+      "_path": "lessons/9df50c0c-7152-4d74-bbf3-56701acef19f",
+      "_collection": "lessons",
+      "title": "Accident Management (Principles, Bleeding, Soft tissue and Shock)",
+      "description": "To refresh the DMT’s and MFA’s fading skill in Accident Management",
+      "duration": "50mins",
+      "target_audience": "DMTs and MFAs",
+      "objectives": [
+        "To refresh the DMT’s and MFA’s fading skill in Accident Management",
+        "The participants will be able to discuss indication for use of Accident management procedures.",
+        "Discuss basic relevant anatomy.",
+        "Principles of Accident Management.",
+        "Discuss the equipment, positioning, step-by-step description of procedure",
+        "Discuss risks and complications.",
+        "Discuss and demonstrate Accident Management techniques.",
+        "Practical assessment."
+      ],
+      "materials": [
+        "Lecture hand-outs",
+        "sample photos",
+        "videos."
+      ],
+      "activities": [
+        "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+        "Demonstration on how to apply the above topics.",
+        "Guided Practice and Independent Practice by the participants and Group Activities."
+      ],
+      "assessment": [
+        {
+          "grade": "Red",
+          "criteria": "Does not meet minimum expectations."
+        },
+        {
+          "grade": "Amber",
+          "criteria": "Meets and demonstrates the basic requirements."
+        },
+        {
+          "grade": "Green",
+          "criteria": "Meets and Demonstrates a thorough understanding."
+        }
+      ],
+      "slideIds": [
+        "459ec33d-6afa-4a98-8b38-22ff5760aeeb",
+        "cd8b37b6-a447-4466-b357-42018eef84f0",
+        "4dac27b7-5844-42ea-b4f2-c2b0a03d62f6",
+        "db180698-75a6-4a23-a549-e44ec3735d9b",
+        "e6848721-38d4-4fe7-9fc1-70805d1b2df7",
+        "64655718-17c3-44b8-ae1b-930a05ad489f"
+      ],
+      "contentType": "slide",
+      "moduleId": "d6b61ac6-712d-4e05-b1df-5be6d2a2aae2",
+      "order": 1,
+      "createdAt": "2025-09-02T14:20:28.838300+00:00",
+      "updatedAt": "2025-09-02T14:20:28.838300+00:00",
+      "sourceType": "lesson_plan_extraction",
+      "metadata": {
+        "source_file": "SK-DIV-PLN-001_R0_Lesson Plan 1 - Accident Management (Principles, Bleeding, Soft tissue and Shock).docx",
+        "extraction_date": "2025-09-02T14:16:46.109934",
+        "total_paragraphs": 0,
+        "total_sections": 0,
+        "total_tables": 8
+      }
+    },
+    {
+      "_id": "c8d16edd-a53f-4f26-a239-0fdd8dc1bfb0",
+      "_path": "lessons/c8d16edd-a53f-4f26-a239-0fdd8dc1bfb0",
+      "_collection": "lessons",
+      "title": "Accident Management (Fractures, Crush Injuries, Chest Trauma)",
+      "description": "To refresh the DMT’s and MFA’s fading skill in Accident Management",
+      "duration": "50mins",
+      "target_audience": "DMTs and MFAs",
+      "objectives": [
+        "To refresh the DMT’s and MFA’s fading skill in Accident Management",
+        "The participants will be able to discuss indication for use of Accident management procedures.",
+        "Discuss basic relevant anatomy.",
+        "Principles of Accident Management.",
+        "Discuss the equipment, positioning, step-by-step description of procedure",
+        "Discuss risks and complications.",
+        "Discuss and demonstrate Accident Management techniques.",
+        "Practical Assessment."
+      ],
+      "materials": [
+        "Splints Lecture hand-outs",
+        "sample photos",
+        "videos."
+      ],
+      "activities": [
+        "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+        "Demonstration on how to apply the above topics.",
+        "Guided Practice and Independent Practice by the participants and Group Activities."
+      ],
+      "assessment": [
+        {
+          "grade": "Red",
+          "criteria": "Does not meet minimum expectations."
+        },
+        {
+          "grade": "Amber",
+          "criteria": "Meets and demonstrates the basic requirements."
+        },
+        {
+          "grade": "Green",
+          "criteria": "Meets and Demonstrates a thorough understanding."
+        }
+      ],
+      "slideIds": [
+        "b8f9049d-6066-4279-b843-1fc48424c982",
+        "6baadb58-8695-433e-8143-4873e4d28ab0",
+        "30b3a26d-1d1e-464f-9157-5486647377bb",
+        "fb0ca0b2-b581-454d-ad54-b9763f58fe55",
+        "944c58bf-b5ba-4c31-a9c4-6e696c1d281e",
+        "c19d8709-b0b4-4ba4-834f-1c2269ed8ecd"
+      ],
+      "contentType": "slide",
+      "moduleId": "47dd393c-9bce-4c91-94ac-09de909fb5c9",
+      "order": 1,
+      "createdAt": "2025-09-02T14:20:28.841235+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841235+00:00",
+      "sourceType": "lesson_plan_extraction",
+      "metadata": {
+        "source_file": "SK-DIV-PLN-002_R0_Lesson Plan 2 - Accident Management (Fractures, Crush Injuries, Chest Trauma).docx",
+        "extraction_date": "2025-09-02T14:16:46.118603",
+        "total_paragraphs": 0,
+        "total_sections": 0,
+        "total_tables": 8
+      }
+    },
+    {
+      "_id": "60d08e35-8698-454c-82fa-d710f9591128",
+      "_path": "lessons/60d08e35-8698-454c-82fa-d710f9591128",
+      "_collection": "lessons",
+      "title": "Accident Management (Burns, Electrical Injury and Poisoning)",
+      "description": "To refresh the DMT’s and MFA’s fading skill in Accident Management",
+      "duration": "50mins",
+      "target_audience": "DMTs and MFAs",
+      "objectives": [
+        "To refresh the DMT’s and MFA’s fading skill in Accident Management",
+        "The participants will be able to discuss indication for use of Accident management procedures.",
+        "Discuss basic relevant anatomy.",
+        "Principles of Accident Management.",
+        "Discuss the equipment, positioning, step-by-step description of procedure",
+        "Discuss risks and complications.",
+        "Discuss and demonstrate Accident Management techniques.",
+        "Practical assessment."
+      ],
+      "materials": [
+        "Burn gel",
+        "burn sheet. Lecture hand-outs",
+        "sample photos",
+        "videos."
+      ],
+      "activities": [
+        "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+        "Demonstration on how to apply the above topics.",
+        "Guided Practice and Independent Practice by the participants and Group Activities."
+      ],
+      "assessment": [
+        {
+          "grade": "Red",
+          "criteria": "Does not meet minimum expectations."
+        },
+        {
+          "grade": "Amber",
+          "criteria": "Meets and demonstrates the basic requirements."
+        },
+        {
+          "grade": "Green",
+          "criteria": "Meets and Demonstrates a thorough understanding."
+        }
+      ],
+      "slideIds": [
+        "255d47df-8094-4817-9781-74ee81dd4d0b",
+        "54d987b7-a749-48fd-b135-86bf694ab95c",
+        "69e4d8fc-6398-4899-81e5-faa532aa1a61",
+        "fe20b9ad-6b77-4c18-b723-ddaf430bfb32",
+        "b3efe171-cf9f-48e7-b3c4-04e3af708892",
+        "c0e9883c-229d-4468-b818-74b7a49cf46d"
+      ],
+      "contentType": "slide",
+      "moduleId": "21cb89bd-1d1a-4c39-8ca5-4b36fe495e28",
+      "order": 1,
+      "createdAt": "2025-09-02T14:20:28.841498+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841498+00:00",
+      "sourceType": "lesson_plan_extraction",
+      "metadata": {
+        "source_file": "SK-DIV-PLN-003_R0_Lesson Plan 3 - Accident Management (Burns, Electrical Injury and Poisoning).docx",
+        "extraction_date": "2025-09-02T14:16:46.126809",
+        "total_paragraphs": 0,
+        "total_sections": 0,
+        "total_tables": 8
+      }
+    },
+    {
+      "_id": "fb51c5a4-b284-4abc-9e8b-aea2b9e7a481",
+      "_path": "lessons/fb51c5a4-b284-4abc-9e8b-aea2b9e7a481",
+      "_collection": "lessons",
+      "title": "Casualty Assessment",
+      "description": "To refresh the DMT’s fading skill in Casualty Assessment",
+      "duration": "40 min",
+      "target_audience": "DMTs",
+      "objectives": [
+        "To refresh the DMT’s fading skill in Casualty Assessment",
+        "The participants will be able to discuss how to take vital signs (blood pressure, temperature, pulse and respiration rate), capillary refill and perform neurological assessment.",
+        "Discuss essential body functions: heartbeat, breathing rate, temperature and blood pressure",
+        "Discuss how to perform and demonstrate neurological assessment",
+        "Familiarise with the equipment involved in these assessments.",
+        "Practical assessment"
+      ],
+      "materials": [
+        "BP apparatus",
+        "thermometer",
+        "reflex hammer Lecture hand-outs",
+        "sample photos",
+        "videos."
+      ],
+      "activities": [
+        "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+        "Demonstration on how to apply the above topics.",
+        "Guided Practice and Independent Practice by the participants and Group Activities."
+      ],
+      "assessment": [
+        {
+          "grade": "Red",
+          "criteria": "Does not meet minimum expectations."
+        },
+        {
+          "grade": "Amber",
+          "criteria": "Meets and demonstrates the basic requirements."
+        },
+        {
+          "grade": "Green",
+          "criteria": "Meets and Demonstrates a thorough understanding."
+        }
+      ],
+      "slideIds": [
+        "0ababd65-7109-43eb-ad7d-e9f78a1dc4ba",
+        "8c22fc84-77c0-42b4-aec3-df4f01900e51",
+        "847b7a31-b15a-494b-94a9-c98dfa269aad",
+        "0e255425-1ee8-4ec0-9fec-ae58eb650616",
+        "876899b3-6f80-4db7-8fa6-89fd4054eaaf",
+        "00c96659-4f20-4c1d-a4a3-fe7f6e953793"
+      ],
+      "contentType": "slide",
+      "moduleId": "609e6896-af92-43f7-a95e-d24330d3c3eb",
+      "order": 1,
+      "createdAt": "2025-09-02T14:20:28.841962+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841962+00:00",
+      "sourceType": "lesson_plan_extraction",
+      "metadata": {
+        "source_file": "SK-DIV-PLN-004_R0_Lesson Plan 4 - Casualty Assessment.docx",
+        "extraction_date": "2025-09-02T14:16:46.135349",
+        "total_paragraphs": 0,
+        "total_sections": 0,
+        "total_tables": 8
+      }
+    },
+    {
+      "_id": "5bb6742a-249c-4a3b-bf17-da62a6314c74",
+      "_path": "lessons/5bb6742a-249c-4a3b-bf17-da62a6314c74",
+      "_collection": "lessons",
+      "title": "Management of Medical Emergencies",
+      "description": "To refresh the DMT’s fading skill in Managing Medical Emergencies",
+      "duration": "60 min",
+      "target_audience": "DMTs",
+      "objectives": [
+        "To refresh the DMT’s fading skill in Managing Medical Emergencies",
+        "5.1 The participants will be able to discuss Cardiac Arrest Algorithm and perform CPR",
+        "Discuss basic anatomy of the heart",
+        "Discuss the Cardiac Arrest Algorithm",
+        "Discuss the equipment, positioning, step-by-step description of procedure.",
+        "Discuss and demonstrate CPR. 5.2 The participants will be able to discuss Pulmonary Oedema",
+        "Discuss the causes and symptoms of Pulmonary Oedema",
+        "Discuss the investigations and treatment of Pulmonary Oedema 5.3 The participants will be able to discuss Seizures",
+        "Discuss the causes, symptoms and types of Seizures",
+        "Discuss the treatment of Seizures 5.4 The participants will be able to discuss Hypothermia and Hyperthermia",
+        "Discuss the contributing factors that can lead to Hypothermia and Hyperthermia",
+        "Discuss the symptoms and treatment of Hypothermia and Hyperthermia",
+        "Practical assessment"
+      ],
+      "materials": [
+        "Defibrillator",
+        "thermometer Lecture hand-outs",
+        "sample photos",
+        "videos."
+      ],
+      "activities": [
+        "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+        "Demonstration on how to apply the above topics.",
+        "Guided Practice and Independent Practice by the participants and Group Activities."
+      ],
+      "assessment": [
+        {
+          "grade": "Red",
+          "criteria": "Does not meet minimum expectations."
+        },
+        {
+          "grade": "Amber",
+          "criteria": "Meets and demonstrates the basic requirements."
+        },
+        {
+          "grade": "Green",
+          "criteria": "Meets and Demonstrates a thorough understanding."
+        }
+      ],
+      "slideIds": [
+        "33b622e1-5371-413f-b249-f3738b2f9bca",
+        "af2b28e9-ea06-4ef8-91f3-cb529aeb539f",
+        "36650377-8ad7-45d7-a407-94f4d6ddf986",
+        "069dc99e-d0eb-481c-abb3-47456352e153",
+        "d78b8ff0-d5dc-442b-8ca7-e843bbd18ab4",
+        "e0b0fe52-99da-4694-b5b4-bf0a7760324a"
+      ],
+      "contentType": "slide",
+      "moduleId": "9394e8ea-4af1-42f2-9082-1be0482781ef",
+      "order": 1,
+      "createdAt": "2025-09-02T14:20:28.843824+00:00",
+      "updatedAt": "2025-09-02T14:20:28.843824+00:00",
+      "sourceType": "lesson_plan_extraction",
+      "metadata": {
+        "source_file": "SK-DIV-PLN-005_R0_Lesson Plan 5 - Management of Medical Emergencies.docx",
+        "extraction_date": "2025-09-02T14:16:46.143966",
+        "total_paragraphs": 0,
+        "total_sections": 0,
+        "total_tables": 8
+      }
+    },
+    {
+      "_id": "7f496a27-589c-458d-9c35-08639dd8bd79",
+      "_path": "lessons/7f496a27-589c-458d-9c35-08639dd8bd79",
+      "_collection": "lessons",
+      "title": "Cannulation",
+      "description": "To refresh the DMT’s fading skill in Cannulation",
+      "duration": "50min",
+      "target_audience": "DMTs",
+      "objectives": [
+        "To refresh the DMT’s fading skill in Cannulation",
+        "The participants will be able to discuss indication and contra-indication for Intravenous and Intraosseous Cannulation procedure.",
+        "Discuss basic relevant anatomy involved in Intravenous and Intraosseous Cannulation.",
+        "Principles of intravenous and intraosseous cannulation.",
+        "Discuss the equipment, positioning, step-by-step description of procedure.",
+        "Discuss risks and complications.",
+        "Discuss and demonstrate Intravenous and Intraosseous Cannulation techniques.",
+        "Practical assessment."
+      ],
+      "materials": [
+        "Intravenous",
+        "Intraosseous Cannulation training KIT",
+        "its accompanying accessories. Lecture hand-outs",
+        "sample photos",
+        "videos."
+      ],
+      "activities": [
+        "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+        "Demonstration on how to apply the above topics.",
+        "Guided Practice and Independent Practice by the participants and Group Activities.",
+        "Group discussion/ Assessment/ Follow-up"
+      ],
+      "assessment": [],
+      "slideIds": [
+        "1aa8fc0b-c41c-4215-bcef-bcd90664ffa9",
+        "991c6a85-1db9-4bcb-b120-7eb42fa275ee",
+        "3c707760-eca0-4ca3-a619-330a3a282979",
+        "cf1ca478-12f2-41b6-a520-2885da91e874",
+        "926d3e85-fba1-4e88-bcb4-2c898dc28915"
+      ],
+      "contentType": "slide",
+      "moduleId": "afed577b-18a9-4a6a-af65-496be0b7acf5",
+      "order": 1,
+      "createdAt": "2025-09-02T14:20:28.843945+00:00",
+      "updatedAt": "2025-09-02T14:20:28.843945+00:00",
+      "sourceType": "lesson_plan_extraction",
+      "metadata": {
+        "source_file": "SK-DIV-PLN-006_R0_Lesson Plan 6 - Cannulation.docx",
+        "extraction_date": "2025-09-02T14:16:46.152675",
+        "total_paragraphs": 0,
+        "total_sections": 0,
+        "total_tables": 7
+      }
+    },
+    {
+      "_id": "08a61353-42f6-4d1e-9153-9c23b1c7597a",
+      "_path": "lessons/08a61353-42f6-4d1e-9153-9c23b1c7597a",
+      "_collection": "lessons",
+      "title": "Urethral Catheterisation",
+      "description": "To refresh the DMT’s fading skill in Urethral Catheterisation for both male and female patients",
+      "duration": "50min",
+      "target_audience": "DMTs",
+      "objectives": [
+        "To refresh the DMT’s fading skill in Urethral Catheterisation for both male and female patients",
+        "The participants will be able to discuss indication and contra-indication for Male Urethral Catheterisation Procedure.",
+        "Discuss basic relevant anatomy of Urinary system involved in Male Catheterisation.",
+        "Principles of Catheterisation.",
+        "Discuss the equipment, positioning, step-by-step description of procedure.",
+        "Discuss risks and complications.",
+        "Discuss and demonstrate Catheterisation.",
+        "Practical assessment The participants will be able to discuss indication and contra-indication for Female Urethral Catheterisation Procedure.",
+        "Discuss basic relevant anatomy of Urinary system involved in Female Catheterisation.",
+        "Principles of Catheterisation.",
+        "Discuss the equipment, positioning, step-by-step description of procedure.",
+        "Discuss risks and complications.",
+        "Discuss and demonstrate Catheterisation.",
+        "Practical assessment"
+      ],
+      "materials": [
+        "Urethral Catheterisation training KIT",
+        "its accompanying accessories. Lecture hand-outs",
+        "sample photos",
+        "videos."
+      ],
+      "activities": [
+        "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+        "Demonstration on how to apply the above topics.",
+        "Guided Practice and Independent Practice by the participants and Group Activities."
+      ],
+      "assessment": [
+        {
+          "grade": "Red",
+          "criteria": "Does not meet minimum expectations."
+        },
+        {
+          "grade": "Amber",
+          "criteria": "Meets and demonstrates the basic requirements."
+        },
+        {
+          "grade": "Green",
+          "criteria": "Meets and Demonstrates a thorough understanding."
+        }
+      ],
+      "slideIds": [
+        "eea60686-2693-4109-84d7-78450840e819",
+        "76f62387-f09a-4bd1-a47f-69931fbdc6a6",
+        "db6d24f4-ea01-4f78-9e5d-ef024594a9e4",
+        "72adf1b2-45a0-43ff-bf46-cf3b36aed9ba",
+        "840b5119-9d39-4d35-8346-5c37fa8e417e",
+        "ac85552c-10e9-49a0-8297-c55a7c2e1883"
+      ],
+      "contentType": "slide",
+      "moduleId": "06edcfbe-60b3-49e2-b523-2a728da47865",
+      "order": 1,
+      "createdAt": "2025-09-02T14:20:28.845144+00:00",
+      "updatedAt": "2025-09-02T14:20:28.845144+00:00",
+      "sourceType": "lesson_plan_extraction",
+      "metadata": {
+        "source_file": "SK-DIV-PLN-007_R0_Lesson Plan 7 - Urethral Catheterisation.docx",
+        "extraction_date": "2025-09-02T14:16:46.161507",
+        "total_paragraphs": 0,
+        "total_sections": 0,
+        "total_tables": 8
+      }
+    },
+    {
+      "_id": "9b2836c5-d5e5-4cc2-96fe-cb4516918446",
+      "_path": "lessons/9b2836c5-d5e5-4cc2-96fe-cb4516918446",
+      "_collection": "lessons",
+      "title": "Airway Management",
+      "description": "To refresh the DMT’s fading skill in Airway Adjuncts Insertion Procedure To refresh the DMT’s fading skill in Ventilation Bag and Mask",
+      "duration": "90 min",
+      "target_audience": "DMTs",
+      "objectives": [
+        "To refresh the DMT’s fading skill in Airway Adjuncts Insertion Procedure To refresh the DMT’s fading skill in Ventilation Bag and Mask",
+        "6.1 The participants will be able to discuss signs and symptoms of Airway Obstruction 6.2 The participants will be able to discuss indication and contra-indication for Oropharyngeal Airway Insertion procedure.",
+        "Discuss basic relevant anatomy of Airway system involved in Guedel insertion.",
+        "Principles of Guedel insertion.",
+        "Discuss the equipment, positioning, step-by-step description of procedure.",
+        "Discuss risks and complications.",
+        "Discuss and demonstrate Guedel insertion techniques. 6.3 The participants will be able to discuss indication and contra-indication for Nasopharyngeal Airway Insertion procedure.",
+        "Discuss basic relevant anatomy of Airway system involved in NPA insertion.",
+        "Principles of NPA insertion.",
+        "Discuss the equipment, positioning, step-by-step description of procedure.",
+        "Discuss risks and complications.",
+        "Discuss and demonstrate NPA insertion techniques. 6.4 The participants will be able to discuss indication and contra-indication for Laryngeal Mask Airway Insertion procedure.",
+        "Discuss basic relevant anatomy of Airway system involved in LMA insertion.",
+        "Principles of LMA insertion.",
+        "Discuss the equipment, positioning, step-by-step description of procedure.",
+        "Discuss risks and complications.",
+        "Discuss and demonstrate LMA insertion techniques 6.5 The participants will be able to discuss indication and contra-indication on the use of Ventilation Bag and Mask",
+        "Discuss basic relevant anatomy of Airway system involved in Ventilation Bag and Mask",
+        "Discuss the equipment, positioning, step-by-step description of procedure.",
+        "Discuss risks and complications.",
+        "Discuss and demonstrate Ventilation Bag and Mask --------------------------------------",
+        "Practical assessment"
+      ],
+      "materials": [
+        "Airway Management training KIT",
+        "its accompanying accessories. Lecture hand-outs",
+        "sample photos",
+        "videos."
+      ],
+      "activities": [
+        "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+        "Demonstration on how to apply the above topics.",
+        "Guided Practice and Independent Practice by the participants and Group Activities."
+      ],
+      "assessment": [],
+      "slideIds": [
+        "48adb939-866e-48ca-87b3-aa8d6fc61bf4",
+        "4d10b7f3-0a45-4884-b9a3-fdd12abd1545",
+        "47450937-9045-4c8d-a757-1816d8578369",
+        "db9b84de-f31e-4ec5-bb0c-14a8b6c6fc4c",
+        "13dc2b5c-4068-4adc-a0d8-6824dcadc9fb"
+      ],
+      "contentType": "slide",
+      "moduleId": "534f559e-3a1b-442b-a23b-3a0d20eac337",
+      "order": 1,
+      "createdAt": "2025-09-02T14:20:28.846288+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846288+00:00",
+      "sourceType": "lesson_plan_extraction",
+      "metadata": {
+        "source_file": "SK-DIV-PLN-008_R0_Lesson Plan 8 - Airway Management.docx",
+        "extraction_date": "2025-09-02T14:16:46.171773",
+        "total_paragraphs": 0,
+        "total_sections": 0,
+        "total_tables": 7
+      }
+    },
+    {
+      "_id": "c0e04865-d598-4e2d-9f29-8b381e3cf5ed",
+      "_path": "lessons/c0e04865-d598-4e2d-9f29-8b381e3cf5ed",
+      "_collection": "lessons",
+      "title": "Chest Drain -Thoracentesis",
+      "description": "To refresh the DMT’s fading skill in Thoracentesis",
+      "duration": "50 min",
+      "target_audience": "DMTs",
+      "objectives": [
+        "To refresh the DMT’s fading skill in Thoracentesis",
+        "The participants will be able to discuss indication for Thoracentesis procedure.",
+        "Discuss basic relevant anatomy of Lungs involved in thoracentesis.",
+        "Principles of thoracentesis.",
+        "Discuss the equipment, positioning, step-by-step description of procedure",
+        "Discuss risks and complications.",
+        "Discuss and demonstrate thoracentesis techniques.",
+        "Practical assessment"
+      ],
+      "materials": [
+        "Chest Drain & Needle Decompression training KIT",
+        "its accompanying accessories. Lecture hand-outs",
+        "sample photos",
+        "videos."
+      ],
+      "activities": [
+        "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+        "Demonstration on how to apply the above topics.",
+        "Guided Practice and Independent Practice by the participants and Group Activities."
+      ],
+      "assessment": [
+        {
+          "grade": "Red",
+          "criteria": "Does not meet minimum expectations."
+        },
+        {
+          "grade": "Amber",
+          "criteria": "Meets and demonstrates the basic requirements."
+        },
+        {
+          "grade": "Green",
+          "criteria": "Meets and Demonstrates a thorough understanding."
+        }
+      ],
+      "slideIds": [
+        "62bac143-70bd-4772-a567-48423f270fcb",
+        "d9e5e53f-18c2-4467-93b5-52190e4870fb",
+        "8458132f-5c88-474f-bfc7-ec0497d2b4e4",
+        "989d2c42-49a7-427b-adb8-b8cc185e16a3",
+        "e8ab36a1-4bf0-486b-bc8e-8073c27f2e4e",
+        "49c908ee-b100-4833-a8fc-aa20ac82b907"
+      ],
+      "contentType": "slide",
+      "moduleId": "a7b33e81-dcdc-4acc-8422-228c572ee470",
+      "order": 1,
+      "createdAt": "2025-09-02T14:20:28.846631+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846631+00:00",
+      "sourceType": "lesson_plan_extraction",
+      "metadata": {
+        "source_file": "SK-DIV-PLN-009_R0_Lesson Plan 9 - Chest Drain -Thoracentesis.docx",
+        "extraction_date": "2025-09-02T14:16:46.181524",
+        "total_paragraphs": 0,
+        "total_sections": 0,
+        "total_tables": 8
+      }
+    },
+    {
+      "_id": "4af74aeb-5a04-4a9b-81f9-1959167ec9da",
+      "_path": "lessons/4af74aeb-5a04-4a9b-81f9-1959167ec9da",
+      "_collection": "lessons",
+      "title": "Suturing",
+      "description": "To refresh the DMT’s fading skill in Suturing",
+      "duration": "50 min",
+      "target_audience": "DMT’s",
+      "objectives": [
+        "To refresh the DMT’s fading skill in Suturing",
+        "The participants will be able to discuss indication and contra-indication for Suturing",
+        "Discuss the anatomy of the skin and its functions.",
+        "Discuss the principles of suturing.",
+        "Discuss the procedure and equipment for suturing.",
+        "Discuss and demonstrate the different suturing techniques",
+        "Practical assessment"
+      ],
+      "materials": [
+        "Suturing training kit",
+        "its accompanying accessories"
+      ],
+      "activities": [
+        "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+        "Demonstration on how to apply the above topics.",
+        "Guided Practice and Independent Practice by the participants and Group Activities."
+      ],
+      "assessment": [
+        {
+          "grade": "Red",
+          "criteria": "Does not meet minimum expectations."
+        },
+        {
+          "grade": "Amber",
+          "criteria": "Meets and demonstrates the basic requirements."
+        },
+        {
+          "grade": "Green",
+          "criteria": "Meets and Demonstrates a thorough understanding."
+        }
+      ],
+      "slideIds": [
+        "ffc9da79-4d1e-49f2-94cc-8eca778a0dbd",
+        "48d0f3e0-354b-4d5f-994b-c2eb2491f62c",
+        "57acd80f-2c13-4e65-8c92-754ad9eb01fb",
+        "0163f4b6-e0ed-418b-b61f-af0469398bbc",
+        "07446be4-c58a-4a6e-8a28-8a7e83868805",
+        "211bb5cd-979b-46c1-991c-b695e01a8470"
+      ],
+      "contentType": "slide",
+      "moduleId": "4e46f4e5-d7d3-4cf5-b912-f6bffc085e65",
+      "order": 1,
+      "createdAt": "2025-09-02T14:20:28.846691+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846691+00:00",
+      "sourceType": "lesson_plan_extraction",
+      "metadata": {
+        "source_file": "SK-DIV-PLN-010_R0_Lesson Plan 10 - Suturing.docx",
+        "extraction_date": "2025-09-02T14:16:46.191713",
+        "total_paragraphs": 0,
+        "total_sections": 0,
+        "total_tables": 8
+      }
+    },
+    {
+      "_id": "c465b2f3-35e1-46f4-8e9e-907ed3d188f7",
+      "_path": "lessons/c465b2f3-35e1-46f4-8e9e-907ed3d188f7",
+      "_collection": "lessons",
+      "title": "Drug Administration",
+      "description": "To refresh the DMT’s fading knowledge in the different routes for Drug Administration",
+      "duration": "40 min",
+      "target_audience": "DMTs",
+      "objectives": [
+        "To refresh the DMT’s fading knowledge in the different routes for Drug Administration",
+        "The participants will be able to discuss the different routes for Drug Administration Discuss basic relevant anatomy of the body involved in the different routes of Drug Administration Discuss the principles and procedure for IM injections, subcutaneous injections and rectal drug administration"
+      ],
+      "materials": [
+        "Syringe",
+        "suppositories. Lecture hand-outs",
+        "sample photos",
+        "videos."
+      ],
+      "activities": [
+        "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+        "Demonstration on how to apply the above topics.",
+        "Guided Practice and Independent Practice by the participants and Group Activities."
+      ],
+      "assessment": [],
+      "slideIds": [
+        "753909e3-c702-41e2-8fae-595785ead8b1",
+        "dfb4d10a-2474-47d5-a511-386f8ca42119",
+        "03091a04-b1fa-4618-ae74-6912ec83d46b",
+        "4c14855d-b53f-4f0b-b7b8-f1e584639347"
+      ],
+      "contentType": "slide",
+      "moduleId": "148fe87f-ff04-42e6-96fd-22cac8dd7224",
+      "order": 1,
+      "createdAt": "2025-09-02T14:20:28.846749+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846749+00:00",
+      "sourceType": "lesson_plan_extraction",
+      "metadata": {
+        "source_file": "SK-DIV-PLN-011_R0_Lesson Plan 11 - Drug Administration.docx",
+        "extraction_date": "2025-09-02T14:16:46.199213",
+        "total_paragraphs": 0,
+        "total_sections": 0,
+        "total_tables": 8
+      }
+    },
+    {
+      "_id": "36486e13-13b9-4494-baa1-5b75832e70e4",
+      "_path": "lessons/36486e13-13b9-4494-baa1-5b75832e70e4",
+      "_collection": "lessons",
+      "title": "DMAS",
+      "description": "To refresh the DMT’s skill in the operation of DMAS Hypersat Unit",
+      "duration": "60 min",
+      "target_audience": "DMTs",
+      "objectives": [
+        "To refresh the DMT’s skill in the operation of DMAS Hypersat Unit",
+        "The participants will be able to discuss and perform the operation of DMAS Hypersat Unit.",
+        "Discuss and set up the DMAS Hypersat Unit.",
+        "Discuss the procedure for ECG monitoring, Blood Pressure monitoring, use of pulse oximeter and perform spirometry.",
+        "Able to demonstrate to hook up all equipment accessories to the patient.",
+        "Practical assessment."
+      ],
+      "materials": [
+        "Training videos for the software of the DMAS Hypersat laptop. DMAS Hypersat Unit",
+        "its accessories."
+      ],
+      "activities": [
+        "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+        "Demonstration on how to apply the above topics.",
+        "Guided Practice and Independent Practice by the participants and Group Activities."
+      ],
+      "assessment": [
+        {
+          "grade": "Red",
+          "criteria": "Does not meet minimum expectations."
+        },
+        {
+          "grade": "Amber",
+          "criteria": "Meets and demonstrates the basic requirements."
+        },
+        {
+          "grade": "Green",
+          "criteria": "Meets and Demonstrates a thorough understanding."
+        }
+      ],
+      "slideIds": [
+        "671b4317-201b-461d-8ffe-afe3ef9addd8",
+        "c5dd354e-08c2-47d9-926d-a0b5e907881e",
+        "130802c2-ef18-44c7-90aa-413dffcf0e1c",
+        "4dc7d62e-1f52-464a-a54a-d57d6b732c3f",
+        "069e9f41-ec29-4d52-b2af-daf22ef7823a",
+        "5508e19c-00e3-4a30-8690-eafe7fb5c79c"
+      ],
+      "contentType": "slide",
+      "moduleId": "f61426fd-7cee-4231-8320-6afd816543ae",
+      "order": 1,
+      "createdAt": "2025-09-02T14:20:28.846842+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846842+00:00",
+      "sourceType": "lesson_plan_extraction",
+      "metadata": {
+        "source_file": "SK-DIV-PLN-012_R0_Lesson Plan 12 - DMAS.docx",
+        "extraction_date": "2025-09-02T14:16:46.206967",
+        "total_paragraphs": 0,
+        "total_sections": 0,
+        "total_tables": 8
+      }
+    }
+  ],
+  "slides": [
+    {
+      "_id": "459ec33d-6afa-4a98-8b38-22ff5760aeeb",
+      "_path": "slides/459ec33d-6afa-4a98-8b38-22ff5760aeeb",
+      "_collection": "slides",
+      "title": "Accident Management (Principles, Bleeding, Soft tissue and Shock)",
+      "content": "<ul><li>Duration: 50mins</li><li>Target Audience: DMTs and MFAs</li><li>To refresh the DMT’s and MFA’s fading skill in Accident Management</li><li>The participants will be able to discuss indication for use of Accident management procedures.</li><li>Discuss basic relevant anatomy.</li></ul>",
+      "slideNumber": 1,
+      "lessonId": "9df50c0c-7152-4d74-bbf3-56701acef19f",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.838309+00:00",
+      "updatedAt": "2025-09-02T14:20:28.838309+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "cd8b37b6-a447-4466-b357-42018eef84f0",
+      "_path": "slides/cd8b37b6-a447-4466-b357-42018eef84f0",
+      "_collection": "slides",
+      "title": "Learning Objectives",
+      "content": "<ul><li>To refresh the DMT’s and MFA’s fading skill in Accident Management</li><li>The participants will be able to discuss indication for use of Accident management procedures.</li><li>Discuss basic relevant anatomy.</li><li>Principles of Accident Management.</li><li>Discuss the equipment, positioning, step-by-step description of procedure</li><li>Discuss risks and complications.</li><li>Discuss and demonstrate Accident Management techniques.</li><li>Practical assessment.</li></ul>",
+      "slideNumber": 2,
+      "lessonId": "9df50c0c-7152-4d74-bbf3-56701acef19f",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.838731+00:00",
+      "updatedAt": "2025-09-02T14:20:28.838731+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "4dac27b7-5844-42ea-b4f2-c2b0a03d62f6",
+      "_path": "slides/4dac27b7-5844-42ea-b4f2-c2b0a03d62f6",
+      "_collection": "slides",
+      "title": "Materials Required",
+      "content": "<ul><li>Lecture hand-outs</li><li>sample photos</li><li>videos.</li></ul>",
+      "slideNumber": 3,
+      "lessonId": "9df50c0c-7152-4d74-bbf3-56701acef19f",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.839191+00:00",
+      "updatedAt": "2025-09-02T14:20:28.839191+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "db180698-75a6-4a23-a549-e44ec3735d9b",
+      "_path": "slides/db180698-75a6-4a23-a549-e44ec3735d9b",
+      "_collection": "slides",
+      "title": "Lesson Procedures 1",
+      "content": "<ul><li>Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.</li><li>Demonstration on how to apply the above topics.</li></ul>",
+      "slideNumber": 4,
+      "lessonId": "9df50c0c-7152-4d74-bbf3-56701acef19f",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.840220+00:00",
+      "updatedAt": "2025-09-02T14:20:28.840220+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "e6848721-38d4-4fe7-9fc1-70805d1b2df7",
+      "_path": "slides/e6848721-38d4-4fe7-9fc1-70805d1b2df7",
+      "_collection": "slides",
+      "title": "Lesson Procedures 2",
+      "content": "<ul><li>Guided Practice and Independent Practice by the participants and Group Activities.</li></ul>",
+      "slideNumber": 5,
+      "lessonId": "9df50c0c-7152-4d74-bbf3-56701acef19f",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.840273+00:00",
+      "updatedAt": "2025-09-02T14:20:28.840273+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "64655718-17c3-44b8-ae1b-930a05ad489f",
+      "_path": "slides/64655718-17c3-44b8-ae1b-930a05ad489f",
+      "_collection": "slides",
+      "title": "Assessment Criteria",
+      "content": "<ul><li>Red: Does not meet minimum expectations.</li><li>Amber: Meets and demonstrates the basic requirements.</li><li>Green: Meets and Demonstrates a thorough understanding.</li></ul>",
+      "slideNumber": 6,
+      "lessonId": "9df50c0c-7152-4d74-bbf3-56701acef19f",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.840297+00:00",
+      "updatedAt": "2025-09-02T14:20:28.840297+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "b8f9049d-6066-4279-b843-1fc48424c982",
+      "_path": "slides/b8f9049d-6066-4279-b843-1fc48424c982",
+      "_collection": "slides",
+      "title": "Accident Management (Fractures, Crush Injuries, Chest Trauma)",
+      "content": "<ul><li>Duration: 50mins</li><li>Target Audience: DMTs and MFAs</li><li>To refresh the DMT’s and MFA’s fading skill in Accident Management</li><li>The participants will be able to discuss indication for use of Accident management procedures.</li><li>Discuss basic relevant anatomy.</li></ul>",
+      "slideNumber": 1,
+      "lessonId": "c8d16edd-a53f-4f26-a239-0fdd8dc1bfb0",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.841399+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841399+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "6baadb58-8695-433e-8143-4873e4d28ab0",
+      "_path": "slides/6baadb58-8695-433e-8143-4873e4d28ab0",
+      "_collection": "slides",
+      "title": "Learning Objectives",
+      "content": "<ul><li>To refresh the DMT’s and MFA’s fading skill in Accident Management</li><li>The participants will be able to discuss indication for use of Accident management procedures.</li><li>Discuss basic relevant anatomy.</li><li>Principles of Accident Management.</li><li>Discuss the equipment, positioning, step-by-step description of procedure</li><li>Discuss risks and complications.</li><li>Discuss and demonstrate Accident Management techniques.</li><li>Practical Assessment.</li></ul>",
+      "slideNumber": 2,
+      "lessonId": "c8d16edd-a53f-4f26-a239-0fdd8dc1bfb0",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.841430+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841430+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "30b3a26d-1d1e-464f-9157-5486647377bb",
+      "_path": "slides/30b3a26d-1d1e-464f-9157-5486647377bb",
+      "_collection": "slides",
+      "title": "Materials Required",
+      "content": "<ul><li>Splints Lecture hand-outs</li><li>sample photos</li><li>videos.</li></ul>",
+      "slideNumber": 3,
+      "lessonId": "c8d16edd-a53f-4f26-a239-0fdd8dc1bfb0",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.841441+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841441+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "fb0ca0b2-b581-454d-ad54-b9763f58fe55",
+      "_path": "slides/fb0ca0b2-b581-454d-ad54-b9763f58fe55",
+      "_collection": "slides",
+      "title": "Lesson Procedures 1",
+      "content": "<ul><li>Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.</li><li>Demonstration on how to apply the above topics.</li></ul>",
+      "slideNumber": 4,
+      "lessonId": "c8d16edd-a53f-4f26-a239-0fdd8dc1bfb0",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.841448+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841448+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "944c58bf-b5ba-4c31-a9c4-6e696c1d281e",
+      "_path": "slides/944c58bf-b5ba-4c31-a9c4-6e696c1d281e",
+      "_collection": "slides",
+      "title": "Lesson Procedures 2",
+      "content": "<ul><li>Guided Practice and Independent Practice by the participants and Group Activities.</li></ul>",
+      "slideNumber": 5,
+      "lessonId": "c8d16edd-a53f-4f26-a239-0fdd8dc1bfb0",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.841455+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841455+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "c19d8709-b0b4-4ba4-834f-1c2269ed8ecd",
+      "_path": "slides/c19d8709-b0b4-4ba4-834f-1c2269ed8ecd",
+      "_collection": "slides",
+      "title": "Assessment Criteria",
+      "content": "<ul><li>Red: Does not meet minimum expectations.</li><li>Amber: Meets and demonstrates the basic requirements.</li><li>Green: Meets and Demonstrates a thorough understanding.</li></ul>",
+      "slideNumber": 6,
+      "lessonId": "c8d16edd-a53f-4f26-a239-0fdd8dc1bfb0",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.841461+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841461+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "255d47df-8094-4817-9781-74ee81dd4d0b",
+      "_path": "slides/255d47df-8094-4817-9781-74ee81dd4d0b",
+      "_collection": "slides",
+      "title": "Accident Management (Burns, Electrical Injury and Poisoning)",
+      "content": "<ul><li>Duration: 50mins</li><li>Target Audience: DMTs and MFAs</li><li>To refresh the DMT’s and MFA’s fading skill in Accident Management</li><li>The participants will be able to discuss indication for use of Accident management procedures.</li><li>Discuss basic relevant anatomy.</li></ul>",
+      "slideNumber": 1,
+      "lessonId": "60d08e35-8698-454c-82fa-d710f9591128",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.841504+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841504+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "54d987b7-a749-48fd-b135-86bf694ab95c",
+      "_path": "slides/54d987b7-a749-48fd-b135-86bf694ab95c",
+      "_collection": "slides",
+      "title": "Learning Objectives",
+      "content": "<ul><li>To refresh the DMT’s and MFA’s fading skill in Accident Management</li><li>The participants will be able to discuss indication for use of Accident management procedures.</li><li>Discuss basic relevant anatomy.</li><li>Principles of Accident Management.</li><li>Discuss the equipment, positioning, step-by-step description of procedure</li><li>Discuss risks and complications.</li><li>Discuss and demonstrate Accident Management techniques.</li><li>Practical assessment.</li></ul>",
+      "slideNumber": 2,
+      "lessonId": "60d08e35-8698-454c-82fa-d710f9591128",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.841519+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841519+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "69e4d8fc-6398-4899-81e5-faa532aa1a61",
+      "_path": "slides/69e4d8fc-6398-4899-81e5-faa532aa1a61",
+      "_collection": "slides",
+      "title": "Materials Required",
+      "content": "<ul><li>Burn gel</li><li>burn sheet. Lecture hand-outs</li><li>sample photos</li><li>videos.</li></ul>",
+      "slideNumber": 3,
+      "lessonId": "60d08e35-8698-454c-82fa-d710f9591128",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.841527+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841527+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "fe20b9ad-6b77-4c18-b723-ddaf430bfb32",
+      "_path": "slides/fe20b9ad-6b77-4c18-b723-ddaf430bfb32",
+      "_collection": "slides",
+      "title": "Lesson Procedures 1",
+      "content": "<ul><li>Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.</li><li>Demonstration on how to apply the above topics.</li></ul>",
+      "slideNumber": 4,
+      "lessonId": "60d08e35-8698-454c-82fa-d710f9591128",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.841533+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841533+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "b3efe171-cf9f-48e7-b3c4-04e3af708892",
+      "_path": "slides/b3efe171-cf9f-48e7-b3c4-04e3af708892",
+      "_collection": "slides",
+      "title": "Lesson Procedures 2",
+      "content": "<ul><li>Guided Practice and Independent Practice by the participants and Group Activities.</li></ul>",
+      "slideNumber": 5,
+      "lessonId": "60d08e35-8698-454c-82fa-d710f9591128",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.841679+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841679+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "c0e9883c-229d-4468-b818-74b7a49cf46d",
+      "_path": "slides/c0e9883c-229d-4468-b818-74b7a49cf46d",
+      "_collection": "slides",
+      "title": "Assessment Criteria",
+      "content": "<ul><li>Red: Does not meet minimum expectations.</li><li>Amber: Meets and demonstrates the basic requirements.</li><li>Green: Meets and Demonstrates a thorough understanding.</li></ul>",
+      "slideNumber": 6,
+      "lessonId": "60d08e35-8698-454c-82fa-d710f9591128",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.841736+00:00",
+      "updatedAt": "2025-09-02T14:20:28.841736+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "0ababd65-7109-43eb-ad7d-e9f78a1dc4ba",
+      "_path": "slides/0ababd65-7109-43eb-ad7d-e9f78a1dc4ba",
+      "_collection": "slides",
+      "title": "Casualty Assessment",
+      "content": "<ul><li>Duration: 40 min</li><li>Target Audience: DMTs</li><li>To refresh the DMT’s fading skill in Casualty Assessment</li><li>The participants will be able to discuss how to take vital signs (blood pressure, temperature, pulse and respiration rate), capillary refill and perform neurological assessment.</li><li>Discuss essential body functions: heartbeat, breathing rate, temperature and blood pressure</li></ul>",
+      "slideNumber": 1,
+      "lessonId": "fb51c5a4-b284-4abc-9e8b-aea2b9e7a481",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.842280+00:00",
+      "updatedAt": "2025-09-02T14:20:28.842280+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "8c22fc84-77c0-42b4-aec3-df4f01900e51",
+      "_path": "slides/8c22fc84-77c0-42b4-aec3-df4f01900e51",
+      "_collection": "slides",
+      "title": "Learning Objectives",
+      "content": "<ul><li>To refresh the DMT’s fading skill in Casualty Assessment</li><li>The participants will be able to discuss how to take vital signs (blood pressure, temperature, pulse and respiration rate), capillary refill and perform neurological assessment.</li><li>Discuss essential body functions: heartbeat, breathing rate, temperature and blood pressure</li><li>Discuss how to perform and demonstrate neurological assessment</li><li>Familiarise with the equipment involved in these assessments.</li><li>Practical assessment</li></ul>",
+      "slideNumber": 2,
+      "lessonId": "fb51c5a4-b284-4abc-9e8b-aea2b9e7a481",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.843416+00:00",
+      "updatedAt": "2025-09-02T14:20:28.843416+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "847b7a31-b15a-494b-94a9-c98dfa269aad",
+      "_path": "slides/847b7a31-b15a-494b-94a9-c98dfa269aad",
+      "_collection": "slides",
+      "title": "Materials Required",
+      "content": "<ul><li>BP apparatus</li><li>thermometer</li><li>reflex hammer Lecture hand-outs</li><li>sample photos</li><li>videos.</li></ul>",
+      "slideNumber": 3,
+      "lessonId": "fb51c5a4-b284-4abc-9e8b-aea2b9e7a481",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.843487+00:00",
+      "updatedAt": "2025-09-02T14:20:28.843487+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "0e255425-1ee8-4ec0-9fec-ae58eb650616",
+      "_path": "slides/0e255425-1ee8-4ec0-9fec-ae58eb650616",
+      "_collection": "slides",
+      "title": "Lesson Procedures 1",
+      "content": "<ul><li>Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.</li><li>Demonstration on how to apply the above topics.</li></ul>",
+      "slideNumber": 4,
+      "lessonId": "fb51c5a4-b284-4abc-9e8b-aea2b9e7a481",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.843772+00:00",
+      "updatedAt": "2025-09-02T14:20:28.843772+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "876899b3-6f80-4db7-8fa6-89fd4054eaaf",
+      "_path": "slides/876899b3-6f80-4db7-8fa6-89fd4054eaaf",
+      "_collection": "slides",
+      "title": "Lesson Procedures 2",
+      "content": "<ul><li>Guided Practice and Independent Practice by the participants and Group Activities.</li></ul>",
+      "slideNumber": 5,
+      "lessonId": "fb51c5a4-b284-4abc-9e8b-aea2b9e7a481",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.843783+00:00",
+      "updatedAt": "2025-09-02T14:20:28.843783+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "00c96659-4f20-4c1d-a4a3-fe7f6e953793",
+      "_path": "slides/00c96659-4f20-4c1d-a4a3-fe7f6e953793",
+      "_collection": "slides",
+      "title": "Assessment Criteria",
+      "content": "<ul><li>Red: Does not meet minimum expectations.</li><li>Amber: Meets and demonstrates the basic requirements.</li><li>Green: Meets and Demonstrates a thorough understanding.</li></ul>",
+      "slideNumber": 6,
+      "lessonId": "fb51c5a4-b284-4abc-9e8b-aea2b9e7a481",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.843790+00:00",
+      "updatedAt": "2025-09-02T14:20:28.843790+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "33b622e1-5371-413f-b249-f3738b2f9bca",
+      "_path": "slides/33b622e1-5371-413f-b249-f3738b2f9bca",
+      "_collection": "slides",
+      "title": "Management of Medical Emergencies",
+      "content": "<ul><li>Duration: 60 min</li><li>Target Audience: DMTs</li><li>To refresh the DMT’s fading skill in Managing Medical Emergencies</li><li>5.1 The participants will be able to discuss Cardiac Arrest Algorithm and perform CPR</li><li>Discuss basic anatomy of the heart</li></ul>",
+      "slideNumber": 1,
+      "lessonId": "5bb6742a-249c-4a3b-bf17-da62a6314c74",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.843831+00:00",
+      "updatedAt": "2025-09-02T14:20:28.843831+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "af2b28e9-ea06-4ef8-91f3-cb529aeb539f",
+      "_path": "slides/af2b28e9-ea06-4ef8-91f3-cb529aeb539f",
+      "_collection": "slides",
+      "title": "Learning Objectives",
+      "content": "<ul><li>To refresh the DMT’s fading skill in Managing Medical Emergencies</li><li>5.1 The participants will be able to discuss Cardiac Arrest Algorithm and perform CPR</li><li>Discuss basic anatomy of the heart</li><li>Discuss the Cardiac Arrest Algorithm</li><li>Discuss the equipment, positioning, step-by-step description of procedure.</li><li>Discuss and demonstrate CPR. 5.2 The participants will be able to discuss Pulmonary Oedema</li><li>Discuss the causes and symptoms of Pulmonary Oedema</li><li>Discuss the investigations and treatment of Pulmonary Oedema 5.3 The participants will be able to discuss Seizures</li><li>Discuss the causes, symptoms and types of Seizures</li><li>Discuss the treatment of Seizures 5.4 The participants will be able to discuss Hypothermia and Hyperthermia</li><li>Discuss the contributing factors that can lead to Hypothermia and Hyperthermia</li><li>Discuss the symptoms and treatment of Hypothermia and Hyperthermia</li><li>Practical assessment</li></ul>",
+      "slideNumber": 2,
+      "lessonId": "5bb6742a-249c-4a3b-bf17-da62a6314c74",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.843842+00:00",
+      "updatedAt": "2025-09-02T14:20:28.843842+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "36650377-8ad7-45d7-a407-94f4d6ddf986",
+      "_path": "slides/36650377-8ad7-45d7-a407-94f4d6ddf986",
+      "_collection": "slides",
+      "title": "Materials Required",
+      "content": "<ul><li>Defibrillator</li><li>thermometer Lecture hand-outs</li><li>sample photos</li><li>videos.</li></ul>",
+      "slideNumber": 3,
+      "lessonId": "5bb6742a-249c-4a3b-bf17-da62a6314c74",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.843853+00:00",
+      "updatedAt": "2025-09-02T14:20:28.843853+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "069dc99e-d0eb-481c-abb3-47456352e153",
+      "_path": "slides/069dc99e-d0eb-481c-abb3-47456352e153",
+      "_collection": "slides",
+      "title": "Lesson Procedures 1",
+      "content": "<ul><li>Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.</li><li>Demonstration on how to apply the above topics.</li></ul>",
+      "slideNumber": 4,
+      "lessonId": "5bb6742a-249c-4a3b-bf17-da62a6314c74",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.843860+00:00",
+      "updatedAt": "2025-09-02T14:20:28.843860+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "d78b8ff0-d5dc-442b-8ca7-e843bbd18ab4",
+      "_path": "slides/d78b8ff0-d5dc-442b-8ca7-e843bbd18ab4",
+      "_collection": "slides",
+      "title": "Lesson Procedures 2",
+      "content": "<ul><li>Guided Practice and Independent Practice by the participants and Group Activities.</li></ul>",
+      "slideNumber": 5,
+      "lessonId": "5bb6742a-249c-4a3b-bf17-da62a6314c74",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.843867+00:00",
+      "updatedAt": "2025-09-02T14:20:28.843867+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "e0b0fe52-99da-4694-b5b4-bf0a7760324a",
+      "_path": "slides/e0b0fe52-99da-4694-b5b4-bf0a7760324a",
+      "_collection": "slides",
+      "title": "Assessment Criteria",
+      "content": "<ul><li>Red: Does not meet minimum expectations.</li><li>Amber: Meets and demonstrates the basic requirements.</li><li>Green: Meets and Demonstrates a thorough understanding.</li></ul>",
+      "slideNumber": 6,
+      "lessonId": "5bb6742a-249c-4a3b-bf17-da62a6314c74",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.843873+00:00",
+      "updatedAt": "2025-09-02T14:20:28.843873+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "1aa8fc0b-c41c-4215-bcef-bcd90664ffa9",
+      "_path": "slides/1aa8fc0b-c41c-4215-bcef-bcd90664ffa9",
+      "_collection": "slides",
+      "title": "Cannulation",
+      "content": "<ul><li>Duration: 50min</li><li>Target Audience: DMTs</li><li>To refresh the DMT’s fading skill in Cannulation</li><li>The participants will be able to discuss indication and contra-indication for Intravenous and Intraosseous Cannulation procedure.</li><li>Discuss basic relevant anatomy involved in Intravenous and Intraosseous Cannulation.</li></ul>",
+      "slideNumber": 1,
+      "lessonId": "7f496a27-589c-458d-9c35-08639dd8bd79",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.845032+00:00",
+      "updatedAt": "2025-09-02T14:20:28.845032+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "991c6a85-1db9-4bcb-b120-7eb42fa275ee",
+      "_path": "slides/991c6a85-1db9-4bcb-b120-7eb42fa275ee",
+      "_collection": "slides",
+      "title": "Learning Objectives",
+      "content": "<ul><li>To refresh the DMT’s fading skill in Cannulation</li><li>The participants will be able to discuss indication and contra-indication for Intravenous and Intraosseous Cannulation procedure.</li><li>Discuss basic relevant anatomy involved in Intravenous and Intraosseous Cannulation.</li><li>Principles of intravenous and intraosseous cannulation.</li><li>Discuss the equipment, positioning, step-by-step description of procedure.</li><li>Discuss risks and complications.</li><li>Discuss and demonstrate Intravenous and Intraosseous Cannulation techniques.</li><li>Practical assessment.</li></ul>",
+      "slideNumber": 2,
+      "lessonId": "7f496a27-589c-458d-9c35-08639dd8bd79",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.845066+00:00",
+      "updatedAt": "2025-09-02T14:20:28.845066+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "3c707760-eca0-4ca3-a619-330a3a282979",
+      "_path": "slides/3c707760-eca0-4ca3-a619-330a3a282979",
+      "_collection": "slides",
+      "title": "Materials Required",
+      "content": "<ul><li>Intravenous</li><li>Intraosseous Cannulation training KIT</li><li>its accompanying accessories. Lecture hand-outs</li><li>sample photos</li><li>videos.</li></ul>",
+      "slideNumber": 3,
+      "lessonId": "7f496a27-589c-458d-9c35-08639dd8bd79",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.845078+00:00",
+      "updatedAt": "2025-09-02T14:20:28.845078+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "cf1ca478-12f2-41b6-a520-2885da91e874",
+      "_path": "slides/cf1ca478-12f2-41b6-a520-2885da91e874",
+      "_collection": "slides",
+      "title": "Lesson Procedures 1",
+      "content": "<ul><li>Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.</li><li>Demonstration on how to apply the above topics.</li></ul>",
+      "slideNumber": 4,
+      "lessonId": "7f496a27-589c-458d-9c35-08639dd8bd79",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.845086+00:00",
+      "updatedAt": "2025-09-02T14:20:28.845086+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "926d3e85-fba1-4e88-bcb4-2c898dc28915",
+      "_path": "slides/926d3e85-fba1-4e88-bcb4-2c898dc28915",
+      "_collection": "slides",
+      "title": "Lesson Procedures 2",
+      "content": "<ul><li>Guided Practice and Independent Practice by the participants and Group Activities.</li><li>Group discussion/ Assessment/ Follow-up</li></ul>",
+      "slideNumber": 5,
+      "lessonId": "7f496a27-589c-458d-9c35-08639dd8bd79",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.845093+00:00",
+      "updatedAt": "2025-09-02T14:20:28.845093+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "eea60686-2693-4109-84d7-78450840e819",
+      "_path": "slides/eea60686-2693-4109-84d7-78450840e819",
+      "_collection": "slides",
+      "title": "Urethral Catheterisation",
+      "content": "<ul><li>Duration: 50min</li><li>Target Audience: DMTs</li><li>To refresh the DMT’s fading skill in Urethral Catheterisation for both male and female patients</li><li>The participants will be able to discuss indication and contra-indication for Male Urethral Catheterisation Procedure.</li><li>Discuss basic relevant anatomy of Urinary system involved in Male Catheterisation.</li></ul>",
+      "slideNumber": 1,
+      "lessonId": "08a61353-42f6-4d1e-9153-9c23b1c7597a",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.845150+00:00",
+      "updatedAt": "2025-09-02T14:20:28.845150+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "76f62387-f09a-4bd1-a47f-69931fbdc6a6",
+      "_path": "slides/76f62387-f09a-4bd1-a47f-69931fbdc6a6",
+      "_collection": "slides",
+      "title": "Learning Objectives",
+      "content": "<ul><li>To refresh the DMT’s fading skill in Urethral Catheterisation for both male and female patients</li><li>The participants will be able to discuss indication and contra-indication for Male Urethral Catheterisation Procedure.</li><li>Discuss basic relevant anatomy of Urinary system involved in Male Catheterisation.</li><li>Principles of Catheterisation.</li><li>Discuss the equipment, positioning, step-by-step description of procedure.</li><li>Discuss risks and complications.</li><li>Discuss and demonstrate Catheterisation.</li><li>Practical assessment The participants will be able to discuss indication and contra-indication for Female Urethral Catheterisation Procedure.</li><li>Discuss basic relevant anatomy of Urinary system involved in Female Catheterisation.</li><li>Principles of Catheterisation.</li><li>Discuss the equipment, positioning, step-by-step description of procedure.</li><li>Discuss risks and complications.</li><li>Discuss and demonstrate Catheterisation.</li><li>Practical assessment</li></ul>",
+      "slideNumber": 2,
+      "lessonId": "08a61353-42f6-4d1e-9153-9c23b1c7597a",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.845329+00:00",
+      "updatedAt": "2025-09-02T14:20:28.845329+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "db6d24f4-ea01-4f78-9e5d-ef024594a9e4",
+      "_path": "slides/db6d24f4-ea01-4f78-9e5d-ef024594a9e4",
+      "_collection": "slides",
+      "title": "Materials Required",
+      "content": "<ul><li>Urethral Catheterisation training KIT</li><li>its accompanying accessories. Lecture hand-outs</li><li>sample photos</li><li>videos.</li></ul>",
+      "slideNumber": 3,
+      "lessonId": "08a61353-42f6-4d1e-9153-9c23b1c7597a",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.845387+00:00",
+      "updatedAt": "2025-09-02T14:20:28.845387+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "72adf1b2-45a0-43ff-bf46-cf3b36aed9ba",
+      "_path": "slides/72adf1b2-45a0-43ff-bf46-cf3b36aed9ba",
+      "_collection": "slides",
+      "title": "Lesson Procedures 1",
+      "content": "<ul><li>Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.</li><li>Demonstration on how to apply the above topics.</li></ul>",
+      "slideNumber": 4,
+      "lessonId": "08a61353-42f6-4d1e-9153-9c23b1c7597a",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.845552+00:00",
+      "updatedAt": "2025-09-02T14:20:28.845552+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "840b5119-9d39-4d35-8346-5c37fa8e417e",
+      "_path": "slides/840b5119-9d39-4d35-8346-5c37fa8e417e",
+      "_collection": "slides",
+      "title": "Lesson Procedures 2",
+      "content": "<ul><li>Guided Practice and Independent Practice by the participants and Group Activities.</li></ul>",
+      "slideNumber": 5,
+      "lessonId": "08a61353-42f6-4d1e-9153-9c23b1c7597a",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.845785+00:00",
+      "updatedAt": "2025-09-02T14:20:28.845785+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "ac85552c-10e9-49a0-8297-c55a7c2e1883",
+      "_path": "slides/ac85552c-10e9-49a0-8297-c55a7c2e1883",
+      "_collection": "slides",
+      "title": "Assessment Criteria",
+      "content": "<ul><li>Red: Does not meet minimum expectations.</li><li>Amber: Meets and demonstrates the basic requirements.</li><li>Green: Meets and Demonstrates a thorough understanding.</li></ul>",
+      "slideNumber": 6,
+      "lessonId": "08a61353-42f6-4d1e-9153-9c23b1c7597a",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.845961+00:00",
+      "updatedAt": "2025-09-02T14:20:28.845961+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "48adb939-866e-48ca-87b3-aa8d6fc61bf4",
+      "_path": "slides/48adb939-866e-48ca-87b3-aa8d6fc61bf4",
+      "_collection": "slides",
+      "title": "Airway Management",
+      "content": "<ul><li>Duration: 90 min</li><li>Target Audience: DMTs</li><li>To refresh the DMT’s fading skill in Airway Adjuncts Insertion Procedure To refresh the DMT’s fading skill in Ventilation Bag and Mask</li><li>6.1 The participants will be able to discuss signs and symptoms of Airway Obstruction 6.2 The participants will be able to discuss indication and contra-indication for Oropharyngeal Airway Insertion procedure.</li><li>Discuss basic relevant anatomy of Airway system involved in Guedel insertion.</li></ul>",
+      "slideNumber": 1,
+      "lessonId": "9b2836c5-d5e5-4cc2-96fe-cb4516918446",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846436+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846436+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "4d10b7f3-0a45-4884-b9a3-fdd12abd1545",
+      "_path": "slides/4d10b7f3-0a45-4884-b9a3-fdd12abd1545",
+      "_collection": "slides",
+      "title": "Learning Objectives",
+      "content": "<ul><li>To refresh the DMT’s fading skill in Airway Adjuncts Insertion Procedure To refresh the DMT’s fading skill in Ventilation Bag and Mask</li><li>6.1 The participants will be able to discuss signs and symptoms of Airway Obstruction 6.2 The participants will be able to discuss indication and contra-indication for Oropharyngeal Airway Insertion procedure.</li><li>Discuss basic relevant anatomy of Airway system involved in Guedel insertion.</li><li>Principles of Guedel insertion.</li><li>Discuss the equipment, positioning, step-by-step description of procedure.</li><li>Discuss risks and complications.</li><li>Discuss and demonstrate Guedel insertion techniques. 6.3 The participants will be able to discuss indication and contra-indication for Nasopharyngeal Airway Insertion procedure.</li><li>Discuss basic relevant anatomy of Airway system involved in NPA insertion.</li><li>Principles of NPA insertion.</li><li>Discuss the equipment, positioning, step-by-step description of procedure.</li><li>Discuss risks and complications.</li><li>Discuss and demonstrate NPA insertion techniques. 6.4 The participants will be able to discuss indication and contra-indication for Laryngeal Mask Airway Insertion procedure.</li><li>Discuss basic relevant anatomy of Airway system involved in LMA insertion.</li><li>Principles of LMA insertion.</li><li>Discuss the equipment, positioning, step-by-step description of procedure.</li><li>Discuss risks and complications.</li><li>Discuss and demonstrate LMA insertion techniques 6.5 The participants will be able to discuss indication and contra-indication on the use of Ventilation Bag and Mask</li><li>Discuss basic relevant anatomy of Airway system involved in Ventilation Bag and Mask</li><li>Discuss the equipment, positioning, step-by-step description of procedure.</li><li>Discuss risks and complications.</li><li>Discuss and demonstrate Ventilation Bag and Mask --------------------------------------</li><li>Practical assessment</li></ul>",
+      "slideNumber": 2,
+      "lessonId": "9b2836c5-d5e5-4cc2-96fe-cb4516918446",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846576+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846576+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "47450937-9045-4c8d-a757-1816d8578369",
+      "_path": "slides/47450937-9045-4c8d-a757-1816d8578369",
+      "_collection": "slides",
+      "title": "Materials Required",
+      "content": "<ul><li>Airway Management training KIT</li><li>its accompanying accessories. Lecture hand-outs</li><li>sample photos</li><li>videos.</li></ul>",
+      "slideNumber": 3,
+      "lessonId": "9b2836c5-d5e5-4cc2-96fe-cb4516918446",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846592+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846592+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "db9b84de-f31e-4ec5-bb0c-14a8b6c6fc4c",
+      "_path": "slides/db9b84de-f31e-4ec5-bb0c-14a8b6c6fc4c",
+      "_collection": "slides",
+      "title": "Lesson Procedures 1",
+      "content": "<ul><li>Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.</li><li>Demonstration on how to apply the above topics.</li></ul>",
+      "slideNumber": 4,
+      "lessonId": "9b2836c5-d5e5-4cc2-96fe-cb4516918446",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846600+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846600+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "13dc2b5c-4068-4adc-a0d8-6824dcadc9fb",
+      "_path": "slides/13dc2b5c-4068-4adc-a0d8-6824dcadc9fb",
+      "_collection": "slides",
+      "title": "Lesson Procedures 2",
+      "content": "<ul><li>Guided Practice and Independent Practice by the participants and Group Activities.</li></ul>",
+      "slideNumber": 5,
+      "lessonId": "9b2836c5-d5e5-4cc2-96fe-cb4516918446",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846607+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846607+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "62bac143-70bd-4772-a567-48423f270fcb",
+      "_path": "slides/62bac143-70bd-4772-a567-48423f270fcb",
+      "_collection": "slides",
+      "title": "Chest Drain -Thoracentesis",
+      "content": "<ul><li>Duration: 50 min</li><li>Target Audience: DMTs</li><li>To refresh the DMT’s fading skill in Thoracentesis</li><li>The participants will be able to discuss indication for Thoracentesis procedure.</li><li>Discuss basic relevant anatomy of Lungs involved in thoracentesis.</li></ul>",
+      "slideNumber": 1,
+      "lessonId": "c0e04865-d598-4e2d-9f29-8b381e3cf5ed",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846637+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846637+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "d9e5e53f-18c2-4467-93b5-52190e4870fb",
+      "_path": "slides/d9e5e53f-18c2-4467-93b5-52190e4870fb",
+      "_collection": "slides",
+      "title": "Learning Objectives",
+      "content": "<ul><li>To refresh the DMT’s fading skill in Thoracentesis</li><li>The participants will be able to discuss indication for Thoracentesis procedure.</li><li>Discuss basic relevant anatomy of Lungs involved in thoracentesis.</li><li>Principles of thoracentesis.</li><li>Discuss the equipment, positioning, step-by-step description of procedure</li><li>Discuss risks and complications.</li><li>Discuss and demonstrate thoracentesis techniques.</li><li>Practical assessment</li></ul>",
+      "slideNumber": 2,
+      "lessonId": "c0e04865-d598-4e2d-9f29-8b381e3cf5ed",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846645+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846645+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "8458132f-5c88-474f-bfc7-ec0497d2b4e4",
+      "_path": "slides/8458132f-5c88-474f-bfc7-ec0497d2b4e4",
+      "_collection": "slides",
+      "title": "Materials Required",
+      "content": "<ul><li>Chest Drain & Needle Decompression training KIT</li><li>its accompanying accessories. Lecture hand-outs</li><li>sample photos</li><li>videos.</li></ul>",
+      "slideNumber": 3,
+      "lessonId": "c0e04865-d598-4e2d-9f29-8b381e3cf5ed",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846654+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846654+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "989d2c42-49a7-427b-adb8-b8cc185e16a3",
+      "_path": "slides/989d2c42-49a7-427b-adb8-b8cc185e16a3",
+      "_collection": "slides",
+      "title": "Lesson Procedures 1",
+      "content": "<ul><li>Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.</li><li>Demonstration on how to apply the above topics.</li></ul>",
+      "slideNumber": 4,
+      "lessonId": "c0e04865-d598-4e2d-9f29-8b381e3cf5ed",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846661+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846661+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "e8ab36a1-4bf0-486b-bc8e-8073c27f2e4e",
+      "_path": "slides/e8ab36a1-4bf0-486b-bc8e-8073c27f2e4e",
+      "_collection": "slides",
+      "title": "Lesson Procedures 2",
+      "content": "<ul><li>Guided Practice and Independent Practice by the participants and Group Activities.</li></ul>",
+      "slideNumber": 5,
+      "lessonId": "c0e04865-d598-4e2d-9f29-8b381e3cf5ed",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846667+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846667+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "49c908ee-b100-4833-a8fc-aa20ac82b907",
+      "_path": "slides/49c908ee-b100-4833-a8fc-aa20ac82b907",
+      "_collection": "slides",
+      "title": "Assessment Criteria",
+      "content": "<ul><li>Red: Does not meet minimum expectations.</li><li>Amber: Meets and demonstrates the basic requirements.</li><li>Green: Meets and Demonstrates a thorough understanding.</li></ul>",
+      "slideNumber": 6,
+      "lessonId": "c0e04865-d598-4e2d-9f29-8b381e3cf5ed",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846673+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846673+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "ffc9da79-4d1e-49f2-94cc-8eca778a0dbd",
+      "_path": "slides/ffc9da79-4d1e-49f2-94cc-8eca778a0dbd",
+      "_collection": "slides",
+      "title": "Suturing",
+      "content": "<ul><li>Duration: 50 min</li><li>Target Audience: DMT’s</li><li>To refresh the DMT’s fading skill in Suturing</li><li>The participants will be able to discuss indication and contra-indication for Suturing</li><li>Discuss the anatomy of the skin and its functions.</li></ul>",
+      "slideNumber": 1,
+      "lessonId": "4af74aeb-5a04-4a9b-81f9-1959167ec9da",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846697+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846697+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "48d0f3e0-354b-4d5f-994b-c2eb2491f62c",
+      "_path": "slides/48d0f3e0-354b-4d5f-994b-c2eb2491f62c",
+      "_collection": "slides",
+      "title": "Learning Objectives",
+      "content": "<ul><li>To refresh the DMT’s fading skill in Suturing</li><li>The participants will be able to discuss indication and contra-indication for Suturing</li><li>Discuss the anatomy of the skin and its functions.</li><li>Discuss the principles of suturing.</li><li>Discuss the procedure and equipment for suturing.</li><li>Discuss and demonstrate the different suturing techniques</li><li>Practical assessment</li></ul>",
+      "slideNumber": 2,
+      "lessonId": "4af74aeb-5a04-4a9b-81f9-1959167ec9da",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846705+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846705+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "57acd80f-2c13-4e65-8c92-754ad9eb01fb",
+      "_path": "slides/57acd80f-2c13-4e65-8c92-754ad9eb01fb",
+      "_collection": "slides",
+      "title": "Materials Required",
+      "content": "<ul><li>Suturing training kit</li><li>its accompanying accessories</li></ul>",
+      "slideNumber": 3,
+      "lessonId": "4af74aeb-5a04-4a9b-81f9-1959167ec9da",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846713+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846713+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "0163f4b6-e0ed-418b-b61f-af0469398bbc",
+      "_path": "slides/0163f4b6-e0ed-418b-b61f-af0469398bbc",
+      "_collection": "slides",
+      "title": "Lesson Procedures 1",
+      "content": "<ul><li>Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.</li><li>Demonstration on how to apply the above topics.</li></ul>",
+      "slideNumber": 4,
+      "lessonId": "4af74aeb-5a04-4a9b-81f9-1959167ec9da",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846719+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846719+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "07446be4-c58a-4a6e-8a28-8a7e83868805",
+      "_path": "slides/07446be4-c58a-4a6e-8a28-8a7e83868805",
+      "_collection": "slides",
+      "title": "Lesson Procedures 2",
+      "content": "<ul><li>Guided Practice and Independent Practice by the participants and Group Activities.</li></ul>",
+      "slideNumber": 5,
+      "lessonId": "4af74aeb-5a04-4a9b-81f9-1959167ec9da",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846726+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846726+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "211bb5cd-979b-46c1-991c-b695e01a8470",
+      "_path": "slides/211bb5cd-979b-46c1-991c-b695e01a8470",
+      "_collection": "slides",
+      "title": "Assessment Criteria",
+      "content": "<ul><li>Red: Does not meet minimum expectations.</li><li>Amber: Meets and demonstrates the basic requirements.</li><li>Green: Meets and Demonstrates a thorough understanding.</li></ul>",
+      "slideNumber": 6,
+      "lessonId": "4af74aeb-5a04-4a9b-81f9-1959167ec9da",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846732+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846732+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "753909e3-c702-41e2-8fae-595785ead8b1",
+      "_path": "slides/753909e3-c702-41e2-8fae-595785ead8b1",
+      "_collection": "slides",
+      "title": "Drug Administration",
+      "content": "<ul><li>Duration: 40 min</li><li>Target Audience: DMTs</li><li>To refresh the DMT’s fading knowledge in the different routes for Drug Administration</li><li>The participants will be able to discuss the different routes for Drug Administration Discuss basic relevant anatomy of the body involved in the different routes of Drug Administration Discuss the principles and procedure for IM injections, subcutaneous injections and rectal drug administration</li></ul>",
+      "slideNumber": 1,
+      "lessonId": "c465b2f3-35e1-46f4-8e9e-907ed3d188f7",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846755+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846755+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "dfb4d10a-2474-47d5-a511-386f8ca42119",
+      "_path": "slides/dfb4d10a-2474-47d5-a511-386f8ca42119",
+      "_collection": "slides",
+      "title": "Materials Required",
+      "content": "<ul><li>Syringe</li><li>suppositories. Lecture hand-outs</li><li>sample photos</li><li>videos.</li></ul>",
+      "slideNumber": 2,
+      "lessonId": "c465b2f3-35e1-46f4-8e9e-907ed3d188f7",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846763+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846763+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "03091a04-b1fa-4618-ae74-6912ec83d46b",
+      "_path": "slides/03091a04-b1fa-4618-ae74-6912ec83d46b",
+      "_collection": "slides",
+      "title": "Lesson Procedures 1",
+      "content": "<ul><li>Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.</li><li>Demonstration on how to apply the above topics.</li></ul>",
+      "slideNumber": 3,
+      "lessonId": "c465b2f3-35e1-46f4-8e9e-907ed3d188f7",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846770+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846770+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "4c14855d-b53f-4f0b-b7b8-f1e584639347",
+      "_path": "slides/4c14855d-b53f-4f0b-b7b8-f1e584639347",
+      "_collection": "slides",
+      "title": "Lesson Procedures 2",
+      "content": "<ul><li>Guided Practice and Independent Practice by the participants and Group Activities.</li></ul>",
+      "slideNumber": 4,
+      "lessonId": "c465b2f3-35e1-46f4-8e9e-907ed3d188f7",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846783+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846783+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "671b4317-201b-461d-8ffe-afe3ef9addd8",
+      "_path": "slides/671b4317-201b-461d-8ffe-afe3ef9addd8",
+      "_collection": "slides",
+      "title": "DMAS",
+      "content": "<ul><li>Duration: 60 min</li><li>Target Audience: DMTs</li><li>To refresh the DMT’s skill in the operation of DMAS Hypersat Unit</li><li>The participants will be able to discuss and perform the operation of DMAS Hypersat Unit.</li><li>Discuss and set up the DMAS Hypersat Unit.</li></ul>",
+      "slideNumber": 1,
+      "lessonId": "36486e13-13b9-4494-baa1-5b75832e70e4",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846848+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846848+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "c5dd354e-08c2-47d9-926d-a0b5e907881e",
+      "_path": "slides/c5dd354e-08c2-47d9-926d-a0b5e907881e",
+      "_collection": "slides",
+      "title": "Learning Objectives",
+      "content": "<ul><li>To refresh the DMT’s skill in the operation of DMAS Hypersat Unit</li><li>The participants will be able to discuss and perform the operation of DMAS Hypersat Unit.</li><li>Discuss and set up the DMAS Hypersat Unit.</li><li>Discuss the procedure for ECG monitoring, Blood Pressure monitoring, use of pulse oximeter and perform spirometry.</li><li>Able to demonstrate to hook up all equipment accessories to the patient.</li><li>Practical assessment.</li></ul>",
+      "slideNumber": 2,
+      "lessonId": "36486e13-13b9-4494-baa1-5b75832e70e4",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846859+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846859+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "130802c2-ef18-44c7-90aa-413dffcf0e1c",
+      "_path": "slides/130802c2-ef18-44c7-90aa-413dffcf0e1c",
+      "_collection": "slides",
+      "title": "Materials Required",
+      "content": "<ul><li>Training videos for the software of the DMAS Hypersat laptop. DMAS Hypersat Unit</li><li>its accessories.</li></ul>",
+      "slideNumber": 3,
+      "lessonId": "36486e13-13b9-4494-baa1-5b75832e70e4",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846871+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846871+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "4dc7d62e-1f52-464a-a54a-d57d6b732c3f",
+      "_path": "slides/4dc7d62e-1f52-464a-a54a-d57d6b732c3f",
+      "_collection": "slides",
+      "title": "Lesson Procedures 1",
+      "content": "<ul><li>Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.</li><li>Demonstration on how to apply the above topics.</li></ul>",
+      "slideNumber": 4,
+      "lessonId": "36486e13-13b9-4494-baa1-5b75832e70e4",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846878+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846878+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "069e9f41-ec29-4d52-b2af-daf22ef7823a",
+      "_path": "slides/069e9f41-ec29-4d52-b2af-daf22ef7823a",
+      "_collection": "slides",
+      "title": "Lesson Procedures 2",
+      "content": "<ul><li>Guided Practice and Independent Practice by the participants and Group Activities.</li></ul>",
+      "slideNumber": 5,
+      "lessonId": "36486e13-13b9-4494-baa1-5b75832e70e4",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846885+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846885+00:00",
+      "sourceType": "lesson_plan_extraction"
+    },
+    {
+      "_id": "5508e19c-00e3-4a30-8690-eafe7fb5c79c",
+      "_path": "slides/5508e19c-00e3-4a30-8690-eafe7fb5c79c",
+      "_collection": "slides",
+      "title": "Assessment Criteria",
+      "content": "<ul><li>Red: Does not meet minimum expectations.</li><li>Amber: Meets and demonstrates the basic requirements.</li><li>Green: Meets and Demonstrates a thorough understanding.</li></ul>",
+      "slideNumber": 6,
+      "lessonId": "36486e13-13b9-4494-baa1-5b75832e70e4",
+      "images": [],
+      "createdAt": "2025-09-02T14:20:28.846892+00:00",
+      "updatedAt": "2025-09-02T14:20:28.846892+00:00",
+      "sourceType": "lesson_plan_extraction"
+    }
+  ],
+  "statistics": {
+    "total_modules": 12,
+    "total_lessons": 12,
+    "total_slides": 68,
+    "integration_date": "2025-09-02T14:20:28.846920+00:00"
+  }
+}

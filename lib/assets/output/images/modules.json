@@ -177,5 +177,413 @@
     "_id": "eaac1b99-2e61-4fb9-b260-173422d5dc2f",
     "_path": "modules/eaac1b99-2e61-4fb9-b260-173422d5dc2f",
     "_collection": "modules"
+  },
+  {
+    "_id": "d6b61ac6-712d-4e05-b1df-5be6d2a2aae2",
+    "_path": "modules/d6b61ac6-712d-4e05-b1df-5be6d2a2aae2",
+    "_collection": "modules",
+    "title": "Accident Management Fundamentals",
+    "description": "Core principles of accident management including bleeding control, soft tissue injuries, and shock management",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "9df50c0c-7152-4d74-bbf3-56701acef19f"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 1,
+    "createdAt": "2025-09-02T14:20:28.838264+00:00",
+    "updatedAt": "2025-09-02T14:20:28.838264+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "47dd393c-9bce-4c91-94ac-09de909fb5c9",
+    "_path": "modules/47dd393c-9bce-4c91-94ac-09de909fb5c9",
+    "_collection": "modules",
+    "title": "Trauma and Injury Management",
+    "description": "Advanced trauma management covering fractures, crush injuries, and chest trauma",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "c8d16edd-a53f-4f26-a239-0fdd8dc1bfb0"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 2,
+    "createdAt": "2025-09-02T14:20:28.841209+00:00",
+    "updatedAt": "2025-09-02T14:20:28.841209+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "21cb89bd-1d1a-4c39-8ca5-4b36fe495e28",
+    "_path": "modules/21cb89bd-1d1a-4c39-8ca5-4b36fe495e28",
+    "_collection": "modules",
+    "title": "Burns and Environmental Injuries",
+    "description": "Management of burns, electrical injuries, and poisoning incidents",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "60d08e35-8698-454c-82fa-d710f9591128"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 3,
+    "createdAt": "2025-09-02T14:20:28.841491+00:00",
+    "updatedAt": "2025-09-02T14:20:28.841491+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "609e6896-af92-43f7-a95e-d24330d3c3eb",
+    "_path": "modules/609e6896-af92-43f7-a95e-d24330d3c3eb",
+    "_collection": "modules",
+    "title": "Patient Assessment",
+    "description": "Systematic approach to casualty assessment and triage",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "fb51c5a4-b284-4abc-9e8b-aea2b9e7a481"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 4,
+    "createdAt": "2025-09-02T14:20:28.841768+00:00",
+    "updatedAt": "2025-09-02T14:20:28.841768+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "9394e8ea-4af1-42f2-9082-1be0482781ef",
+    "_path": "modules/9394e8ea-4af1-42f2-9082-1be0482781ef",
+    "_collection": "modules",
+    "title": "Medical Emergency Response",
+    "description": "Management of medical emergencies in diving operations",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "5bb6742a-249c-4a3b-bf17-da62a6314c74"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 5,
+    "createdAt": "2025-09-02T14:20:28.843817+00:00",
+    "updatedAt": "2025-09-02T14:20:28.843817+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "afed577b-18a9-4a6a-af65-496be0b7acf5",
+    "_path": "modules/afed577b-18a9-4a6a-af65-496be0b7acf5",
+    "_collection": "modules",
+    "title": "Vascular Access Procedures",
+    "description": "Cannulation techniques and vascular access procedures",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "7f496a27-589c-458d-9c35-08639dd8bd79"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 6,
+    "createdAt": "2025-09-02T14:20:28.843893+00:00",
+    "updatedAt": "2025-09-02T14:20:28.843893+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "06edcfbe-60b3-49e2-b523-2a728da47865",
+    "_path": "modules/06edcfbe-60b3-49e2-b523-2a728da47865",
+    "_collection": "modules",
+    "title": "Urological Procedures",
+    "description": "Urethral catheterization procedures and techniques",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "08a61353-42f6-4d1e-9153-9c23b1c7597a"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 7,
+    "createdAt": "2025-09-02T14:20:28.845137+00:00",
+    "updatedAt": "2025-09-02T14:20:28.845137+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "534f559e-3a1b-442b-a23b-3a0d20eac337",
+    "_path": "modules/534f559e-3a1b-442b-a23b-3a0d20eac337",
+    "_collection": "modules",
+    "title": "Airway Management",
+    "description": "Advanced airway management techniques and procedures",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "9b2836c5-d5e5-4cc2-96fe-cb4516918446"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 8,
+    "createdAt": "2025-09-02T14:20:28.846077+00:00",
+    "updatedAt": "2025-09-02T14:20:28.846077+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "a7b33e81-dcdc-4acc-8422-228c572ee470",
+    "_path": "modules/a7b33e81-dcdc-4acc-8422-228c572ee470",
+    "_collection": "modules",
+    "title": "Thoracic Procedures",
+    "description": "Chest drain insertion and thoracentesis procedures",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "c0e04865-d598-4e2d-9f29-8b381e3cf5ed"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 9,
+    "createdAt": "2025-09-02T14:20:28.846625+00:00",
+    "updatedAt": "2025-09-02T14:20:28.846625+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "4e46f4e5-d7d3-4cf5-b912-f6bffc085e65",
+    "_path": "modules/4e46f4e5-d7d3-4cf5-b912-f6bffc085e65",
+    "_collection": "modules",
+    "title": "Surgical Procedures",
+    "description": "Basic suturing techniques and wound closure",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "4af74aeb-5a04-4a9b-81f9-1959167ec9da"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 10,
+    "createdAt": "2025-09-02T14:20:28.846685+00:00",
+    "updatedAt": "2025-09-02T14:20:28.846685+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "148fe87f-ff04-42e6-96fd-22cac8dd7224",
+    "_path": "modules/148fe87f-ff04-42e6-96fd-22cac8dd7224",
+    "_collection": "modules",
+    "title": "Pharmacology and Drug Administration",
+    "description": "Drug administration techniques and pharmacological principles",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "c465b2f3-35e1-46f4-8e9e-907ed3d188f7"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 11,
+    "createdAt": "2025-09-02T14:20:28.846743+00:00",
+    "updatedAt": "2025-09-02T14:20:28.846743+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "f61426fd-7cee-4231-8320-6afd816543ae",
+    "_path": "modules/f61426fd-7cee-4231-8320-6afd816543ae",
+    "_collection": "modules",
+    "title": "Diving Medical Advisory Service (DMAS)",
+    "description": "DMAS protocols and procedures for diving medical support",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "36486e13-13b9-4494-baa1-5b75832e70e4"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 12,
+    "createdAt": "2025-09-02T14:20:28.846817+00:00",
+    "updatedAt": "2025-09-02T14:20:28.846817+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "d6b61ac6-712d-4e05-b1df-5be6d2a2aae2",
+    "_path": "modules/d6b61ac6-712d-4e05-b1df-5be6d2a2aae2",
+    "_collection": "modules",
+    "title": "Accident Management Fundamentals",
+    "description": "Core principles of accident management including bleeding control, soft tissue injuries, and shock management",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "9df50c0c-7152-4d74-bbf3-56701acef19f"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 1,
+    "createdAt": "2025-09-02T14:20:28.838264+00:00",
+    "updatedAt": "2025-09-02T14:20:28.838264+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "47dd393c-9bce-4c91-94ac-09de909fb5c9",
+    "_path": "modules/47dd393c-9bce-4c91-94ac-09de909fb5c9",
+    "_collection": "modules",
+    "title": "Trauma and Injury Management",
+    "description": "Advanced trauma management covering fractures, crush injuries, and chest trauma",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "c8d16edd-a53f-4f26-a239-0fdd8dc1bfb0"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 2,
+    "createdAt": "2025-09-02T14:20:28.841209+00:00",
+    "updatedAt": "2025-09-02T14:20:28.841209+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "21cb89bd-1d1a-4c39-8ca5-4b36fe495e28",
+    "_path": "modules/21cb89bd-1d1a-4c39-8ca5-4b36fe495e28",
+    "_collection": "modules",
+    "title": "Burns and Environmental Injuries",
+    "description": "Management of burns, electrical injuries, and poisoning incidents",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "60d08e35-8698-454c-82fa-d710f9591128"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 3,
+    "createdAt": "2025-09-02T14:20:28.841491+00:00",
+    "updatedAt": "2025-09-02T14:20:28.841491+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "609e6896-af92-43f7-a95e-d24330d3c3eb",
+    "_path": "modules/609e6896-af92-43f7-a95e-d24330d3c3eb",
+    "_collection": "modules",
+    "title": "Patient Assessment",
+    "description": "Systematic approach to casualty assessment and triage",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "fb51c5a4-b284-4abc-9e8b-aea2b9e7a481"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 4,
+    "createdAt": "2025-09-02T14:20:28.841768+00:00",
+    "updatedAt": "2025-09-02T14:20:28.841768+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "9394e8ea-4af1-42f2-9082-1be0482781ef",
+    "_path": "modules/9394e8ea-4af1-42f2-9082-1be0482781ef",
+    "_collection": "modules",
+    "title": "Medical Emergency Response",
+    "description": "Management of medical emergencies in diving operations",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "5bb6742a-249c-4a3b-bf17-da62a6314c74"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 5,
+    "createdAt": "2025-09-02T14:20:28.843817+00:00",
+    "updatedAt": "2025-09-02T14:20:28.843817+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "afed577b-18a9-4a6a-af65-496be0b7acf5",
+    "_path": "modules/afed577b-18a9-4a6a-af65-496be0b7acf5",
+    "_collection": "modules",
+    "title": "Vascular Access Procedures",
+    "description": "Cannulation techniques and vascular access procedures",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "7f496a27-589c-458d-9c35-08639dd8bd79"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 6,
+    "createdAt": "2025-09-02T14:20:28.843893+00:00",
+    "updatedAt": "2025-09-02T14:20:28.843893+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "06edcfbe-60b3-49e2-b523-2a728da47865",
+    "_path": "modules/06edcfbe-60b3-49e2-b523-2a728da47865",
+    "_collection": "modules",
+    "title": "Urological Procedures",
+    "description": "Urethral catheterization procedures and techniques",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "08a61353-42f6-4d1e-9153-9c23b1c7597a"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 7,
+    "createdAt": "2025-09-02T14:20:28.845137+00:00",
+    "updatedAt": "2025-09-02T14:20:28.845137+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "534f559e-3a1b-442b-a23b-3a0d20eac337",
+    "_path": "modules/534f559e-3a1b-442b-a23b-3a0d20eac337",
+    "_collection": "modules",
+    "title": "Airway Management",
+    "description": "Advanced airway management techniques and procedures",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "9b2836c5-d5e5-4cc2-96fe-cb4516918446"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 8,
+    "createdAt": "2025-09-02T14:20:28.846077+00:00",
+    "updatedAt": "2025-09-02T14:20:28.846077+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "a7b33e81-dcdc-4acc-8422-228c572ee470",
+    "_path": "modules/a7b33e81-dcdc-4acc-8422-228c572ee470",
+    "_collection": "modules",
+    "title": "Thoracic Procedures",
+    "description": "Chest drain insertion and thoracentesis procedures",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "c0e04865-d598-4e2d-9f29-8b381e3cf5ed"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 9,
+    "createdAt": "2025-09-02T14:20:28.846625+00:00",
+    "updatedAt": "2025-09-02T14:20:28.846625+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "4e46f4e5-d7d3-4cf5-b912-f6bffc085e65",
+    "_path": "modules/4e46f4e5-d7d3-4cf5-b912-f6bffc085e65",
+    "_collection": "modules",
+    "title": "Surgical Procedures",
+    "description": "Basic suturing techniques and wound closure",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "4af74aeb-5a04-4a9b-81f9-1959167ec9da"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 10,
+    "createdAt": "2025-09-02T14:20:28.846685+00:00",
+    "updatedAt": "2025-09-02T14:20:28.846685+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "148fe87f-ff04-42e6-96fd-22cac8dd7224",
+    "_path": "modules/148fe87f-ff04-42e6-96fd-22cac8dd7224",
+    "_collection": "modules",
+    "title": "Pharmacology and Drug Administration",
+    "description": "Drug administration techniques and pharmacological principles",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "c465b2f3-35e1-46f4-8e9e-907ed3d188f7"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 11,
+    "createdAt": "2025-09-02T14:20:28.846743+00:00",
+    "updatedAt": "2025-09-02T14:20:28.846743+00:00",
+    "sourceType": "lesson_plan_extraction"
+  },
+  {
+    "_id": "f61426fd-7cee-4231-8320-6afd816543ae",
+    "_path": "modules/f61426fd-7cee-4231-8320-6afd816543ae",
+    "_collection": "modules",
+    "title": "Diving Medical Advisory Service (DMAS)",
+    "description": "DMAS protocols and procedures for diving medical support",
+    "courseId": "f3dc8d26-1f86-4359-b7a1-079eae961568",
+    "lessonIds": [
+      "36486e13-13b9-4494-baa1-5b75832e70e4"
+    ],
+    "testIds": [],
+    "questionIds": [],
+    "order": 12,
+    "createdAt": "2025-09-02T14:20:28.846817+00:00",
+    "updatedAt": "2025-09-02T14:20:28.846817+00:00",
+    "sourceType": "lesson_plan_extraction"
   }
 ]

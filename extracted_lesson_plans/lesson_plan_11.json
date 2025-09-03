@@ -1,0 +1,221 @@
+{
+  "lesson_id": "lesson_11",
+  "title": "Drill 11: Drug Administration - Training ID 9",
+  "lesson_number": 11,
+  "description": "To refresh the DMT’s fading knowledge in the different routes for Drug Administration",
+  "duration": "40 min",
+  "target_audience": "DMTs",
+  "objectives": [
+    "To refresh the DMT’s fading knowledge in the different routes for Drug Administration",
+    "The participants will be able to discuss the different routes for Drug Administration Discuss basic relevant anatomy of the body involved in the different routes of Drug Administration Discuss the principles and procedure for IM injections, subcutaneous injections and rectal drug administration"
+  ],
+  "materials": [
+    "Syringe",
+    "suppositories. Lecture hand-outs",
+    "sample photos",
+    "videos."
+  ],
+  "content_sections": [],
+  "activities": [
+    "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+    "Demonstration on how to apply the above topics.",
+    "Guided Practice and Independent Practice by the participants and Group Activities."
+  ],
+  "assessment": [],
+  "tables": [
+    {
+      "headers": [
+        "LESSON TITLE",
+        "Drug Administration"
+      ],
+      "rows": [
+        [
+          "TARGET AUDIENCE",
+          "DMTs"
+        ],
+        [
+          "LESSON DURATION",
+          "40 min"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "MAIN OBJECTIVES"
+      ],
+      "rows": [
+        [
+          "To refresh the DMT’s fading knowledge in the different routes for Drug Administration"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "LEARNING GOALS"
+      ],
+      "rows": [
+        [
+          "The participants will be able to discuss the different routes for Drug Administration Discuss basic relevant anatomy of the body involved in the different routes of Drug Administration Discuss the principles and procedure for IM injections, subcutaneous injections and rectal drug administration"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "MATERIALS"
+      ],
+      "rows": [
+        [
+          "Syringe and suppositories. Lecture hand-outs and sample photos and videos."
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "PROCEDURES"
+      ],
+      "rows": [
+        [
+          "1st 10 minutes - Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos. 2nd 10 minutes - Demonstration on how to apply the above topics. 3rd 20 minutes - Guided Practice and Independent Practice by the participants and Group Activities."
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "CLOSURE"
+      ],
+      "rows": [
+        [
+          "Group discussion/ Assessment/ Follow-up"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "ASSESSMENT",
+        "ASSESSMENT",
+        "ASSESSMENT",
+        "ASSESSMENT"
+      ],
+      "rows": [
+        [
+          "GRADE",
+          "PERCENTAGE",
+          "CRITERIA",
+          "TICK"
+        ],
+        [
+          "1",
+          "Below 60%",
+          "Does not meet minimum expectations.",
+          ""
+        ],
+        [
+          "2",
+          "60% - 69%",
+          "Meets the basic requirements",
+          ""
+        ],
+        [
+          "3",
+          "70% - 79%",
+          "Demonstrates partial understanding.",
+          ""
+        ],
+        [
+          "4",
+          "80% - 89%",
+          "Shows a good understanding.",
+          ""
+        ],
+        [
+          "5",
+          "90% and above",
+          "Demonstrates a thorough understanding.",
+          ""
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "SIGN-OFF COMPLETION",
+        "SIGN-OFF COMPLETION",
+        "SIGN-OFF COMPLETION"
+      ],
+      "rows": [
+        [
+          "",
+          "Diver Medic Technician (DMT)",
+          "Doctor Onboard"
+        ],
+        [
+          "Name",
+          "",
+          ""
+        ],
+        [
+          "Grade",
+          "",
+          ""
+        ],
+        [
+          "Signature",
+          "",
+          ""
+        ],
+        [
+          "Date",
+          "",
+          ""
+        ]
+      ]
+    }
+  ],
+  "metadata": {
+    "source_file": "SK-DIV-PLN-011_R0_Lesson Plan 11 - Drug Administration.docx",
+    "extraction_date": "2025-09-02T14:16:46.199213",
+    "total_paragraphs": 0,
+    "total_sections": 0,
+    "total_tables": 8
+  },
+  "slides": [
+    {
+      "slideNumber": 1,
+      "title": "Drug Administration",
+      "content": [
+        "Duration: 40 min",
+        "Target Audience: DMTs",
+        "To refresh the DMT’s fading knowledge in the different routes for Drug Administration",
+        "The participants will be able to discuss the different routes for Drug Administration Discuss basic relevant anatomy of the body involved in the different routes of Drug Administration Discuss the principles and procedure for IM injections, subcutaneous injections and rectal drug administration"
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 2,
+      "title": "Materials Required",
+      "content": [
+        "Syringe",
+        "suppositories. Lecture hand-outs",
+        "sample photos",
+        "videos."
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 3,
+      "title": "Lesson Procedures 1",
+      "content": [
+        "Presentation of the above topics by the Medic through lectures hand-outs. Showing sample photos and instructional videos.",
+        "Demonstration on how to apply the above topics."
+      ],
+      "images": []
+    },
+    {
+      "slideNumber": 4,
+      "title": "Lesson Procedures 2",
+      "content": [
+        "Guided Practice and Independent Practice by the participants and Group Activities."
+      ],
+      "images": []
+    }
+  ]
+}
